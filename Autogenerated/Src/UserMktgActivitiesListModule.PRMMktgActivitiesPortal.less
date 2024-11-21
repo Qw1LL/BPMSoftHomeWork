@@ -1,0 +1,74 @@
+﻿.empty-container-list-message {
+	font-family: "Segoe UI Light";
+	color: #252F40;
+
+	.image-container, .ts-image-edit-inner-container {
+		width: 95px;
+		height: 95px;
+		margin: auto;
+	}
+	
+	.image-container {
+		.image-control {
+			width: 95px !important;
+			height: 95px !important;
+		}
+	}
+	
+	.ts-image-edit-inner-container {
+		.ts-image-edit-full-size-element {
+			margin: 0px;
+		}
+	}
+
+	.title {
+		margin-top: 15px;
+		text-align: center;
+	}
+
+	.description {
+		position: relative;
+		width: fit-content;
+		margin: 3px auto;
+		padding-left: 20px;
+		font-size: 14px;
+		line-height: 20px;
+		font-weight: 400;
+		letter-spacing: -0.02em;
+		color: #252F40;
+
+		&::before {
+			content: "";
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 4px;
+			height: 100%;
+			background: #F9763D;
+			border-radius: 2px;
+		}
+	}
+
+	.message {
+		padding-bottom: 4px;
+
+		label {
+			font-size: 14px;
+			line-height: 20px;
+			color: #252F40;
+		}
+	}
+	
+	.border {
+		width: 70px;
+		height: 2px;
+		background-color: #54b8df;
+		clear: both;
+		margin: 12px auto 10px;
+	}
+	
+	.t-label {
+		font-size: 1em;
+		display: inline;
+	}
+}

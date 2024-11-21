@@ -1,0 +1,122 @@
+﻿.word-printable-table-part-card-content-container {
+
+  .grid-layout.collapse-empty-row .grid-layout-row .grid-layout-column .control-width-15 {
+    min-height: 46px;
+  }
+
+  .grid-layout.collapse-empty-row .grid-layout-row .grid-layout-column .control-width-15.checkbox-control-item {
+    min-height: 32px;
+    display: flex;
+    align-items: center;
+    .label-wrap{
+      margin-left: 0;
+    }
+  }
+  .add-table-part{
+    left: -1.14em;
+  }
+  .control-width-15 {
+    flex-direction: column;
+    padding-right: 15px;
+    margin-bottom: 10px;
+
+    .label-wrap {
+      justify-content: flex-start;
+      max-width: 35em;
+    }
+
+    .t-label {
+      text-align: left;
+    }
+  }
+
+  .control-width-15.checkbox-control-item {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+
+    .control-wrap {
+      flex-basis: auto;
+      margin-right: 4px;
+      width: auto;
+    }
+  }
+
+  .word-printable-blank-slates-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+
+    .word-printable-blank-slates-label-container {
+      box-shadow: -3px 0 0 0 #54b8df;
+      padding-left: 16px;
+      margin-top: 20px;
+      width: 450px;
+    }
+
+    .word-printable-blank-slates-label-container label {
+      font-family: "Segoe UI Light";
+      font-size: 28px;
+      color: #999;
+    }
+  }
+  .base-edit-right-icon{
+    display: block !important;
+  }
+}
+#WordPrintableTablePartPageIsEmptyTableHideLabel{
+  color: #67748E;
+}
+#WordPrintableTablePartPageActionButtonsContainerContainer {
+padding-top: 0;
+}
+#WordPrintableTablePartPageMainHeaderWrapContainer {
+  position: inherit;
+}
+#WordPrintableTablePartPageParametersTabBlankSlatesContainerContainer,
+#WordPrintableTablePartPageFiltersTabBlankSlatesContainerContainer {
+  display: none;
+}
+#WordPrintableTablePartPageHeaderGridLayout > div:nth-child(1), #WordPrintableTablePartPageHeaderGridLayout > div:nth-child(2) {
+  max-width: 80em;
+}
+#WordPrintableTablePartPageContainer{
+  #WordPrintableTablePartPageHeaderGridLayout {
+    .t-label-tip-wrap {
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+  }
+  #ParametersTab {
+    .t-btn-text.t-btn-left {
+      color:#67748E;
+    }
+    .t-btn-image.left-12px.t-btn-image-left {
+			background-position: center;
+		}
+    .container-list > div {
+        border-bottom: 1px solid #D8DBE2;
+      }
+  }
+  #MacrosModule {
+    .base-edit-right-icon.combobox-edit-right-icon {
+      left: 0;
+      top: 16px;
+    }
+  }
+}
+#WordPrintableTablePartPageContainer #CardContentWrapper{
+  margin-top: 0;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: stretch;
+  height: 100%;
+}
+#WordPrintableTablePartPageTableObjectLookupEdit-el::placeholder,  #WordPrintableTablePartPageCaptionTextEdit-el::placeholder,
+#WordPrintableTablePartPageTableObjectColumnLookupEdit-el::placeholder, #WordPrintableTablePartPageMainObjectColumnLookupEdit-el::placeholder {
+  opacity: 1
+}
+#WordPrintableTablePartPageTabsTabPanel-tabpanel-items{
+  margin: 0 0 0 20px;
+}

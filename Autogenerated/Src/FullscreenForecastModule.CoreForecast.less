@@ -1,0 +1,72 @@
+﻿.background-border-mixin() {
+	background: #fff;
+	border-radius: 8px;
+}
+
+.flex-content-end {
+	display: flex;
+	align-items: center;
+	justify-content: end;
+}
+
+
+.caption-class {
+	width: 100%;
+}
+
+.schema-wrap[data-item-marker = "FullscreenHeaderSchemaContainer"] {
+	.caption-class {
+		.background-border-mixin();
+		padding: 10px 0 10px 10px;
+		.t-label {
+			font-style: normal;
+			font-weight: 400;
+			font-size: 20px;
+			color: #252F40;
+			width: auto;
+			padding-right: 15px;
+		}
+	}
+
+	.t-btn-wrapper[data-item-marker = "ActionsFullScreenForecastButton"] {
+		text-transform: none;
+		color: #252F40;
+		font-weight: 400;
+
+		.t-btn-menu {
+			top: 5px;
+		}
+	}
+}
+
+div[data-item-marker = "FullscreenForecastTabContainer"] {
+	.background-border-mixin();
+	padding: 15px 15px 0;
+
+	.fullscreen-forecast-footer-container {
+		.flex-content-end;
+		padding: 1em 2em 1em 2em;
+		position: fixed;
+		bottom: 0;
+		background: #fff;
+		right: 0;
+		width: 100%;
+		z-index: 9999;
+
+		.fullscreen-forecast-buttons-wrapper {
+			display: flex;
+			flex-direction: row-reverse;
+			span {
+				padding: 8px 20px;
+			}
+		}
+	}
+
+
+}
+
+#FullscreenForecastTabContainer {
+	#FullscreenForecastTabfullscreenCloseButtonButton-wrapperEl {
+		margin-right: 11px;
+	}
+}

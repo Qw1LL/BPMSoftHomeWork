@@ -1,0 +1,50 @@
+﻿@CtiPanelInnerWidth: 315px;
+@ProcessButtonTextColor: #F9763D;
+@ProcessButtonImageSize: 24px;
+@ProcessImageLeft: 5px;
+@ProcessButtonTextMaxWidth: @CtiPanelInnerWidth - @ProcessButtonImageSize + @ProcessImageLeft;
+
+.singleLineItem {
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+.imageProcessAction {
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	background-size: cover;
+	left: 0;
+	width: 24px;
+	height: @ProcessButtonImageSize;
+}
+.cti-process-action-container {
+	&:not(:last-of-type) {
+		margin-bottom: 9px;
+		margin-top: 6px;
+	}
+
+	.cti-process-action-button {
+		padding-right: 0 !important;
+		padding-top: 8px;
+		padding-bottom: 8px;
+	}
+
+	.cti-process-action-button-text {
+		font-family: "Golos Regular";
+		font-size: 14px;
+		color: @ProcessButtonTextColor;
+		text-align: left;
+		max-width: @ProcessButtonTextMaxWidth;
+		.singleLineItem;
+	}
+
+	.cti-process-action-button-image {
+		.imageProcessAction;
+	}
+
+	.cti-process-action-button-image:hover {
+		background-position: 0 -@ProcessButtonImageSize !important;
+		.imageProcessAction;
+	}
+}

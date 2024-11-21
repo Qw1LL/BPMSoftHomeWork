@@ -1,0 +1,79 @@
+﻿@indent-primary: 16px;
+@indent-secondary: 32px;
+@bg-color: #fff;
+@gray-primary: #67748E;
+
+.main-content-wrapper {
+	height: 100%; 
+	#ViewModuleContainer {
+		height: inherit;
+		
+		.center-panel{
+			height: inherit;
+
+			 .default-center-panel-content {
+				height: inherit;
+			 }
+		}
+	}
+}
+
+#SimpleReportFilterPageContainer {
+	height: inherit;
+
+	.report-filter-page-main-container {
+		height: inherit;
+
+		.action-buttons-container-wrapClass {
+			padding-bottom: @indent-primary;
+			position: relative;
+			width: 100%;
+			background-color: @bg-color;
+	
+			.report-section-header-container-wrapClass {
+				padding-top: @indent-primary;
+				margin-bottom: @indent-secondary;
+	
+				.report-filter-page-caption {
+					font-size: 24px;
+					font-weight: 600;
+					line-height: 32px;
+					letter-spacing: -0.48px;
+				}
+			}
+
+			.t-btn-wrapper {
+				margin-right: 0.65em;
+			}
+		}
+	}
+
+	.report-filter-page-filter-container {
+		margin-top: 8px;
+		padding: @indent-primary;
+		height: calc(~"100% - 156px");
+		background-color: @bg-color;
+		border-radius: 8px;
+
+		.radio-button-container {
+			margin-left: 0;
+		}
+		
+		#SimpleReportFilterPageFilterRadioGroupContainer {
+			margin-top: @indent-primary;
+		}
+
+		.t-label {
+			font-size: 14px;
+			font-style: normal;
+			color: @gray-primary;
+			font-weight: 400;
+			line-height: 20px;
+			letter-spacing: -0.28px;
+		}
+
+		.report-filter-page-filter-area-caption {
+			font-size: 12px;
+		}
+	}
+}

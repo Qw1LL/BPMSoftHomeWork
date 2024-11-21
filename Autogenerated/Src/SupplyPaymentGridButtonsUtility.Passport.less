@@ -1,0 +1,134 @@
+﻿@editableGridButtonColor: #F9763D;
+
+.editable-grid-button {
+	.t-btn-text {
+		color: @editableGridButtonColor;
+		font-size: 1em;
+		line-height: 25px;
+		&:hover {
+			color: @editableGridButtonColor;
+			text-decoration: underline;
+		}
+	}
+}
+.schema-wrap.one-el.modal-box-schema-module-content .base-edit{
+	border: none !important;
+}
+.supply-payment-products-modal-box #SupplyPaymentProductDetailModalBoxContainer .grid-listed-row.grid-active-selectable.empty-actions.configuration-grid-row-active{
+	border: none;
+}
+.supply-payment-products-modal-box {
+	-moz-transition: height .1s ease-in;
+	-ms-transition: height .1s ease-in;
+	-o-transition: height .1s ease-in;
+	-webkit-transition: height .1s ease-in;
+	transition: height .1s ease-in;
+	.t-btn-text {
+		line-height: 1.2em;
+		margin-right: 0.8em;
+		width: 85px;
+	}
+	.fixed-area-container {
+		display: inline-block;
+		height: 100%;
+		padding: 0 40px 0 24px;
+		width: 100%;
+	}
+	.summary-item-container {
+		margin-top: 0;
+	}
+	.t-label {
+		width: auto;
+	}
+	.header {
+		display: inline-block;
+		margin-bottom: 20px;
+		width: 100%;
+	}
+	.header-name-container-full {
+		padding-top: 4px;
+	}
+	.header-name-container {
+		-moz-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		box-sizing: border-box;
+		display: inline-block;
+		padding-right: 15px;
+		vertical-align: top;
+		width: 45%;
+		.t-label {
+			color: #64b8df;
+			font-family: "Segoe UI Light";
+			font-size: 2.2em;
+			letter-spacing: -0.01em;
+		}
+	}
+	.modal-box-schema-module-content {
+		margin-top: 0;
+		overflow: auto;
+		&.schema-wrap.one-el{
+			height: auto;
+		}
+	}
+	.close-btn-user-class {
+		position: absolute;
+		right: 0.5em;
+		top: 11px;
+	}
+}
+.product-buttons-container {
+	display: flex;
+	.editable-grid-button {
+		width: 80%;
+		float: left;
+		.t-btn-wrapper .t-btn-text {
+			padding-left: 2px;
+		}
+	}
+}
+.editable-grid-button.clear-products {
+	margin: 0.7em 0 0 0.5em;
+	span {
+		height: 16px;
+		padding: 0;
+		width: 16px;
+	}
+}
+
+.supply-payment-products-modal-box {
+	padding-left: 24px;
+	padding-right: 24px;
+	#PortalSupplyPaymentProductDetailModalBoxContainerheader {
+		#fixedAreaContainer {
+			padding-left: 0;
+			padding-right: 0;
+			.t-btn-wrapper.close-btn-user-class {
+				right: 32px;
+				top: 30px;
+				.t-btn-image {
+					background-position: center;
+					width: 14px;
+					height: 14px;
+				}
+			}
+			#PortalSupplyPaymentProductDetailModalBoxheadContainerContainer {
+				margin-bottom: 3px;
+				padding-right: 40px;
+				#PortalSupplyPaymentProductDetailModalBoxheaderNameContainerContainer {
+					display: flex;
+					align-items: center;
+					width: fit-content;
+					#PortalSupplyPaymentProductDetailModalBoxHeaderLabelLabel {
+						font-size: 20px;
+						color: #252F40;
+					}
+				}
+			}
+			#buttonsContainer {
+				#summaryItemContainer {
+					margin-bottom: 16px;
+				}
+			}
+		}
+	}
+}

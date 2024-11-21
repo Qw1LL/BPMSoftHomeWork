@@ -1,0 +1,125 @@
+﻿.communication-panel-item-container {
+	div[data-item-marker*="ProcessDashboard"] {
+		padding: 0 auto auto 0;
+		.label-wrap + .control-wrap {
+			margin-left: -17em;
+		}
+		.control-width-15 .t-label {
+			text-align: left;
+		}
+		.control-width-15 .t-checkboxedit-wrap {
+			margin-left: 25px;
+		}
+		.control-width-15.t-checkbox-control .label-wrap {
+			position: absolute;
+			margin-top: 2px;
+			margin-left: 45px;
+			width: 100%;
+			max-width: 100%;
+		}
+		.process-filters-container {
+			display: flex;
+			flex-direction: column;
+			width: 354px;
+			padding-right: 16px;
+			padding-bottom: 20px;
+			height: 90px;
+			justify-content: space-between;
+
+			.future-task-mode-checkbox {
+				.label-wrap {
+					margin-left: 3.3em;
+				}
+				.control-wrap {
+					margin-left: 0;
+					padding-left: 0;
+					.t-checkboxedit-wrap {
+						margin-top: 5px;
+						margin-left: 0;
+					}
+				}
+			}
+			.process-filter-button {
+				margin-top: 2px;
+				padding-left: 0px;
+				margin-right: 18px;
+			}
+		}
+
+		.ts-notifications-container {
+			.process-notification-item-container {
+				padding: 10px 0;
+				border-bottom: 1px solid #e1e8f2;
+				position: relative;
+				.owner-action-button-class {
+					position: absolute;
+					right: 0;
+					top: 7px;
+					visibility: hidden;
+					opacity: 0;
+				}
+			}
+			.selected-item-class {
+				.owner-action-button-class {
+					opacity: 1;
+					visibility: visible;
+				}
+			}
+			.process-notification-item-container:hover {
+				.owner-action-button-class {
+					opacity: 1;
+					visibility: visible;
+					transition: opacity 0.2s 0.1s ease;
+				}
+			}
+			.process-notification-item-image-container {
+				position: absolute;
+				> img {
+					margin-right: 8px;
+					width: 24px;
+					height: 24px;
+					position: absolute;
+					left: 0;
+					top: 0;
+				}
+			}
+			.process-notification-item-top-container {
+				padding: 7px 10px 15px 43px;
+				> img {
+					margin-right: 12px;
+					width: 32px;
+					position: absolute;
+					left: 0;
+					top: 0;
+				}
+			}
+			.start-date-labelClass {
+				color: #252F40;
+				padding-top: 2px;
+			}
+			.process-notification-item-body-container {
+				margin-bottom: 8px;
+				margin-left: 36px;
+				width: 291px;
+				text-overflow: ellipsis;
+				overflow: hidden;
+				
+				&:nth-last-child(2) {
+					margin-bottom: 4px;
+				}
+			}
+			.subject-text-labelClass {
+				width: auto;
+				color: #67748E;
+			}
+			.title-text-labelClass {
+				padding-top: 2px;
+				&.t-label {
+					width: initial !important;
+					min-width: 30px;
+					color: #F9763D;
+				}
+			}
+		}
+	}
+}

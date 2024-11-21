@@ -1,0 +1,3 @@
+﻿define("InfoButtonStyles", function() {
+	return {};
+});

@@ -1,0 +1,474 @@
+﻿@border: 1px solid #d8d9d9;
+
+.ts-modalbox {
+	position: fixed;
+	overflow-y: auto;
+	overflow-x: hidden;
+	display: block;
+	z-index: 2000;
+	background: #FFFFFF;
+	filter: drop-shadow(0px 4px 12px rgba(3, 13, 45, 0.1));
+	box-shadow: 0 4px 12px rgba(3, 13, 45, 0.1);
+	border-radius: 8px;
+	border: none;
+	padding: 15px 5px 10px 5px;
+	
+	.header-name-container {
+		margin: 0;
+
+		.t-label {
+			font-weight: 400;
+			font-size: 20px;
+			line-height: 28px;
+			letter-spacing: -0.02em;
+			color: #252F40;
+		}
+	}
+
+	.base-edit {
+		border: 1px solid #D8DBE2;
+		border-radius: 8px;
+		padding: 6px 40px 6px 16px;
+		&.modal-time-edit-value-field {
+			border-radius: 0;
+			border-top-width: 0;
+			border-left-width: 0;
+			border-right-width: 0;
+			padding-left: 0;
+		}
+		.base-edit-right-icon-wrapper {
+			top: 50%;
+			transform: translateY(-50%);
+			right: 15px;
+		}
+	}
+
+	.base-edit-input {
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 20px;
+		letter-spacing: -0.02em;
+		color: #252F40;
+
+		&::placeholder {
+			color: #67748E;
+		}
+	}
+
+	.grid-listed-row:after {
+		display: none;
+	}
+
+	.grid-listed-row,
+	#rightContainer {
+		display: flex;
+		align-items: center;
+
+		.ts-modalbox .t-checkboxedit-wrap {
+			margin-top: 0;
+		}
+	}
+
+	.grid-listed-row>.grid-fixed-col {
+		display: flex;
+		align-items: center;
+		margin-top: 0;
+		width: auto;
+
+		.t-checkboxedit-wrap {
+			margin-top: 0;
+		}
+	}
+
+	.t-label.labelEdit {
+		font-size: 14px;
+		line-height: 20px;
+		letter-spacing: -0.02em;
+	}
+
+	.selectedRowsCountLabel {
+		color: #F9763D;
+	}
+
+	.t-btn-wrapper.wrapper-with-centered-right-menu.t-btn-style-default.lookup-grid-settings-button-wrapperEl {
+		display: flex;
+		align-items: center;
+		margin-right: 0;
+		margin-left: 10px;
+
+		.t-btn-text {
+			padding-right: 5px;
+		}
+
+		.t-btn-marker {
+			border-top: 0.32em solid #F9763D;
+		}
+	}
+	[data-item-marker="ProcessMappingPageContainer"] {
+		#DcmMappingPageheadContainerContainer, #DcmMappingPageclose-iconButton-wrapperEl {
+			margin-top: 8px;
+			margin-bottom: 23px;
+		}
+		.modal-page-fixed-container [data-item-marker="FormulaHelpButton"] {
+			bottom: 18px;
+			left: 3px;
+		}
+		#DcmMappingPagecenter-area-editPageContainer {
+			padding-top: 0;
+			#DcmMappingPageFormulaEditContainer {
+				border-radius: 8px;
+				margin: 0 19px;
+			}
+			#DcmMappingPagecenter-area-grid-containerContainer {
+				padding-top: 0;
+				#DcmMappingPageTabsTabPanel-wrap {
+					top: 0;
+					position: relative;
+					margin-top: 32px;
+				}
+				#TabSysSettingsMapping {
+					#rootFilteringContainerLookupPage {
+						margin-top: 32px;
+					}
+					[data-item-marker="LookupGridContainer"] {
+						height: 290px;
+						margin-top: 9px;
+						#grid-area-container {
+							height: calc(~"100% - 40px");
+						}
+					}
+					.containerLookupPage {
+						margin-top: 0;
+						margin-bottom: 6px;
+						#action-buttons-container {
+							margin-top: 0;
+						}
+					}
+				}
+				#TabValueMapping {
+					[data-item-marker="LookupSchemaSTLookupSchemaND"] {
+						border-radius: 0;
+						border-left: none;
+						border-right: none;
+						border-top: none;
+					}
+					#rootFilteringContainerLookupPage {
+						margin-top: 22px;
+					}
+					[data-item-marker="LookupGridContainer"] {
+						height: 193px;
+						margin-top: 7px;
+						.containerLookupPage {
+							margin-top: 0;
+						}
+					}
+				}
+				#TabFunctionsMapping, #TabSystemVariablesMapping {
+					padding-top: 8px;
+					.grid {
+						.grid-captions {
+							display: none;
+						}
+						.grid-listed-row {
+							min-height: 32px;
+							height: 32px;
+							border: none;
+							&.grid-row-selected {
+								background-color: #FFEFE9 !important;
+							}
+						}
+					}
+				}
+				#TabFunctionsMapping {
+					margin: 16px 20px 0 20px;
+				}
+			}
+		}
+	}
+
+	&.ts-modalbox-scroll {
+		overflow-y: auto !important;
+	}
+}
+
+html.ts-modalbox-opened {
+	overflow:hidden;
+}
+
+.ts-modalbox-innerbox {
+	display: inline-block;
+	min-width: 100%;
+	width: 100%;
+}
+
+.ts-messagebox-box {
+	#close-btn-wrapperEl{
+		top: 22px		
+	}
+
+	.ts-inpupbox-control {
+		margin-bottom: 20px;
+
+		.controlCaption:first-child {
+			font-style: normal;
+			font-weight: 400;
+			font-size: 12px;
+			line-height: 16px;
+			color: #67748E;
+			margin-top: 13px;
+		}
+	}
+
+	&.rename-modalbox-schema-wrap-item {
+		.ts-inputbox-caption {
+			margin-bottom: 24px;
+		}
+
+		.ts-inpupbox-control {
+			margin-bottom: 32px;
+			
+			.controlCaption {
+				display: none;
+	
+				&::after {
+					content: "";
+				}
+			}
+		}
+	}
+
+	.t-btn-wrapper {
+		float: right;
+		margin-left: 8px;
+	}
+
+	#order-contract-modal-caption {
+		margin-bottom: 70px;
+	}
+
+	.base-edit {
+		border: 1px solid #D8DBE2;
+		border-radius: 8px;
+		padding: 6px 16px;
+	}
+	
+	.button-choice-all {
+		float: left;
+		margin-right: 80px;
+	}
+	.button-choice-some {
+		float: left;
+		margin-right: 8px;
+	}
+	.button-choice-cancel {
+		float: right;
+	}
+}
+
+.ts-modalbox-cover {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	filter: alpha(opacity=0);
+	z-index: 2000;
+	background-color: #737CA1;
+	opacity: 0.3;
+	
+	&.fullCover {
+		opacity: 1;
+	}
+}
+
+.ts-modalbox-center-position {
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	overflow: hidden;
+	overflow-y: auto;
+	max-height: 98%;
+}
+
+.x-ie8 .ts-modalbox {
+	border-left: solid 1px #c2c6ce;
+	border-right: solid 1px #c2c6ce;
+	border-bottom: solid 1px #c2c6ce;
+}
+
+.x-ie8 .ts-modalbox-center-position {
+	display: table-cell;
+	margin: auto;
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+}
+
+.ts-modalbox::-webkit-scrollbar {
+	width: 4px;
+}
+
+.ts-modalbox::-webkit-scrollbar-thumb {
+	border-radius: 8px;
+	background-color: #D8DBE2;
+}
+
+.ts-modalbox #labelContainer {
+	padding-bottom: 10px;
+	padding-top: 10px;
+	padding-left: 20px;
+	padding-right: 20px;
+	white-space: pre-wrap;
+}
+
+.ts-modalbox #buttonContainer {
+	padding-left: 20px;
+}
+
+
+.data-source-properties-page-modal-box {
+	width: 428px !important;
+	height: 430px !important;
+
+	.datasource-properties-page{
+		max-width: 100%;
+	}
+
+	#DataSourcePropertiesPageContainer{
+		width: 92%;
+		left: 16px;
+		right: 16px;
+	}
+
+	.control-wrap{
+		width: 100%;
+	}
+	.t-label{
+		color: #252F40 !important;
+	}
+
+	#DataSourcePropertiesPageContainerheader{
+		padding-left: 10px;
+	}
+	#DataSourcePropertiesPageBottomButtonsWrapperContainer{
+		display: flex;
+		justify-content: flex-end;
+	}
+}
+
+.ts-modalbox.opportunity-mood-image-list{
+	width: 480px !important;
+
+	.image-list-header-caption-label{
+		font-weight: 400;
+		font-size: 20px;
+		line-height: 28px;
+		color: #252F40;
+	}
+
+	.image-list-item-caption{
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 20px;
+		color: #252F40;
+	}
+}
+
+.supply-payment-products-modal-box {
+	#SupplyPaymentProductDetailModalBoxContainerheader {
+		#SupplyPaymentProductDetailModalBoxheaderNameContainerContainer {
+			padding-right: 0;
+			padding-top: 0;
+			#SupplyPaymentProductDetailModalBoxHeaderLabelInfoButtonButton-wrapperEl {
+				margin: 0;
+				margin-top: 4px;
+				margin-left: 8px;
+			}
+		}
+		#SupplyPaymentProductDetailModalBoxcloseIconButtonButton-wrapperEl {
+			padding: 7px 19px;
+			#SupplyPaymentProductDetailModalBoxcloseIconButtonButton-imageEl {
+				background-position: center;
+			}
+		}
+		.fixed-area-container {
+			padding-right: 30px;
+		}
+		.header-name-container.header-name-container-full{
+			.t-label  {
+				color: #252F40;
+			}
+		}
+	}
+	#SupplyPaymentProductDetailModalBoxContainer {
+		padding: 16px 24px 0 24px;
+		#SupplyPaymentProductDetailModalBoxDataGridGrid-caption-3 {
+			display: flex;
+			justify-content: end;
+			padding-right: 0;
+		}
+		.grid-listed-row.grid-active-selectable.empty-actions {
+			border:none;
+			border-bottom: @border;
+			border-radius: 0;
+			div:nth-last-child(1) {
+				display: flex;
+				justify-content: end;
+				padding-right: 0;
+			}
+			div:nth-last-child(3) {
+				position: relative;
+			}
+		}
+		.grid-listed-row.grid-active-selectable.empty-actions.configuration-grid-row-active {
+			padding-bottom: 0;
+			border-bottom-color: #fff !important;
+			
+			.grid-row-controls {
+				.base-edit {
+					padding: 0;
+				}
+				#SupplyPaymentProductDetailModalBoxGridLayout-item-UsedAmountContainer {
+					padding-right: 0;
+
+					.base-edit-input {
+						text-align: right;
+						padding-right: 8px;
+					}
+
+					.base-edit-disabled-el-icon {
+						position: static;
+					}
+				}
+			}
+
+			.base-edit-input {
+				letter-spacing: normal;
+			}
+		}
+		#SupplyPaymentProductDetailModalBoxDataGridGrid-caption-3 {
+			display: flex;
+			justify-content: end;
+		}
+		.grid-container {
+			#SupplyPaymentProductDetailModalBoxButtonContainerContainer {
+				display: flex;
+				justify-content: end;
+				margin: 32px 0 24px 0;
+				#SupplyPaymentProductDetailModalBoxcancelButtonButton-textEl {
+					margin-right: 0;
+				}
+			}
+		}
+	}
+}
+
+div[id$="custom-control"] {
+	.t-label.controlCaption::after {
+		content: '';
+	}
+}

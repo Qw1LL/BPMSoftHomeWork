@@ -1,0 +1,75 @@
+﻿#SimpleSourceCodeEditPageModalWindowContainer .process-element-trace-data-editor {
+	border:none !important;
+	padding: 0;
+}
+
+.process-element-trace-data-editor {
+	overflow-y: hidden;
+}
+
+#SimpleSourceCodeEditPageclose-iconButton-wrapperEl {
+	right: 16px;
+}
+
+.close-btn-trace-data-page {
+	position: absolute;
+	top: 10px;
+	right: 0;
+	background-color: white;
+	border-radius: 0;
+	z-index: 200;
+	padding-left: 7px !important;
+	
+	.t-btn-image {
+		width: 24px;
+		height: 24px;
+	}
+}
+
+.process-element-trace-data-page-container {
+	height: 100%;
+}
+
+#ProcessElementTraceDataPageContainer {
+	overflow-y: hidden !important;
+}
+
+#SimpleSourceCodeEditPageContainer {
+	overflow-y: hidden !important;
+	height: 100%;
+    padding-left: 0;
+	top: 0;
+	position: absolute;
+	right: 30px;
+	left: 0;
+	padding-right: 30px;
+
+	.ace_marker-layer .ace_active-line {
+		background: #7299F8;
+		opacity: 0.2;	
+	}
+}
+
+.schema-module-modal {
+	padding: 10px 0 0 0;
+	
+	#TraceData-wrap {
+		height: 788px;
+		border: none !important;
+		border-radius: 0 !important;
+		padding: 0 !important;
+		
+		&::before {
+			content: "";
+			position: fixed;
+			top: 0;
+			width: 56px;
+			height: 10px;
+			background-color: #F1F1F1;
+		}
+
+		.ace_fold-widget {
+			background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.64645 9.64645L4.85355 6.85355C4.53857 6.53857 4.76165 6 5.20711 6H10.7929C11.2383 6 11.4614 6.53857 11.1464 6.85355L8.35355 9.64645C8.15829 9.84171 7.84171 9.84171 7.64645 9.64645Z' fill='%2367748E'/%3E%3C/svg%3E%0A");
+		}
+	}
+}

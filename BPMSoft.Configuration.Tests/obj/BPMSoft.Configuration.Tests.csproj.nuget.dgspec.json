@@ -1,0 +1,96 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\inetpub\\wwwroot\\BPMSoft\\Demo\\BPMRights\\SalesFullCycle_Marketing_ServiceFull_1_4_0_3084_Net_PostgreSQL\\BPMSoft.WebApp\\BPMSoft.Configuration\\BPMSoft.Configuration.Tests\\BPMSoft.Configuration.Tests.csproj": {}
+  },
+  "projects": {
+    "C:\\inetpub\\wwwroot\\BPMSoft\\Demo\\BPMRights\\SalesFullCycle_Marketing_ServiceFull_1_4_0_3084_Net_PostgreSQL\\BPMSoft.WebApp\\BPMSoft.Configuration\\BPMSoft.Configuration.Dev.csproj": {
+      "version": "0.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\inetpub\\wwwroot\\BPMSoft\\Demo\\BPMRights\\SalesFullCycle_Marketing_ServiceFull_1_4_0_3084_Net_PostgreSQL\\BPMSoft.WebApp\\BPMSoft.Configuration\\BPMSoft.Configuration.Dev.csproj",
+        "projectName": "BPMSoft.Configuration",
+        "projectPath": "C:\\inetpub\\wwwroot\\BPMSoft\\Demo\\BPMRights\\SalesFullCycle_Marketing_ServiceFull_1_4_0_3084_Net_PostgreSQL\\BPMSoft.WebApp\\BPMSoft.Configuration\\BPMSoft.Configuration.Dev.csproj",
+        "packagesPath": "C:\\Users\\Adm-A.Gaakh\\.nuget\\packages\\",
+        "outputPath": "C:\\inetpub\\wwwroot\\BPMSoft\\Demo\\BPMRights\\SalesFullCycle_Marketing_ServiceFull_1_4_0_3084_Net_PostgreSQL\\BPMSoft.WebApp\\BPMSoft.Configuration\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Adm-A.Gaakh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net472"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net472": {
+            "targetAlias": "net472",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1701"
+          ]
+        }
+      },
+      "frameworks": {
+        "net472": {
+          "targetAlias": "net472",
+          "dependencies": {
+            "Microsoft.ServiceFabric.Services.Remoting": {
+              "target": "Package",
+              "version": "[6.0.1028, )"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\inetpub\\wwwroot\\BPMSoft\\Demo\\BPMRights\\SalesFullCycle_Marketing_ServiceFull_1_4_0_3084_Net_PostgreSQL\\BPMSoft.WebApp\\BPMSoft.Configuration\\BPMSoft.Configuration.Tests\\BPMSoft.Configuration.Tests.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\inetpub\\wwwroot\\BPMSoft\\Demo\\BPMRights\\SalesFullCycle_Marketing_ServiceFull_1_4_0_3084_Net_PostgreSQL\\BPMSoft.WebApp\\BPMSoft.Configuration\\BPMSoft.Configuration.Tests\\BPMSoft.Configuration.Tests.csproj",
+        "projectName": "BPMSoft.Configuration.Tests",
+        "projectPath": "C:\\inetpub\\wwwroot\\BPMSoft\\Demo\\BPMRights\\SalesFullCycle_Marketing_ServiceFull_1_4_0_3084_Net_PostgreSQL\\BPMSoft.WebApp\\BPMSoft.Configuration\\BPMSoft.Configuration.Tests\\BPMSoft.Configuration.Tests.csproj",
+        "packagesPath": "C:\\Users\\Adm-A.Gaakh\\.nuget\\packages\\",
+        "outputPath": "C:\\inetpub\\wwwroot\\BPMSoft\\Demo\\BPMRights\\SalesFullCycle_Marketing_ServiceFull_1_4_0_3084_Net_PostgreSQL\\BPMSoft.WebApp\\BPMSoft.Configuration\\BPMSoft.Configuration.Tests\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Adm-A.Gaakh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net472"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net472": {
+            "targetAlias": "net472",
+            "projectReferences": {
+              "C:\\inetpub\\wwwroot\\BPMSoft\\Demo\\BPMRights\\SalesFullCycle_Marketing_ServiceFull_1_4_0_3084_Net_PostgreSQL\\BPMSoft.WebApp\\BPMSoft.Configuration\\BPMSoft.Configuration.Dev.csproj": {
+                "projectPath": "C:\\inetpub\\wwwroot\\BPMSoft\\Demo\\BPMRights\\SalesFullCycle_Marketing_ServiceFull_1_4_0_3084_Net_PostgreSQL\\BPMSoft.WebApp\\BPMSoft.Configuration\\BPMSoft.Configuration.Dev.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net472": {
+          "targetAlias": "net472",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

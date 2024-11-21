@@ -1,0 +1,69 @@
+﻿.label-red label.estimate-caption-label {
+	color: #F9763D;
+}
+
+.label-green label.estimate-caption-label {
+	color: #F9763D;
+	width: auto;
+}
+
+.base-edit.datetime-timecontrol {
+	width: 81px;
+}
+
+.estimate-caption-container {
+	display: flex;
+	align-items: center;
+	justify-content: end;
+	margin-left: 32px;
+	gap: 6px;
+	width: 188px;
+	margin-top: -20px;
+}
+
+.timer-image-container {
+	display: inline-block;
+	width: 24px;
+	height: 24px;
+	flex-shrink: 0;
+	background-position: 0 0;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+.estimate-caption-label {
+	font-size: 14px;
+	font-family: "Golos Regular";
+	
+	&[data-item-marker="ResponseMinutesCaption"],
+	&[data-item-marker="MinutesCaption"] {
+		padding-right: 0;
+	}
+}
+
+.prefix {
+	width: 65px;
+	display: inline-block;
+	text-align: left;
+}
+
+.day {
+	width: 55px;
+	display: inline-block;
+	flex-shrink: 0;
+	text-align: right;
+}
+
+.blink {
+	-webkit-animation: blink 1s linear infinite;
+	animation: blink 1s linear infinite;
+}
+
+@-webkit-keyframes blink {
+	0% { opacity: 0; }
+	100% { opacity: 1; }
+}
+@keyframes blink {
+	0% { opacity: 0; }
+	100% { opacity: 1; }
+}

@@ -1,0 +1,146 @@
+﻿namespace BPMSoft.Configuration
+{
+
+	using BPMSoft.Common;
+	using BPMSoft.Core;
+	using BPMSoft.Core.Configuration;
+	using System;
+	using System.Collections.Generic;
+	using System.Collections.ObjectModel;
+	using System.Globalization;
+
+	#region Class: GeneratedWebFormServiceSchema
+
+	/// <exclude/>
+	public class GeneratedWebFormServiceSchema : BPMSoft.Core.SourceCodeSchema
+	{
+
+		#region Constructors: Public
+
+		public GeneratedWebFormServiceSchema(SourceCodeSchemaManager sourceCodeSchemaManager)
+			: base(sourceCodeSchemaManager) {
+		}
+
+		public GeneratedWebFormServiceSchema(GeneratedWebFormServiceSchema source)
+			: base( source) {
+		}
+
+		#endregion
+
+		#region Methods: Protected
+
+		protected override void InitializeProperties() {
+			base.InitializeProperties();
+			UId = new Guid("177ef661-e736-4802-9520-b1d553edb13c");
+			Name = "GeneratedWebFormService";
+			ParentSchemaUId = new Guid("50e3acc0-26fc-4237-a095-849a1d534bd3");
+			CreatedInPackageId = new Guid("a350b119-a1d4-416a-b96f-a65dc67beca4");
+			ZipBody = new byte[] { 31,139,8,0,0,0,0,0,0,10,181,89,91,83,227,70,22,126,118,170,242,31,122,52,251,32,103,141,152,236,211,86,8,164,204,101,102,200,14,152,26,155,204,3,161,166,132,213,54,189,200,146,183,213,130,56,20,255,125,191,211,23,91,45,201,198,48,201,139,109,181,206,189,207,249,206,233,118,22,207,120,49,143,199,156,29,94,156,13,243,137,138,142,242,108,34,166,165,140,149,200,179,232,3,207,56,126,242,228,11,191,121,159,203,217,144,203,123,49,230,223,127,247,248,253,119,157,178,16,217,148,13,23,133,226,179,189,218,115,244,33,205,111,226,84,252,169,229,52,222,158,14,26,75,231,92,53,214,70,252,143,230,162,181,225,44,79,120,186,241,101,4,163,55,19,244,199,74,220,215,44,92,5,98,54,67,4,126,45,218,95,74,222,190,26,157,100,74,40,193,139,230,107,152,19,125,84,106,30,245,111,10,37,99,232,206,51,34,3,225,149,53,11,209,215,111,174,105,173,95,204,17,20,216,49,135,137,55,34,21,106,241,153,255,175,20,146,207,120,166,138,176,250,64,254,176,125,246,12,11,81,69,118,33,233,146,146,121,121,147,138,49,27,167,113,81,176,181,187,221,161,237,238,188,149,124,10,147,25,140,132,253,229,88,229,178,248,137,93,104,9,218,11,39,109,141,156,176,203,180,156,14,184,41,46,146,79,184,148,92,194,238,172,76,245,94,118,58,98,194,66,10,18,69,2,187,31,29,149,32,201,148,182,154,23,42,186,148,233,103,199,247,198,48,58,177,157,138,192,45,69,208,86,228,105,169,248,165,20,70,255,147,254,188,143,37,187,71,250,38,49,156,36,251,248,67,195,171,223,220,251,208,233,237,177,203,130,75,168,205,184,222,220,238,222,82,88,194,39,113,153,42,240,148,252,44,206,226,41,119,98,63,241,56,57,110,190,13,45,243,89,60,159,47,105,73,237,113,172,226,81,174,179,108,97,94,134,75,75,123,109,122,218,173,210,126,110,177,103,167,237,58,217,76,127,185,208,47,173,52,203,78,131,206,26,158,37,38,113,236,179,205,162,11,153,131,146,42,5,57,36,115,5,227,120,98,211,72,82,85,242,234,38,178,175,183,171,7,45,126,238,120,216,189,144,170,140,83,143,220,238,121,117,201,88,58,229,138,237,31,120,226,216,47,191,176,208,91,104,205,31,187,33,69,139,128,125,74,150,146,87,221,118,62,248,177,103,95,75,239,185,230,73,141,184,246,184,114,192,230,59,213,74,77,96,163,38,80,20,170,148,237,138,93,182,119,234,66,246,91,226,7,228,44,10,188,188,10,124,179,130,107,22,23,53,83,247,254,98,251,168,130,144,88,158,133,97,191,186,208,109,49,24,4,200,108,13,239,87,129,71,29,92,239,173,115,220,83,19,153,166,209,234,220,38,187,159,94,154,255,21,12,221,221,221,101,63,23,229,108,22,203,197,129,91,56,5,226,198,25,218,116,62,97,107,42,50,90,50,239,86,185,109,121,175,43,99,251,245,200,144,86,123,12,185,189,199,158,177,251,140,171,219,60,209,69,171,51,220,79,119,135,30,241,61,16,254,51,47,128,69,128,22,53,44,199,99,164,79,117,121,217,13,108,32,9,223,218,184,151,216,78,79,103,16,2,76,195,62,213,241,234,211,248,207,75,69,13,15,1,181,153,133,233,69,97,121,168,187,141,70,196,48,160,16,156,146,29,60,177,54,77,144,141,11,43,55,232,177,96,13,16,6,13,24,237,85,13,59,50,253,247,157,217,254,54,32,88,19,153,19,41,115,233,197,197,118,199,153,49,233,219,162,100,133,180,153,186,243,227,122,91,239,115,145,96,150,40,196,52,131,252,57,250,189,158,76,80,95,206,186,177,121,28,45,230,188,199,210,28,43,120,193,227,217,39,158,77,213,109,143,249,100,199,2,66,10,161,195,70,166,190,5,50,188,57,63,25,13,71,253,243,227,254,231,227,127,125,53,129,131,103,3,164,163,46,217,122,247,30,148,106,154,27,135,181,65,52,169,58,19,224,78,197,160,189,87,203,50,214,67,90,213,153,87,136,251,136,158,206,101,17,245,147,36,12,172,236,157,74,16,144,76,45,145,129,162,183,60,45,104,222,234,116,170,157,203,111,53,77,164,51,22,86,168,162,109,131,212,202,99,173,191,90,90,110,226,0,160,247,3,19,141,114,83,91,225,17,210,170,148,252,52,155,228,209,105,6,180,22,113,166,236,98,119,131,38,196,199,40,123,105,148,178,68,76,182,192,216,21,86,85,0,246,202,219,71,55,109,119,174,176,195,176,61,191,227,161,97,131,183,193,197,96,56,130,25,118,114,164,170,139,105,11,64,106,107,204,44,233,83,2,145,25,191,54,211,233,185,219,225,178,173,147,33,28,88,33,52,193,147,43,52,204,117,177,195,0,234,167,181,153,96,191,49,2,107,152,48,204,209,201,108,174,22,213,185,214,10,189,227,11,88,247,143,96,165,238,63,124,241,245,241,67,41,18,156,195,30,232,59,236,62,5,134,211,215,232,198,0,98,189,130,28,74,10,178,209,208,90,245,88,175,194,202,134,136,3,1,67,204,222,35,62,155,167,132,60,136,57,153,179,138,197,123,145,242,221,199,9,62,207,113,86,125,218,125,36,101,54,145,96,244,83,224,133,115,168,211,147,53,69,184,112,58,65,75,132,242,197,189,60,210,171,147,139,23,225,138,88,248,180,33,132,190,254,235,85,77,85,14,15,60,27,231,9,73,53,167,128,203,209,251,127,159,216,165,42,153,169,77,75,116,198,103,185,92,152,120,56,162,155,133,226,87,215,70,28,39,237,160,117,178,169,89,30,226,125,17,86,44,114,35,175,150,18,125,145,66,241,112,197,221,99,239,122,21,97,145,65,5,159,103,200,249,93,8,50,250,30,72,49,21,89,116,136,218,116,71,163,102,55,161,12,32,213,187,200,7,145,217,20,92,219,77,116,87,39,150,88,169,120,124,75,135,220,61,189,199,25,246,120,255,247,32,96,255,92,110,57,126,6,88,49,18,219,155,155,215,213,172,7,174,163,173,81,110,29,89,213,29,120,182,204,253,6,218,12,46,70,167,131,243,33,141,26,205,146,112,115,14,29,23,17,109,63,239,117,195,198,14,214,136,44,110,13,230,250,170,33,220,216,123,41,131,242,90,35,179,157,192,32,217,139,219,159,137,204,26,153,166,55,246,245,8,182,163,67,147,167,59,253,52,205,31,118,76,158,208,44,246,67,208,125,173,16,11,253,36,69,131,248,171,5,89,10,18,100,12,235,49,215,171,76,158,16,215,92,5,127,75,251,174,52,200,109,67,245,42,57,107,162,245,42,89,47,11,88,173,147,183,158,126,142,80,84,64,38,150,66,50,187,137,245,165,26,16,57,141,193,140,159,115,154,117,9,181,214,28,129,244,202,60,150,192,70,13,11,193,196,182,134,224,96,112,243,95,96,50,123,16,152,250,154,226,126,222,213,92,43,33,166,202,139,3,246,235,112,112,238,154,44,91,154,9,47,129,89,5,142,81,24,128,112,247,137,19,125,94,81,48,17,60,197,48,226,200,43,211,248,14,70,7,89,22,96,125,199,68,193,80,180,114,193,248,31,124,140,155,169,132,21,149,131,74,143,229,234,150,203,7,81,128,235,199,165,195,254,220,191,195,220,47,173,215,188,180,242,168,149,233,253,68,144,156,59,175,156,138,182,0,41,115,240,56,204,19,116,162,69,202,189,145,104,185,138,198,66,167,208,100,219,57,75,203,252,134,89,171,105,103,232,134,5,230,82,227,165,199,20,246,208,178,182,17,54,189,206,38,208,69,103,26,150,12,96,235,186,1,127,139,84,12,216,30,237,106,92,183,96,96,239,54,218,88,55,31,84,54,35,76,171,137,223,10,122,207,184,239,227,207,70,119,191,13,62,55,56,231,0,234,47,152,190,169,197,98,91,40,217,62,2,108,210,229,189,238,23,111,177,166,197,98,177,207,24,153,111,90,9,151,57,187,186,65,127,83,163,182,119,29,117,67,169,68,232,31,17,131,86,97,235,117,68,77,146,38,176,133,214,237,86,189,91,43,179,245,242,103,121,11,189,233,252,118,68,127,75,252,212,118,225,225,253,223,96,254,189,104,165,234,152,191,46,158,189,117,171,97,132,143,167,54,104,116,69,102,126,209,61,153,243,188,202,45,50,85,133,245,231,249,170,142,183,70,195,174,213,2,66,184,117,145,23,10,222,80,100,53,73,189,115,210,115,141,14,182,1,173,199,104,41,58,98,212,61,26,221,210,11,105,67,15,69,243,217,3,118,107,15,191,128,24,204,208,249,157,224,76,229,140,58,204,29,69,26,169,78,215,107,219,182,110,26,1,204,5,102,112,64,214,225,252,65,15,94,171,118,51,177,253,91,64,207,198,164,254,112,142,203,60,125,242,58,77,234,149,236,223,226,246,152,209,161,39,14,243,211,150,78,123,194,218,77,242,22,177,246,127,205,112,191,170,94,29,0,0 };
+		}
+
+		protected override void InitializeLocalizableStrings() {
+			base.InitializeLocalizableStrings();
+			SetLocalizableStringsDefInheritance();
+			LocalizableStrings.Add(CreateNotAllowedURLMessageLocalizableString());
+			LocalizableStrings.Add(CreateDataIsSavedSuccessfullyMessageLocalizableString());
+			LocalizableStrings.Add(CreateUnknownWebFormIdentifierMessageLocalizableString());
+			LocalizableStrings.Add(CreateLandingDisabledMessageLocalizableString());
+			LocalizableStrings.Add(CreateConversionExceptionMessageLocalizableString());
+			LocalizableStrings.Add(CreateOverflowExceptionMessageLocalizableString());
+			LocalizableStrings.Add(CreateFormatExceptionMessageLocalizableString());
+		}
+
+		protected virtual SchemaLocalizableString CreateNotAllowedURLMessageLocalizableString() {
+			SchemaLocalizableString localizableString = new SchemaLocalizableString() {
+				UId = new Guid("ab59051e-66d5-4ef8-885c-4a1307f76006"),
+				Name = "NotAllowedURLMessage",
+				CreatedInPackageId = new Guid("a350b119-a1d4-416a-b96f-a65dc67beca4"),
+				CreatedInSchemaUId = new Guid("177ef661-e736-4802-9520-b1d553edb13c"),
+				ModifiedInSchemaUId = new Guid("177ef661-e736-4802-9520-b1d553edb13c")
+			};
+			return localizableString;
+		}
+
+		protected virtual SchemaLocalizableString CreateDataIsSavedSuccessfullyMessageLocalizableString() {
+			SchemaLocalizableString localizableString = new SchemaLocalizableString() {
+				UId = new Guid("2fe873f3-73c3-4911-ada1-b77028b1ac25"),
+				Name = "DataIsSavedSuccessfullyMessage",
+				CreatedInPackageId = new Guid("a350b119-a1d4-416a-b96f-a65dc67beca4"),
+				CreatedInSchemaUId = new Guid("177ef661-e736-4802-9520-b1d553edb13c"),
+				ModifiedInSchemaUId = new Guid("177ef661-e736-4802-9520-b1d553edb13c")
+			};
+			return localizableString;
+		}
+
+		protected virtual SchemaLocalizableString CreateUnknownWebFormIdentifierMessageLocalizableString() {
+			SchemaLocalizableString localizableString = new SchemaLocalizableString() {
+				UId = new Guid("29eb0044-749f-44a7-be3e-f5ca1d725a82"),
+				Name = "UnknownWebFormIdentifierMessage",
+				CreatedInPackageId = new Guid("a350b119-a1d4-416a-b96f-a65dc67beca4"),
+				CreatedInSchemaUId = new Guid("177ef661-e736-4802-9520-b1d553edb13c"),
+				ModifiedInSchemaUId = new Guid("177ef661-e736-4802-9520-b1d553edb13c")
+			};
+			return localizableString;
+		}
+
+		protected virtual SchemaLocalizableString CreateLandingDisabledMessageLocalizableString() {
+			SchemaLocalizableString localizableString = new SchemaLocalizableString() {
+				UId = new Guid("ec21278c-9228-4888-ad81-2753b2f4bfc7"),
+				Name = "LandingDisabledMessage",
+				CreatedInPackageId = new Guid("2cebfd9b-fa03-4242-8ecd-21cd2ca5b8ba"),
+				CreatedInSchemaUId = new Guid("177ef661-e736-4802-9520-b1d553edb13c"),
+				ModifiedInSchemaUId = new Guid("177ef661-e736-4802-9520-b1d553edb13c")
+			};
+			return localizableString;
+		}
+
+		protected virtual SchemaLocalizableString CreateConversionExceptionMessageLocalizableString() {
+			SchemaLocalizableString localizableString = new SchemaLocalizableString() {
+				UId = new Guid("4fdb8564-ea35-4b21-8dc4-c5f118c7a7e0"),
+				Name = "ConversionExceptionMessage",
+				CreatedInPackageId = new Guid("2cebfd9b-fa03-4242-8ecd-21cd2ca5b8ba"),
+				CreatedInSchemaUId = new Guid("177ef661-e736-4802-9520-b1d553edb13c"),
+				ModifiedInSchemaUId = new Guid("177ef661-e736-4802-9520-b1d553edb13c")
+			};
+			return localizableString;
+		}
+
+		protected virtual SchemaLocalizableString CreateOverflowExceptionMessageLocalizableString() {
+			SchemaLocalizableString localizableString = new SchemaLocalizableString() {
+				UId = new Guid("54e9d086-fbb8-4bea-a8f1-7611beb3aee1"),
+				Name = "OverflowExceptionMessage",
+				CreatedInPackageId = new Guid("2cebfd9b-fa03-4242-8ecd-21cd2ca5b8ba"),
+				CreatedInSchemaUId = new Guid("177ef661-e736-4802-9520-b1d553edb13c"),
+				ModifiedInSchemaUId = new Guid("177ef661-e736-4802-9520-b1d553edb13c")
+			};
+			return localizableString;
+		}
+
+		protected virtual SchemaLocalizableString CreateFormatExceptionMessageLocalizableString() {
+			SchemaLocalizableString localizableString = new SchemaLocalizableString() {
+				UId = new Guid("e82e92af-f617-41f4-b061-1fe472ab96dd"),
+				Name = "FormatExceptionMessage",
+				CreatedInPackageId = new Guid("2cebfd9b-fa03-4242-8ecd-21cd2ca5b8ba"),
+				CreatedInSchemaUId = new Guid("177ef661-e736-4802-9520-b1d553edb13c"),
+				ModifiedInSchemaUId = new Guid("177ef661-e736-4802-9520-b1d553edb13c")
+			};
+			return localizableString;
+		}
+
+		#endregion
+
+		#region Methods: Public
+
+		public override void GetParentRealUIds(Collection<Guid> realUIds) {
+			base.GetParentRealUIds(realUIds);
+			realUIds.Add(new Guid("177ef661-e736-4802-9520-b1d553edb13c"));
+		}
+
+		#endregion
+
+	}
+
+	#endregion
+
+}
+

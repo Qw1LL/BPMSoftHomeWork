@@ -1,0 +1,77 @@
+﻿.ts-modalbox-cover {
+	background: #252F40;
+	opacity: 0.4;
+}
+
+.data-source-properties-page-modal-box.ts-modalbox {
+	padding: 24px;
+
+	.ts-modalbox-fixedbox,
+	.control-width-15.control-left.control-right {
+		margin-bottom: 28px;
+	}
+
+	.ts-modalbox-fixedbox {
+
+		#DataSourcePropertiesPageContainerheader,
+		#DataSourcePropertiesPageHeaderCaptionContainerContainer {
+			padding: 0;
+		}
+
+		#DataSourcePropertiesPageHeaderContainerContainer {
+			display: flex;
+			align-items: center;
+			flex-direction: row-reverse;
+			justify-content: space-between;
+
+			.close-btn-container {
+				position: static;
+			}
+		}
+	}
+
+	.ts-modalbox-innerbox {
+		.t-label.t-label-is-required {
+			color: #67748E !important;
+		}
+
+		#DataSourcePropertiesPagePageSchemaParameterComboBoxEdit-right-icon-wrapper {
+			display: none;
+		}
+
+		#DataSourcePropertiesPageContainer {
+			width: 100%;
+		}
+
+		.base-edit-input {
+			padding: 0;
+		}
+
+		#DataSourcePropertiesPageCancelDataSourceButton-textEl {
+			margin: 0;
+		}
+
+		.right-button:first-of-type {
+			margin-right: 9px;
+		}
+	}
+}
+
+
+.listview.listview-scroll[data-item-marker="DataSourceSchema"] {
+	width: 0;
+	border: 1px solid #D8DBE2;
+	height: 200px !important;
+	box-shadow: 0px 4px 12px rgba(3, 13, 45, 0.1);
+	border-radius: 8px;
+
+	li {
+		border-bottom: none;
+		margin: 4px;
+	}
+
+	.listview-selected {
+		border-radius: 4px;
+		background-color: #FFEFE9;
+	}
+}

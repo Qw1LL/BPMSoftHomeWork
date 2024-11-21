@@ -1,0 +1,147 @@
+﻿@light-gray-color: #999;
+
+.shared-user-radio-group {
+	.radio-button-container {
+		 margin-left: 0px;
+		.t-label {
+			text-align: left;
+		}
+	}
+}
+
+#OAuthSettingsTab {
+	.label-wrap {
+		max-width: 450px;
+	}
+}
+
+.auth-info-setup-container div[id*="RedirectUrlInfoComponent"] {
+	max-width: none;
+}
+
+.scope-info-btn {
+	border: 0 !important;
+	margin: 0 !important;
+	margin-top: 1px !important;
+}
+
+.show-placeholder ::-webkit-input-placeholder {
+	color: @light-gray-color;
+	opacity: 1;
+}
+
+.show-placeholder ::-moz-placeholder {
+	color: @light-gray-color;
+	opacity: 1;
+}
+
+.show-placeholder :-ms-input-placeholder {
+	color: @light-gray-color;
+	opacity: 1;
+}
+
+.info-help {
+	display: flex;
+	padding-bottom: 24px;
+	
+	&__link {
+		text-decoration: underline;
+	}
+
+	img {
+		height: 24px;
+	}
+
+	p {
+		margin: 0 0 0 8px;
+		font-size: 14px;
+	}
+}
+
+.info-help div {
+	color: @light-gray-color;
+	font-size: 1.3em;
+	margin-left: 30px;
+	white-space: pre-wrap;
+	word-wrap:  break-word;
+}
+
+.left-modules-container .grid-layout-column.ts-box-sizing {
+	&:hover .app-image {
+		margin-bottom: 0;
+
+		.ts-image-edit-button {
+			top: auto;
+			bottom: 0;
+			height: 40px;
+			width: 50%;
+			display: block;
+			background: #67748E;
+			cursor: pointer;
+
+			span {
+				margin: 8px;
+			}
+		}
+
+		.ts-image-edit-upload {
+			left: 0;
+			border-radius: 0 0 0 8px;
+		}
+
+		.ts-image-edit-clear {
+			right: 0;
+			border-radius: 0 0 8px 0;	
+
+			span {
+				position: absolute;
+				right: 0;
+			}
+		}
+	}
+
+	.app-image {
+		height: 136px !important;
+		width: 136px !important;
+		border-radius: 8px;
+		background-color: #F6F6F6;
+
+		.ts-image-edit-container {
+			.ts-image-edit-inner-container {
+				position: static;
+			}
+		}
+	}
+
+	.ts-image-edit-button {
+		display: none;
+	}
+}
+
+
+body[OldUI="false"] .left-modules-container .faq-container {
+	padding-top: 0;
+
+	.faq-header {
+		line-height: 22px;
+		font-size: 14px;
+	}
+
+	.t-btn-wrapper.faq-button {
+		padding: 0;
+		font-size: 12px; 
+	}
+
+	.t-btn-wrapper.faq-button:hover {
+		text-decoration: underline;
+	}
+}
+
+.schema-wrap.two-el {
+	.oauth20app-card-content-wrapper {
+		margin-top: 0px !important;
+	}
+	.oauth20-header-container {
+		padding-left: 0px !important;
+	}
+}

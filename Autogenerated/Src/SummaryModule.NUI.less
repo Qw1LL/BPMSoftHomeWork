@@ -1,0 +1,46 @@
+﻿//buttons-classes
+.image-size(@width, @height) {
+	width: @width;
+	height: @height;
+}
+
+.image-size(@size) {
+	width: @size;
+	height: @size;
+}
+
+.summary-delete-button-image-size {
+	.image-size(7px, 8px);
+}
+
+.summary-delete-button-wrapperEl {
+	vertical-align: bottom;
+}
+
+//container-classes
+
+.summary-main-container {
+	display: inline-block;
+	vertical-align: top;
+}
+
+.summary-item-container {
+	margin: 0px 8px;
+	float: right;
+}
+
+//label-classes
+.summary-item-label(@color, @size) {
+	color: @color;
+	font-size: @size;
+	overflow: visible;
+}
+
+.summary-item-caption {
+	.summary-item-label(#999, 1.6em);
+}
+
+.summary-item-value {
+	.summary-item-label(#88C658, 2.2em);
+	padding-left: 5px;
+}

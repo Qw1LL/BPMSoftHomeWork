@@ -1,0 +1,101 @@
+﻿@color-white: #ffffff;
+@color-widget: #4ca6a3;
+
+.widget-metrics-container {
+	align-items: center;
+	background-color: @color-widget;
+	color: @color-white;
+	display: flex;
+	font-family: "Golos Regular", serif;
+	justify-content: center;
+	overflow: hidden;
+}
+.widget-metric-item {
+	cursor: default;
+	margin-top: 22px;
+	text-align: center;
+	label {
+		font-size: 13px;
+		margin: 40px 0 10px;
+	}
+}
+.overlay {
+	span {
+		color: @color-white;
+		font-family: "Golos Regular", serif;
+		font-size: 45px;
+	}
+}
+div.ts-round-progress-bar-wrap {
+	background-color: rgba(255, 255, 255, 0.3);
+	.overlay {
+		background-color:#F9763D;
+		color: @color-white;
+		font-family: "Golos Regular", serif;
+	}
+	.circle {
+		.half {
+			border-color: @color-white !important;
+		}
+	}
+}
+.main-widget-metrics-container {
+	background-color: transparent;
+}
+.main-widget-metrics-container .widget-metrics-container {
+	background: #F9763D;
+	border: 2px solid transparent;
+	border-radius: 8px;
+}
+#PRMportalLevelSchemaContainer.schema-wrap.one-el {
+	min-width: auto;
+}
+#DashboardModuleContainer {
+	.grid-layout-row {
+		.grid-layout-column {
+			.module-container {
+				padding-left: 8px;
+				padding-right: 0px;
+				padding-bottom: 8px;
+			}
+			&:last-child {
+				.module-container {
+					padding-right: 8px;
+				}
+			}
+
+			#PRMportalLevelSchemaCurrentLevelCaptionLabel {
+				color: #FFFFFF;
+			}
+
+			.indicator-caption {
+				text-overflow: ellipsis;
+				white-space: nowrap;
+			}
+			.indicator-value {
+				font-style: normal;
+				font-weight: 600;
+				font-size: 40px;
+				line-height: 40px;
+				letter-spacing: -0.02em;
+				top: 34.5px;
+			}
+		}
+		&:not(:first-child) {
+			.grid-layout-column {
+				.module-container {
+					padding-top: 0px;
+					padding-bottom: 8px;
+				}
+			}
+		}
+	}
+	div[data-item-marker="User Certificate List Module"] {
+		.default-widget-header{
+			border-radius: 8px;
+		}
+		.dashboard-grid-list{
+			height: auto;
+		}
+	}
+}

@@ -1,0 +1,1 @@
+﻿/*Процесс настроен некорректно. Перед запуском заполните обязательные параметры в элементах: "Update without notification, Update with notification"*/

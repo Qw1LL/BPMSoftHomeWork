@@ -1,0 +1,91 @@
+﻿.notification-container {
+  width: 300px;
+  margin-right: -110px;
+  margin-bottom: 15px;
+  color: #444;
+}
+
+#MiniPageContainer {
+  #DayInCalendarMiniPageContainer, #DayOffMiniPageContainer {
+    .minipage-alignable-container {
+      padding: 24px;
+
+      .day-in-calender-mini-page-container {
+        padding: 0;
+
+        #HeaderContainer.header-mini-wrap {
+          margin: 0;
+          
+          & > label {
+            width: auto;
+            font-size: 20px;
+            line-height: 28px;
+            letter-spacing: -0.02em;
+            color: #252F40;
+          }
+          
+          [data-item-marker="AddIntervalButton"] {
+            align-self: auto;
+            margin:0;
+          }
+        }
+
+        [id^="from-interval-item-container-"],
+        [id^="to-interval-item-container-"] {
+          flex-direction: row;
+          margin: 0 16px 0 0;
+
+          .interval-control {
+            width: 170px;
+            margin-top: 0;
+            
+            .base-edit[data-item-marker="From"],
+            .base-edit[data-item-marker="To"] {
+              border: 1px solid #D8DBE2 !important;
+              border-radius: 8px !important;
+              padding: 0 10px !important;
+            }  
+          }
+        }
+        
+        [id^="button-container-"] {
+          display: flex;
+          
+          .t-btn-wrapper {
+            .t-btn-image {
+              width: 24px;
+              height: 24px;
+              transform: rotate(45deg);
+            }
+          }
+        }
+      }
+    }
+    
+    .base-minipage-edit-button-container {
+      padding: 0;
+      margin-top: 32px;
+    }
+  }  
+}
+
+.day-intervals-collection-container {
+  overflow: hidden;
+  
+  & > .interval-item-container {
+    display: flex;
+    margin-top: 24px;
+
+    .interval-label {
+      width: auto;
+      margin: 0 !important;
+
+      & > .t-label {
+        font-size: 14px !important;
+        line-height: 20px;
+        letter-spacing: -0.02em;
+        color: #252F40;
+      }
+    }
+  } 
+}

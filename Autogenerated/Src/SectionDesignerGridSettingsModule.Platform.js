@@ -1,0 +1,220 @@
+﻿define("SectionDesignerGridSettingsModule", ["ext-base", "BPMSoft", "sandbox",
+		"SectionDesignerGridSettingsModuleResources", "SectionDesignerUtils", "SectionDesignDataModule",
+		"ConfigurationEnums", "SectionDesignerEnums", "GridSettingsV2"],
+	function(Ext, BPMSoft, sandbox, resources, SectionDesignerUtils, SectionDesignDataModule, ConfigurationEnums,
+		SectionDesignerEnums) {
+		var view,
+			viewModel,
+			entityName,
+			entitySchema,
+			sectionSchemaName,
+			gridSettingsData;
+
+		/**
+		 * ################ ###### ########.
+		 * @private
+		 * @type {Object}
+		 */
+		var localizableStrings = resources.localizableStrings;
+
+		/**
+		 * ########## ####### # ############# ####.
+		 * @private
+		 * @param {StepType} step
+		 */
+		function goToStep(step) {
+			sandbox.publish("GoToStep", {
+				stepCompleteResult: step
+			});
+		}
+
+		/**
+		 * ####### ######## ###### #############.
+		 * @private
+		 * @return (BPMSoft.BaseViewModel) ###### #############.
+		 */
+		function getViewModel() {
+			var config = {
+				values: {
+					header: localizableStrings.PageCaption
+				},
+				methods: {
+					onPreviousButtonClick: function() {
+						goToStep(SectionDesignerEnums.StepType.PREV);
+					},
+					onNextButtonClick: function() {
+						goToStep(SectionDesignerEnums.StepType.NEXT);
+					},
+					onApplyButtonClick: function() {
+						goToStep(SectionDesignerEnums.StepType.FINISH);
+					},
+					onSaveButtonClick: function() {
+						goToStep(SectionDesignerEnums.StepType.FINISH);
+					},
+					saveProfile: function(profile) {
+						gridSettingsData.modifiedData = profile;
+						var designData = {
+							gridSettings: gridSettingsData
+						};
+						SectionDesignDataModule.setDesignData(designData);
+					},
+					onCancelButtonClick: function() {
+						goToStep(SectionDesignerEnums.StepType.EXIT);
+					},
+					onViewRendered: function() {
+						sandbox.publish("ModuleLoaded");
+					}
+				}
+			};
+			return Ext.create("BPMSoft.BaseViewModel", config);
+		}
+
+		/**
+		 * ####### ######## #############.
+		 * @private
+		 * @return {BPMSoft.Container} #############.
+		 */
+		function getView() {
+			var config = {
+				id: "sectionDesignerGridSettings",
+				selectors: {
+					wrapEl: "#sectionDesignerGridSettings"
+				},
+				items: [
+					{
+						className: "BPMSoft.Container",
+						id: "sectionDesignerGridSettingsContainer",
+						selectors: {
+							wrapEl: "#sectionDesignerGridSettingsContainer"
+						},
+						classes: {
+							wrapClassName: ["grid-settings-main-container"]
+						},
+						afterrender: {
+							bindTo: "onViewRendered"
+						}
+					}
+				]
+			};
+			return Ext.create("BPMSoft.Container", config);
+		}
+
+		/**
+		 * ####### ######## ###### ######### #######.
+		 * @private
+		 */
+		function loadGridSettingsModule() {
+			var sandboxId = sandbox.id;
+			var gridSettingsId = sandboxId + "_GridSettings";
+			var profile = gridSettingsData.modifiedData;
+			sandbox.subscribe("GetGridSettingsInfo", function() {
+				var gridSettingsInfo = {
+					entitySchemaName: entityName,
+					hideButtons: true,
+					hideCaption: true,
+					propertyName: "DataGrid",
+					baseGridType: profile.isTiled
+						? ConfigurationEnums.GridType.TILED
+						: ConfigurationEnums.GridType.LISTED,
+					profile: profile,
+					profileKey: profile.key,
+					isNested: true
+				};
+				return gridSettingsInfo;
+			}, [gridSettingsId]);
+			var callback = function(schema) {
+				entitySchema = schema;
+				sandbox.loadModule("GridSettingsV2", {
+					renderTo: "sectionDesignerGridSettingsContainer",
+					id: gridSettingsId,
+					keepAlive: true
+				});
+			};
+			SectionDesignDataModule.getEntitySchemaByName({
+				name: entityName,
+				callback: callback,
+				scope: this,
+				isOriginal: false
+			});
+		}
+
+		/**
+		 * ########## ################ ###### ####### ######.
+		 * @return{Object} ################ ###### ####### ######.
+		 */
+		function getHeaderConfig() {
+			var mainModuleName = SectionDesignDataModule.getMainModuleName();
+			var moduleConfig = SectionDesignDataModule.getModuleStructure(mainModuleName);
+			return {
+				header: Ext.String.format(localizableStrings.PageCaption, moduleConfig.caption),
+				buttons: {
+					Next: {
+						enabled: false
+					}
+				}
+			};
+		}
+
+		/**
+		 * ####### ######### ######.
+		 * @param {Ext.Element} renderTo ######### ### ######### ######.
+		 */
+		var render = function(renderTo) {
+			var viewModelEmpty = Ext.isEmpty(viewModel);
+			if (viewModelEmpty) {
+				viewModel = getViewModel();
+				sandbox.subscribe("IsStepReady", function() {
+					var profile = sandbox.publish("GetProfileData");
+					viewModel.saveProfile(profile);
+					return true;
+				});
+			}
+			view = getView();
+			view.bind(viewModel);
+			view.render(renderTo);
+			if (viewModelEmpty) {
+				var profileKey = sectionSchemaName + "GridSettingsGridDataView";
+				if (Ext.Object.isEmpty(gridSettingsData.modifiedData) ||
+						(gridSettingsData.modifiedData.key !== profileKey)) {
+					require(["profile!" + profileKey], function(profile) {
+						profile.key = profileKey;
+						profile.isTiled = profile.isTiled || true;
+						gridSettingsData.originalData = BPMSoft.deepClone(profile);
+						gridSettingsData.modifiedData = BPMSoft.deepClone(profile);
+						loadGridSettingsModule();
+					});
+				} else {
+					loadGridSettingsModule();
+				}
+			}
+		};
+
+		/**
+		 * ####### ############# ######.
+		 */
+		var init = function() {
+			if (!entityName) {
+				sandbox.subscribe("GetEntitySchema", function(schemaName) {
+					if (entityName === schemaName) {
+						return entitySchema;
+					}
+					return null;
+				});
+				var config = sandbox.publish("GetStepConfig");
+				entityName = config.sectionCode;
+				SectionDesignDataModule.getDesignData(function(data) {
+					gridSettingsData = BPMSoft.deepClone(data.gridSettings);
+					var moduleData = data.module;
+					sectionSchemaName = moduleData[entityName].sectionSchemaName;
+				});
+			}
+			sandbox.publish("SetPageHeaderInfo", getHeaderConfig());
+			sandbox.subscribe("GetHeaderConfig", getHeaderConfig);
+		};
+
+		return {
+			render: render,
+			init: init
+		};
+	}
+);

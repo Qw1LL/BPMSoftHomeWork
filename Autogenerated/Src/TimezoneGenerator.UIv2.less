@@ -1,0 +1,118 @@
+﻿.timezone-image {
+	width: 24px !important;
+	height: 24px !important;
+}
+.timezone-container {
+	text-align: center;
+	.timezone-label {
+		font-size: 14px;
+		color: #999;
+		line-height: 1.7;
+		vertical-align: text-bottom;
+	}
+}
+body[OldUI=false] .left-modules-container .profile-container .grid-layout-row .photo-timezone-container .timezone-container {
+	margin: 32px 0px 0px 36px;
+}
+.profile-container .timezone-container {
+	width: 92px;
+	text-align: center;
+	.timezone-image {
+		align-self: center;
+		padding-right: 5px; 
+	}
+	.timezone-city {
+		display: block;
+		text-overflow: ellipsis;
+		overflow: hidden;
+		padding-left: 5px;
+	}
+	.timezone-caption {
+		line-height: 29px;
+	}
+}
+.contact-mini-page-container .timezone-container {
+	text-align: left;
+	.timezone-label {
+		padding-left: 5px;
+	}
+}
+.tip-border {
+	padding: 24px;
+	border-radius: 8px;
+}
+
+.timezone-grid-layout {
+	width: 284px;
+
+	.grid-layout-row {
+		&:nth-child(2n-1) {
+			margin-bottom: 16px;
+		}
+
+		.grid-layout-column {
+			label[data-item-marker^="TimezoneHeader"] {
+				font-size: 14px;
+				line-height: 20px;
+				color: #252F40;
+				padding-left: 12px;
+				position: relative;
+				&::before {
+					content: '';
+					width: 4px;
+					border-radius: 2px;
+					background-color: #f9763d;
+					height: 100%;
+					position: absolute;
+					left: 0;
+					top: 0;
+				}
+			}
+		}
+
+		.base-edit.base-edit-disabled .base-edit-disabled-el-icon {
+			display: block;
+		}
+	}
+
+	.base-edit-right-icon:hover {
+		cursor: pointer;
+	}
+	.timezone-label-bottom {
+		position: absolute;
+		bottom: 0;
+	}
+	.grid-layout-row,
+	.grid-layout-column {
+		min-height: 26px;
+	}
+	.control-no-label {
+		.base-edit:not(.base-edit-focus):not(.memo-edit-core) {
+			height: auto;
+		}
+	}
+}
+
+.timezone-button-container {
+	text-align: right;
+	padding-top: 11px;
+	.t-btn-wrapper {
+		margin-left: 8px;
+	}
+}
+
+#TimezoneContainer {
+	.control-no-label .base-edit {
+		&.base-edit-with-right-icon {
+			padding-right: 25px;
+		}
+		.base-edit-input {
+			padding-bottom: 0;
+		}
+	} 
+	#OffsetStartDateDateTimeContainer,
+	#OffsetDueDateDateTimeContainer {
+		display: flex;
+		column-gap: 20px;
+	}
+}

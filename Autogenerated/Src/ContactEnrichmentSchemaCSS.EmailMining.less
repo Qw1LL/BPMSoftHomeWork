@@ -1,0 +1,127 @@
+﻿.enrichment-contact-container-wrapper {
+	z-index: 1500 !important;
+	width: 100%;
+	max-width: 410px;
+	.base-edit {
+		border: none;
+		&-focus, &:focus {
+			border: 0 solid #F9763D;
+			border-bottom-width: 1px;
+			-webkit-box-shadow: none;
+			-moz-box-shadow: none;
+			box-shadow: none;
+		}
+	}
+	.contact-name-edit,
+	.account-edit {
+		color: #444444;
+	}
+	.contact-header-enrichment-container .base-edit:not(.base-edit-focus) {
+		border-bottom: 1px solid #c8c8c8;
+	}
+	.contact-header-enrichment-container {
+		display: flex;
+		flex-direction: column;
+	}
+	.contact-change-enrich-mode-container {
+		display: flex;
+		flex-direction: row;
+		order: 1;
+	}
+	.contact-edit-container {
+		order: 2;
+		width: 98%
+	}
+	.contact-lookup-edit {
+		color: #444444;
+	}
+	.control-wrap {
+		margin-left: 0;
+		padding-left: 0;
+	}
+	.enrichment-container .enrichment-container-list .enrichment-data-row .label-wrap {
+		display: flex;
+		justify-content: flex-end;
+		label {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-around;
+		}
+	}
+	.contact-enrichment-header-caption {
+		font-family: 'Golos Regular', 'Golos Regular';
+		font-size: 18px;
+		color: #252f40;
+		line-height: 16px;
+		height: 20px;
+		margin-bottom: 10px;
+		width: auto;
+		flex-basis: 56%;
+	}
+	.change-enrichment-mode-button {
+		font-size: 14px;
+		font-family: 'Golos Regular';
+		color: #999999;
+		text-decoration: underline;
+		text-align: right;
+		margin-right: 10px;
+		flex-basis: 44%;
+	}
+	.change-enrichment-mode-button.t-btn-style-transparent:not(.t-btn-disabled):hover {
+		color: #999999;
+	}
+	.change-enrichment-mode-button.t-btn-wrapper {
+		padding: 1px 0 0 0;
+	}
+	.additional-data-enrichment-container {
+		margin: 12px 0 0 0;
+		display: flex;
+		flex-direction: column;
+	}
+	.additional-data-enrichment-caption {
+		font-family: 'Golos Regular';
+		font-size: 14px;
+		color: #252f40;
+		margin-bottom: 5px;
+		order: 1;
+	}
+	.account-data-enrichment-container {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		margin-bottom: 2px;
+		order: 2;
+		.control-no-label {
+			width: 66%;
+			&:hover {
+				border-bottom-color: #F9763D;
+			}
+			&:focus {
+				border-bottom-color: #F9763D;
+			}
+		}
+	}
+	.account-caption {
+		width: 95px;
+		margin-right: 8px;
+		text-align: right;
+		font-size: 13px;
+	}
+	.custom-right-item {
+		display: none;
+	}
+	.custom-right-item:hover {
+		display: inline-block;
+	}
+
+	&.enrichment-container-wrapper {
+		width: 465px;
+		.enrichment-container > .enrichment-close-button {
+			top: -5px;
+			right: -23px;
+			.t-btn-image {
+				background-position: center;
+			}
+		}
+	}
+}

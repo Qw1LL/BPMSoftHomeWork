@@ -1,0 +1,139 @@
+﻿.flex() {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+}
+
+//buttons-classes
+.image-size(@width, @height) {
+	width: @width;
+	height: @height;
+}
+
+.image-size(@size) {
+	width: @size;
+	height: @size;
+}
+
+.summary-delete-button-image-size {
+	.image-size(1.18em);
+	background-repeat: no-repeat;
+    background-position: 0.18em 0.09em;
+}
+
+.summary-delete-button-wrapperEl {
+	vertical-align: top;
+	position: relative;
+}
+
+//container-classes
+
+.summary-main-container {
+	display: inline-block;
+	vertical-align: top;
+}
+
+.summary-item-container {
+  //detail
+  display: flex;
+  align-items: center;
+  float: left;
+	.t-btn-wrapper {
+		margin: 2px 4px 0;
+	}
+}
+
+//label-classes
+.summary-item-label(@color, @size, @family) {
+	color: @color;
+	font-size: @size;
+	font-family: @family;
+	overflow: visible;
+}
+//detail
+.summary-item-caption {
+	.summary-item-label(#999, 1.3em, "Segoe UI");
+	// margin: 0.1em 0 -0.17em 0;
+	padding: 0 0 0 1em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	word-wrap: normal;
+	width: auto;
+}
+
+.summary-item-value {
+	.summary-item-label(#8ecb60, 1.6em, "Segoe UI Semibold");
+	padding-left: 0.5em;
+	width: auto;
+}
+
+.summary-container-wrapClass {
+	height: 100%;
+	display: flex;
+	align-items: center;
+	min-height: 56px;
+	padding: 8px 0px;
+
+	.summaries-container {
+		height: 100%;
+
+		.t-btn-image {
+			width: 16px;
+			height: 16px;
+			background-position: 0 0;
+			}
+
+		.summary-item-container {
+			.flex();
+		}
+
+		.ts-mask-frame {
+			width: 100%;
+			border: 0;
+			background-color: #fff;
+		}
+
+		.summary-item-value {
+			@maskHeight: 22px;
+
+			.ts-mask-container {
+				height: @maskHeight;
+
+				.ts-mask-spinner-wrap {
+					.ts-mask-frame {
+						height: @maskHeight;
+						padding: 0;
+						margin: 0;
+
+						.ts-mask-spinner {
+							width: 16px;
+							height: 16px;
+							margin: 0 auto;
+						}
+					}
+				}
+			}
+
+			&[maskstate="none"] {
+				.ts-mask-container {
+					display: none;
+				}
+			}
+
+			&[maskstate="visible"] {
+				min-width: 18px;
+				min-height: 18px;
+				margin-top: 0.1em;
+			}
+		}
+	}
+}
+
+.left-utils-container-wrapClass .summary-container-wrapClass {
+	order: 999;
+	margin-left: auto;
+}
+

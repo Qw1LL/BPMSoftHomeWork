@@ -1,0 +1,13 @@
+﻿{
+  "Descriptor": {
+    "UId": "ce3557cf-4e38-45eb-aa71-502879d15cd5",
+    "Name": "UsrTransportRequests",
+    "ModifiedOnUtc": "\/Date(1732104436000)\/",
+    "Parent": {
+      "UId": "1bab9dcf-17d5-49f8-9536-8e0064f1dce0",
+      "Name": "BaseEntity"
+    },
+    "ManagerName": "EntitySchemaManager",
+    "Caption": "Заявки на транспорт"
+  }
+}

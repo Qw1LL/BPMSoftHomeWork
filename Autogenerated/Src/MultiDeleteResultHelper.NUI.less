@@ -1,0 +1,146 @@
+﻿.constraints-item-container {
+	margin-bottom: 5px;
+	margin-top: 20px;
+	.constraint-details-hide {
+		display: none;
+	}
+	.constraints-item-details-container {
+		margin-left: 36px;
+		padding-bottom: 6px;
+		padding-top: 14px;
+		.multi-delete-detail-module {
+			margin-bottom: 26px;
+		}
+		.constraints-item-container.selectable {
+			margin-bottom: 0;
+
+			.ts-controlgroup-container.no-line {
+				padding-bottom: 0;
+			}
+		}
+	}
+	>label {
+		width: auto;
+	}
+	>.label-link.t-label {
+		font-size: 18px;		
+		margin-left: 17px;
+		color: #F9763D;
+		font-weight: bold;
+	}
+	>.constraints-item-tools-container {
+		display: inline-block;
+		position: relative;
+		top: -17px;
+		margin-left: 10px;
+	}
+	.constraints-icon-hierarchical {
+		background: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.69953 0.70998L11.2895 5.29998C11.6795 5.68998 11.6795 6.31998 11.2895 6.70998C10.8995 7.09998 10.2695 7.09998 9.87953 6.70998L5.98953 2.82998L2.10953 6.70998C1.71953 7.09998 1.08953 7.09998 0.69953 6.70998C0.30953 6.31998 0.30953 5.68998 0.69953 5.29998L5.28953 0.70998C5.66953 0.31998 6.30953 0.31998 6.69953 0.70998Z' fill='%2367748E'/%3E%3C/svg%3E%0A");
+		width: 12px;
+		height: 8px;
+		position: relative;
+		top: -7px;
+		cursor: pointer;
+	}
+	&.constraint-details-hide .constraints-icon-hierarchical {
+		transform: rotate(180deg);
+	}
+	>.subject-text-labelClass {
+		font-size: 1.5em;
+		position: relative;
+		margin-left: 6px;
+		top: -1px;
+	}
+}
+#MultiDeleteResultPageV2Container {
+	.page-header-container,
+	.header-container-margin-bottom {
+		display: none;
+	}
+	.resultsContainerCollapsed {
+		display: none
+	}
+}
+#MultiDeleteResultPageV2ByConstraintsContainerContainer,
+#MultiDeleteResultPageV2ByRightsContainerContainer{
+	flex-grow: unset;
+	padding-bottom: 14px;
+	position: relative;
+	.container-multi-delete-caption-labelClass {
+		font-size: 2.5em;
+		margin: 0px;
+		width: auto;
+	}
+	#ByConstraintsContainerListContainerList {
+		margin-top: 19px;
+	}
+	#grid-MultiDeleteResultPageV2DataGridGrid-wrap {
+		margin-top: 16px;
+	}
+	.multi-delete-type-image-wrapClass {
+		width: 16px;
+		height: 17px;
+		padding: 0;
+		margin: 0;
+		display: inline-block;
+		position: absolute;
+		top: 23px;
+		left: 19px;
+		>span {
+			width: 16px;
+			height: 17px;
+			background-position-y: 0;
+		}
+	}
+	.multi-delete-type-image-wrapClass.multi-delete-type-image-wrapClass-rights {
+		>span {
+			background-position-y: 17px;
+		}
+	}
+	.multi-delete-collapsed-wrapClass, .multi-delete-expand-wrapClass {
+		width: 24px;
+		height: 24px;
+		display: inline-block;
+		padding: 0;
+		position: absolute;
+		left: 100%;
+		top: 26px;
+		margin-left: -46px;
+		>span {
+			width: 24px;
+			height: 24px;
+			background-position: center;
+		}
+	}
+}
+
+#MultiDeleteResultPageV2ActionButtonsContainerContainer.actions-container {
+	justify-content: normal;
+}
+
+#MultiDeleteResultPageV2ByConstraintsContainerHeaderDeleteButtonButton-wrapperEl {
+	border: 1px #F9763D solid;
+	border-radius: 8px;
+	color: #F9763D;
+
+	.t-btn-marker {
+		border-top: 0.32em solid #F9763D;
+	}
+}
+
+#MultiDeleteResultPageV2ByConstraintsContainerHeaderContainer {	
+    display: flex;
+    justify-content: space-between;
+}
+
+#MultiDeleteDependenciesSchemaContainer .grid-captions {
+	background-color: transparent;
+
+	.gridHeaderSeparator {
+		width: 0px;
+	}
+
+	.grid-label, label {
+		color: #67748E;
+	}
+}

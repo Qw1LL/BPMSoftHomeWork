@@ -1,0 +1,13 @@
+﻿{
+  "Descriptor": {
+    "UId": "b940206f-2344-4b31-8e4b-2e9ea04412a9",
+    "Name": "UsrSchema40a6a56fDetail",
+    "ModifiedOnUtc": "\/Date(1732103332000)\/",
+    "Parent": {
+      "UId": "01eb38ee-668a-42f0-999d-c2534f979089",
+      "Name": "BaseGridDetailV2"
+    },
+    "ManagerName": "ClientUnitSchemaManager",
+    "Caption": "Схема детали: \" Отмененные заявки\""
+  }
+}

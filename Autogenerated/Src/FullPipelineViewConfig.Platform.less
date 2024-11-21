@@ -1,0 +1,168 @@
+﻿@breadcrumbs-height: 27px;
+@fullpipeline-filters-height: 41px;
+@fullpipeline-header-height: 35px;
+
+.fullpipeline-chart-legend-container {
+	display: flex;
+  margin-left: 8px;
+  position: absolute;
+
+	.fullpipeline-legend-item {
+		display: flex;
+    margin-left: 8px;
+	}
+
+	.legend-item-color-container {
+    margin: 6px 5px 0px 0px;
+		height: 12px;
+    min-width: 12px;
+    border-radius: 8px;
+	}
+}
+
+.main-tools-container {
+	display: flex;
+	justify-content: space-between;
+	padding: 0 16px;
+
+	&::-webkit-scrollbar {
+		height: 2px;
+	}
+
+  .fullpipeline-buttons-settings-container {
+    .t-btn-wrapper {
+      border: 1px solid #D8DBE2;
+      color: #67748E;
+      font-size: 14px;
+      line-height: 20px;
+      letter-spacing: -0.02em;
+      
+      .t-btn-marker {
+        border-top-color: #67748e;
+      }
+    }   
+  }
+}
+
+.default-chart-wrapper.full-screen-el {
+  .main-tools-container {
+    flex-direction: column;
+    align-items: center;
+  
+    .row-filter-container {
+      justify-content: center;
+    }
+  
+    .fullpipeline-buttons-settings-container{
+      margin-top: 18px;
+    }
+  }
+  
+  .fullpipeline-chart-legend-container {
+    display: block;
+  }
+}
+
+.fullpipeline-chart-legend-container .fullpipeline-chart-legend {
+  display: flex;
+  justify-content: center;
+}
+
+.fullpipeline-main-container {
+  height: 100%;
+  .breadcrumbs-module-container:not(:empty) ~ .fullpipeline-chart-grid-wrapper {
+    height: calc(~"100% - @{fullpipeline-header-height} - @{fullpipeline-filters-height} - @{breadcrumbs-height}");
+    border-bottom: 0;
+  }
+  .main-filter-container ~ .fullpipeline-chart-grid-wrapper {
+    height: calc(~"100% - @{fullpipeline-header-height} - @{fullpipeline-filters-height}");
+    border-bottom: 0;
+  }
+}
+
+.highcharts-tooltip {
+  span {
+    z-index: 9999;
+  }
+}
+
+.main-filter-container {
+  display: flex;
+  align-items: center;
+}
+
+.row-filter-container {
+  display: flex;
+}
+
+.filter-cell-filter-container {
+  display: flex;
+
+  .fullpipeline-filter-remove-button {
+    margin: 0 8px;
+
+    .t-btn-image {
+      background-position: center;
+    }
+  }
+}
+
+.fullpipeline-filter-inner-container {
+  .wrapper-with-centered-right-menu .t-btn-menu .t-btn-marker{
+    opacity: 0;
+  }
+
+  label {
+    width: initial;
+    overflow: visible;
+    padding: 0 8px;
+
+    &::not([data-item-marker="StartDate"]):not([data-item-marker="DueDate"]) {
+      padding: 0 8px 0 16px;
+    }
+  }
+
+  span[data-item-marker="PeriodButton"] {
+    margin-right: 8px;
+  }
+
+  .filter-value-label {
+    position: relative;
+    cursor: pointer;
+    
+    &:after {
+      background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0ibTExLjY0NiAxMy42NDYtMi43OTItMi43OTJBLjUuNSAwIDAgMSA5LjIwNyAxMGg1LjU4NmEuNS41IDAgMCAxIC4zNTMuODU0bC0yLjc5MiAyLjc5MmEuNS41IDAgMCAxLS43MDggMHoiIGZpbGw9IiM2Nzc0OEUiLz48L3N2Zz4=');
+      content: "";
+      position: absolute;
+      display: block;
+      top: 0;
+      right: -12px;
+      width: 24px;
+      height: 24px;
+    }
+  }
+}
+
+.period-fixed-filter-image-class {
+  height: 1.44em;
+  width: 1.43em;
+}
+
+.default-chart-wrapper .default-widget-header ~ .fullpipeline-chart-grid-wrapper {
+  margin-top: 0;
+}
+
+.fullpipeline-main-container .default-widget-header {
+  position: static;
+}
+
+.main-content-wrapper .module-container .fullpipeline-main-container .default-chart-wrapper {
+  &.full-screen-el .highcharts-wrapper {
+  height: calc(~'100% - 190px');
+  }
+
+  .highcharts-wrapper {
+    height: calc(~'100% - 140px');
+    padding-top: 0;
+  }
+} 

@@ -1,0 +1,3 @@
+﻿namespace BPMSoft.Configuration.CaseSequenceService
+{
+}

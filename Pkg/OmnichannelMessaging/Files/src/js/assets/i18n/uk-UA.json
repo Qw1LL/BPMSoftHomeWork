@@ -1,0 +1,139 @@
+{
+  "LookupDialog": {
+    "TitleTemplate": "Вибрати: {0}",
+    "Selected": "Вибрані:",
+    "SelectButton": "Вибрати",
+    "CancelButton": "Скасувати",
+    "Blankslate": "Для цього об'єкту немає жодного запису"
+  },
+  "BaseTableDetail": {
+    "Add": "Додати",
+    "BlankslateWithFilters": "При встановленому фільтрі в розділі немає жодного запису. Очистіть фільтр або змініть умови фільтрації"
+  },
+  "SearchInput": {
+    "Placeholder": "Пошук",
+    "Settings": {
+      "Cancel": "Скасувати",
+      "Apply": "Застосувати",
+      "SearchColumnTemplate": "Пошук по полю \"{0}\"",
+      "StartsWith": "Починається",
+      "Contains": "Містить",
+      "Equals": "Дорівнює"
+    }
+  },
+  "ChatSettings": {
+    "ChatWindow": {
+      "AcceptChatButton": "Прийняти чат",
+      "AlreadyAssignedChat": "Чат був призначений на іншого оператора",
+      "NewMessages": "Нові повідомлення",
+      "ChatIsCompleted": "Чат завершено",
+      "AcademyLink": "https://bpm-soft.ru/",
+      "LastChatMessageAuthorCaption": "Ви:",
+      "DraftMessageCaption": "Чернетка:",
+      "BlankSlates": {
+        "Default": {
+          "reason": "Канали для роботи з чатами не налаштовані",
+          "textStart": "Зверніться до адміністратора системи для налаштування каналу. Дізнайтеся більше про роботу з чатами в ",
+          "academyLink": {
+            "displayText": "Академії"
+          }
+        },
+        "HasRightsAndNoChannel": {
+          "reason": "Канали для роботи з чатами не налаштовані",
+          "splitTextLink": {
+            "href": "/ClientApp/#/ChatSettings",
+            "displayText": "Додайте"
+          },
+          "textEnd": " новий канал. Дізнайтеся більше про роботу з чатами в ",
+          "academyLink": {
+            "displayText": "Академії"
+          }
+        },
+        "HasRightsAndChannelButInactive": {
+          "reason": "Нові чати розподіляються тільки на активних операторів",
+          "textStart": "Змініть свій статус на \"Активний\", щоб продовжити роботу з чатом. Дізнайтеся більше про роботу з чатами в ",
+          "academyLink": {
+            "displayText": "Академії"
+          }
+        },
+        "HasRightsAndChannelAndIsActive": {
+          "reason": "Немає нових чатів в черзі",
+          "textStart": "Дізнайтеся більше про роботу з чатами в ",
+          "academyLink": {
+            "displayText": "Академії"
+          }
+        },
+        "HasNotRightsAndHasChannelAndInactive": {
+          "reason": "Нові чати розподіляються тільки на активних операторів",
+          "textStart": "Змініть свій статус на \"Активний\", щоб продовжити роботу з чатом. Дізнайтеся більше про роботу з чатами в ",
+          "academyLink": {
+            "displayText": "Академії"
+          }
+        },
+        "HasNotRightsAndHasChannelAndIsActive": {
+          "reason": "Немає нових чатів в черзі",
+          "textStart": "Дізнайтеся більше про роботу з чатами в ",
+          "academyLink": {
+            "displayText": "Академії"
+          }
+        },
+        "HasNoActiveChats": {
+          "reason": "Схоже, у Вас немає чатів в роботі. Перевірте список нових чатів"
+        }
+      },
+      "Actions": {
+        "Complete": "Завершити чат",
+        "ProcessesDivider": "Процеси",
+        "EmptyProcessesList": "Додайте бізнес-процес на деталі \"Дії чату\"",
+        "SearchFacebook": "Пошук на Facebook",
+        "ContactDuplicates": {
+          "Show": "Перейти до дублів контактів",
+          "NotFound": "Дублі контактів не знайдені",
+          "Find": "Знайти дублі контактів"
+        },
+        "Back": "Назад",
+        "Transfer": "Передати чат"
+      },
+      "ChatListTitle": "Активні чати",
+      "Tips": {
+        "BackToChats": "Повернутися до списку"
+      },
+      "Bots": {
+        "Name": "Bot"
+      },
+      "OversizeFiles": "Перевищено максимальний розмір файлу 25 Мб\n{0}",
+      "NewChatsTitle": "Нові чати"
+    },
+    "History": {
+      "Captions": {
+        "StartDate": "Чат розпочато: {0}, ",
+        "EndDate": "Чат завершено: {0}, "
+      }
+    },
+    "PreChatSummary": {
+      "Caption": "Інформація про чат",
+      "Fields": {
+        "Source": "Джерело"
+      }
+    },
+    "Deduplication": {
+      "DuplicatesFoundTemplate": "Знайдено {0} схожих контактів",
+      "DuplicatesNotFound": "Схожі контакти не знайдені",
+      "FindDuplication": "Знайти схожі контакти"
+    },
+    "Transfer": {
+      "ToAgent": "Оператор",
+      "ToQueue": "Черга",
+      "TransferWindowCaption": "Передати на"
+    }
+  },
+  "InfoDialog": {
+    "OK": "OK"
+  },
+  "MessageTemplate": {
+    "Suggestion": "Запропоновані шаблони",
+    "SuggestionHint": "Спробуйте ввести слово, щоб почати пошук",
+    "QuickSearchHint": "Введіть // для пошуку шаблону",
+    "TemplateSearchCaption": "Шаблони відповідей"
+  }
+}

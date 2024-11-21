@@ -1,0 +1,92 @@
+﻿@left-panel-collapsed-width: 72px;
+@left-panel-width: 160px;
+@right-panel-collapsed-width: 64px;
+@right-panel-width: 370px;
+@line-position-left: 255px;
+@padding: 8px;
+
+#WidgetDesignerContainer,
+#ModuleSelectingContainer {
+    [id$="item-HeaderContainer"] {
+        max-width: calc(~'100%' - (@left-panel-collapsed-width + @left-panel-width + @right-panel-collapsed-width + @padding * 2));
+        min-height: 60px;
+        background-color: white;
+        border-radius: 0 0 8px 8px;
+        position: fixed;
+        z-index: 1001;
+    }
+
+    &::before {
+        content: '';
+        position: fixed;
+        left: @line-position-left;
+        right: @right-panel-collapsed-width + @padding * 3;
+        height: 1px;
+        background-color: #D8DBE2;
+        z-index: 1002;
+    }
+}
+
+#HeaderContainer {
+    position: sticky !important;
+    top: 96px;
+}
+
+.opened-right-panel {
+
+    #WidgetDesignerContainer,
+    #ModuleSelectingContainer {
+        [id$="item-HeaderContainer"] {
+            max-width: calc(~'100%' - (@left-panel-collapsed-width + @left-panel-width + @right-panel-collapsed-width + @right-panel-width + @padding * 2));
+        }
+
+        &::before {
+            right: @right-panel-collapsed-width + @right-panel-width + @padding * 3;
+        }
+    }
+}
+
+.left-panel-collapsed {
+
+    #WidgetDesignerContainer,
+    #ModuleSelectingContainer {
+        [id$="item-HeaderContainer"] {
+            max-width: calc(~'100%' - (@left-panel-collapsed-width + @right-panel-collapsed-width + @padding * 3));
+        }
+
+        &::before {
+            left: @line-position-left - @left-panel-width + @padding;
+        }
+    }
+
+    .opened-right-panel {
+
+        #WidgetDesignerContainer,
+        #ModuleSelectingContainer {
+            [id$="item-HeaderContainer"] {
+                max-width: calc(~'100%' - (@left-panel-collapsed-width + @right-panel-collapsed-width + @right-panel-width + @padding * 3));
+            }
+
+            &::before {
+                right: @right-panel-collapsed-width + @right-panel-width + @padding * 3;
+            }
+        }
+    }
+}
+
+#WidgetModule {
+    padding-right: @padding * 2;
+}
+
+.widget-designer-container .ts-controlgroup-container {
+    padding-bottom: 1.7em;
+
+    .ts-controlgroup {
+        padding-bottom: 3px;
+        margin-top: 24px;
+    }
+
+    #FormatProperties-wrap .ts-controlgroup-container {
+        padding-bottom: 4em;
+    }
+}

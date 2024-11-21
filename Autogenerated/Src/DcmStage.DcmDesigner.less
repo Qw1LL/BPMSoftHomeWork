@@ -1,0 +1,383 @@
+﻿.dcm-stage-container.reorderable-container .dcm-stage.dcm-stage-wrap:first-child .stage-header {
+	border-bottom-left-radius: 4px;
+	border-top-left-radius: 4px;
+}
+
+.reorderable-container.dcm-stage-items {
+	padding-top: 20px;
+}
+
+.dcm-stage.dcm-stage-wrap:first-child .stage-header:before,
+.dcm-stage.dcm-stage-wrap:first-child .stage-header:after {
+	content: initial;
+}
+
+.dcm-stage {
+	position: relative;
+	height: 100%;
+	min-width: 242px;
+	max-width: 242px;
+	padding-top: 22px;
+	margin-right: 2px;
+}
+
+.dcm-stage.draggable-item-grabbed.x-dd-drag-current .stage-header {
+	box-shadow: 2px 2px 7px 2px rgba(0, 0, 0, 0.1);
+}
+
+.dcm-stage.draggable-item-grabbed.x-dd-drag-current .dcm-stage-element {
+	box-shadow: 2px 2px 7px 2px rgba(0, 0, 0, 0.1);
+	border-color: white;
+}
+
+.dcm-stage.draggable-item-grabbed.x-dd-drag-current .stage-header.outer-rounded .add-btn-ct {
+	box-shadow: 2px 2px 7px 2px rgba(0, 0, 0, 0.1);
+	padding-right: 0;
+}
+
+.dcm-stage.draggable-item-grabbed.x-dd-drag-current .add-dcm-stage-element {
+	display: none;
+}
+
+.dcm-stage.draggable-item-grabbed.x-dd-drag-current .stage-header .boundary-el {
+	background-color: transparent;
+}
+
+.dcm-stage.draggable-item-grabbed.x-dd-drag-current .stage-header.inner-arrow .boundary-el:after {
+	border-left-color: transparent;
+}
+
+.dcm-stage.draggable-item-grabbed.x-dd-drag-current .stage-inner-container {
+	background-color: transparent;
+}
+
+.dcm-stage.draggable-item-grabbed.x-dd-drag-current .stage-header.outer-rounded .boundary-el.right-add-btn-el {
+	border-color: transparent;
+}
+
+.dcm-stage .stage-inner-container {
+	padding-left: 3px;
+	padding-right: 2px;
+	background-color: white;
+}
+
+.dcm-stage .stage-inner-container .dcm-stage-element {
+	padding: 16px;
+	box-sizing: border-box;
+	margin-bottom: 16px;
+}
+
+.dcm-stage .draggable-item-move {
+	width: 200px;
+	z-index: 10;
+}
+
+.dcm-stage .stage-header {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 2.5em;
+	padding-left: 2.4em;
+	box-sizing: border-box;
+	padding-right: 1.7em;
+	color: white;
+	line-height: 2.5em;
+}
+
+.dcm-stage .stage-header .stage-tools {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	font-family: Golos Regular;
+}
+
+.dcm-stage .stage-header .stage-tools .t-label {
+	font-size: 13px;
+	text-overflow: ellipsis;
+	color: #252F40;
+}
+
+.dcm-stage .stage-header .add-btn-ct {
+	position: absolute;
+	box-sizing: border-box;
+	top: 0;
+	height: 100%;
+	cursor: pointer;
+}
+
+.dcm-stage .stage-header .add-btn-el {
+	height: 100%;
+	box-sizing: border-box;
+	font-size: 21px;
+	display: none;
+	cursor: inherit;
+	content-visibility: hidden;
+	background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M19 11H13V5C13 4.73478 12.8946 4.48043 12.7071 4.29289C12.5196 4.10536 12.2652 4 12 4C11.7348 4 11.4804 4.10536 11.2929 4.29289C11.1054 4.48043 11 4.73478 11 5V11H5C4.73478 11 4.48043 11.1054 4.29289 11.2929C4.10536 11.4804 4 11.7348 4 12C4 12.2652 4.10536 12.5196 4.29289 12.7071C4.48043 12.8946 4.73478 13 5 13H11V19C11 19.2652 11.1054 19.5196 11.2929 19.7071C11.4804 19.8946 11.7348 20 12 20C12.2652 20 12.5196 19.8946 12.7071 19.7071C12.8946 19.5196 13 19.2652 13 19V13H19C19.2652 13 19.5196 12.8946 19.7071 12.7071C19.8946 12.5196 20 12.2652 20 12C20 11.7348 19.8946 11.4804 19.7071 11.2929C19.5196 11.1054 19.2652 11 19 11Z' fill='%2367748E'/%3E%3C/svg%3E%0A") !important;
+	background-color: unset;
+	background-position: center;
+	position: absolute;
+	right: 1px;
+	width: 20px;
+	color: transparent;
+}
+
+.dcm-stage .stage-header .boundary-el {
+	position: absolute;
+	top: 0;
+	width: 0.2em;
+	height: 100%;
+	background-color: white;
+	box-sizing: content-box;
+	border: 0 solid white;
+	z-index: 1000;
+}
+
+.dcm-stage .stage-header .boundary-el:after,
+.dcm-stage .stage-header .boundary-el:before {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	border: 0 solid;
+}
+
+.dcm-stage .stage-header .boundary-el:after {
+	content: "";
+}
+
+.dcm-stage .stage-header .boundary-el.left-add-btn-el {
+	display: none;
+	left: 0;
+}
+
+.dcm-stage .stage-header.show-add-button .add-btn-el {
+	display: block;
+}
+
+.dcm-stage .stage-header.show-add-button{
+	.dcm-stage .stage-header.show-add-button{
+		margin-right: 5px;
+	}
+}
+
+.dcm-stage .stage-header .boundary-el.left-add-btn-el:after,
+.dcm-stage .stage-header .boundary-el.left-add-btn-el:before {
+	left: 0;
+	right: 0;
+	z-index: 900;
+	width: 0;
+}
+
+.dcm-stage .stage-header .boundary-el.right-add-btn-el {
+	right: 0;
+}
+
+.dcm-stage .stage-header .boundary-el.left-add-btn-el:before {
+	content: "";
+}
+
+.dcm-stage .stage-header .boundary-el.right-add-btn-el:after {
+	z-index: 900;
+}
+
+.dcm-stage .stage-header .boundary-el.right-add-btn-el:before {
+	z-index: 1000;
+}
+
+.dcm-stage .dcm-stage-items {
+	height: auto;
+}
+.dcm-stage:not(.stage-selected) .stage-header{
+	color: #252F40;
+}
+/* --------------------------------------  ARROW  --------------------------------------------- */
+
+.dcm-stage .stage-header .add-btn-ct {
+	width: 1.7em;
+	right: 0;
+}
+
+.dcm-stage .stage-header.inner-arrow .boundary-el:before {
+	border-left-color: #8ecb60;
+}
+
+.dcm-stage .stage-header.inner-arrow .boundary-el:after {
+	left: 100%;
+	border-left-color: white;
+}
+
+.dcm-stage .stage-header.inner-arrow .boundary-el.left-add-btn-el:before {
+	z-index: 1000;
+}
+
+.dcm-stage .stage-header.inner-arrow .boundary-el.right-add-btn-el {
+	right: -0.2em;
+}
+.dcm-stage .stage-header.inner-arrow .boundary-el:before,
+.dcm-stage .stage-header.inner-arrow .boundary-el:after {
+	border-color: transparent;
+	border-width: 1.2em 0.8em;
+}
+.dcm-stage .stage-header.inner-arrow .boundary-el.right-add-btn-el:before {
+	content: "";
+	left: 0;
+}
+.dcm-stage .stage-header.inner-arrow .boundary-el:before,
+.dcm-stage .stage-header.inner-arrow .boundary-el:after {
+	border-color: transparent;
+	border-width: 1.2em 0.8em;
+}
+.dcm-stage .stage-header.inner-arrow .boundary-el:after{
+	border-left: 8px solid #fff;
+}
+
+/* -------------------------------  BUTTON & INNER_BUTTON  ------------------------------------- */
+
+.dcm-stage .stage-header.inner-rounded,
+.dcm-stage .stage-header.outer-rounded {
+	border-top-right-radius: 4px;
+	border-bottom-right-radius: 4px;
+	border-right-width: 4px;
+}
+
+.dcm-stage .stage-header.inner-rounded:before,
+.dcm-stage .stage-header.inner-rounded:after,
+.dcm-stage .stage-header.outer-rounded:before,
+.dcm-stage .stage-header.outer-rounded:after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: -2px;
+	height: 100%;
+	background-color: white;
+	border: 0 solid;
+}
+
+.dcm-stage .stage-header.inner-rounded:after,
+.dcm-stage .stage-header.outer-rounded:after {
+	width: 1px;
+	box-sizing: content-box;
+	border-right-width: 4px;
+	border-top-right-radius: 4px;
+	border-bottom-right-radius: 4px;
+	z-index: 10;
+}
+
+.dcm-stage .stage-header.inner-rounded:before,
+.dcm-stage .stage-header.outer-rounded:before {
+	box-sizing: border-box;
+	border-right-width: 2px;
+	border-top-right-radius: 2px;
+	border-bottom-right-radius: 2px;
+	border-color: white;
+	z-index: 800;
+}
+
+/* --------------------------------------  BUTTON  --------------------------------------------- */
+
+.dcm-stage .stage-header.inner-rounded .boundary-el.right-add-btn-el {
+	border-right-width: 2px;
+	border-top-right-radius: 4px;
+	border-bottom-right-radius: 4px;
+}
+
+.dcm-stage .stage-header.show-add-button.inner-rounded .boundary-el.left-add-btn-el {
+	border-left-width: 2px;
+	border-top-left-radius: 4px;
+	border-bottom-left-radius: 4px;
+}
+
+.dcm-stage .stage-header.inner-rounded .boundary-el.right-add-btn-el:after {
+	left: 0;
+	right: 0;
+	border-right-width: 4px;
+	border-top-right-radius: 4px;
+	border-bottom-right-radius: 4px;
+	border-color: #8ecb60;
+}
+
+/* --------------------------------------  INNER_BUTTON  --------------------------------------------- */
+
+.dcm-stage .stage-header.outer-rounded .add-btn-ct {
+	width: 3.1em;
+	left: 100%;
+}
+
+.dcm-stage .stage-header.outer-rounded .add-btn-el {
+	display: block;
+	padding-left: 10px;
+	content-visibility: hidden;
+	background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M19 11H13V5C13 4.73478 12.8946 4.48043 12.7071 4.29289C12.5196 4.10536 12.2652 4 12 4C11.7348 4 11.4804 4.10536 11.2929 4.29289C11.1054 4.48043 11 4.73478 11 5V11H5C4.73478 11 4.48043 11.1054 4.29289 11.2929C4.10536 11.4804 4 11.7348 4 12C4 12.2652 4.10536 12.5196 4.29289 12.7071C4.48043 12.8946 4.73478 13 5 13H11V19C11 19.2652 11.1054 19.5196 11.2929 19.7071C11.4804 19.8946 11.7348 20 12 20C12.2652 20 12.5196 19.8946 12.7071 19.7071C12.8946 19.5196 13 19.2652 13 19V13H19C19.2652 13 19.5196 12.8946 19.7071 12.7071C19.8946 12.5196 20 12.2652 20 12C20 11.7348 19.8946 11.4804 19.7071 11.2929C19.5196 11.1054 19.2652 11 19 11Z' fill='%2367748E'/%3E%3C/svg%3E%0A") !important;
+	background-color: white;
+	background-position-x: 5px;
+	border-top-right-radius: 4px;
+	border-bottom-right-radius: 4px;
+}
+
+.dcm-stage .stage-header.outer-rounded .boundary-el.right-add-btn-el {
+	right: 32px;
+}
+
+.dcm-stage .stage-header.outer-rounded .boundary-el:before,
+.dcm-stage .stage-header.outer-rounded .boundary-el:after {
+	border-color: transparent;
+	border-width: 1.2em 0.8em;
+}
+
+.dcm-stage .stage-header.outer-rounded .boundary-el:before {
+	border-left-color: #F9763D;
+}
+
+.dcm-stage .stage-header.outer-rounded .boundary-el:after {
+	left: 100%;
+	border-left-color: white;
+}
+
+.dcm-stage .stage-header.outer-rounded .boundary-el.left-add-btn-el:before {
+	z-index: 1000;
+}
+
+.dcm-stage .stage-header.outer-rounded .boundary-el.right-add-btn-el:before {
+	content: "";
+	left: 0;
+}
+
+.dcm-stage .valid-state {
+	z-index: 600;
+}
+
+.dcm-stage .not-valid {
+	position: absolute;
+	padding-bottom: 7px;
+	width: 100%;
+}
+
+.dcm-stage.dcm-stage-wrap:last-child {
+	.add-btn-el {
+		display: block;
+	}
+	.add-btn-ct {
+		right: -33px;
+	}
+	.boundary-el.right-add-btn-el {
+		display: none;
+	}
+	.stage-header.show-add-button:not(.outer-rounded){
+		.btn-remove-stage-wrap {
+			margin-right: -5px;
+		}
+	}
+}	
+
+#ProcessEmailContentBuilderSearchUserBlockTemplateContainer {
+	flex-direction: row;
+	
+	.base-edit-input.ts-box-sizing {
+		line-height: 10px;
+	}
+	
+	.base-edit-right-icon-wrapper {
+		top: 8px;
+		right: 5px;
+	}
+}

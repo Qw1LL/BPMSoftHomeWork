@@ -1,0 +1,83 @@
+﻿.sys-logo-settings .save-button {
+	margin-right: 9px;
+}
+
+.sys-logo-settings .grid-layout {
+	margin-top: 24px;
+	height: 80vh;
+}
+
+.sys-logo-settings .logo-label-wrap .t-label {
+	text-align: left;
+	color: #999999;
+	text-overflow: ellipsis;
+	padding-top: 3px;
+	line-height: 20px
+}
+
+.sys-logo-settings .logo-label-wrap {
+	padding-right: 0.9em
+}
+
+.sys-logo-settings .ts-image-edit-inner-container {
+	width: 100%;
+}
+
+.sys-logo-settings .ts-image-edit-full-size-element {
+	behavior: url(ieb64.htc);
+}
+
+.sys-logo-settings {
+	background-color: rgb(255, 255, 255);
+	border-radius: 8px;
+	margin-top: 8px;
+	top: 46px;
+  	position: relative;
+	.ts-image-edit-button {
+		background: #F5F7FB;
+    	border-radius: 8px;
+		&:hover{
+			background-color: #D8DBE2;
+		}
+		span {
+			width: 24px;
+			height: 24px;
+			margin: 6px;
+		}
+	}
+}
+
+#sys-logo-settings-content .grid-layout-row {
+	padding: 16px;
+}
+
+#sys-logo-settings-content .grid-layout-row:nth-child(2n):before {
+	content: "";
+	height: 1px;
+	width: calc(~"100% - 32px");
+	top: 0;
+	position: absolute;
+	background-color: #D8DBE2;
+}
+
+#sys-logo-settings-content .grid-layout-row:nth-child(2n) {
+	min-height: 0px;
+	height: 0px;
+	padding-left: 16px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+}
+
+#buttons-container{
+	top: 96px;
+	position: fixed;
+	width: calc(~"100% - 312px");
+	background: #FFF;
+	padding: 8px;
+	overflow: hidden;
+	border-radius: 0 0 8px 8px;
+
+	#close-button-textEl{
+		margin-left: 8px;
+	}
+}

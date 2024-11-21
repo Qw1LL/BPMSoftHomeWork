@@ -1,0 +1,5 @@
+is_global = true
+build_property.RootNamespace = BPMSoft.BackConfiguration.Dev
+build_property.ProjectDir = C:\inetpub\wwwroot\BPMSoft\Demo\BPMRights\SalesFullCycle_Marketing_ServiceFull_1_4_0_3084_Net_PostgreSQL\BPMSoft.WebApp\BPMSoft.Configuration\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 

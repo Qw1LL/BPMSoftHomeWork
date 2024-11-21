@@ -1,0 +1,4603 @@
+﻿@base-z-index: 1000;
+@main-header-height: 9.6em;
+@vertical-grid-width: 300px;
+@card-container-margin-top: 3.7em;
+@card-container-padding: 0.8em;
+@card-container-inner-padding: 20px;
+@card-container-left-padding: 2.6em;
+@actions-buttons-height: 7.2em;
+@actions-buttons-padding-left: 2em;
+@actions-buttons-padding-bottom: 0.5em;
+@actions-buttons-margin-bottom: 1.6em;
+
+@left-container-width: 30.4em;
+@center-container-min-width: 43em;
+@center-container-max-width: none;
+@center-container-inner-max-width: 100%;
+
+@page-header-height: 1.3em;
+
+@border: 1px solid #d8d9d9;
+@default-border: 1px solid #e6e6e6;
+@max-width: none;
+
+@left-panel-collapsed-width: 88px;
+@left-panel-open-width: 240px;
+@right-panel-collapsed-width: 7.2em;
+@right-panel-open-width: 44.2em;
+@header-height: 9.9em;
+@absolute-header-height: 115px;
+@folders-container-width: 399px;
+
+@background-color: #F5F7FB;
+@utils-container-extra-offset: 4em;
+
+@djs-palette-image-size: 32px;
+@djs-palette-space-size: 16px;
+
+.delimiter-line-mixin() {
+	content: '';
+	position: absolute;
+	background-color: #D8DBE2;
+	height: 1px;
+	left: 16px;
+	right: 16px;
+}
+
+.proc-btn-img {
+	background: no-repeat;
+}
+
+.left-collapsed_right-collapsed {
+	width: calc(~"100% - @{left-panel-collapsed-width} - @{right-panel-collapsed-width}");
+	min-width: calc(~"100% - @{left-panel-collapsed-width} - @{right-panel-collapsed-width}");
+}
+
+.left-collapsed_right-open {
+	width: calc(~"100% - @{left-panel-collapsed-width} - @{right-panel-open-width}");
+	min-width: calc(~"100% - @{left-panel-collapsed-width} - @{right-panel-open-width}");
+}
+
+.left-open_right-collapsed {
+	width: calc(~"100% - @{left-panel-open-width} - @{right-panel-collapsed-width}");
+	min-width: calc(~"100% - @{left-panel-open-width} - @{right-panel-collapsed-width}");
+}
+
+.left-open_right-open {
+	width: calc(~"100% - @{left-panel-open-width} - @{right-panel-open-width}");
+	min-width: calc(~"100% - @{left-panel-open-width} - @{right-panel-open-width}");
+}
+
+.left-collapsed_right-collapsed_with-folders {
+	width: calc(~"100% - @{left-panel-collapsed-width} - @{right-panel-collapsed-width} - @{folders-container-width}");
+	min-width: calc(~"100% - @{left-panel-collapsed-width} - @{right-panel-collapsed-width} - @{folders-container-width}");
+}
+
+.left-collapsed_right-open_with-folders {
+	width: calc(~"100% - @{left-panel-collapsed-width} - @{right-panel-open-width} - @{folders-container-width}");
+	min-width: calc(~"100% - @{left-panel-collapsed-width} - @{right-panel-open-width} - @{folders-container-width}");
+}
+
+.left-open_right-collapsed_with-folders {
+	width: calc(~"100% - @{left-panel-open-width} - @{right-panel-collapsed-width} - @{folders-container-width}");
+	min-width: calc(~"100% - @{left-panel-open-width} - @{right-panel-collapsed-width} - @{folders-container-width}");
+}
+
+.left-open_right-open_with-folders {
+	width: calc(~"100% - @{left-panel-open-width} - @{right-panel-open-width} - @{folders-container-width}");
+	min-width: calc(~"100% - @{left-panel-open-width} - @{right-panel-open-width} - @{folders-container-width}");
+}
+
+body[OldUI=false] {
+	.card-content-container>.actions-container {
+		position: fixed;
+		display: block;
+	}
+
+	.card-content-container .filteredit .base-edit-right-icon {
+		display: block;
+	}
+}
+
+#AccountProfileSchemaTypeLookupEdit-wrap:hover,
+#AccountProfileSchemaOwnerLookupEdit-wrap:hover,
+#AccountProfileSchemaNameTextEdit-wrap:hover {
+	border-bottom: 1px solid #D8DBE2;
+}
+
+body[OldUI=false] .left-modules-container {
+
+	.profile-container,
+	.module-container {
+		.base-edit {
+			padding-left: 1px;
+		}
+
+		.label-wrap+.control-wrap {
+			margin: 0;
+			padding: 0;
+			width: 100%;
+			max-width: none;
+		}
+
+		.label-wrap label {
+			text-align: left;
+			padding-left: 1px;
+		}
+
+		.control-width-15 {
+			display: inline-block;
+
+			.t-checkboxedit-wrap {
+				margin-left: 0;
+			}
+
+			>.label-wrap {
+				min-width: 0;
+				margin: 0 0 10px;
+				width: 100%;
+				max-width: 100%;
+				&.checkbox-label-wrap {
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+
+	.profile-container {
+		.control-width-15>.label-wrap {
+			justify-content: flex-start;
+		}
+	}
+
+	.module-container .base-edit {
+		.base-edit-disabled-el-icon {
+			display: none;
+		}
+	}
+
+	.module-container {
+		.base-edit-input[disabled="disabled"] {
+			color: #000;
+		}
+
+		.schema-wrap {
+			min-width: 0;
+		}
+
+		.control-width-15 .t-label-is-required:after {
+			content: "";
+		}
+
+		.profile-module-actions {
+
+			.t-btn-menuWrap,
+			.t-btn-menu {
+				display: none;
+			}
+
+			.tools-button-icon {
+				position: absolute;
+				right: 0px;
+				margin-right: -26px;
+				margin-top: -18px;
+				padding: 5px 10px;
+
+				.t-btn-image {
+					width: 16px;
+					height: 16px;
+				}
+			}
+		}
+
+		.contact-profile-photo,
+		.account-profile-photo,
+		.profile-icon,
+		.blank-slate-icon {
+			width: 24px;
+			height: 24px;
+
+			img {
+				border-radius: 50%;
+				width: 100%;
+				height: 100%;
+			}
+		}
+
+		.profile-header-container {
+			margin: 0;
+
+			.label-link {
+				color: #67748E;
+				font-size: 14px;
+				line-height: 20px;
+			}
+
+			>* {
+				text-align: left;
+				margin: 0;
+			}
+		}
+
+		.profile-module-container {
+			position: relative;
+		}
+
+		.blank-slate-container {
+			background-color: white;
+
+			.blank-slate-button {}
+		}
+	}
+}
+
+body[OldUI=false] {
+	&[is-card-opened="true"] {
+		.center-panel .schema-wrap.one-el {
+			.section-wrap {
+				.action-buttons-container-wrapClass {
+					padding-bottom: 1.6em;
+				}
+			}
+		}
+	}
+}
+
+#SysProcessLogSectionV2AnalyticsDataViewContainer {
+	background-color: white;
+	border-radius: 8px;
+	padding-top: 10px;
+}
+
+#SysProcessLogSectionV2AnalyticsModeActionButtonsRightContainerContainer {
+	margin: 0;
+
+	#SysProcessLogSectionV2AnalyticsModeViewOptionsButtonButton-wrapperEl {
+		#SysProcessLogSectionV2AnalyticsModeViewOptionsButtonButton-textEl {
+			color: #67748E;
+		}
+	}
+}
+
+#SysProcessLogSectionV2AnalyticsDataViewContainer {
+	position: relative;
+	top: -830px;
+}
+
+#main-summary-settings-view::before {
+	content: '';
+	position: absolute;
+	background-color: #D8DBE2;
+	height: 1px;
+	left: 32px;
+	right: 20px;
+	z-index: 1001;
+}
+
+#main-summary-settings-view .grid-listed-row.label-grid-listed-row {
+	min-height: 45px;
+}
+
+.default {
+	.center-panel {
+		position: relative;
+
+		.t-btn-no-text-padding.card-back-button {
+			margin-left: -@actions-buttons-padding-left;
+		}
+
+		.card-content-container {
+			display: flex;
+			overflow: hidden;
+			margin-right: 0;
+			width: 100%;
+			padding-left: 0;
+			padding-top: 22px;
+			padding-bottom: @card-container-padding;
+			&#GridSettingsPageRootContentWrapperContainer{
+				padding-bottom: 0;
+			}
+			box-sizing: border-box;
+			&div[data-item-marker*='EntityLoaded']{
+				padding-top: 0;
+			}
+
+			.actions-container {
+				margin-left: -(@card-container-left-padding);
+				padding-left: @card-container-left-padding - 1em;
+				margin-top: -57px;
+				padding-top: 0;
+				height: @actions-buttons-height;
+				min-width: 0;
+				left: auto;
+				right: auto;
+			}
+
+			.page-header-container {
+				height: @page-header-height;
+				margin-top: -(@card-container-padding + @page-header-height);
+				margin-left: 0;
+				margin-bottom: @card-container-padding;
+				padding-left: @card-container-left-padding;
+				padding-right: @card-container-padding;
+				white-space: nowrap;
+				background-color: #fff;
+				border-bottom: @border;
+				color: #444;
+				position: fixed;
+				z-index: @base-z-index;
+
+				>label {
+					&:empty:before {
+						content: "...";
+					}
+				}
+
+				>* {
+					@font-size: 2em;
+					@height: @page-header-height / @font-size;
+
+					height: @height;
+					line-height: @height - @actions-buttons-padding-bottom;
+					font-size: @font-size;
+					text-overflow: ellipsis;
+				}
+			}
+
+			.left-modules-container {
+				flex-grow: 0;
+				display: table;
+
+				#ClientProfile {
+					.control-width-15 {
+						min-height: auto;
+					}
+					.profile-header-container.control-width-15 {
+						display: flex;
+						align-items: center;
+						min-height: 24px;
+					}
+					.sale-profile-add-button,
+					.sale-profile-state-button {
+						padding-left: 12px;
+					}
+					.profile-content-container {
+						.grid-layout-row:first-child {
+							margin-bottom: 16px;
+						}
+						.base-edit:hover {
+							border-bottom: 1px solid #D8DBE2;
+						}
+					}
+				}
+
+				>* {
+					width: @left-container-width - @card-container-padding;
+					margin-right: @card-container-padding;
+
+					&:last-child {
+						margin-bottom: 0;
+					}
+				}
+			}
+
+			.center-main-container {
+				min-width: @center-container-min-width;
+				max-width: @center-container-max-width;
+				flex-grow: 1;
+
+				>*:last-child {
+					margin-bottom: 0;
+					&#GridSettingsPageDataContainerContainer{
+						margin-bottom: 8px;
+						.grid-captions.fixed-header {
+							top: 0;
+						}
+					}
+				}
+
+				.ts-tabpanel {
+					margin-left: -@card-container-inner-padding;
+					margin-right: -@card-container-inner-padding;
+					margin-top: -@card-container-padding;
+
+					.ts-tabpanel-wrap {
+						@margin-width: 8px;
+
+						.ts-tabpanel-items {
+							li:first-child {
+								margin-left: @margin-width;
+							}
+
+							li:last-child {
+								margin-right: @margin-width;
+							}
+						}
+					}
+				}
+			}
+		}
+
+		.designer .card-content-container {
+			min-height: 0;
+		}
+
+		.schema-wrap {
+			.action-buttons-container-wrapClass {
+				.left-open_right-collapsed;
+			}
+
+			&.one-el {
+				.actions-container::before {
+					.delimiter-line-mixin();
+				}
+
+				.section-wrap {
+					#ActionButtonsContainer::before {
+						.delimiter-line-mixin();
+					}
+
+					.action-buttons-container-wrapClass {
+						padding-right: 0;
+						padding-bottom: 0;
+						border-radius: 0 0 8px 8px;
+						padding-left: 16px;
+					}
+				}
+			}
+
+			&.two-el {
+				span[data-item-marker="ScrollTopBtn"] {
+					margin-top: -80px;
+				}
+
+				.section-wrap {
+					.action-buttons-container-wrapClass {
+						padding-bottom: 0;
+						padding-left: 0;
+						margin-bottom: 0;
+						padding-right: 0;
+					}
+
+					.combined-action-buttons-container-wrapClass {
+						background-color: #F5F7FB;
+						margin-left: 30px;
+					}
+
+					.combined-action-buttons-section-container-wrapClass {
+						background-color: #fff;
+						width: 300px;
+						min-height: 73px;
+						display: flex;
+						justify-content: center;
+						padding-bottom: 33px;
+						margin-left: -30px;
+						padding-left: 20px;
+
+						& > [id$="AddRecordButtonButton-textEl"] {
+							width: 100%;
+							margin-right: 20px;
+						}
+					}
+
+					.combined-action-buttons-card-container-wrapClass {
+						background-color: #fff;
+						padding-bottom: 20px;
+						border-bottom-left-radius: 8px;
+						border-bottom-right-radius: 8px;
+					
+						&::before {
+							.delimiter-line-mixin();
+							top: 0;
+						}
+					}
+				}
+
+				.action-buttons-container-wrapClass,
+				.utils-container-wrapClass {
+					left: auto;
+				}
+
+				.utils-container-wrapClass {
+					width: @vertical-grid-width;
+				}
+
+				.combined-action-buttons-card-container-wrapClass {
+					right: 0;
+					left: @vertical-grid-width - @actions-buttons-padding-left - 22em + 2px;
+					padding-left: 20px;
+				}
+
+				.card-content-container {
+					padding-left: @card-container-padding;
+					margin-bottom: 0;
+
+					.page-header-container {
+						margin-left: -@card-container-padding;
+						padding-left: @card-container-padding;
+					}
+				}
+			}
+
+			.section-wrap {
+				.action-buttons-container-wrapClass {
+					height: auto;
+					min-height: @actions-buttons-height;
+				}
+
+				.utils-container-wrapClass:not(#VwDcmLibSectionGridUtilsContainerContainer, #SysMobileWorkplaceSectionGridUtilsContainerContainer) {
+					box-sizing: border-box;
+					margin: 0;
+
+					&:before {
+						// область, скрывающая контент грида, который окажется над контейнером при скролле
+						content: '';
+						position: absolute;
+						background-color: @background-color;
+						top: -5em;
+						height: 5em;
+						left: 0;
+						right: 0;
+					}
+				}
+
+				.action-buttons-container-wrapClass,
+				.utils-container-wrapClass,
+				.section-header-container-wrapClass {
+					padding-left: 20px;
+					padding-right: @card-container-padding;
+					left: auto;
+					right: auto;
+				}
+				.two-el {
+					max-width: none;
+
+					.action-buttons-container-wrapClass,
+					.utils-container-wrapClass {
+						max-width: none;
+						left: auto;
+					}
+				}
+
+				.content-container-wrapClass {
+					>.section {
+						&.left-el {
+							top: @main-header-height + @actions-buttons-height;
+						}
+
+						.utils-container-wrapClass {
+							top: (@main-header-height + @actions-buttons-height + @utils-container-extra-offset);
+							background-color: #F5F7FB;
+						}
+					}
+
+					.card {
+						&.right-el {
+							padding-top: 3.5em;
+						}
+					}
+				}
+			}
+
+			&.dashboard-container .section-wrap{
+				.data-views-container-wrapClass {
+					padding-top: 0;
+					height: 100%;
+					.utils-container-wrapClass {
+						top: 9.8em;
+					}
+				}
+			}
+		}
+
+		.default-center-panel-content {
+
+			// CLOSED right panel
+			.actions-container {
+				left: auto;
+				margin-left: 0;
+				padding-left: @card-container-left-padding - 1em;
+				border-radius: 0 0 8px 8px;
+				justify-content: space-between;
+
+				.left-open_right-collapsed;
+			}
+
+			.schema-wrap {
+				&#Container {
+					position: relative;
+					z-index: 1000;
+				}
+				&.one-el {
+
+					.combined-action-buttons-container-wrapClass {
+						max-width: @max-width;
+						margin-right: 0;
+					}
+				}
+
+				&.two-el {
+					.combined-action-buttons-container-wrapClass {
+						max-width: @max-width;
+						margin-right: 0;
+					}
+
+					.action-buttons-container-wrapClass,
+					.utils-container-wrapClass {
+						max-width: @max-width;
+					}
+
+					.combined-action-buttons-card-container-wrapClass {
+						right: 0;
+						left: @vertical-grid-width - @actions-buttons-padding-left - 22em + 2px;
+					}
+
+					.card-content-container {
+						padding-left: @card-container-padding;
+					}
+				}
+			}
+		}
+
+		.center-panel-content {
+
+			// OPENED right panel
+			.actions-container,
+			.action-buttons-container-wrapClass {
+				.left-open_right-open;
+
+				margin-left: 0;
+				border-radius: 0 0 8px 8px;
+
+				.combined-action-buttons-container-wrapClass {
+					max-width: @max-width;
+					margin-right: 0;
+				}
+
+				.separate-action-buttons-container-wrapClass {
+					margin-right: 0;
+				}
+			}
+		}
+
+		.utils-container-wrapClass {
+			margin-left: -@card-container-left-padding;
+			left: auto;
+		}
+
+		#VwDcmLibSectionGridUtilsContainerContainer{
+			margin-left: 0;
+		}
+
+		.action-buttons-container-wrapClass,
+		.actions-container {
+			padding-bottom: @actions-buttons-padding-bottom + 4.5em;
+			min-height: @actions-buttons-height;
+		}
+	}
+}
+
+.center-panel-border {
+	width: 1px;
+	height: 100vh;
+	background-color: #e6e6e6;
+	top: 10px;
+	position: fixed;
+}
+
+body[OldUI=false] {
+	&.x-safari {
+		&.x-body {
+			.center-panel {
+				&.opened-right-panel {
+					&:after {
+						right: 413px;
+					}
+				}
+			}
+		}
+	}
+
+	&.x-ie,
+	&.x-safari {
+		&.x-edge {
+			.center-panel {
+				&.opened-right-panel {
+					&:after {
+						right: 413px;
+					}
+				}
+			}
+		}
+
+		.center-panel {
+			&:after {
+				.center-panel-border;
+				content: "";
+				right: 56px;
+			}
+
+			&:before {
+				.center-panel-border;
+				content: "";
+				left: 21em;
+				z-index: 1000;
+			}
+
+			&.opened-right-panel {
+				&:after {
+					right: 41.2em;
+				}
+			}
+		}
+
+		&[is-card-opened="true"] {
+			.center-panel {
+				&:after {
+					display: none
+				}
+			}
+
+			&[is-main-header-visible="false"] {
+				.center-panel {
+					&:before {
+						display: none
+					}
+				}
+			}
+		}
+
+		&.left-panel-collapsed {
+			.center-panel {
+				&:before {
+					left: 7.2em;
+				}
+			}
+		}
+	}
+
+	&.x-ie,
+	&.x-safari {
+		.section-designer-shown {
+			.center-panel {
+
+				&:before,
+				&:after {
+					display: none;
+				}
+			}
+		}
+	}
+
+	&.left-panel-collapsed {
+
+		.folders-container-wrapClass,
+		.extended-filters-container-wrapClass {
+			left: 8.8em !important;
+		}
+	}
+
+	.folders-container-wrapClass,
+	.extended-filters-container-wrapClass {
+		z-index: 1000;
+		background: #fff;
+	}
+
+	[class*='grid-cols-'] {
+		padding-right: 20px;
+	}
+
+	.scheduler-area {
+		padding-right: 2.8em;
+	}
+
+	.UsersSectionV2 .utils-container-wrapClass {
+		z-index: 1000;
+	}
+
+	.ts-controlgroup-container .control-width-15 {
+		.t-label {
+			font-family: "Golos Regular";
+			font-style: normal;
+			font-weight: 400;
+			font-size: 12px;
+			line-height: 16px;
+			color: #67748E;
+		}
+	}
+
+	.detail-edit-container-user-class {
+		span.detail-type-btn-inner-user-class {
+			font-size: 13px;
+		}
+	}
+
+	&[is-card-opened=true] {
+		min-height: 100vh;
+
+		.center-panel {
+			min-height: 100vh;
+		}
+
+		.wizard-container .center-panel {
+			min-height: 93.4vh;
+		}
+	}
+
+	.main-header.fixed {
+		border-left: 16px solid @background-color;
+
+		.left-header-container-class {
+			border: 1px solid #ffffff;
+			border-radius: 8px 0 0 0;
+			border-right: none;
+			&.operator-window-left-header-container-class,
+			&.rounded-header-left {
+				border-radius: 8px 0 0 8px;
+			}
+		}
+
+		.right-header-container-class {
+			border: 1px solid #ffffff;
+			border-radius: 0 8px 0 0;
+			border-left: none;
+			&.operator-window-right-header-container-class,
+			&.rounded-header-right {
+				border-radius: 0 8px 8px 0;
+			}
+		}
+	}
+
+	.default;
+
+	.schema-wrap {
+		&.one-el {
+			.custom-filter-button-container .t-btn-wrapper {
+				margin-left: 0;
+
+				.t-btn-menu {
+					.t-btn-marker {
+						border-top: 4px solid #67748E;
+						border-right: 4px solid transparent;
+						border-left: 4px solid transparent;
+					}
+				}
+			}
+		}
+	}
+
+	// LEFT OPEN
+	div.default-center-panel-content {
+
+		// RIGHT CLOSED
+		.schema-wrap {
+			&.two-el {
+				div.page-header-container {
+					width: calc(~"100% - @{left-panel-open-width} - @{right-panel-collapsed-width} - @{vertical-grid-width}");
+				}
+			}
+		}
+	}
+
+	div.center-panel-content {
+		// RIGHT OPEN
+		margin-right: 37em;
+
+		>.schema-wrap {
+			.card-content-container {
+				width: 100%;
+				border-right: 0;
+			}
+
+			&.one-el {
+				.card-content-container {
+					padding-left: 0;
+				}
+			}
+
+			&.two-el {
+				div.page-header-container {
+					width: calc(~"100% - @{left-panel-open-width} - @{right-panel-open-width} - @{vertical-grid-width}");
+				}
+			}
+		}
+	}
+
+	&.left-panel-collapsed {
+
+		// LEFT CLOSED
+		div.default-center-panel-content {
+
+			// RIGHT CLOSED
+			.schema-wrap {
+				&.two-el {
+					div.page-header-container {
+						width: calc(~"100% - @{left-panel-collapsed-width} - @{right-panel-collapsed-width} - @{vertical-grid-width}");
+					}
+				}
+			}
+
+			.actions-container,
+			.action-buttons-container-wrapClass {
+				.left-collapsed_right-collapsed;
+			}
+		}
+
+		div.center-panel-content {
+
+			// RIGHT OPEN
+			.schema-wrap {
+				&.two-el {
+					div.page-header-container {
+						width: calc(~"100% - @{left-panel-collapsed-width} - @{right-panel-open-width} - @{vertical-grid-width}");
+					}
+				}
+			}
+
+			.actions-container,
+			.action-buttons-container-wrapClass {
+				.left-collapsed_right-open;
+			}
+		}
+	}
+
+	.schema-wrap.two-el,
+	.schema-wrap.one-el .section-wrap,
+	.schema-wrap.one-el .card-content-container {
+		max-width: @max-width;
+	}
+}
+
+body[OldUI=false] {
+	&.x-safari {
+		.center-main-container {
+			width: calc(~"100% - @{left-container-width}");
+		}
+	}
+
+	.schema-wrap.one-el .card-content-container {
+		max-width: @max-width;
+		margin-top: 3.5em;
+	}
+
+	.left-modules-container,
+	.center-main-container {
+		box-sizing: border-box;
+		float: left;
+		padding: 0;
+	}
+
+	.left-modules-container {
+		&:empty {
+			display: none;
+		}
+
+		.profile-container {
+			.image-edit-container {
+				padding-top: 0;
+			}
+
+			&.grid-layout {
+				.grid-layout-row {
+					.grid-layout-column {
+						>*:not(.grid-layout-spacer, .profile-image-container, .photo-timezone-container) {
+							padding-bottom: 8px;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.center-main-container {
+		display: flex;
+		flex-direction: column;
+
+		>*:last-child {
+			flex-grow: 1;
+		}
+
+		>.grid-layout>* {
+			max-width: @center-container-inner-max-width;
+		}
+
+		.actions-dashboard-content {
+
+			.social-message-module>*,
+			.call-message-module>*,
+			.email-message-module .layout-container {
+				max-width: @center-container-inner-max-width;
+			}
+		}
+	}
+
+	.card() {
+		background-color: #fff;
+		padding: @card-container-inner-padding;
+		box-sizing: border-box;
+		// border: @default-border;
+		border-radius: 8px;
+		margin-bottom: @card-container-padding;
+
+		&#GridSettingsPageRootDesignContainerContainer {
+			padding: 16px
+		}
+	}
+
+	.center-main-container>div,
+	.left-modules-container>div {
+		.card;
+	}
+
+	.center-main-container>.header-container-margin-bottom {
+		padding: 0;
+		margin: 0;
+		border: 0;
+		background-color: transparent;
+
+		>* {
+			.card;
+
+			&:empty {
+				display: none;
+			}
+		}
+	}
+
+	.designer .center-main-container>div,
+	.designer .center-main-container>.header-container-margin-bottom>* {
+		border: 0;
+	}
+
+	.center-main-container>div:not(.dcm-actions-dashboard-container):empty,
+	.left-modules-container>div:not(.module-container):empty {
+		display: none;
+	}
+
+	.center-main-container {
+
+		.action-dashboard-container {
+			background-color: #f4f5f7;
+		}
+
+		.action-dashboard-container {
+			min-height: 192px;
+
+			&[tab-panel-collapsed] {
+				min-height: 68px;
+			}
+		}
+
+		.action-dashboard-container[actions-visible="true"],
+		.dcm-actions-dashboard-container {
+			min-height: 233px;
+
+			&[tab-panel-collapsed] {
+				min-height: 109px;
+			}
+		}
+
+	}
+
+	.card-content-container>.actions-container .right-container-wrapClass:not(#AutoGeneratedPageV2TaskDetailsButtonContainerContainer),
+	.separate-action-buttons-right-container-wrapClass {
+		margin: 16px 8px 10px 8px;
+
+		.t-btn-wrapper.wrapper-with-centered-right-menu[data-item-marker$="ViewOptionsButton"] {
+			height: 40px;
+			order: 2;
+		}
+		&#LeadManagementDistributionPageV2TaskDetailsButtonContainerContainer {
+			margin: 23px 0 0 0;
+		}
+	}
+
+	.combined-action-buttons-card-container-wrapClass>.combined-action-buttons-card-right-container-wrapClass {
+		margin-right: 8px;
+
+		.t-btn-wrapper.wrapper-with-centered-right-menu[data-item-marker$="ViewOptionsButton"] {
+			height: 40px;
+		}
+	}
+
+	.schema-wrap.two-el div.right-el {
+		left: @vertical-grid-width;
+	}
+}
+
+#GridSettingsPageRootContentContainerContainer {
+	&[active-type="tiled"] #GridSettingsPageRootDesignContainerContainer {
+		padding-bottom: 30px;
+	}
+}
+
+body[OldUI=false] {
+
+	div.wizard-container,
+	div.designer {
+		div.card-content-container {
+			padding-top: 2em;
+
+			div.page-header-container {
+				display: none;
+			}
+		}
+	}
+
+	.center-main-container {
+		.grid-layout-row {
+			max-width: @center-container-inner-max-width;
+		}
+
+		.ts-controlgroup:not(.grid-detail) {
+			max-width: @center-container-inner-max-width;
+		}
+
+		&.campaign-card-content-container {
+
+			.header-container-margin-bottom,
+			.campaign-schema-block {
+				.grid-layout-row {
+					max-width: none;
+				}
+			}
+		}
+	}
+}
+
+body[OldUI=false] .default-center-panel-content .schema-wrap.one-el .combined-action-buttons-container-wrapClass {
+	max-width: @max-width;
+}
+
+body[OldUI=false] div.schema-wrap div.SysAdminUnitSectionV2 div.combined-action-buttons-card-container-wrapClass {
+	left: 486px !important;
+}
+
+body[OldUI=false] {
+	.autofill-layout {
+		>.grid-layout-row {
+			>.grid-layout-column[id] {
+				width: 100% !important;
+			}
+
+			>.grid-layout-column:not([id]) {
+				width: 0 !important;
+			}
+		}
+	}
+
+	/*--- CardModuleV2 ---*/
+	.header-caption-container-margin {
+		&:empty {
+			display: none;
+		}
+	}
+
+	.schema-wrap.one-el {
+		.google-integration-card-container.card-content-container {
+			.actions-container {
+				margin-top: -6.5em;
+			}
+		}
+	}
+
+	/*--- End CardModuleV2 ---*/
+
+	/*--- CommonCSSV2 ---*/
+	.image-edit-container {
+		position: relative;
+	}
+
+	/*--- End CommonCssV2 ---*/
+
+	/*--- MainHeaderModule---*/
+	.caption-class {
+		padding-left: 16px;
+	}
+
+	/*--- EndMainHeaderModule ---*/
+
+	/*--- SectionModuleV2 ---*/
+	.left-panel-collapsed .action-buttons-container-wrapClass {
+		padding-left: 3em;
+	}
+
+	.action-buttons-container-wrapClass {
+		padding-left: 3em;
+	}
+
+	.utils-container-wrapClass {
+		padding-left: 3em;
+	}
+
+	#ESNFeedSectionV2Container {
+		.utils-container-wrapClass {
+			padding-left: 13px;
+		}
+	}
+
+	.schema-wrap .section.left-el .analytics-gridLayout-container .grid-listed-row {
+		padding-left: 30px;
+	}
+
+	.grid-module,
+	.grid-row-actions {}
+
+	.schema-wrap.two-el .utils-container-wrapClass {
+		border-bottom: 0;
+		overflow: hidden;
+	}
+
+	.schema-wrap.two-el .filter-caption-value-container {
+		max-width: 240px;
+	}
+
+	/*--- End SectionModuleV2 ---*/
+
+	/*--- ViewModel ---*/
+	.default-center-panel-content {
+		padding-right: 0em;
+	}
+
+	/*--- End ViewModel ---*/
+
+	/*--- DashboardModule ---*/
+	/*.default-center-panel-content {
+		padding-right: 1em;
+	}*/
+	/*--- End DashboardModule ---*/
+}
+
+/*--- PageDesigner ---*/
+body[OldUI=false] {
+	div.designer {
+		margin-top: 2.2em;
+
+		>div.card-content-container {
+			margin-top: 0;
+			padding-top: 1em;
+			background-color: #ffffff;
+
+			div.page-header-container {
+				display: none;
+			}
+		}
+	}
+}
+
+/*---End PageDesigner ---*/
+
+/*--- SectionDasboardsModule ---*/
+body[OldUI=false] {
+	div.center-panel {
+
+		div.dashboard-container {
+			&.schema-wrap {
+				.ts-tabpanel {
+					padding-right: 8em;
+				}
+
+				.ts-tabpanel-tools {
+					padding-right: 0em;
+				}
+			}
+
+			.card-content-container .module-container {
+				padding-top: 0;
+			}
+
+			.module-container {
+				height: 100%;
+				width: 100%;
+				padding-left: 14px;
+				padding-top: 6px;
+			}
+
+			#DashboardModule {
+				margin-left: 0;
+			}
+
+			#DashboardsModuleContainer {
+				background-color: inherit;
+				margin-top: 8px;
+				padding-right: 14px;
+				padding-bottom: 14px;
+			}
+		}
+	}
+}
+
+/*--- End SectionDashboardsModule ---*/
+
+/*--- ViewModelSchemaDesignerModule ---*/
+body[OldUI=false] {
+	div.design-container-wrapClass {
+		padding-top: 108px;
+
+		#DesignedView {
+			padding-top: 0;
+
+			div.card-content-container {
+				padding-top: 2em;
+
+				div.page-header-container {
+					display: none;
+				}
+			}
+		}
+
+		div.card-content-container {
+			margin-top: 0;
+		}
+	}
+
+	.draggable-items-list {
+		top: 110px;
+		background-color: #fff;
+	}
+}
+
+/*--- End ViewModelSchemaDesignerModule ---*/
+
+/*--- LookupSectionModule ---*/
+body[OldUI=false] {
+	.schema-wrap.two-el .section-header-container-wrapClass {
+		display: none;
+	}
+
+	.section-header-container-wrapClass {
+		background-color: #F5F7FB;
+		padding-left: 1em;
+		white-space: nowrap;
+		margin-top: -3.7em;
+		color: #444;
+		font-size: 2em;
+		position: fixed;
+		z-index: 1000;
+		width: 100%;
+
+		>label {
+			font-size: 1em;
+		}
+	}
+
+	.center-panel .schema-wrap.one-el .section-wrap .content-container-wrapClass .section-header-container-wrapClass+.utils-container-wrapClass {
+		top: 13em;
+	}
+}
+
+/*--- End LookupSectionModule ---*/
+
+body[OldUI=false] {
+	div.design-container-wrapClass {
+		padding-top: 108px;
+
+		#DesignedView {
+			padding-top: 0;
+
+			#PageHeaderContainer{
+				.control-no-label .base-edit .base-edit-input{
+					font-weight: 600;
+					font-size: 32px;
+					line-height: 32px;
+					color: #252F40;
+				}
+			}
+
+			div.card-content-container {
+				padding-top: 2em;
+
+				div.page-header-container {
+					display: none;
+				}
+			}
+		}
+
+		div.card-content-container {
+			margin-top: 0;
+		}
+	}
+
+	.draggable-items-list {
+		top: 110px;
+		background-color: #fff;
+	}
+}
+
+.schema-wrap {
+	.card-content-container {
+		+* {
+			padding-top: 14px;
+			margin-top: 20px;
+
+			&:before {
+				top: 0;
+			}
+		}
+
+		~* {
+			position: relative;
+			background: #fff;
+			padding-right: 20px;
+			overflow: visible;
+			padding-left: 0;
+
+			&:before {
+				content: "";
+				width: 1px;
+				background: #ebeeef;
+				position: absolute;
+				height: calc(~"100% + 2em");
+				left: -30px;
+			}
+		}
+
+		&.page-with-left-el {
+			~* {
+				padding-left: 300px;
+
+				&:before {
+					width: 305px;
+				}
+			}
+		}
+	}
+
+	&.two-el {
+		.card-content-container {
+			+* {
+				margin-top: 0;
+			}
+
+			~* {
+				&:before {
+					width: 7px;
+				}
+			}
+
+			&.page-with-left-el {
+				~* {
+					&:before {
+						width: 311px;
+					}
+				}
+			}
+		}
+	}
+}
+
+.card-widget-grid-layout-item {
+	overflow: hidden;
+	padding-top: 6px;
+	padding-left: 14px;
+}
+
+.grid-layout:not(.profile-container) .card-widget-grid-layout-item {
+	padding: 0 8px 24px 0;
+}
+
+.grid-layout>.grid-layout-row {
+	&>*:first-child {
+		& .card-widget-grid-layout-item {
+			padding-left: 0;
+		}
+	}
+}
+
+html[dir="rtl"] {
+	.center-main-container {
+		.grid-layout.collapse-empty-row .control-width-15 .label-wrap>* {
+			margin-bottom: 0.5em;
+		}
+	}
+
+	.center-panel-content {
+		margin-left: 0;
+	}
+
+	.custom-filter-button-container .t-btn-image {
+		margin-left: 0;
+	}
+
+	body[OldUI=false] {
+		div.center-panel-content {
+			>.schema-wrap.one-el .card-content-container {
+				padding-right: 0;
+			}
+		}
+
+		.center-panel {
+			&.opened-right-panel {
+				.schema-wrap {
+					&.two-el {
+						.combined-action-buttons-card-container-wrapClass {
+							right: 0;
+							left: 305px;
+							padding-left: 20px;
+							padding-right: 0;
+							margin-right: -33px;
+						}
+					}
+
+					&.one-el {
+						.combined-action-buttons-container-wrapClass {
+							margin-right: 0;
+						}
+					}
+				}
+			}
+
+			.default-center-panel-content {
+				.schema-wrap.two-el {
+					.combined-action-buttons-card-container-wrapClass {
+						left: 305px;
+						right: -37px;
+						padding-left: 20px;
+						padding-right: 0;
+					}
+				}
+			}
+
+			.schema-wrap {
+				.section-wrap {
+
+					.action-buttons-container-wrapClass,
+					.utils-container-wrapClass,
+					.section-header-container-wrapClass {
+						padding-left: 20px;
+						padding-right: 0.6em;
+					}
+				}
+
+				&.one-el {
+					.toggle-section-button>span {
+						-moz-transform: scaleX(-1);
+						-ms-transform: scaleX(-1);
+						-webkit-transform: scaleX(-1);
+						-o-transform: scaleX(-1);
+						transform: scaleX(-1);
+						background-position: center;
+					}
+				}
+
+				&.two-el {
+					.action-buttons-container-wrapClass {
+						padding-left: 0;
+					}
+
+					.toggle-section-button>span {
+						-moz-transform: scaleX(1);
+						-ms-transform: scaleX(1);
+						-webkit-transform: scaleX(1);
+						-o-transform: scaleX(1);
+						transform: scaleX(1);
+						background-position: -2px center;
+					}
+
+					.card-content-container {
+						padding-left: 0.6em;
+						padding-right: 0;
+					}
+
+					.section-wrap {
+						.combined-action-buttons-section-container-wrapClass {
+							border-left: none;
+							width: 298px;
+
+							.t-btn-wrapper {
+								margin-left: 20px;
+							}
+						}
+					}
+				}
+			}
+
+			.card-content-container {
+				right: 3em;
+
+				.left-modules-container>* {
+					margin-left: 0;
+					margin-right: 0.6em;
+				}
+			}
+		}
+	}
+}
+
+#LookupEditPageHeaderGridLayout {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 20px;
+	margin-top: 35px;
+	border: 0;
+}
+
+#LookupEditPageHeaderGridLayout.grid-layout.ts-box-sizing.collapse-empty-row {
+	margin-top: 0;
+}
+
+#CardContentWrapper {
+	margin-left: 0;
+	background-color: transparent;
+}
+
+#centerPanel {
+	div[class*='schema-wrap one-el']{
+		div[class*='grid-layout ts-box-sizing widget-designer-container']{
+			z-index: 1;
+		}
+	}
+
+	#CardContentWrapper {
+		#CardContentContainer,
+		#LeftModulesContainer {
+			margin-top: 2.3em;
+
+			&.UserPageV2 {
+				margin-top: 0;
+			}
+
+			#DcmActionsDashboardContainer {
+				margin-top: 0;
+			}
+			&.duplicates-card-content-container {
+				z-index: 0;
+				&.no-filters {
+					margin-top: 3.1em;
+				}
+			}
+
+			#SysMobileWorkplacePageHeaderGridLayout {
+				padding: 16px;
+			}
+			#SysMobileWorkplacePageTabsContainerContainer {
+				min-height: calc(100vh - 55em);
+				padding-left: 16px;
+				padding-right: 16px;
+			}
+		}
+	}
+
+	#SocialChannelPageV2Container {
+		#CardContentContainer {
+			margin-top: 3.3em;
+		}
+	}
+
+	.two-el {
+		#CardContentWrapper {
+
+			#CardContentContainer,
+			#LeftModulesContainer {
+				margin-top: 2.7em;
+				&.UserPageV2{
+					margin-top: 0;
+				}
+				#DcmActionsDashboardContainer {
+					margin-top: 0;
+				}
+			}
+		}
+		#SocialChannelPageV2Container {
+			#CardContentContainer {
+				margin-top: 3.7em;
+			}
+		}
+		.ssp-card #CardContentWrapper {
+			padding-top: 20px;
+
+			#CardContentContainer,
+			#LeftModulesContainer {
+				margin-top: 0;
+			}
+		}
+	}
+
+	#DesignedView {
+		#CardContentContainer,
+		#LeftModulesContainer {
+			margin-top: 0;
+		}
+	}
+}
+
+#PartnershipPageContactGeneralInfoControlGroupControlGroup-wrap {
+	padding: 2em 0;
+}
+
+#UserPageV2Container #CardContentWrapper {
+	display: flex;
+	flex-direction: column;
+}
+
+.blocked-user-container {
+	display: flex;
+	justify-content: space-between;
+	order: -1;
+	width: 100%;
+	background: #FFFFFF;
+	transform: translateY(20px);
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+	border-radius: 8px;
+	margin-top: 8px;
+	min-height: 56px;
+	padding: 18px;
+	.t-btn-image {
+		flex-shrink: 0;
+	}
+	.t-btn-wrapper {
+		padding: 0;
+	}
+	#UserPageV2UserUnblockButtonLeftSectionInfoCaptionContainer_Control {
+		display: none;
+	}
+}
+
+.blocked-user-left-container {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	.t-label {
+		padding: 0;
+		color: #252F40;
+	}
+	.control-width-15 {
+		display: flex;
+		align-items: center;
+	}
+}
+
+#LookupEditPageActionButtonsContainerContainer {
+	margin-top: -58px;
+	border-radius: 0 0 8px 8px;
+	padding-top: 10px;
+	border: 0;
+	display: flex;
+}
+
+#LookupEditPageRightContainerContainer {
+	margin-left: auto;
+}
+
+.grid-layout-row .ts-box-sizing label {
+	font-size: 14px;
+	color: #252F40;
+	line-height: 26px;
+	font-weight: 400;
+}
+
+#LookupEditPageDescriptionMemoEdit-scroll {
+	height: 28px !important;
+}
+
+
+#LookupEditPageDescriptionMemoEdit-el {
+	padding-top: 4px;
+}
+div[data-item-marker*='command-line']{
+	border: 1px solid #D8DBE2;
+	border-radius: 8px;
+	input{
+		color: #67748E;
+	}
+	&:hover{
+		border: 1px solid #67748E;
+	}
+	&.base-edit-focus {
+		border: 1px solid #67748E;
+		input{
+			color: #252F40;
+		}
+	}
+}
+
+#LookupEditPageDiscardChangesButtonButton-textEl {
+	color: #F9763D;
+	background-color: #fff !important;
+	border: 1px solid #F9763D;
+	border-radius: 8px;
+	min-height: 40px;
+	font-size: 1.6em;
+	text-transform: none;
+
+	.t-btn-menu {
+		.t-btn-marker {
+			border-top: 0.32em solid #F9763D;
+		}
+	}
+}
+
+#LookupEditPageRightContainerContainer {
+	span {
+		color: #67748E;
+		text-transform: none;
+		font-size: 14px;
+	}
+}
+
+#grid-LookupSectionDataGridGrid-wrap::before {
+	border-top: none;
+}
+
+
+.grid-row .grid-module {
+	a {
+		font-size: 16px;
+	}
+}
+
+#UserPageV2TabsContainerContainer {
+	#SysAdminUnitGrantedRightDetailV2DetailControlGroup-caption,
+	#SysAdminUnitIPRangeDetailV2DetailControlGroup-caption,
+	#UserPageV2SessionSettingsGroupControlGroup-caption,
+	#UserPageV2LicenseControlGroupControlGroup-caption,
+	#SysOrgRoleInUserDetailV2DetailControlGroup-caption,
+	#UserPageV2AuthControlGroupControlGroup-caption,
+	#SysFuncRoleInUserDetailV2DetailControlGroup-caption,
+	#SessionDetailV2DetailControlGroup-caption {
+			padding-left: 10px;
+	}
+
+	#UserPageV2TabsTabPanel-wrap {
+		margin-bottom: 23px;
+	}
+	.radio-button-container:first-of-type {
+		margin-left: 0;
+	}
+
+	.radio-button-container {
+		display: flex;
+		align-items: center;
+
+		label {
+			margin-top: 0;
+			padding-left: 0.5em;
+		}
+	}
+
+	.ts-controlgroup-caption-wrap {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		margin-bottom: 10px;
+	}
+
+	#UserPageV2LicenseControlGroupControlGroup-tools {
+		display: flex;
+		align-items: center;
+	}
+
+	.grid-listed-row {
+		padding: 8px 16px;
+	}
+
+	.grid.grid-listed.grid-listed-zebra .grid-listed-row.grid-active-selectable {
+		height: auto;
+	}
+}
+
+
+#SysFuncRoleInUserDetailV2DetailControlGroup-wrap {
+	margin-top: 15px;
+}
+
+#SysAdminUnitGrantedRightDetailV2AddRecordButtonButton-wrapperEl,
+#SysAdminUnitGrantedRightDetailV2GetRightsButtonButton-textEl,
+#SessionDetailV2EndTheSessionButtonButton-textEl {
+	margin-top: 0;
+	margin-right: 8px;
+}
+
+#SysAdminUnitGrantedRightDetailV2AddRecordButtonButton-wrapperEl,
+#SessionDetailV2EndTheSessionButtonButton-textEl {
+	margin-left: 0;
+}
+
+div#UserPageV2HeaderGridLayout-item-UserPageV2PhotoContainerContainer {
+	width: auto !important;
+	margin-right: 20px;
+}
+
+#UserPageV2ActiveContainer {
+	display: flex;
+	align-items: center;
+}
+
+#EmailMLangContentEditSchemaContentGridGroupControlGroup-wrap {
+	max-width: 100%;
+
+	.ts-controlgroup-caption-wrap {
+		display: grid;
+		grid-template-areas: "icon toggle edit";
+		grid-template-columns: 25px 1fr 1fr;
+		margin-bottom: 30px;
+	}
+
+	#EmailMLangContentEditSchemaContentGridGroupControlGroup-tools {
+		justify-content: flex-end;
+	}
+
+	#EmailMLangContentEditSchemaContentGridGroupControlGroup-caption {
+		grid-area: toggle;
+		height: auto;
+	}
+
+	#EmailMLangContentEditSchemaContentGridGroupControlGroup-wrap-marker {
+		grid-area: icon;
+		justify-content: flex-end;
+		padding-top: 3px;
+	}
+
+
+	.grid-layout-row {
+		max-width: 100%;
+	}
+}
+
+#ChatTemplateContentEditSchemaContentGridGroupControlGroup-wrap {
+	.ts-controlgroup-caption-wrap {
+		align-items: unset;
+	}
+
+	#ChatTemplateContentEditSchemaContentGridGroupControlGroup-wrap-marker {
+		flex: 0;
+		padding-top: 10px;
+		margin-top: 0;
+	}
+}
+
+#EmailTemplateSectionV2GridUtilsContainerContainer {
+	border: 0;
+}
+
+.ts-tabpanel-items>li {
+	padding: 0;
+	text-transform: none;
+	color: #67748E;
+}
+
+#GridSettingsPageContainer {
+	#GridSettingsPageActionButtonsContainerContainer {
+		&::before {
+			height: 1px;
+			position: absolute;
+			left: 25px;
+			right: 20px;
+			top: 4px;
+			content: '';
+			background-color: #D8DBE2;
+			z-index: 50;
+		}
+	}
+
+	#GridSettingsPageTypeSelectConfigContainerContainer {
+		align-items: end;
+
+		&::after {
+			color: #252F40;
+			font-size: 24px;
+			font-weight: 600;
+			line-height: 32px;
+			letter-spacing: -0.02em;
+			content: "Настройка списка";
+			margin-right: 20px;
+		}
+	}
+}
+
+#grid-TimeZoneLookupPageDataGridGrid-wrap {
+	.base-edit {
+		padding-bottom: 0;
+	}
+}
+
+#EmailTemplatePageMultilingualHeaderContainerContainer {
+	padding-top: 40px;
+}
+
+#EmailTemplatePageMultilingualHeaderGridLayout,
+#EmailTemplatePageMultilingualTabsContainerContainer {
+	border: 0;
+}
+
+.menu-wrap.profile-menu[data-item-marker="userProfileButton"] {
+	border-radius: 8px;
+	padding: 12px 4px;
+	.menu-item, .menu-separator.menu-separator-first {
+		padding: 0px 38px 0px 44px !important;
+		margin: 0 0 12px;
+	}
+
+	.menu-separator-first {
+		color: #252F40;
+	}
+
+		.menu-separator {
+			text-transform: uppercase;
+			line-height: 2.3em;
+			&-header {
+				padding: 6px 38px 6px 44px !important;
+				margin: 0 !important;
+				color: #252F40 !important;
+			}
+		}
+
+		.menu-item {
+			&-image {
+				width: 8px;
+				height: 8px;
+			}
+			&-image[id*="t-"] {
+				left: 20px;
+			}
+		}
+
+	.menu-item[id="profile-menu-item"], .menu-item[id="extended-user-profile-menu-item"], .menu-item[id="company-profile-menu-item"]{
+		.menu-item-image {
+			width: 24px;
+			height: 24px;
+			top: 16px;
+			left: 12px;
+			background-repeat: no-repeat;
+			background-position: center;
+		}
+	}
+}
+
+.ts-menu-color-picker-block,
+.ts-menu-color-picker-hue-line,
+.ts-menu-color-picker-preview {
+	border-radius: 8px;
+}
+
+crt-grid {
+	width: 99% !important;
+	padding: 16px;
+	.ng-star-inserted {
+	    padding: 0;
+		&.crt-button {
+			padding: 0 16px;
+		}
+	}
+
+	crt-expansion-panel.ng-star-inserted {
+		padding: 5px 16px;
+	}
+ }
+
+#SysAdminUnitFuncRolePageV2HeaderContainerContainer {
+	margin-top: 30px;
+}
+
+#SysAdminUnitPageV2TabsContainerContainer,
+#SysAdminUnitFuncRolePageV2TabsContainerContainer {
+	span[data-item-marker='AddRecordButton'] {
+		margin-top: 0;
+	}
+}
+
+#SysAdminUnitSectionV2CombinedModeActionButtonsContainerContainer {
+	background-color: #F5F7FB;
+
+	.combined-action-buttons-section-container-wrapClass {
+		background-color: #fff;
+		width: 511px !important;
+		border-right: @default-border;
+		padding-left: 20px;
+		padding-bottom: 10px;
+		margin-left: -30px;
+	}
+}
+
+#SysAdminUnitSectionV2CombinedModeAddButtonsButton-wrapperEl,
+#SysAdminUnitSectionV2CombinedModeCustomActionsButtonButton-wrapperEl,
+#SysAdminUnitSectionV2CombinedModeAddFuncRoleButton-textEl {
+	width: 100%;
+}
+
+span[data-item-marker='AddTypedRecordButton'],
+span[data-item-marker='AddRecordButton'],
+span[data-item-marker='AddRecordOnSsp'],
+span[data-item-marker='AddRecord'] {
+	span:first-of-type {
+		background-size: cover;
+	}
+}
+
+#AccountCommunicationDetailContainer {
+	.base-edit-clear-icon {
+		right: 20px;
+	}
+}
+
+.detail .ts-controlgroup-tools .social-networks-container .t-btn-wrapper.t-btn-no-text-padding.t-btn-full-image {
+	width: 24px;
+	height: 24px;
+}
+
+.ts-messagebox-border-style-blue {
+	border: none;
+	border-radius: 8px;
+}
+
+.visa-action .ts-inputbox-caption {
+		word-wrap: break-word;
+		width: 95%;
+}
+
+
+.t-btn-wrapper[data-item-marker="TagButton"],
+.t-btn-wrapper[data-item-marker="CombinedModeTagsButton"] {
+	.t-btn-text {
+		display: block;
+    	margin-left: 8px;
+    	padding-bottom: 5px;
+		color: #67748E;
+	}
+}
+
+#ActivitySectionV2addActionsButton-wrapperEl,
+#ActivityPageV2addActionsButton-wrapperEl {
+	justify-content: flex-start;
+
+	.t-btn-menu {
+		right: 0;
+		top: 5px;
+	}
+
+	.t-btn-image {
+		width: 24px;
+		height: 24px;
+		margin-top: 8px;
+		margin-left: 0;
+	}
+}
+
+#grid-SysOperationAuditSectionV2DataGridGrid-wrap,
+#grid-SysOperationAuditArchiveSectionV2DataGridGrid-wrap {
+	.grid-listed-row.grid-active-selectable.grid-row-selected,
+	.grid-row.grid-pad {
+		.grid-row-actions {
+			display: none;
+		}
+
+		&:after {
+			display: none;
+		}
+	}
+	.grid-listed-row.grid-active-selectable::after,
+	.grid-listed-row.grid-active-selectable.grid-row-selected::after{
+		content: none !important;
+	}
+}
+
+
+#autoGeneratedContainer .base-edit-disabled-el-icon {
+	right: 18px;
+	top: 8px;
+}
+
+#RateContainer .base-edit-disabled-el-icon {
+	background-color: white;
+}
+
+#ActivityPageV2HeaderContainerContainer {
+	.base-edit-disabled-el-icon{
+		right: 0px;
+	}
+  .timezone-button {
+    position: absolute;
+    right: -25px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+  }
+}
+
+
+.t-label-tip {
+	border: none;
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none'%3E%3Cg clip-path='url(%23a)'%3E%3Ccircle cx='8' cy='8' r='6.833' stroke='%23BABABA'/%3E%3Cpath fill='%23BABABA' d='M7.235 8.884c0-.28.077-.53.232-.751.154-.229.405-.483.753-.763.279-.228.495-.427.65-.597a.835.835 0 0 0 .243-.596.852.852 0 0 0-.29-.674c-.185-.177-.46-.265-.823-.265-.332 0-.603.088-.812.265-.2.17-.301.412-.301.729H5.333c0-.302.066-.586.197-.85.14-.273.325-.513.557-.719a2.69 2.69 0 0 1 .846-.486C7.258 4.059 7.613 4 8 4c.417 0 .788.055 1.113.166.332.103.615.25.846.442.232.191.406.416.522.674.124.258.186.538.186.84 0 .198-.02.379-.058.541a1.533 1.533 0 0 1-.197.464c-.085.147-.201.298-.348.453-.147.147-.325.31-.534.486a5.504 5.504 0 0 0-.417.376c-.1.096-.178.184-.232.265a.696.696 0 0 0-.116.398v.221h-1.53v-.442ZM8 12a.973.973 0 0 1-.696-.276.884.884 0 0 1-.29-.663c0-.273.097-.498.29-.674A.995.995 0 0 1 8 10.12c.27 0 .502.089.696.266.193.176.29.401.29.674a.884.884 0 0 1-.29.663A.973.973 0 0 1 8 12Z'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='a'%3E%3Cpath fill='%23fff' d='M0 0h16v16H0z'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
+	width: 16px;
+	height: 16px;
+	margin-left: 7px;
+	display: inline-block;
+	background-position: left center;
+	background-repeat: no-repeat;
+	flex-shrink: 0;
+	cursor: pointer;
+}
+
+#GridSettingsPageRootContentWrapperContainer {
+	margin-left: 0;
+}
+
+#SysWorkplacePageV2Container {
+	#CardContentContainer {
+		margin-top: 2.2em;
+	}
+}
+
+#SysWorkplacePageV2ActionButtonsContainerContainer {
+	margin-top: -5.7em;
+	height: auto;
+	padding-bottom: initial;
+}
+
+#SysWorkplacePageV2ActionButtonsContainerContainer::before {
+	content: '';
+	position: absolute;
+	background-color: #D8DBE2;
+	height: 1px;
+	width: 97.5%;
+	left: 16px;
+}
+
+#UsersSectionV2GridDataViewContainer {
+	background-color: #fff;
+	border-radius: 8px;
+
+
+	.grid-row.grid-module {
+		padding-left: 16px;
+	}
+
+	span[grid-data-type="text"] {
+		font-size: 14px;
+	}
+}
+
+#AccountPageV2AccountOwnerTipLabel-tip {
+	display: none;
+}
+
+#TranslationSectionCloseButtonButton-textEl {
+	padding: 8px 20px;
+	font-size: 1.6em;
+	min-height: 40px;
+}
+
+#SysAdminUnitSectionV2GridDataViewContainer,
+#SysAdminUnitSectionV2Container {
+	.grid-row-hidden {
+		display: none !important;
+	}
+}
+
+.t-btn-wrapper[data-item-marker="ProcessButton"] {
+	margin-top: 0;
+}
+
+.base-edit-voice-to-text {
+	width: 24px !important;
+	height: 24px !important;
+}
+
+#SocialChannelPageV2TabsTabPanel-wrap {
+	border-bottom: none;
+	padding: 0 16px;
+
+	#SocialChannelPageV2TabsTabPanel-items-wrap.ts-tabpanel-wrap {
+
+		border-bottom: 1px solid #D8DBE2;
+
+		#SocialChannelPageV2TabsTabPanel-scroll-left,
+		#SocialChannelPageV2TabsTabPanel-scroll-right,
+		&::before {
+			display: none;
+		}
+
+		.ts-tabpanel-items {
+			margin: 0;
+		}
+
+		.ts-tabpanel-items li:first-child {
+			margin-left: 0;
+		}
+
+		.ts-tabpanel-items>li {
+			font-style: normal;
+			font-weight: 400;
+			font-size: 14px;
+			text-transform: none;
+			line-height: 20px;
+			color: #252F40;
+		}
+	}
+
+}
+
+#CaseSectionActionsDashboardTabsTabPanel-wrap .ts-tabpanel-items li {
+	font-weight: bold;
+}
+
+#SocialChannelPageV2PublisherRightKindContainer {
+	.t-label {
+		padding-top: 0;
+		margin-top: 0;
+		font-style: normal;
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 20px;
+		color: #252F40;
+	}
+}
+
+#SocialChannelPageV2PublisherRightKindLabelLabel {
+	font-size: 14px;
+	line-height: 20px;
+	color: #252F40;
+	margin-bottom: 15px;
+}
+
+.menu-scroll-wrap.menu {
+	border-radius: 8px;
+}
+
+.menu-item:not(.menu-item-disabled) {
+	font-style: normal;
+	font-weight: 400;
+	color: #67748E;
+	cursor: pointer;
+
+	&.menu-item-selected {
+		background: #FFEFE9;
+		border-radius: 4px;
+		color: #252F40;
+	}
+}
+
+#EmployeePagePhotoContainerContainer {
+	width: 100% !important;
+	height: 160px;
+	border-radius: 8px;
+	overflow: hidden;
+	margin-bottom: 16px;
+
+	.ts-image-edit-wrap {
+		width: 256px !important;
+		height: 160px;
+
+		.ts-image-edit-full-size {
+			width: 256px !important;
+			height: 160px;
+
+			.ts-image-edit-inner-container {
+				width: 256px !important;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				background-color: #F6F6F6;
+				height: 160px;
+
+			}
+		}
+	}
+}
+
+@black: #252F40;
+@gray: #67748E;
+@orange: #F9763D;
+@table-gray: #D8DBE2;
+
+#ActionDashboardContainer {
+	#SectionActionsDashboardTabsTabPanel-tabpanel-items {
+		li:first-of-type {
+			font-family: "Golos Regular";
+			font-style: normal;
+			font-weight: 600;
+			text-transform: capitalize;
+			font-size: 18px;
+			line-height: 133%;
+			letter-spacing: -0.02em;
+			color: @black;
+		}
+	}
+}
+
+#EmployeePageTabsContainerContainer {
+
+	.t-btn-wrapper[data-item-marker="AddTypedRecordButton"],
+	.t-btn-wrapper[data-item-marker="AddRecordButton"] {
+		margin-top: 0;
+	}
+
+	#ContactCommunicationDetailDetailControlGroup-tools {
+		.wrapper-with-centered-right-menu {
+			margin-left: 0;
+		}
+	}
+
+	#BaseInfoTab {
+		padding-top: 15px;
+	}
+
+	.ts-controlgroup-caption-wrap {
+		margin-bottom: 20px;
+		height: 4em;
+	}
+
+	.ts-controlgroup-container .grid.grid-listed {
+		background: #FFFFFF;
+		border-radius: 8px;
+
+		.grid-captions {
+			background-color: @table-gray;
+			align-items: center;
+			min-height: 40px;
+
+			label {
+				color: @black;
+			}
+		}
+
+		.grid-listed-row {
+			padding-left: 16px;
+			padding-right: 16px;
+		}
+	}
+
+	.detail-type-btn-inner-user-class {
+		text-align: left;
+	}
+
+	.t-btn-wrapper.wrapper-with-centered-right-menu.t-btn-style-transparent.label-wrap.detail-type-btn-user-class {
+		padding-left: 0;
+	}
+
+	#DragAndDropContainer {
+		margin-left: 0;
+	}
+}
+
+#EmployeeProfile {
+
+	#EmployeeProfileSchemaBlankSlateHeaderLabel {
+		font-family: "Golos Regular";
+		font-style: normal;
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 143%;
+		letter-spacing: -0.02em;
+		color: @gray;
+		text-transform: capitalize;
+	}
+
+	span[data-item-marker="AddButton"],
+	span[data-item-marker="FindButton"] {
+		color: @orange;
+	}
+}
+
+#EmployeePageRightContainerContainer {
+    margin-top: 12px;
+
+	#EmployeePageViewOptionsButtonButton-textEl {
+		color: @gray;
+		font-size: 16px;
+	}
+
+	#t-btn-marker {
+		border-top-color: @gray;
+	}
+}
+
+#EmployeeSectionIsActiveCheckboxContainer_Control {
+	margin-left: 0;
+	margin-top: 0;
+	width: max-content;
+	padding-right: 0;
+
+	.t-checkboxedit-wrap {
+		margin-top: 0 !important;
+	}
+}
+
+#EmployeeSectionIsActiveCheckboxContainer {
+	display: flex;
+	flex-direction: row-reverse;
+	align-items: center;
+
+	#EmployeeSectionIsActiveCheckboxLabel {
+		padding-top: 0;
+	}
+}
+
+#EmployeeSectionIsActiveFiltersContainerContainer {
+	margin-right: 15px;
+	padding-left: 4px;
+}
+
+#GridSettingsPageDataGridWrapperContainer,
+#QueuePageGridSettingsPageDataGridWrapperContainer {
+	padding: 16px;
+	.fixed-captions-wrap {
+		height: 52px;
+	}
+
+	.fixed-header {
+		background: #D8DBE2;
+		border-radius: 8px 8px 0px 0px;
+		height: 52px;
+
+		&>div {
+			padding-left: 0;
+
+			label {
+				font-style: normal;
+				font-weight: 400;
+				font-size: 14px;
+				line-height: 20px;
+				color: #252F40;
+				padding-left: 8px;
+				border-left: 1px solid #67748E;
+			}
+		}
+		&>div:first-child {
+
+			label {
+				border-left: 0;
+			}
+		}
+	}
+
+	.grid-content {
+		&>div {
+			padding-left: 16px;
+		}
+	}
+
+	.grid-scroll {
+		margin-top: 15px;
+	}
+}
+
+#GridSettingsPageDataContainerContainer,
+#QueuePageGridSettingsPageDataContainerContainer {
+	padding: 20px 0;
+
+	#GridSettingsPagePreviewCaptionLabel,
+	#QueuePageGridSettingsPagePreviewCaptionLabel {
+		width: fit-content;
+		margin-bottom: 6px;
+		padding-left: 16px;
+	}
+}
+
+#grid-GridSettingsPageDataGridGrid-wrap,
+#grid-QueuePageGridSettingsPageDataGridGrid-wrap {
+	width: 100%;
+}
+
+#GridSettingsPageColumnsDesignContainerContainer,
+#QueuePageGridSettingsPageColumnsDesignContainerContainer {
+	.grid-layout-table-edit-item-content-text-wrap {
+		font-style: normal;
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 20px;
+		color: #252F40;
+	}
+
+	.grid-layout-table-edit-item-wrap {
+		border-radius: 8px;
+	}
+
+	.grid-layout-table-edit-grid-cell {
+		border-radius: 8px;
+	}
+
+	#columnsSettings-grid-layout-table-edit-wrapper[current-state="transforming"] {
+		.grid-layout-table-edit-grid-cell {
+			border-color: #D8DBE2;
+		}
+	}
+}
+
+#GridSettingsPageRootDesignContainerContainer,
+#QueuePageGridSettingsPageRootDesignContainerContainer {
+
+	#GridSettingsPageTiledConfigButtonButton-textEl,
+	#GridSettingsPageListedConfigButtonButton-textEl,
+	#QueuePageGridSettingsPageTiledConfigButtonButton-textEl,
+	#QueuePageGridSettingsPageListedConfigButtonButton-textEl {
+		color: rgba(0, 0, 0, 0);
+	}
+}
+
+#TabsTabPanel-wrap[data-item-marker="mainDashboardPage"] {
+
+	#TabsTabPanel-tabpanel-items {
+		display: flex;
+
+		li {
+			display: flex;
+			flex-direction: row;
+			flex-shrink: 0;
+			font-family: "Golos Regular";
+			color: #67748E;
+			font-size: 14px;
+			line-height: 20px;
+			height: auto;
+			letter-spacing: -0.02em;
+			&.ts-tabpanel-active-item {
+				border-bottom: none !important;
+				color: #252F40;
+			}
+		}
+	}
+}
+
+#EmailPageV2Container {
+	[data-item-marker="actions"] {
+		border: none;
+	}
+	#EmailEntityConnectionsDetailV2CommunicationsContainerContainerList {
+		display: flex;
+		flex-wrap: wrap;
+		column-gap: 96px;
+		> div {
+			flex: 1 1 46%;
+			.control-width-15 {
+				display: flex;
+				flex-direction: column;
+
+			}
+		}
+	}
+	#EmailPageV2ActionButtonsContainerContainer {
+		#EmailPageV2LeftContainerContainer {
+			display: flex;
+			align-items: center;
+		}
+
+		#EmailPageV2RightContainerContainer {
+			margin-top: 18px;
+			margin-left: 0;
+			#EmailPageV2ViewOptionsButtonButton-wrapperEl {
+			    padding-left: 0;
+			}
+		}
+
+	}
+
+	#EmailPageV2TabsContainerContainer {
+		color: #67748E;
+
+		#EmailPageV2TabsTabPanel-wrap {
+			*[id^="EmailPageV2TabsTabPanel-scroll-"] {
+				display: none;
+			}
+		}
+
+		#EmailPageV2EmailPageMessageTabContainerContainer {
+			.html-editor {
+				.html-edit-toolbar {
+					.base-edit-with-right-icon.base-edit-focus {
+						border: none;
+					}
+
+					.t-btn-wrapper {
+						.t-btn-image {
+							width: 24px;
+							height: 24px;
+							background-size: 24px 24px;
+						}
+					}
+
+					#html-edit-toolbar-font-family,
+					#html-edit-toolbar-font-size {
+						padding-top: 10px;
+					}
+				}
+			}
+		}
+	}
+}
+
+.opened-right-panel #EmailPageV2ActionButtonsContainerContainer {
+	@media (max-width: 1439px) {
+		width: 100%;
+		min-width: auto;
+		margin-right: 64px;
+	}
+}
+
+#grid-AccountSectionV2DataGridGrid-wrap,
+#grid-WebServiceV2SectionDataGridGrid-wrap,
+#grid-MLModelSectionDataGridGrid-wrap,
+#grid-EmailTemplateSectionV2DataGridGrid-wrap,
+#grid-SysSettingsSectionDataGridGrid-wrap {
+	border-radius: 8px;
+	background-color: white;
+
+	.grid-row-selected:first-of-type {
+		border-top-left-radius: 8px;
+		border-top-right-radius: 8px;
+	}
+
+	&.grid-empty {
+		background-color: #f5f7fb !important;
+	}
+}
+
+#UserPageV2Container {
+	.detail .ts-controlgroup-tools .t-btn-wrapper[data-item-marker="AddRecordButton"]:not(.padding-left-34px) {
+		margin-top: 0;
+	}
+}
+
+#CalendarLookupSectionSeparateModeActionButtonsLeftContainerContainer {
+	display: flex;
+}
+
+#CalendarLookupSectionSeparateModeActionsButtonButton-wrapperEl {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding-top: 4px;
+}
+
+#CalendarLookupSectionSeparateModeActionsButtonButton-markerEl {
+	border-top: 0.32em solid #F9763D !important;
+}
+
+#CompletenessParameterDetailV2TotalValueLabel {
+	position: relative;
+	top: 0;
+}
+
+#schema-designer-caption-el {
+	height: 100%;
+	font-size: 20px;
+	background-color: transparent;
+}
+
+.t-label.filter-caption {
+	padding: 8px 0 0 16px;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 20px;
+	color: #252F40;
+}
+
+#ProcessMappingPageContainer {
+	#DcmParameterSelectionPageModalBoxCaptionLabel {
+		font-family: "Golos Regular";
+		font-style: normal;
+		font-weight: 400;
+		font-size: 20px;
+		line-height: 140%;
+		letter-spacing: -0.02em;
+		color: #252F40;
+	}
+
+	#DcmParameterSelectionPageutils-area-editPageContainer {
+		display: flex;
+
+		span {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			min-height: 40px;
+		}
+	}
+
+	#DcmElementParametersMappingPageleft-grid-containerContainer {
+		width: 100% !important;
+
+		label.t-label {
+			position: absolute;
+			text-align: center;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+	}
+
+	#DcmElementParametersMappingPageElementsGridSearchTextSearchEdit-wrap {
+		border-radius: 8px;
+		border: 1px solid #67748E;
+		border-width: 1px 1px 1px 1px !important;
+
+		input,
+		input.base-edit-focus {
+			font-family: "Golos Regular";
+			font-style: normal;
+			font-weight: 400;
+			font-size: 14px;
+			line-height: 143%;
+			letter-spacing: -0.02em;
+			color: #67748E;
+		}
+
+		#DcmElementParametersMappingPageElementsGridSearchTextSearchEdit-right-icon-wrapper {
+			transform: translateX(-50%);
+		}
+	}
+}
+
+#SysAdminUnitIPRangeDetailV2DetailControlGroup-tools {
+	margin-right: 8px;
+}
+
+
+#UserPageV2SessionSettingsGroupControlGroup-wrap-marker,
+#SessionDetailV2DetailControlGroup-wrap-marker,
+#SysAdminUnitGrantedRightDetailV2DetailControlGroup-wrap-marker,
+#AccountOrganizationChartDetailV2DetailControlGroup-wrap-marker,
+#AccountContactsDetailV2DetailControlGroup-wrap-marker,
+#PortalUserInOrganizationDetailDetailControlGroup-wrap-marker {
+	margin-right: 2px;
+	margin-top: 0 !important;
+}
+#SysAdminUnitIPRangeDetailV2DetailControlGroup-wrap-marker{
+	margin-top: 0;
+}
+
+#UsersDetailV2DetailControlGroup-wrap-marker,
+#OrganizationDetailDetailControlGroup-wrap-marker {
+	margin-right: 4px;
+}
+
+#SessionDetailV2DetailControlGroup-tools,
+#SysAdminUnitIPRangeDetailV2DetailControlGroup-tools,
+#SysAdminUnitGrantedRightDetailV2DetailControlGroup-tools,
+#AccountOrganizationChartDetailV2DetailControlGroup-tools,
+#AccountContactsDetailV2DetailControlGroup-tools,
+#PortalUserInOrganizationDetailDetailControlGroup-tools,
+#UsersDetailV2DetailControlGroup-tools {
+	span[data-item-marker="ToolsButton"] {
+		display: flex;
+		align-items: center;
+
+		.t-btn-image {
+			margin-top: 0 !important;
+		}
+	}
+}
+
+#AccountOrganizationChartDetailV2DetailControlGroup-caption,
+#AccountContactsDetailV2DetailControlGroup-caption {
+	padding-left: 0.75em;
+}
+
+#grid-ContactCareerDetailV2DataGridGrid-wrap,
+#grid-EmployeeCareerDetailDataGridGrid-wrap,
+#SysOrgRoleInUserDetailV2DetailControlGroup-wrap,
+#SysFuncRoleInUserDetailV2DetailControlGroup-wrap,
+#ContactAddressDetailV2DetailControlGroup-wrap,
+#ContactAnniversaryDetailV2DetailControlGroup-wrap {
+	.grid-listed-row {
+		height: auto !important;
+	}
+}
+
+#ContactSectionV2SeparateModeReportsButtonButton-textEl {
+	line-height: unset;
+}
+
+.menu-wrap {
+	#separator-beginprocess-menu-item-menu-separator {
+		display: none;
+	}
+
+	&[data-item-marker="NotificationCreateActivity"] {
+		& .menu-item:not(.menu-item-disabled) {
+			padding-left: 10px;
+		}
+	}
+	&.menu {
+		.menu-item {
+			display: flex;
+			align-items: center;
+			gap: 5px;
+		}
+	}
+}
+
+#ProductPageV2ActionButtonsContainerContainer {
+	display: flex;
+	justify-content: space-between;
+}
+
+#ProductPageV2ViewOptionsButtonButton-wrapperEl {
+	font-size: 14px;
+	text-transform: none;
+}
+
+#EmailPageV2HeaderGridLayout .grid-layout-row {
+	max-width: inherit;
+}
+
+#EmailPageV2SenderEnumComboBoxEdit-el::placeholder,
+#EmailPageV2RecepientTextEdit-el::placeholder,
+#EmailPageV2CopyRecepientTextEdit-el::placeholder,
+#EmailPageV2BlindCopyRecepientTextEdit-el::placeholder,
+#EmailPageV2TitleTextEdit-el::placeholder {
+	opacity: 1;
+	font-family: 'Golos Regular';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 20px;
+	letter-spacing: -0.02em;
+	color: #67748E;
+}
+
+#EmailPageV2ToggleHeaderContainerContainer {
+	float:right;
+}
+
+#EmailPageV2ToggleCopyRecipientVisibleButton-textEl,
+#EmailPageV2ToggleBlindCopyRecipientVisibleButton-textEl {
+	padding-right: 0px;
+}
+
+#EmailPageV2RecepientContainer {
+	margin-bottom: 0px;
+}
+
+//
+//#EmailPageV2RecepientTextEdit-right-icon {
+//	display: block;
+//}
+
+
+.run-process-wrapClass {
+	float: left;
+	margin-right: 16px;
+
+	.proc-btn-img {
+		margin-top: 0px;
+	}
+
+	.t-btn-menu .t-btn-marker {
+		border-top: 4px solid #F9763D;
+	}
+}
+
+span[data-item-marker="SetupTracking"],
+span[data-item-marker="ShowJsCode"] {
+	color: #F9763D;
+	border-radius: 8px;
+	text-transform: none;
+	font-size: 16px;
+	min-height: 40px;
+	border: 1px solid #F9763D
+}
+
+#SiteEventTypeSectionSeparateModeActionButtonsRightContainerContainer {
+	#SiteEventTypeSectionSeparateModeViewOptionsButtonButton-wrapperEl {
+		min-height: auto;
+	}
+}
+
+#SiteEventTypePageIsActiveContainer {
+	display: flex !important;
+	align-items: center !important;
+}
+
+#SiteEventTypePageNameTextEdit-wrap {
+	input#SiteEventTypePageNameTextEdit-el {
+		font-style: normal;
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 143%;
+		letter-spacing: -0.02em;
+		color: #252F40;
+	}
+}
+
+.ts-modalbox.ts-modalbox-center-position {
+
+	.setuptracking-merge-container,
+	.tracking-merge-container {
+		.header#HeaderContainerContainer {
+			#HeaderLabelLabel {
+				font-family: "Golos Regular";
+				font-style: normal;
+				font-weight: 400;
+				font-size: 20px;
+				line-height: 28px;
+				letter-spacing: -0.02em;
+				color: #252F40;
+			}
+		}
+
+		#ContentContainerContainer {
+			#ApiKeyEditTextEdit-wrap.base-edit-focus {
+				border-width: 0 0 1px 0;
+			}
+
+			.control-wrap#ControlContainerContainer {
+				margin-left: 0;
+			}
+
+			#DescriptionLabelLabel_label.multiline-label.description-label {
+				padding-top: 10px;
+				width: 95%;
+			}
+		}
+
+		#ContentContainerContainer.content {
+			border-radius: 8px;
+			width: 370px !important;
+			padding-top: 10px !important;
+		}
+
+		#FooterContainerContainer {
+			span#CancelButtonButton-textEl {
+				margin-top: 0;
+			}
+		}
+	}
+}
+
+#WordPrintablePageAddTablePartButton-wrapperEl{
+	padding-left: 1.43em !important;
+}
+
+#WordPrintablePageAddTablePartButton-imageEl{
+	left: -0.14em;
+	width: 24px;
+    height: 24px;
+}
+
+#ChangePageContainer {
+	.left-container-wrapClass {
+		display: flex;
+	}
+
+	.grid-layout.ts-box-sizing.collapse-empty-row {
+		padding: 16px;
+	}
+
+	.ts-tabpanel.ts-tabpanel-scroll-visible.tab-panel-margin-bottom {
+		margin-bottom: 32px;
+	}
+
+	.control-wrap {
+		width: 100%;
+
+		#ScheduledClosureDateDateTimeContainer {
+			display: flex;
+
+			.base-edit.ts-box-sizing.base-edit-with-right-icon {
+				&.date-edit.datetime-datecontrol {
+					flex: 50%;
+				}
+
+				&.time-edit.datetime-timecontrol {
+					flex: 50%;
+				}
+			}
+		}
+
+		#ClosureDateDateTimeContainer {
+			display: flex;
+
+			.base-edit.ts-box-sizing.base-edit-with-right-icon {
+				&.date-edit.datetime-datecontrol {
+					flex: 50%;
+				}
+
+				&.time-edit.datetime-timecontrol {
+					flex: 50%;
+				}
+			}
+		}
+	}
+
+	.schema-wrap.one-el {
+		.ts-controlgroup.detail.grid-detail {
+			padding-bottom: 32px;
+		}
+	}
+
+	.grid.grid-listed.grid-listed-zebra {
+
+		.grid-cols-8,
+		.grid-cols-4,
+		.grid-cols-2 {
+			margin-left: 8px;
+		}
+	}
+
+	#ConfItemInChangeDetailDetailControlGroup-tools {
+		.t-btn-wrapper.t-btn-no-text-padding.t-btn-style-transparent {
+			margin-top: 3px;
+		}
+
+		.t-btn-wrapper {
+			margin-top: 2px;
+		}
+	}
+
+	#ServiceItemInChangeDetailDetailControlGroup-tools {
+		.t-btn-wrapper.t-btn-no-text-padding.t-btn-style-transparent {
+			margin-top: 3px;
+		}
+
+		.t-btn-wrapper {
+			margin-top: 3px;
+		}
+	}
+
+	#CaseChangeDetailDetailControlGroup-tools {
+		.t-btn-wrapper.t-btn-no-text-padding.t-btn-style-transparent {
+			margin-top: 2px;
+		}
+
+		.t-btn-wrapper {
+			margin-top: 2px;
+		}
+	}
+
+	#ProblemChangeDetailDetailControlGroup-tools {
+		.t-btn-wrapper.t-btn-no-text-padding.t-btn-style-transparent {
+			margin-top: 4px;
+		}
+
+		.t-btn-wrapper {
+			margin-top: 3px;
+		}
+	}
+
+	#ActivityChangeDetailDetailControlGroup-tools {
+		.t-btn-wrapper.t-btn-no-text-padding.t-btn-style-transparent {
+			margin-top: 3px;
+		}
+
+		.t-btn-wrapper {
+			margin-top: 2px;
+		}
+	}
+
+	#EmailDetailV2DetailControlGroup-tools {
+		.t-btn-wrapper.t-btn-no-text-padding.t-btn-style-transparent {
+			margin-top: 2px;
+		}
+
+		.t-btn-wrapper {
+			margin-top: 2px;
+		}
+	}
+
+	#ChangePageFilesContainer {
+		.ts-controlgroup-tools.ts-box-sizing {
+			margin-left: 6px;
+		}
+	}
+}
+
+#UserPageV2Container {
+	#UserPageV2HeaderGridLayout-item-UserPageV2PhotoContainerContainer,
+	#UserPageV2PhotoContainerContainer,
+	div#UserPageV2HeaderGridLayout-item-UserPageV2PhotoContainerContainer,
+	.image-edit-container .ts-image-edit-inner-container {
+		width: 72px;
+		height: 72px;
+		overflow: hidden;
+	}
+
+	.ts-image-edit-inner-container {
+		background-color: @background-color;
+		border-radius: 50%;
+	}
+
+	.ts-image-edit-full-size-element.ts-image-style-rectangular {
+		width: 60px;
+		height: 60px;
+	}
+
+	.image-edit-container .ts-image-edit-wrap {
+		min-width: 72px;
+		max-width: 72px;
+		min-height: 72px;
+		max-height: 72px;
+	}
+}
+
+#UserPageV2LeftContainerContainer {
+	position: relative;
+	right: 4px;
+}
+
+#UserPageV2ContactContainer,
+#UserPageV2UserConnectionTypeContainer,
+#UserPageV2SysCultureContainer,
+#UserPageV2HomePageContainer,
+#UserPageV2DateTimeFormatContainer,
+#UserPageV2OrganizationContainer,
+#UserPageV2RadioGroupContainer {
+	display: flex;
+	flex-direction: column;
+}
+
+#UserPageV2NameContainer,
+#UserPageV2EmailContainer,
+#UserPageV2UserPasswordContainer,
+#UserPageV2PasswordConfirmationContainer,
+#UserPageV2PasswordExpireDateContainer {
+	display: flex;
+	flex-direction: column;
+}
+
+#UserPageV2AuthLDAPContainer {
+	margin-left: 0;
+}
+
+#UserPageV2RadioGroupContainer {
+	margin-bottom: @actions-buttons-margin-bottom;
+}
+
+#PreviewContentBuilderHeaderContainer {
+	min-height: 64px;
+	display: flex;
+	align-items: center;
+}
+
+#PreviewContentBuilderHeaderButtonsContainer {
+	align-self: flex-end;
+}
+
+#PreviewContentBuilder-preview-content-builder {
+	#centerContainer {
+		margin-top: 64px;
+	}
+}
+
+#ContractPageV2TabsContainerContainer {
+	.ts-tabpanel-active-item::after {
+		display: none;
+	}
+}
+
+#ContractPageV2CustomerBillingInfoTipLabel-tip,
+#ContractPageV2SupplierBillingInfoTipLabel-tip,
+#ContractPageV2ParentTipLabel-tip,
+#ContractPageV2OrderTipLabel-tip {
+	margin-left: 2px;
+}
+
+#ContractSectionV2AnalyticsDataViewContainer, #DocumentSectionV2AnalyticsDataViewContainer {
+	background-color: #fff;
+	border-radius: 8px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+#OrderPageV2ClientContainer {
+	flex-direction: column;
+	gap: 5px;
+}
+
+#OrderPageV2AmountContainer {
+	flex-direction: column;
+	gap: 5px;
+	margin: 0;
+}
+
+#OrderPageV2StatusContainer {
+	flex-direction: column;
+	gap: 5px;
+}
+
+#OrderPageV2PaymentAmountContainer {
+	flex-direction: column;
+	gap: 5px;
+	margin: 0;
+	position: relative;
+}
+
+#OrderPageV2ClientContainer_Label {
+	min-height: 33px;
+}
+
+#OrderPageV2StatusContainer_Label {
+	min-height: 33px;
+}
+
+#OrderPageV2AmountContainer_Label {
+	min-height: 33px;
+}
+
+#OrderPageV2PaymentAmountContainer_Label {
+	min-height: 33px;
+}
+
+
+#view-button-BasketDataView-imageEl,
+
+#view-button-GridDataView-imageEl {
+	width: 24px;
+	height: 24px;
+}
+
+#view-button-AnalyticsDataView-imageEl {
+	width: 24px;
+	height: 24px;
+	@media (any-hover: hover) {
+	  &:hover {
+		  background-position: top -24px right 0px;
+	 }
+	}
+}
+
+#grid-SupplyPaymentDetailV2DataGridGrid-wrap {
+	.grid-listed-row {
+		padding: 0 20px;
+	}
+}
+
+.menu-separator-header {
+	color: #67748E;
+}
+
+.menu-separator {
+	&-header {
+		padding-left: 0px;
+	}
+}
+
+#DownButtonButton-textEl,
+#UpButtonButton-textEl {
+	margin-top: 10px;
+	margin-right: 10px;
+}
+
+#quickFilterViewContainer_SectionModuleV2_DocumentSectionV2_QuickFilterModuleV2Container {
+	.t-label, .t-btn-text {
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 143% !important;
+		color: #252F40 !important;
+	}
+
+	.t-btn-text {
+		margin-top: 0;
+	}
+
+	span[data-item-marker="clearPeriodFilter"] {
+		.t-btn-image {
+			background-position: center center;
+		}
+	}
+
+	.t-btn-marker {
+		border-top-color: #67748E !important;
+	}
+
+	.t-label.tag-filters-add-button-text {
+		color: #67748E !important;
+	}
+
+	span[data-item-marker="filterButton"] {
+		.t-btn-text {
+			color: #67748E !important;
+		}
+	}
+}
+
+#DocumentSectionV2SeparateModeActionButtonsRightContainerContainer {
+	span#DocumentSectionV2SeparateModeViewOptionsButtonButton-wrapperEl {
+		padding-top: 0.3em;
+
+		span.t-btn-text {
+			min-height: auto;
+		}
+	}
+}
+
+.djs-palette {
+	right: calc(~"(100% - 356px) / 2");
+
+	.djs-palette-entries {
+		display: flex;
+		padding: 0 @djs-palette-space-size !important;
+
+		& > .group {
+			width: unset;
+
+			&[data-group="elements"] {
+				display: flex;
+				align-items: center;
+			}
+
+			&[data-group="subtools"] {
+				box-sizing: content-box;
+				width: @djs-palette-image-size;
+				border-right: 1px solid #D8DBE2;
+				padding: 0 @djs-palette-space-size !important;
+
+				& > *:not(:first-child) {
+					margin-top: @djs-palette-space-size;
+				}
+			}
+
+			div[data-action] {
+
+				img {
+					width: @djs-palette-image-size;
+					height: @djs-palette-image-size;
+				}
+			}
+
+			&[data-group="elements"] {
+				& > .entry {
+					margin-left: @djs-palette-space-size;
+				}
+			}
+
+			& > .entry {
+				&[data-action] {
+					transform: rotate(0deg);
+				}
+			}
+		}
+
+	}
+}
+
+.diagram-create-popup-menu {
+	z-index: 999999999 !important;
+}
+
+#ProjectPageV2Container {
+	.ts-controlgroup-caption-wrap {
+		margin-top: 10px;
+		margin-bottom: 20px;
+	}
+
+	#ProjectPageV2EmailDetailV2Container {
+		.ts-controlgroup-tools.ts-box-sizing {
+			.t-btn-wrapper.wrapper-with-centered-right-menu {
+				padding-top: 1px;
+			}
+		}
+	}
+
+	#NotesAndFilesTab {
+		.t-btn-wrapper.wrapper-with-centered-right-menu.t-btn-no-text-padding {
+			margin-left: 12px;
+		}
+	}
+
+	#GeneralInfoTab {
+		.ts-controlgroup.control-group-margin-bottom {
+			max-width: 100%;
+		}
+
+		.control-width-15.control-left,
+		.control-width-15.control-right {
+			margin-bottom: 0;
+		}
+
+		.grid-layout-row.ts-box-sizing {
+			margin-bottom: 30px;
+
+			&:nth-child(2) {
+				.grid-layout-column.ts-box-sizing {
+					&:nth-child(2) {
+						margin-bottom: 10px;
+					}
+				}
+			}
+
+			.control-width-15.checkbox-control-item.control-left {
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+			}
+
+			&:nth-child(4) {
+				.grid-layout-column.ts-box-sizing {
+					>.control-width-15.control-left {
+						margin-bottom: 10px;
+					}
+				}
+			}
+		}
+	}
+}
+
+#CampaignPageTabsContainerContainer {
+	.ts-tabpanel-active-item::after {
+		display: none;
+	}
+}
+
+#CampaignPageContainer {
+	.indicator-value {
+		top: 7px;
+	}
+}
+
+#OpportunityProductPageV2HeaderGridLayout {
+	#CustomCurrencyRevenueCurrencyControl-wrapperEl,
+	#CustomCurrencyCurrencyControl-wrapperEl {
+		padding: 0;
+		font-size: 12px;
+		color: #67748E;
+	}
+	#OpportunityProductPageV2CommentContainer_Label,
+	#OpportunityProductPageV2OfferResultContainer_Label {
+		height: 24px;
+	}
+}
+
+#ContactPageV2ContactGeneralInfoControlGroupControlGroup,
+#ContactPageV2ContactGeneralInfoBlockControlGroup {
+	padding-bottom: 0;
+}
+
+
+#CampaignPageCloseButtonButton-textEl {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#AddButtonButton-wrapperEl {
+	margin-right: 0;
+}
+
+#CampaignSectionV2AnalyticsDataViewContainer,
+#CampaignLogSectionV2AnalyticsDataViewContainer {
+	background-color: #fff;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+	border-radius: 8px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+#CampaignLogSectionV2GridDataViewContainer, #CyclicTasksPageContainer #VisitCategoryDetailContainer {
+	.grid.grid-listed {
+		.grid-listed-row {
+			&::after {
+				display: none;
+			}
+			.grid-row-actions {
+				display: none;
+			}
+		}
+	}
+}
+
+#LeadSectionV2SectionWrapContainerContainer,
+#EventSectionV2SectionWrapContainerContainer,
+#GeneratedWebFormSectionV2SectionWrapContainerContainer,
+#BulkEmailSectionV2SectionWrapContainerContainer,
+#MLModelSectionSectionWrapContainerContainer,
+#EmailTemplateSectionV2SectionWrapContainerContainer,
+#AccountSectionV2SectionWrapContainerContainer,
+#EmployeeSectionSectionWrapContainerContainer,
+#ContactSectionV2SectionWrapContainerContainer,
+#ImportEventAudienceSectionSectionWrapContainerContainer {
+	#DataViewsContainer {
+		border-radius: 8px;
+		padding-bottom: 16px;
+	}
+}
+
+#LeadManagementDistributionPageV2ShowTaskDetailsButtonButton-textEl {
+	left: 5px;
+}
+
+#ContextHelpProfileSchemaContextHelpDescriptionLabel {
+	position: relative;
+	border-left: none;
+	padding-left: 16px;
+	font-size: 14px;
+	line-height: 20px;
+	letter-spacing: -0.02em;
+	color: #252F40;
+	margin-top: 10px;
+	&::after {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 3px;
+		width: 4px;
+		height: 100%;
+		background: #F9763D;
+		border-radius: 2px;
+	}
+}
+
+#SupervisorSingleWindowPageV2FillingInfoTabGridLayoutGridLayout {
+	.radio-button-container {
+		display: flex;
+		align-items: center;
+		.t-label {
+			padding-top: 0;
+			margin-top: 0;
+		}
+	}
+}
+
+#QueueItemSectionContainer {
+	.fixed-filter-checkbox-container {
+		.t-checkboxedit-wrap {
+			margin-top: 0;
+		}
+	}
+}
+
+#selectionControlsContainerLookupPage {
+	.t-btn-wrapper.wrapper-with-centered-right-menu.t-btn-style-default.action-buttons {
+		.t-btn-text {
+			font-size: 14px;
+		}
+
+		.t-btn-menu {
+			margin-top: 9px;
+
+			.t-btn-marker {
+				left: 0px;
+    			border-top: 5px solid #e56229;
+			}
+		}
+	}
+}
+
+#SupervisorSingleWindowSectionV2CombinedModeActionButtonsContainerContainer {
+  display:flex;
+  align-items:center;
+	#SupervisorSingleWindowSectionV2CombinedModeActionButtonsCardRightContainerContainer  {
+		margin-top: 0;
+	}
+}
+
+#AccountPageV2TabsContainerContainer {
+	#ContactsAndStructureTabContainer {
+		margin-top: 32px;
+		> div {
+			margin-bottom: 15px;
+		}
+		.ts-controlgroup-caption-wrap span {
+			&:not(.t-btn-wrapper, .t-btn-image) {
+				padding-left: 8px;
+			}
+		}
+		
+		#AccountOrganizationChartDetailV2Container {
+			.grid-listed-row {
+				&::after {
+					display: none;
+				}
+			}
+		}
+	}
+	#PortalUserInOrganizationDetailDetailControlGroup-tools {
+		position: relative;
+		#PortalUserInOrganizationDetailCreateOrganizationButtonButton-textEl {
+			font-size: 14px;
+			font-weight: 400;
+			position: absolute;
+			color: #F9763D;
+			left: 300px;
+			top: 50%;
+			transform: translateY(-50%);
+			white-space: nowrap;
+		}
+	}
+}
+
+#CaseSectionLeftGridUtilsContainerContainer {
+	#fixedFilterOwnerContainer {
+		margin: 0;
+	}
+	.t-checkboxedit-wrap {
+		margin-top: 4px;
+	}
+}
+
+#DocumentPageV2HeaderContainerContainer {
+	.grid-layout {
+		.control-width-15 {
+			flex-direction: column;
+
+			label { margin-bottom: 0; }
+		}
+	}
+}
+
+#ContractPageV2TabsTabPanel-tabpanel-items {
+	margin: 0 8px;
+	.ts-tabpanel-active-item {
+		position: relative;
+		&::before {
+			display: block;
+			width: 100%;
+			top: auto;
+			bottom: 0;
+			height: 4px;
+			border-radius: 2px;
+		}
+	}
+}
+
+#ProjectSectionV2DataGridContainerContainer {
+	.grid-row-actions {
+		.t-btn-menuWrap, .t-btn-menu {
+			display: none;
+		}
+	}
+}
+
+#ChangePageDescriptionContainer_Control.control-wrap,#ChangePageDescriptionContainer_Label{
+	padding-left: 0 !important;
+}
+#ChangePageDescriptionContainer,
+#ProblemPageSymptomsContainer{
+	&_Control{
+		padding-left: 0 !important;
+	}
+}
+
+#ChangePageDescriptionContainer,
+#ProblemPageSymptomsContainer{
+	&_Label{
+		padding-left: 0 !important;
+	}
+}
+
+span.t-btn-style-default[data-item-marker="ProcessRunButton"] {
+	z-index: 10;
+	display: flex;
+    order: 1;
+    padding: 7px 35px 7px 19px;
+    border: 1px solid #f9763d;
+    margin-right: 8px;
+
+	.proc-btn-img {
+		margin-top: 0px;
+	}
+}
+
+span.t-btn-style-default[data-item-marker="ProcessButton"] {
+    padding: 7px 35px 7px 19px;
+    border: 1px solid #f9763d;
+
+	.proc-btn-img-top {
+		margin-top: 0px;
+	}
+}
+
+.separate-action-buttons-right-container-wrapClass {
+	order: 2;
+}
+
+#ChangePageDescriptionContainer,
+#ProblemPageSymptomsContainer{
+	&_Control{
+		padding-left: 0 !important;
+	}
+}
+
+#ChangePageDescriptionContainer,
+#ProblemPageSymptomsContainer{
+	&_Label{
+		padding-left: 0 !important;
+	}
+}
+
+#WorkPageV2Container {
+	#WorkPageV2NameContainer {
+		.label-wrap,
+		.control-wrap {
+			padding-left: 0;
+	    }
+	}
+	#WorkPageV2OwnerContainer {
+		top: 5px;
+	}
+	#WorkPageV2GeneralInfoBlockGridLayout-item-WorkPageV2IsAutoCalcCompletionContainer {
+		display: flex;
+	}
+	#WorkPageV2IsAutoCalcCompletionContainer {
+		flex-direction: row;
+		.control-wrap {
+			width: auto;
+		}
+		.label-wrap.checkbox-label-wrap {
+			padding-left: 0;
+		}
+		.t-label {
+			margin-bottom: 0;
+		}
+	}
+}
+
+#CashflowPageV2Container {
+    #CashflowPageV2CashflowPageGeneralTabContainerContainer {
+        padding: 0;
+    }
+}
+
+#ProblemPageNumberContainer_Label{
+	padding-left: 0 !important;
+}
+
+#ProblemPageTabsTabPanel-tabpanel-items{
+	margin: 0 16px;
+}
+
+.grid.grid-tiled {
+//не ставь сюда цвет
+
+
+	.grid-row.grid-pad {
+		padding-top: 16px;
+		padding-bottom: 16px;
+		[class*="grid-fixed-col"]{
+			margin-left:0px;
+		}
+		.grid-row.grid-module {
+			a {
+				color: #F9763D !important;
+			}
+		}
+		&.grid-row-selected .grid-row.grid-module:not(:last-child) {
+			padding-bottom: 32px;
+		}
+		&:not(.grid-row-selected) .grid-row.grid-module:not(:first-child) {
+			padding-top: 32px;
+		}
+		&:not(.grid-row-selected) .grid-fixed-col + .grid-row.grid-module {
+			padding-top: 0px;
+		}
+	}
+}
+
+#AccountOrganizationChartDetailV2DetailControlGroup-wrap {
+	#AccountOrganizationChartDetailV2DetailControlGroup {
+		.grid-row.grid-active-selectable.grid-row-selected,
+		.grid-row.grid-active-selectable {
+			border-radius: 8px;
+
+			.grid-fixed-col,
+			.grid-fixed-col-2 {
+				align-items: start;
+				padding-top: 20px;
+
+				.t-checkboxedit-wrap {
+					margin-right: 6px;
+				}
+			}
+			.grid-row.grid-module {
+				padding-top: 0;
+				padding-left: 32px;
+				padding-bottom: 6px;
+			}
+		}
+	}
+}
+
+#PlanningCardContainer {
+	#PlanningContactDetailV2DetailControlGroup-wrap {
+		.grid.grid-tiled {
+			.grid-row.grid-pad .grid-row.grid-module {
+				padding-top: 12px;
+			}
+			.grid-row.grid-pad.grid-row-selected .grid-row.grid-module {
+				&:not(:last-child) {
+					padding-top: 0;
+					padding-bottom: 12px;
+				}
+				&:last-child {
+					padding-top: 0;
+					padding-bottom: 0;
+				}
+			}
+		}
+	}
+}
+
+#ProductPageV2HeaderContainerContainer {
+	[data-item-marker="Header"] {
+		.grid-layout-row {
+			align-items: center;
+			column-gap: 24px;
+
+			.grid-layout-column {
+				&#ProductPageV2HeaderGridLayout-item-ProductPageV2PhotoContainerContainer {
+					margin-right: 0;
+					padding-bottom: 35px;
+					width: 136px!important;
+				}
+			}
+		}
+	}
+}
+
+#ServiceModelPageContainer {
+	#ActionsButtonContainer{
+		right: auto;
+		border-radius: 0 0 8px 8px;
+	}
+}
+
+#centerPanelContainer{
+	&.opened-right-panel{
+		#ServiceModelFilterContainer,#ServiceModelFilterContainer .extended-filter-button-container{
+			right: 440px;
+		}
+		@media screen and (max-width: 1366px) {
+			.card-content-container {
+				.center-main-container {
+					min-width: 37em;
+
+					.ts-tabpanel#CaseSectionActionsDashboardTabsTabPanel-wrap {
+						height: auto;
+						margin: -1.8em 0 0;
+
+						.ts-tabpanel-wrap {
+
+							&::after {
+								content: " ";
+								position: absolute;
+								inset: 42px 2px auto 2px;
+								width: 100%;
+								height: 1px;
+								background-color: #D8DBE2;
+							}
+
+							&::before {
+								inset: auto 270px 0 2px;
+							}
+
+							.ts-tabpanel-items {
+
+								&#CaseSectionActionsDashboardTabsTabPanel-tabpanel-items {
+									display: flex;
+									flex-wrap: wrap;
+									height: auto;
+
+									li {
+										min-height: 32px;
+										margin: 10px 10px 0;
+
+										&:first-child {
+											margin: 10px 20px 0 2px;
+										}
+
+										&:last-child {
+											margin-right: 8px;
+										}
+									}
+								}
+							}
+						}
+
+						.ts-tabpanel-collapse-button {
+							top: 51px;
+						}
+					}
+				}
+
+				.actions-dashboard-header#CaseSectionActionsDashboardHeaderContainerContainer {
+
+					.right-header-action-container {
+						top: 84px;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+.base-color-picker-menu {
+	display: flex;
+	flex-wrap: wrap;
+	border-radius: 8px;
+	border: none;
+	box-shadow: 0px 4px 12px rgba(3, 13, 45, 0.1);
+	z-index: 11000;
+	padding: 0 !important;
+}
+
+#BpCloudIntegrationPageV2DKIMFootnoteLabel {
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+#SendingDomainsDetailV2RefreshButtonButton-textEl, .cloudintegration-refresh-button {
+	border: 1px #f9763d solid;
+	color: #f9763d;
+	padding: 5px 10px;
+	margin-left: 15px;
+}
+
+#BpCloudIntegrationPageV2CloudConnectionUrlTipLabel-tip,
+#BpCloudIntegrationPageV2WebHooksTipLabel-tip,
+#BpCloudIntegrationPageV2SystemEmailTipLabel-tip {
+	right: 5em;
+}
+
+#BpCloudIntegrationPageV2ApiKeyTipLabel-tip,
+#BpCloudIntegrationPageV2AuthKeyTipLabel-tip {
+	right: 1.6em;
+}
+
+#grid-OrganizationalRolesGridId-wrap, #grid-SspSysAdminUnitSectionDataGridGrid-wrap {
+	.grid-listed-row.grid-active-selectable {
+		display: flex;
+		align-items: center;
+		min-height: unset;
+
+		div.grid-fixed-col {
+			display: flex;
+			align-items: center;
+			margin-top: 0 !important;
+			top: 50%;
+			min-height: unset;
+			transform: translateY(-50%);
+			height: max-content;
+
+
+			div.grid-listed-row-control {
+				margin-top: 0 !important;
+				min-width: 16px;
+			}
+		}
+	}
+}
+
+#MultiDeleteDependenciesSchemaContainer {
+	.grid-captions {
+		border-bottom: 1px solid #D8DBE2;
+		padding-left: 0;
+		height: 30px;
+	}
+
+	.grid-listed-row {
+		padding-left: 0;
+	}
+}
+
+#MultiDeleteDependenciesSchemaByConstraintDetailsContainerContainerList {
+	.grid.grid-listed {
+		padding-left: 0px;
+	}
+
+	.grid-listed-row:not(div[id^="foldersGrid-"]) {
+		min-height: 35px;
+	}
+}
+
+#MultiDeleteResultPageV2ByConstraintsContainerListContainerList {
+	.constraints-item-container.constraints-item-details-container {
+		padding-top: 0;
+	}
+
+	.grid-listed-row.grid-active-selectable.empty-actions {
+		.grid-cols-6[grid-cell-type="number"] {
+			display: flex;
+			justify-content: flex-end;
+			padding-right: 0;
+			width: 20px;
+			margin-right: 0;
+
+			span[grid-data-type="number"] {
+				margin-left: 0;
+			}
+		}
+	}
+}
+
+div#SysAdminUnitPageV2HeaderGridLayout {
+    margin-top: 20px;
+}
+
+body[OldUI=false] div.center-panel div.schema-wrap .section-wrap .content-container-wrapClass > .section.left-el {
+	top: 13.8em;
+}
+
+#SupplyPaymentTemplateSectionContainer {
+	#ContentContainer {
+		top: 0;
+	}
+}
+
+#grid-VwProcessLibSectionDataGridGrid-wrap [data-tag="executeProcess"] {
+	justify-content: stretch;
+}
+
+#BaseLookupConfigurationSectionContainer {
+	#FoldersAndDataViewContainer {
+		#BaseLookupConfigurationSectionDataGridContainerContainer {
+			min-height: auto;
+		}
+	}
+	.grid-listed-row.grid-active-selectable {
+		&::after {
+			display: none;
+		}
+	}
+}
+
+#SendingDomainsDetailV2DetailControlGroup {
+	.grid-captions,
+	.grid-listed-row {
+		.grid-cols-8 {
+			width: 50%;
+			&:nth-child(2) {
+				.gridHeaderSeparator {
+					display: none;
+				}
+			}
+			&:nth-child(3) {
+				display: none;
+			}
+		}
+	}
+	.grid-layout {
+		.grid-layout-row .grid-layout-column {
+			width: 50%!important;
+			&:nth-child(3) {
+				display: none;
+			}
+		}
+	}
+}
+
+#BulkEmailAudienceSectionDuplicateTypeSTDuplicateTypeNDComboBoxEdit-wrap {
+	padding-left: 0;
+
+	input {
+		background-color: transparent;
+		padding-bottom: 0;
+	}
+}
+
+#grid-ImportBulkEmailAudienceSectionDataGridGrid-wrap,
+#grid-BulkEmailAudienceSectionDataGridGrid-wrap {
+	.grid-captions {
+		#ImportBulkEmailAudienceSectionDataGridGrid-caption-0,
+		#BulkEmailAudienceSectionDataGridGrid-caption-0 {
+			padding-left: 36px;
+		}
+	}
+}
+
+.show-task-details-button {
+	padding: 0;
+}
+
+#EventPageV2Container {
+	#GeneralInfoTab {
+		#EventPageV2EventTeamContainer {
+			#EventTeamDetailV2DetailControlGroup-tools {
+				#EventTeamDetailV2FiltersContainerContainer {
+					order: 2;
+				}
+			}
+		}
+	}
+}
+
+#PortalPartnershipPageContainer {
+	#LeftModulesContainer {
+		#ProfileContainer {
+			#PortalPartnershipPageIsActiveContainer {
+				display: flex;
+				justify-content: flex-start;
+				#PortalPartnershipPageIsActiveContainer_Control {
+					width: auto;
+				}
+			}
+		}
+	}
+	#CardContentContainer {
+		#FileDetailV2Container {
+			#FileDetailV2DetailControlGroup {
+				#DragAndDropContainer {
+					[data-item-marker="DragAndDropFileOrLabel"] {
+						display: none;
+					}
+				}
+			}
+		}
+		#PortalPartnershipPageTabsContainerContainer {
+			.grid-fixed-col {
+				z-index: 29;
+			}
+		}
+	}
+}
+
+#FormSubmitGeneratedWebFormPageV2ControlGroupSubmitCodeControlGroup-wrap {
+	.base-edit,
+	.base-edit:hover {
+		.base-edit-voice-to-text-wrapper {
+			display: none;
+		}
+	}
+}
+
+[data-item-marker="WebHooks"] {
+	.tip-content {
+		word-break: break-word;
+	}
+}
+
+#UserQuestionProcessPageV2HeaderContainerContainer {
+	[data-item-marker="UserQuestionContentBlock"] {
+		.radio-button-container {
+			display: flex;
+			align-items: center;
+
+			.t-label {
+				padding-top: 0;
+				padding-bottom: 5px;
+			}
+		}
+	}
+}
+
+#ActivitySectionV2Container {
+	#FoldersAndDataViewContainer {
+		#DataViewsContainer {
+			background: transparent;
+			#ActivitySectionV2Scheduler-scheduler {
+				background-color: #ffffff;
+				border-radius: 8px;
+				padding-left: 30px;
+				margin-left: 0;
+			}
+			#ActivitySectionV2AnalyticsDataViewContainer {
+				border-radius: 8px;
+				overflow: hidden;
+			}
+		}
+	}
+}
+
+#PortalOrderPageOrderReceiverInformationResultsControlBlockControlGroup-wrap {
+	.base-edit .ts-box-sizing {
+		padding: 10px 0 10px 0;
+	}
+}
+
+#SearchAccountAndContactPageHeaderGridLayout {
+	.grid-layout-row {
+		#SearchAccountAndContactPageSearchResultContainerContainer,
+		#SearchAccountAndContactPageContactNameContainer {
+			padding-top: 32px;
+		}
+
+		[data-item-marker="SearchOption"],
+		[data-item-marker="SearchResult"] {
+			font-weight: 600;
+			line-height: 20px;
+			letter-spacing: -0.02em;
+		}
+	}
+}
+
+#EmployeePageContainer, #ContactPageV2Container, #SspProfileContactPageContainer {
+	.page-contact-communication-container {
+		.ts-controlgroup-container > div:not(:empty) {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			& > .detail-edit-container-user-class {
+				display: flex;
+				width: 45%;
+				.base-edit-with-clear-icon:not(.clear-icon-not-visible) {
+					.base-edit-input {
+						padding-right: 25px;
+						text-overflow: ellipsis;
+					}
+					&:hover {
+						.base-edit-input {
+							padding-right: 40px;
+						}
+					}
+				}
+				.base-edit-clear-icon {
+					right: 26px;
+					top: 0;
+				}
+				.detail-icon-type-btn-user-class {
+					position: absolute;
+					right: 0;
+					bottom: 10px;
+				}
+				.t-btn-wrapper.wrapper-with-centered-right-menu.label-wrap {
+					padding-left: 0;
+					order: 0;
+					overflow: visible;
+					width: fit-content;
+					.t-btn-menu {
+						top: 3px;
+						right: 27px;
+					}
+				}
+				.detail-edit-user-class.base-edit {
+					width: 100% !important;
+				}
+				.detail-type-btn-inner-user-class {
+					font-size: 12px;
+					line-height: 16px;
+					letter-spacing: -0.02em;
+					color: #67748E;
+				}
+			}
+		}
+	}
+}
+
+#EmailTemplatePageMultilingualTabsContainerContainer,
+#ChatTemplatePageTabsContainerContainer {
+	[data-item-marker="SettingsButton"] {
+		padding-right: 20px;
+
+		.t-btn-image {
+			width: 24px;
+			height: 24px;
+		}
+	}
+}
+
+.dcm-actions-dashboard-container #SectionActionsDashboardContentContainerContainer {
+	margin-top: 30px;
+}
+
+#CasePageContainer{
+	#ProfileContainer {
+		.predictable-icon {
+			margin-top: 0;
+		}
+	}
+	.card-content-container.page-with-left-el {
+		~* {
+			padding-top: 0;
+			&:before {
+				content: none;
+			}
+		}
+	}
+	#CasePageActionButtonsContainerContainer {
+		height: auto;
+		display: flex;
+		padding-bottom: 1em;
+		.t-btn-wrapper {
+			margin-bottom: 0.5em;
+		}
+	}
+}
+
+#OpportunityProductPageV2Container {
+	#OpportunityProductPageV2TabsContainerContainer {
+		display: none;
+	}
+}
+
+#OpportunitySectionV2Container {
+	.action-buttons-container-wrapClass {
+		.combined-action-buttons-card-left-container-wrapClass {
+			display: flex;
+		
+			[data-item-marker="DiscardChangesButton"], 
+			[data-item-marker="SaveButton"],
+			[data-item-marker="CloseButton"] {
+				order: 1;
+			}
+			[data-item-marker="CreateOrderFromOpportunityButton"] {
+				order: 2;
+			}
+			[data-item-marker="CombinedModeActionsButton"],
+			[data-item-marker="CombinedModeTagsButton"] {
+				order: 3;
+			}
+		}
+	}
+}
+#FieldForceActionsInRuleEditPageV2Container {
+	#FieldForceActionsInRuleEditPageV2RequireContainer{
+		padding: 15px 0 0 24px;
+		align-items: flex-start;
+		width: 171px;
+	}
+
+	.grid-listed-row {
+		&::after {
+			display: none;
+		}
+	}
+
+	.grid-layout-row.ts-box-sizing {
+		padding-right: 0;
+		.grid-layout-column.ts-box-sizing {
+			padding-right: 0;
+		}
+	}
+}
+
+#FieldForceRulesLookupEditPageV2TabsContainerContainer {
+	#FieldForceActionsInRuleDetailV2DetailControlGroup {
+		.grid-listed-row {
+			&::after {
+				display: none;
+			}
+		}
+	}
+}
+
+#SspSysAdminUnitPageContainer {
+	#SspSysAdminUnitPageGroupNameContainer {
+		display: flex;
+		margin-top: 20px;
+		.base-edit {
+			margin-top: 8px;
+		}
+		.control-wrap {
+			margin-left: 0;
+			padding-left: 0;
+		}
+	}
+}
+
+#FieldForceRulesLookupEditPageV2 {
+	&DurationLabelLabel {
+		position: absolute;
+		right: 26px;
+		bottom: 36px;
+	}
+	&VisitCountLabelLabel {
+		position: absolute;
+		right: 0;
+		bottom: 36px;
+	}
+	&DurationSTDurationNDTimeEdit-right-icon-wrapper {
+		top: 4px;
+	}
+}
+
+#RecommendationModuleContainer {
+	#displayingInformationContainer {
+		display: flex;
+
+		.recommendation {
+			width: auto;
+		}
+	}
+}
+
+#InvoicePageV2Container {
+	#RecommendationModuleContainer {
+		#displayingInformationContainer{
+			.recommendation {
+				max-width: none;
+			}
+		} 
+	} 
+} 
+
+#ProductTypeLookupPageV2Container {
+	#ProductTypeLookupPageV2DataGridContainerContainer {
+		height: auto;
+		#grid-ProductTypeLookupPageV2DataGridGrid-wrap {
+			padding-bottom: 50px;
+		}
+	}
+}
+
+#CallSectionV2CombinedModeActionButtonsSectionContainerContainer{
+	padding-bottom: 72px;
+}
+
+#ActivitySectionV2Scheduler-scroll-area::-webkit-scrollbar {
+	width: 4px;
+	height: 77px;
+}
+
+#SoapWebServiceV2PageViewOptionsButtonButton-wrapperEl {
+	display: none;
+}
+
+#AccountPageV2AnnualRevenueContainer {
+	.predictable-icon {
+		right: -32px;
+		top: 0;
+	}
+}
+
+#SpecificationInProductPageV2Container {
+	#SpecificationInProductPageV2BooleanValueContainer {
+		column-gap: 10px;
+	}
+}
+
+#TriggerEmailPageV2Container #TriggerEmailPageV2SettingsTabContainerContainer {
+	#TriggerEmailPageV2DomainsContainer #TriggerEmailPageV2DomainsTipLabel-wrap {
+		&::after {
+			display: none;
+		}
+	}
+}
+#centerPanelContainer #CompetitorProductPageContainer #CompetitorProductPageCompetitorProductPageGeneralTabContainerContainer {
+    padding-top: 0;
+}
+
+.angular-grid-layout-item {
+	height: 100%;
+	margin-bottom: 24px;
+}
+#TriggerEmailPageV2HeaderGridLayout-item-TriggerEmailPageV2StatusButtonInfoButton {
+	align-items: center;
+    display: flex;
+	.t-btn-wrapper {
+		margin-bottom: 0;
+	}
+}
+#FieldForceActionsInRuleEditPageV2KnowledgeBaseTabContainerContainer {
+	padding-left: 20px;
+	border-radius: 8px;
+}
+
+#ServicePactPageTabsContainerContainer {
+	.grid-row.grid-pad {
+		&::after {
+			display: none;
+		}
+	}
+}
+
+#ProjectSectionV2DataGridContainerContainer {
+	.wrapper-with-centered-right-menu {
+		.t-btn-text {
+			background-color: transparent;
+		}
+	}
+}
+
+#preview-content-iframe {
+	border-radius: 8px;
+}
+
+@media (max-width: 1730px) {
+	.center-panel-content {
+		#BulkEmailPageV2Container {
+			#BulkEmailPageV2ActionButtonsContainerContainer {
+				display: flex;
+				align-items: baseline;
+				height: auto;
+				padding-bottom: 8px;
+				#BulkEmailPageV2LeftContainerContainer {
+					flex-wrap: wrap;
+					display: flex;
+					row-gap: 5px;
+					#BulkEmailPageV2BulkEmailActionButtonsContainer {
+						display: flex;
+					}
+				}
+				#BulkEmailPageV2RightContainerContainer {
+					margin-left: 0;
+					margin-right: 0;
+					#BulkEmailPageV2ViewOptionsButtonButton-wrapperEl {
+						padding-left: 5px;
+					}
+				}
+			}
+			#CardContentContainer {
+				margin-top: 6.1em !important;
+			}
+		}
+	}
+}
+
+.center-panel.opened-right-panel {
+	#KnowledgeBaseSectionV2Container.schema-wrap.two-el {
+		min-width: auto;
+
+		.card-content-container {
+			min-width: 462px;
+		}
+	}
+}

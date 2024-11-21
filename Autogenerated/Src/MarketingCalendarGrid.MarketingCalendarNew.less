@@ -1,0 +1,122 @@
+﻿#grid-CalendarLeftGridId-wrap {
+    height: inherit;
+    min-height: calc(~"100vh - 274px");
+    border-radius: 8px;
+    overflow: hidden;
+    &:not(.grid-empty) {
+        background-color: #fff;    
+    }
+    .marketing-calendar-grid-captions {
+        height: 74px;
+        background-color: #D8DBE2;
+        display: flex;
+        align-items: center;
+        z-index: 1000;
+        padding: 2px 20px;
+        border-radius: 8px 8px 0 0;
+        :last-child {
+            padding-right: 0;
+            label {
+                margin-right: 0;
+            }
+        }
+
+        [class|="grid-cols"] {
+            display: flex;
+            float: none;
+            align-items: center;
+        }
+        label {
+            color: #252f40;
+        }
+        &::after {
+            display: none;
+        }
+    }
+    .grid-listed-row {
+        padding: 16px;
+        min-height: 72px;
+        align-items: flex-start;
+        &:last-of-type {
+            border-bottom: 1px solid #D8DBE2;
+            border-radius: initial;
+        }
+    }
+}
+
+.calendar-right-grid-container {
+    background-color: #fff;
+    min-height: calc(~"100vh - 274px");
+    border-radius: 8px;
+    .grid-layout-table-edit-columns-header {
+        height: 74px;
+    }
+    .grid-layout-table-edit-grid {
+        &::-webkit-scrollbar {
+            -webkit-appearance: none;
+            height: 4px;
+        }
+    }
+
+}
+
+.grid-layout-table-edit-columns-header-cell,
+.grid-layout-table-edit-grid-cell[id^="MarketingCalendarId"] {
+	height: 72px;
+}
+
+[class*='marketing-calendar-grid-cols-'] {
+    position: relative;
+    float: left;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0 10px 0 0;
+    height: 2.4em;
+    overflow: hidden;
+    word-wrap: break-word;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.grid.grid-listed [class*='marketing-calendar-grid-cols-'] {
+    line-height: 1.2em;
+}
+
+.grid-captions [class*='marketing-calendar-grid-cols-'] {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-wrap: normal;
+    line-height: normal;
+}
+
+.grid-row-actions-external [class*='marketing-calendar-grid-cols-'] {
+    min-height: 0;
+}
+
+[class*='marketing-calendar-grid-cols-'] span,
+[class*='marketing-calendar-grid-cols-'] img,
+[class*='marketing-calendar-grid-cols-'] label,
+[class*='marketing-calendar-grid-cols-'] div {
+	-webkit-user-select: text;
+	-moz-user-select: text;
+	-ms-user-select: text;
+	user-select: text;
+	display: inline-block;
+}
+
+.grid-row [class*='marketing-calendar-grid-cols-']:last-of-type {
+    padding-right: 0;
+}
+
+.grid-fixed-col + [class*='marketing-calendar-grid-cols-'] {
+    padding-left: 32px;
+}
+
+.grid-tiled .grid-fixed-col-2 + [class*='marketing-calendar-grid-cols-'] {
+    padding-left: 64px;
+}

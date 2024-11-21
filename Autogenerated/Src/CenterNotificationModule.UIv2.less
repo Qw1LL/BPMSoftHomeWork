@@ -1,0 +1,563 @@
+﻿@EmptyResultFontSize: 14px;
+@ActionsButtonBorder: #e1e8f2;
+@TextOrange: #F9763D;
+@TextGray: #999;;
+
+.communication-panel-item-container {
+	.control-wrap {
+		width: 100%;
+	}
+	.message-container {
+		height: auto;
+	}
+	.ctiPanelMain {
+		width: 336px;
+	}
+	.schema-wrap.one-el {
+		width: 338px;
+		::-webkit-scrollbar {
+			-webkit-appearance: none;
+			width: 4px;
+			height: 6px;
+		}
+		::-webkit-scrollbar-thumb {
+			background-color: #DBDBDB;
+		}
+		.ts-tabpanel-wrap {
+			transform: translateY(-5px);
+		}
+		>.ts-tabpanel.ts-imagetabpanel {
+			height: 58px;
+			padding-right: 0;
+			.ts-tabpanel-items {
+				width: inherit;
+				overflow: visible;
+				>li {
+					width: 52px;
+					height: 42px;
+					display: inline-block;
+					background-size: cover;
+					position: relative;
+					margin: 0 12px 0 0;
+					padding-bottom: 51px;
+					overflow: visible;
+					>span {
+						color: @TextOrange;
+						font-family: "Golos Regular";
+						font-style: normal;
+						font-size: 12px;
+						line-height: 10px;
+						letter-spacing: -0.02em;
+						position: absolute;
+						border-radius: 50%;
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						width: 16px;
+						height: 16px;
+						right: -2px;
+						top: 5px;
+
+						&:empty, &[value="&nbsp"] { display: none; }
+					}
+					&:first-child {
+						margin-left: 15px;
+					}
+					&.ts-tabpanel-active-item::after,
+					&.ts-imagetabpanel-required::after {
+						bottom: 0;
+						left: 0;
+						top: auto;
+					}
+				}
+				>.ts-imagetabpanel-required:after {
+					content: "";
+				}
+			}
+		}
+		>.ts-notifications-container {
+			overflow-y: auto;
+			overflow-x: hidden;
+			height: ~"calc(100% - 105px)";
+			width: 354px;
+			padding-right: 16px;
+
+			.ts-visamodule-container {
+				.show-only-my-approvals {
+					display: flex;
+					height: 100%;
+
+					.checkbox-label-wrap {
+						order: 2;
+						width: 100%;
+						max-width: 100%;
+						padding-left: 10px;
+						display: flex;
+
+						.t-label {
+							text-align: left;
+							align-self: flex-end;
+							padding-bottom: 5px;
+						}
+					}
+
+					.control-wrap {
+						flex-basis: 32px;
+						padding-left: 12px;
+						margin-left: initial;
+						align-self: flex-end;
+						padding-bottom: 8px;
+					}
+				}
+			}
+		}
+	}
+	.empty-grid-message {
+		display: block;
+		font-size: @EmptyResultFontSize;
+		color: #999999;
+		padding-top: 60px;
+		width: 100%;
+		margin-top: 0px;
+		overflow: auto;
+		>.image-container {
+			transform: translateX(-50%);
+			left: 50%;
+			width: 135px;
+			height: 139px;
+			margin: auto 37px 0 0;
+		}
+		>.title {
+			width: auto;
+			margin: 0 auto auto 12px;
+			padding: 0 20px;
+			font-size: @EmptyResultFontSize;
+			position: relative;
+			&::before {
+				content:'';
+				background: #F9763D;
+				border-radius: 2px;
+				height: 100%;
+				width: 4px;
+				position: absolute;
+				left: 0;
+				top: 0;
+			}
+			>.t-label {
+				font-size: @EmptyResultFontSize;
+				line-height: 20px;
+				color: #252F40;
+			}
+		}
+		>.description {
+			box-shadow: none;
+			border-left: 2px solid @TextOrange;
+			width: auto;
+			margin: 30px auto auto 50px;
+			padding: 15px 50px 15px 20px;
+			font-size: 18px;
+			>a {
+				cursor: pointer;
+				color: @TextOrange;
+			}
+		}
+	}
+}
+.ts-notifications-container, .ts-anniversarynotificationsmodule-container {
+	.button-caption-labelClass {
+		width: auto;
+		color: #999999;
+	}
+	.visaActionButtonWrap-class {
+		position: absolute;
+		right: -35px;
+	}
+	.notificationActionButtonWrap-class {
+		position: absolute;
+		left: 100%;
+		top: 17px;
+		margin-left: -33px;
+		padding: 2px 12px;
+		border-left: 1px solid @ActionsButtonBorder;
+	}
+	.visaActionButtonWrap-class {
+		top: -5px;
+		color: #252F40;
+		visibility: hidden;
+		opacity: 0;
+	}
+	.selected-item-class {
+		.visaActionButtonWrap-class {
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+	.visa-notification-item-selected {
+		.visaActionButtonWrap-class {
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+	.visa-notification-item-container:hover {
+		.visaActionButtonWrap-class {
+			opacity: 1;
+			visibility: visible;
+			transition: opacity 0.2s 0.1s ease;
+		}
+	}
+	.visa-notification-item-middle-container {
+		margin: auto auto 5px 45px;
+
+		.visa-notification-item-middle {
+			margin-right: 5px;
+		}
+	}
+	.reminder-notification-item-container,
+	.visa-notification-item-container,
+	.system-notification-item-container,
+	.anniversary-notification-item-container {
+		padding: 15px 38px 17px 0px;
+		margin-left: 15px;
+		position: relative;
+	}
+	.notifications-main-container,
+	.visa-notifications-main-container,
+	.system-notifications-main-container,
+	.anniversary-notifications-main-container {
+		width: 100%;
+		height:100%;
+	}
+	.reminder-notification-item-top-container,
+	.anniversary-notification-item-top-container {
+		position: relative;
+		a.t-label, label.t-label {
+			line-height: 18px;
+			margin-right: 6px;
+			display: inline;
+		}
+		a.t-label {
+			margin-right: 0;
+		}
+		a.ts-notification-Invoice-caption{
+			margin-right: 6px;
+		}
+		img {
+			margin-right: 6px;
+			width: 16px;
+		}
+	}
+	.reminder-notification-item-bottom-container,
+	.visa-notification-item-bottom-container,
+	.system-notification-item-bottom-container,
+	.anniversary-notification-item-bottom-container {
+		.t-label {
+			white-space: pre-wrap;
+			display: inline;
+			line-height: 17px;
+			margin-right: 6px;
+			&[activelink="false"] {
+				text-decoration: none;
+				cursor: default;
+				color: #444;
+			}
+		}
+		.reminder-notification-icon-class, .visa-notification-icon-class, .notification-icon-class {
+			height: 16px;
+			width: 16px;
+			position: relative;
+			top: 3px;
+		}
+	}
+	.reminder-notification-item-top-container {
+		padding: 7px 10px 15px 43px;
+		>img {
+			margin-right: 12px;
+			width: 32px;
+			position: absolute;
+			left: 0;
+			top: 0;
+		}
+	}
+	.system-notification-item-bottom-container {
+		margin-top: 15px;
+	}
+	div.default-notification-items-container-class img [ src = "" ] {
+		margin-right: -10px;
+	}
+	.message-container {
+		height: auto;
+	}
+	.right-panel-modules-container {
+		padding-top: 0px !important;
+		margin-top: 0px !important;
+	}
+	.offset-notification-items-container-class,
+	.system-notification-items-container-class {
+		overflow: hidden;
+		position: absolute;
+		width: 100%;
+		bottom: 2px;
+		top: 0px;
+		left: 0px;
+	}
+	.offset-notification-items-container-class::-webkit-scrollbar {
+		width: 5px;
+	}
+	.offset-notification-items-container-class:hover {
+		overflow: auto;
+	}
+	.subject-text-labelClass {
+		width: auto;
+	}
+
+	.notification-container {
+		border-bottom: 1px solid #D8DBE2;
+	}
+	.selected-item-class {
+		background-color: #FFEFE9;
+		border-radius: 8px;
+		.reminder-notification-item-container,
+		.process-notification-item-container.reminder-notification-activity-item-container.process-notification-item-container {
+			border-bottom: none;
+		}
+	}
+	.main-actions-button-container {
+		position: relative;
+		height: 41px;
+		left: 14px;
+		>.postpone-all-class {
+			padding-top: 4px !important;
+			padding-bottom: 5px;
+			float: left;
+			border-right: 1px solid @ActionsButtonBorder;
+			margin: 8px auto;
+			>.postpone-all-menuClass {
+				margin-top: 5px;
+			}
+		}
+		>.cancel-all-class {
+			float: left;
+			border-right: 1px solid @ActionsButtonBorder;
+			margin: 8px auto;
+			padding: 4px 11px 5px 11px;
+		}
+	}
+}
+.ts-anniversarynotificationsmodule-container {
+	.offset-notification-items-container-class {
+		top: 123px;
+	}
+}
+.visa-notification-item-top-container,
+.system-notification-item-top-container {
+	position: relative;
+	padding-right: 10px;
+	color: #999999;
+	img {
+		position: absolute;
+		width: 32px;
+		height: 32px;
+		top: 4px;
+	}
+	>.t-label {
+		line-height: 16px;
+		margin: auto auto 5px 45px;
+		display: block;
+		text-align: left;
+		min-height: 10px;
+	}
+}
+
+.visa-notification-item-top-container {
+	img {
+		box-sizing: border-box;
+		padding: 8px;
+		width: 40px;
+		height: 40px;
+		border-radius: 8px;
+		background-color:#FDD6C5;
+	}
+}
+
+html[dir="rtl"] {
+	.communication-panel-item-container {
+		.empty-grid-message > .image-container {
+			transform: translateX(50%);
+			-webkit-transform: translateX(50%);
+			-moz-transform: translateX(50%);
+			-ms-transform: translateX(50%);
+		}
+		.schema-wrap.one-el > .ts-tabpanel.ts-imagetabpanel .ts-tabpanel-items > li {
+			transform: scaleX(-1);
+			-webkit-transform: scaleX(-1);
+			-moz-transform: scaleX(-1);
+			-ms-transform: scaleX(-1);
+			> span {
+				 left: auto;
+				 padding-right: 0.02px;
+				 transform: scaleX(-1);
+				 top: 0.25px;
+				 -webkit-transform: scaleX(-1);
+				 -moz-transform: scaleX(-1);
+				 -ms-transform: scaleX(-1);
+			 }
+		}
+	}
+	.communication-panel .content .t-btn-text {
+		transform: translate(50%, -50%);
+		-webkit-transform: translate(50%, -50%);
+		-moz-transform: translate(50%, -50%);
+		-ms-transform: translate(50%, -50%);
+	}
+}
+
+#CenterNotificationSchemaImageTabPanelImageTabPanel-tabpanel-items {
+	.ts-box-sizing {
+		background-size: 25px 25px;
+    	background-position: center;
+	}
+}
+
+.reminder-notification-item-top-container {
+	img.reminder-notification-icon-class {
+		width: 40px;
+		height: 40px;
+	}
+}
+
+#CenterNotificationSchemaModuleContainerContainer {
+	.t-label.label-link {
+		color: @TextOrange;
+	}
+
+	.reminder-notification-item-bottom-container {
+		margin-top: 1em;
+	}
+
+	.reminder-notification-item-image-info-container {
+		display: flex;
+	}
+
+	.reminder-notification-item-info-container {
+		display: flex;
+		flex-direction: column;
+		overflow: hidden;
+		word-break: break-word;
+	}
+
+	.reminder-notification-item-top-container {
+		padding: unset;
+	}
+
+	.t-btn-text, .t-label {
+		color: @TextGray;
+		font-family: "Golos Regular";
+		font-style: normal;
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 143%;
+		letter-spacing: -0.02em;
+		color: #999;;
+	}
+
+	.notification-header {
+		font-weight: 600;
+	}
+
+	.t-btn-wrapper {
+		border: none;
+
+		.t-btn-marker {
+			border-top-color: @TextGray;
+		}
+	}
+
+	.message-container {
+		.ts-image-edit-wrap { display: none; }
+		.message-created-on { margin-left: 0; }
+	}
+
+	.system-notification-icon-class {
+		img {
+			width: 40px;
+			height: 40px;
+			border-radius: 8px;
+			overflow: hidden;
+		}
+	}
+
+	.t-checkboxedit-wrap {
+		width: 20px;
+		height: 20px;
+		background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20' fill='none'%3E%3Crect x='0.5' y='0.5' width='19' height='19' rx='3.5' stroke='%23D8DBE2'/%3E%3C/svg%3E");
+	}
+
+	.t-checkboxedit-wrap.t-checkboxedit-checked {
+		background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='20' height='20' rx='4' fill='%23F9763D'/%3E%3Cpath d='M5 10.5L8.33333 14L15 7' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+		width: 20px;
+		height: 20px;
+	}
+}
+
+#ReminderNotificationsSchemaMainActionsButtonContainerContainer {
+	border-bottom: none;
+
+	#ReminderNotificationsSchemaMainActionsButtonPostponeAllButton-wrapperEl {
+		padding-left: 2px;
+	}
+
+	.t-btn-wrapper {
+		border-right: none;
+	}
+
+	.t-btn-marker{
+		border-top-color: @TextGray;
+	}
+
+	.t-btn-text, .t-label {
+		color: @TextGray;
+		font-family: "Golos Regular";
+		font-style: normal;
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 143%;
+		letter-spacing: -0.02em;
+		color: #67748E;
+	}
+
+}
+
+.system-notification-item-top-container {
+	.t-label { margin-left: 50px; }
+}
+
+#ctiPanelMainContainer {
+	width: 354px;
+	padding-right: 16px;
+}
+
+#CenterNotificationSchemaModuleContainerContainer {
+	.empty-grid-message {
+		>.title {
+			>.t-label {
+				&[data-item-marker="EmptyHistoryLabel"] {
+					font-size: @EmptyResultFontSize;
+					line-height: 20px;
+					color: #252F40;
+				}
+			}
+		}
+	}
+}
+
+#CommunicationPanelEmailSchemaContainer {
+	[data-item-marker="EmailTypeButton"] {
+		padding-left: 0;
+	}
+
+	#EmailContainerListGrid {
+		.email-container {
+			padding-left: 0;
+		}
+	}
+}

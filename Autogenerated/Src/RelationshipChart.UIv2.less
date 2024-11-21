@@ -1,0 +1,175 @@
+﻿
+.relationship-chart .orgchart {
+	height: 100%;
+	width: 100%;
+	background-image: none;
+	overflow: auto;
+
+	.lines {
+		.leftLine, .topLine, .rightLine, .downLine  {
+			border-color: #60779F;
+		}
+
+		.downLine {
+			background-color: #60779F;
+		}
+	}
+
+	.verticalNodes {
+		@correction: 1px;
+		@additional-margin: 8px;
+		@additional-margin-correction: 4px;
+
+		> td > ul > li:first-child::before {
+			top: -4px + @correction;
+			height: 30px + (@additional-margin * 2) - @additional-margin-correction - @correction;
+		}
+
+		ul > li {
+			&::before {
+				top: -4px - @additional-margin;
+				height: 30px + (@additional-margin * 2) + @additional-margin-correction;
+			}
+
+			&:first-child::after {
+				top: 24px + @additional-margin + @additional-margin-correction;
+			}
+
+			.node {
+				margin: @additional-margin 0;
+			}
+		}
+	}
+
+	.node-wrapper {
+		padding-right: 10px;
+		padding-left: 10px;
+	}
+
+	.node {
+		border: 1px dashed transparent;
+
+
+		&.focused, &:hover {
+			border: 1px dashed;
+			border-radius: 4px;
+			background-color: transparent;
+		}
+
+		&.focused {
+			border-color: rgba(0, 108, 224, 1);
+		}
+
+		&:hover {
+			border-color: rgba(0, 108, 224, 0.5);
+		}
+
+		&.focused, &:hover {
+			.node-content-wrapper .node-panel .node-button {
+				display: inline-block;
+			}
+		}
+
+		.node-content-wrapper {
+			background-color: #F4F5F7;
+			border-radius: 4px;
+			width: 190px;
+			height: 56px;
+			border: 1px solid #E6E6E6;
+
+			&.master-node {
+				background-color: #60779F;
+
+				.node-content {
+					.node-title, .node-description {
+						color: #FFFFFF;
+					}
+
+					.node-description {
+						opacity: 0.8;
+					}
+				}
+			}
+
+			.node-panel {
+				position: absolute;
+				left: 0;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				width: 100%;
+
+				.node-button {
+					background-position: 0px 0px;
+					background-repeat: no-repeat;
+					background-clip: padding-box;
+					display: none;
+					z-index: 21;
+
+					&:hover {
+						cursor: pointer;
+					}
+
+					&.add-button {
+						height: 24px;
+						width: 24px;
+						background-size: 24px 24px;
+						border-radius: 50%;
+						box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+					}
+				}
+			}
+
+			.node-top-panel {
+				top: -14px;
+
+				.remove-button {
+					background-size: 24px 24px;
+					width: 24px;
+					height: 24px;
+					border-radius: 50%;
+				}
+			}
+
+			.node-content {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				height: 100%;
+				font-size: 12px;
+				overflow: hidden;
+				padding: 3px;
+				line-height: 12px;
+
+				.node-title-wrapper {
+					height: 17px;
+					line-height: 17px;
+
+					.node-title, .node-title a {
+						white-space: nowrap;
+						overflow: hidden;
+						text-overflow: ellipsis;
+						display: inline-block;
+						max-width: 180px;
+						height: 100%;
+						line-height: inherit;
+						font-size: 12px;
+					}
+				}
+
+				.node-description {
+					color: #999999;
+					white-space: nowrap;
+					overflow: hidden;
+					text-overflow: ellipsis;
+					margin-top: 4px;
+				}
+
+			}
+
+			.node-bottom-panel {
+				bottom: -14px;
+			}
+		}
+	}
+}

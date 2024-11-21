@@ -1,0 +1,50 @@
+﻿.base-dc-template-viewer-control-group {
+	margin-top: 10px;
+
+	.email-empty-template-container{
+		height: 350px;
+
+		.email-template-blank-slates-container {
+			display:flex;
+			flex-direction:column;
+			justify-content:center;
+			align-items:center;
+
+			.email-template-blank-slates-image-container{
+				.not-selected-image {
+					width: 134px;
+					height: 139px;
+					text-align: center;
+					margin-left: auto;
+					margin-right: auto;
+					padding-top: 50px;
+					padding-bottom: 40px;
+				}
+			}
+
+			.description-label {
+				height: 24px;
+			}
+
+			.description-text {
+				position: relative;
+				margin-left: 15px;
+				font-size: 14px;
+				color: #252F40;
+				max-width: 400px;
+				height: 56px;
+
+				&::before {
+					content: '';
+					position: absolute;
+					top: 0;
+					left: -12px;
+					border-radius: 2px;
+					width: 4px;
+					height: calc(~"100%" - 8px);
+					background-color: #F9763D;
+				}
+			}
+		}
+	}
+}

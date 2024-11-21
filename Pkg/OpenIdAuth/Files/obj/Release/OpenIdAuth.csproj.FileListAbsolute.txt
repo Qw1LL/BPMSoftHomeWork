@@ -1,0 +1,9 @@
+C:\inetpub\wwwroot\BPMSoft\Demo\BPMRights\SalesFullCycle_Marketing_ServiceFull_1_4_0_3084_Net_PostgreSQL\BPMSoft.WebApp\BPMSoft.Configuration\Pkg\OpenIdAuth\Files\Bin\OpenIdAuth.dll
+C:\inetpub\wwwroot\BPMSoft\Demo\BPMRights\SalesFullCycle_Marketing_ServiceFull_1_4_0_3084_Net_PostgreSQL\BPMSoft.WebApp\BPMSoft.Configuration\Pkg\OpenIdAuth\Files\Bin\OpenIdAuth.pdb
+C:\inetpub\wwwroot\BPMSoft\Demo\BPMRights\SalesFullCycle_Marketing_ServiceFull_1_4_0_3084_Net_PostgreSQL\BPMSoft.WebApp\BPMSoft.Configuration\Pkg\OpenIdAuth\Files\obj\Release\OpenIdAuth.csproj.AssemblyReference.cache
+C:\inetpub\wwwroot\BPMSoft\Demo\BPMRights\SalesFullCycle_Marketing_ServiceFull_1_4_0_3084_Net_PostgreSQL\BPMSoft.WebApp\BPMSoft.Configuration\Pkg\OpenIdAuth\Files\obj\Release\OpenIdAuth.GeneratedMSBuildEditorConfig.editorconfig
+C:\inetpub\wwwroot\BPMSoft\Demo\BPMRights\SalesFullCycle_Marketing_ServiceFull_1_4_0_3084_Net_PostgreSQL\BPMSoft.WebApp\BPMSoft.Configuration\Pkg\OpenIdAuth\Files\obj\Release\OpenIdAuth.AssemblyInfoInputs.cache
+C:\inetpub\wwwroot\BPMSoft\Demo\BPMRights\SalesFullCycle_Marketing_ServiceFull_1_4_0_3084_Net_PostgreSQL\BPMSoft.WebApp\BPMSoft.Configuration\Pkg\OpenIdAuth\Files\obj\Release\OpenIdAuth.AssemblyInfo.cs
+C:\inetpub\wwwroot\BPMSoft\Demo\BPMRights\SalesFullCycle_Marketing_ServiceFull_1_4_0_3084_Net_PostgreSQL\BPMSoft.WebApp\BPMSoft.Configuration\Pkg\OpenIdAuth\Files\obj\Release\OpenIdAuth.csproj.CoreCompileInputs.cache
+C:\inetpub\wwwroot\BPMSoft\Demo\BPMRights\SalesFullCycle_Marketing_ServiceFull_1_4_0_3084_Net_PostgreSQL\BPMSoft.WebApp\BPMSoft.Configuration\Pkg\OpenIdAuth\Files\obj\Release\OpenIdAuth.dll
+C:\inetpub\wwwroot\BPMSoft\Demo\BPMRights\SalesFullCycle_Marketing_ServiceFull_1_4_0_3084_Net_PostgreSQL\BPMSoft.WebApp\BPMSoft.Configuration\Pkg\OpenIdAuth\Files\obj\Release\OpenIdAuth.pdb

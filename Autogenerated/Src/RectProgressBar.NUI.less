@@ -1,0 +1,63 @@
+﻿@progress-bar-thickness: 4px;
+.ts-rect-progress-bar-wrap {
+	#CompletenessValue-rect {
+		border-radius: 4px;
+	}
+	&.horizontal-progress-bar {
+		width: 100%;
+		height: @progress-bar-thickness;
+		min-height: @progress-bar-thickness;
+		padding-bottom: 0;
+
+		.rect {
+			height: 100%;
+			width: auto;
+		}
+
+		.overlay {
+			margin-top: -25px;
+			margin-left: 0;
+		}
+	}
+
+	float: left;
+	position: relative;
+	width: @progress-bar-thickness;
+	height: 83px;
+	min-height: 50px;
+	border: 1px solid #f2f2f2;
+
+	.rect {
+		width: 100%;
+		bottom: 0;
+		position: absolute;
+		background-color: #67748E;
+	}
+
+	.overlay {
+		position: absolute;
+		margin-left: 12px;
+		text-align: center;
+		font-size: 16px;
+		color: #67748E;
+		.caption-suffix {
+			font-size: 14px;
+		}
+		.caption {
+			color: #67748E !important;
+		}
+	}
+}
+
+.completeness-caption {
+	padding-left: 1px;
+	font-size: 1.3em;
+	color: #999999;
+	padding-top: 1px;
+	text-overflow: ellipsis;
+	padding-bottom: 1px;
+}
+
+.completeness-container {
+	height: 47px;
+}

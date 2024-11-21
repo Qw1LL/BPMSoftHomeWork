@@ -1,0 +1,48 @@
+﻿@circle-size: 32px;
+@circle-half-size: @circle-size / 2;
+@circle-progress-size: 4px;
+@circle-background-color: #f0f0f0;
+@circle-color: #b8ea76;
+@circle-overlay-color: #fff;
+@circle-overlay-size: @circle-size - (@circle-progress-size * 2);
+
+.ts-round-progress-bar-wrap {
+	float: left;
+	position: relative;
+	width: @circle-size;
+	height: @circle-size;
+	border-radius: 50%;
+	background-color: @circle-background-color;
+
+	.circle {
+		clip: rect(0px, @circle-size, @circle-size, @circle-half-size);
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		transform: scaleX(-1);
+
+		.half {
+			width: 100%;
+			height: 100%;
+			border: @circle-progress-size solid;
+			border-radius: @circle-half-size;
+			position: absolute;
+			clip: rect(0px, @circle-half-size, @circle-size, 0px);
+			border-width: 4px!important;
+		}
+	}
+	
+	.overlay {
+		position: absolute;
+		width: @circle-overlay-size;
+		height: @circle-overlay-size;
+		background-color: @circle-overlay-color;
+		border-radius: 50%;
+		margin-left: @circle-progress-size;
+		margin-top: @circle-progress-size;
+		text-align: center;
+		line-height: @circle-overlay-size;
+		font-size: 10px;
+		border-width: 4px!important;
+	}
+}

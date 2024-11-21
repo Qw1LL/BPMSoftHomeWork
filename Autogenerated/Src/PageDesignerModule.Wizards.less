@@ -1,0 +1,202 @@
+﻿html[dir="rtl"] {
+	body.x-safari,
+	body.x-ie:not(.x-edge) {
+		.page-wizard .center-panel .design-container-wrapClass .draggable-items-list {
+			overflow-y: scroll;
+		}
+	}
+}
+
+body.x-ie:not(.x-edge) {
+	.page-wizard .center-panel .data-model-item {
+		height: 100% !important;
+	}
+}
+
+.page-wizard {
+	.page-header-container {
+		.control-wrap {
+			padding-top: 6px;
+			margin-bottom: 0;
+		}
+
+		.base-edit-input {
+			font-size: 26px;
+			min-height: 0;
+			padding-bottom: 8px;
+		}
+
+		.base-edit {
+			padding-left: 0;
+			&.base-edit-focus {
+				outline: none;
+				border-bottom: 1px solid #F9763D;
+				box-shadow: none;
+			}
+		}
+	}
+
+	.center-panel {
+		padding-top: 6px !important;
+
+		.data-model-item {
+			height: calc(~"100vh" - 72px);
+			.new-column-info-button-container[data-item-marker="NewWidgetInfoButtonContainer"] {
+				padding-left: 16px;
+			}
+		}
+
+		div.design-container-wrapClass {
+			margin-top: 64px !important;
+		}
+
+		.design-container-wrapClass {
+			.draggable-items-list {
+				top: 70px !important;
+				left: 0;
+				bottom: 0;
+				margin-top: 0px;
+				border: none;
+				position: fixed;
+				border-radius: 0 8px 8px 0;
+				box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+				height: calc(~"100vh" - 135px);
+				overflow-x: hidden;
+			}
+			.main-header {
+				display: block;
+				top: 72px;
+				left: 320px;
+				height: 56px;
+				border-top: #ebeeef 6px solid;
+				z-index: 10;
+
+				.page-header-container {
+					display: block;
+					padding-left: 16px;
+				}
+				.right-header-container-class {
+					margin-top: 6px;
+				}
+			}
+		}
+
+		.main-header {
+			.page-header-container {
+				.t-label {
+					width: auto;
+					line-height: inherit;
+					margin-top: 10px;
+					padding-left: 5px;
+					padding-right: 5px;
+					border: 1px dotted #15b8ff;
+					border-radius: 2px;
+					color: #999999;
+				}
+			}
+		}
+	}
+	#DesignedView {
+		padding-bottom: 59px;
+
+		.card-content-container {
+			min-height: calc(~"100vh" - 52px);
+			padding-top: 170px !important;
+
+			.actions-container {
+				background-color: white;
+				width: calc(~"100% - 320px");
+				min-width: auto;
+				margin-top: -80px;
+				padding-top: 20px;
+				z-index: 11;
+
+				&#ActionButtonsContainerContainer {
+					padding-top: 0;
+				}
+
+				.page-designer-btn-wrapper {
+					cursor: not-allowed;
+
+					.t-btn-wrapper {
+						cursor: not-allowed;
+					}
+				}
+			}
+
+			.grid-layout-edit-item-actions-wrap {
+				.t-btn-wrapper .t-btn-image {
+					filter: opacity(0.7);
+				}
+				.t-btn-wrapper:hover .t-btn-image {
+					filter: opacity(1);
+				}
+			}
+		}
+	}
+	
+	.main-header {
+		z-index: auto;
+	}
+	#SspProfileContactPageContainer {
+		#mainHeaderContainer {
+			border-radius: 8px;
+			min-height: auto;
+		}
+		.actions-container#ActionButtonsContainerContainer {
+			padding-top: 14px;
+			.actions-button-margin-right {
+				margin-left: 0;
+			}
+		}
+	}
+}
+
+#PageDesignerPropertyPageMainGridContainerGridLayout {
+	.base-edit {
+		height: unset;
+	}
+}
+
+#mainHeaderContainer{
+	background-color: #fff !important;
+	border-left: none;
+	border-top: none;
+	border-radius: 8px  8px 0 0;
+}
+
+
+#DesignedView{
+	#ActionButtonsContainerContainer{
+		&::before{
+			display: none;
+		}
+	}
+}
+
+#wizardContainer {
+	#RelatedAccountProfileItem {
+		margin-bottom: 0;
+	}
+}
+
+#SspAccountProfilePageContainer,
+#SspProfileContactPageContainer {
+	#CardContentWrapper {
+		padding-top: 142px !important;
+	}
+}
+
+[id*="PageDesignerSchema"] #AngularLabel-Elements-data-model {
+    display: none;
+}
+#SspAccountProfilePageContainer {
+	#DesignedView {
+		#ActionButtonsContainerContainer {
+			padding-top: 20px;
+			[data-item-marker="SaveButton"] {
+				margin-left: 0;
+			}
+		}
+	}
+}

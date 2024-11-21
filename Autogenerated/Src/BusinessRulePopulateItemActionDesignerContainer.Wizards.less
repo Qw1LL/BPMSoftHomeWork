@@ -1,0 +1,68 @@
+﻿.business-rule-case-populate-action {
+	.business-rule-case-action-titleitems-header-container,
+	.business-rule-case-action-titleitems-content-container {
+		flex-basis: 30%;
+	}
+
+	.business-rule-case-action-populatetitleitems-header-container,
+	.business-rule-case-action-populateitems-content-container {
+		flex-basis: 70%;
+		display: flex;
+		position: relative;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		justify-content: flex-start;
+	}
+
+	.business-rule-case-action-populatetitleitems-header-container {
+		.business-rule-case-action-header-item:first-child {
+			margin-right: 1.5em;
+			flex-basis: 35%;
+
+			label {
+				max-width: 70%;
+			}
+
+			&:after {
+				right: 0em;
+			}
+		}
+
+		.business-rule-case-action-header-item:first-child:before {
+			display: block;
+		}
+
+		.business-rule-case-action-header-item:last-child {
+			flex-basis: 57%;
+			padding-left: 2em;
+		}
+	}
+
+	.business-rule-case-action-leftexpressionitems-content-container {
+		.expression-edit-wrap {
+			width: 90%;
+		}
+
+		.t-btn-wrapper {
+			position: absolute;
+			top: 0.2em;
+			right: -1.25em;
+
+			.t-btn-menu {
+				display: none;
+			}
+		}
+	}
+}
+
+.bindable-action-wrap {
+	.business-rule-case-action-header-container {
+		& > div {
+			flex-basis: 40%;
+			min-width: 35%;
+			&:first-child {
+				flex-basis: 60%;
+			}
+		}
+	}
+}

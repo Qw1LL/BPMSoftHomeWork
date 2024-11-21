@@ -1,0 +1,159 @@
+﻿.expression-edit-inner-wrap {
+	min-height: 36px;
+	display: flex;
+	position: relative;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+	align-items: flex-start;
+
+	.expression-inner-type {
+		margin-right: 0;
+		padding-right: 0;
+		position: relative;
+		flex-basis: auto;
+		flex-grow: 1;
+
+		.t-btn-text {
+			white-space: nowrap;
+		}
+	}
+
+	.expression-inner-type:empty,
+	.expression-inner-value:empty,
+	.expression-inner-reference-schema:empty {
+		display: none;
+	}
+
+	.expression-inner-reference-schema {
+		margin-right: 0.5em;
+	}
+
+	.expression-inner-values-ct {
+		display: flex;
+		flex-direction: column;
+		top: 5px;
+		position: relative;
+
+		.expression-inner-tools {
+			margin-top: 8px;
+
+			.tool-item-ct {
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				justify-content: flex-start;
+				padding-left: 12px;
+
+				.tool-item {
+					flex-shrink: 0;
+					margin-right: 14px;
+				}
+			}
+		}
+	}
+
+	.expression-inner-values-ct,
+	.expression-inner-value,
+	.expression-inner-reference-schema {
+		flex-basis: auto;
+		flex-grow: 4;
+	}
+
+	.expression-inner-values-ct,
+	.expression-inner-value,
+	.expression-inner-reference-schema {
+		& > div {
+			flex-shrink: 0;
+
+			.t-checkboxedit-wrap {
+				margin-top: 3px;
+			}
+		}
+
+		.base-edit {
+			&:not(.base-edit-focus) {
+				border: 1px solid white;
+				border-bottom: 1px dotted #c8c8c8;
+
+				&:hover {
+					border-bottom: 1px solid #c8c8c8;
+				}
+			}
+			&.base-edit-focus {
+				.base-edit-right-icon {
+					display: block;
+				}
+
+				.base-edit-input {
+					cursor: text;
+				}
+			}
+
+			&:not(.base-edit-disabled) {
+				&:hover {
+					.base-edit-right-icon {
+						display: block;
+					}
+				}
+			}
+			&.base-edit-disabled {
+				background-color: white;
+				top: 5px;
+
+				.base-edit-input {
+					background-color: white;
+				}
+			}
+
+			&.base-edit-error {
+				box-shadow: none;
+				-webkit-box-shadow: none;
+			}
+
+			&:hover {
+				cursor: text;
+
+				&.base-edit-disabled {
+					cursor: default;
+				}
+			}
+
+			.ts-date-edit-right-icon {
+				width: 24px;
+				height: 24px;
+			}
+
+			.lookup-edit-right-icon{
+				width: 20px;
+				height: 20px;
+			}
+		}
+		& .base-edit-with-clear-icon:not(.clear-icon-not-visible):hover {
+			.base-edit-input {
+				padding-right: 0;
+			}
+			.base-edit-clear-icon {
+				background-color: #fff;
+			}
+		}
+	}
+}
+.expression-edit-wrap.condition-right-expression {
+	.expression-inner-values-ct {
+		.expression-inner-value{
+			position: relative;
+		}
+	} 
+} 
+
+#BusinessRuleSchemaDesignerBusinessRuleCaseCollectionContainerContainer-inner-container {
+	.base-edit {
+		.base-edit-input {
+			text-overflow: ellipsis;
+		}
+		.base-edit-right-icon-wrapper {
+			right: 5px;
+		}
+	}
+}

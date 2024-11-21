@@ -1,0 +1,84 @@
+﻿@default-border-radius: 8px;
+@default-padding: 16px;
+@default-color: #F9763D;
+.default-button-mixin() {
+	border-radius: @default-border-radius;
+	text-transform: none;
+	font-size: 16px;
+	min-height: 40px;
+	padding-top: 0.56em
+}
+.default-block-with-bottom-borders-mixin() {
+	background-color: white;
+	border-bottom-right-radius: @default-border-radius;
+	border-bottom-left-radius: @default-border-radius;
+	padding: @default-padding;
+} 
+
+.local-duplicate-search-container {
+	&::before {
+		content: '';
+		position: absolute;
+		background-color: #D8DBE2;
+		height: 1px;
+		left: 40px;
+		right: 25px;
+		z-index: 1002;
+	}
+	
+	.local-duplicate-buttons-container {
+		.default-block-with-bottom-borders-mixin;
+		margin-bottom: 10px;
+		
+		*[data-item-marker="acceptButton"] {
+			color: white;
+			background-color: @default-color;
+			.default-button-mixin;
+		}
+		
+		*[data-item-marker="CancelButton"] {
+			color:  @default-color;
+			background-color: white;
+			border: 1px solid @default-color;
+			.default-button-mixin;
+		}
+
+		*[data-item-marker="acceptButton"]:hover {
+			color: white;
+			background-color: #E56229
+		}
+		
+		*[data-item-marker="CancelButton"]:hover {
+			background-color: transparent;
+		}
+
+		span {
+			margin-right: 5px;
+		}
+	}
+	
+	#DescriptionContainer {
+		background-color: white;
+		border-top-left-radius: @default-border-radius;
+		border-top-right-radius: @default-border-radius;
+		padding: @default-padding;
+	}
+
+	.grid-pad .grid-row-actions, .grid-listed-row:not(div[id^="foldersGrid-"]) .grid-row-actions {
+		padding: 16px 0;
+	}
+	
+	> .grid {
+		width: auto;
+		.default-block-with-bottom-borders-mixin;
+
+		> .grid-pad {
+			padding: 0 6px;
+			&.no-duplicate {
+				.grid-row span {
+					color: #999;
+				}
+			}
+		}
+	}
+}

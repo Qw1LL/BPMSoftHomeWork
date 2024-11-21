@@ -1,0 +1,123 @@
+﻿#BulkEmailClicksMapModuleHtml {
+	font-size: 1.4em;
+	padding: 10px;
+	position: relative;
+
+	#BulkEmailClicksMapModuleHtmlMask {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		z-index: 25;
+		background-color: white;
+		opacity: 0.5;
+	}
+
+	.bubble {
+		position: relative;
+		color: #F9763D!important;
+
+
+		&:after, &:before {
+			position: absolute;
+			display: block;
+			font-size: 14px !important;
+			line-height: 21px !important;
+		}
+
+		&:hover:after, &:hover:before {
+			cursor: default;
+		}
+
+		&:after {
+			border-radius: 8px;
+			color: #fff;
+			content: attr(data-clicks-count);
+			font-family: "Golos Regular";
+			min-height: 28px;
+			display: flex;
+			justify-content: center;
+			padding: 0 16px;
+			align-items: center;
+			white-space: nowrap;
+			z-index: 198;
+			text-align: center;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+
+		&:before {
+			border: solid;
+			border-width: .4em .4em 0 .4em;
+			content: "";
+			z-index: 199;
+			left: calc(~'50% - 0.4em');
+		}
+
+		&.bubble-text-position {
+			display: inline;
+
+			&:after {
+				bottom: 1.35em;
+			}
+
+			&:before {
+				bottom: 1em;
+			}
+		}
+
+		&.bubble-image-position {
+			display: block;
+
+			&:after {
+				bottom: calc(~'50% + 0.4em');
+			}
+
+			&:before {
+				bottom: 50%;
+			}
+		}
+
+		&.bubble-stage-1:after {
+			background: #F9763D;
+			border-radius: 8px;
+		}
+
+		&.bubble-stage-1:before {
+			border-color: #F9763D transparent;
+		}
+
+		&.bubble-stage-2:after {
+			background: #4cafde;
+		}
+
+		&.bubble-stage-2:before {
+			border-color: #4cafde transparent;
+		}
+
+		&.bubble-stage-3:after {
+			background: #6cb039;
+		}
+
+		&.bubble-stage-3:before {
+			border-color: #6cb039 transparent;
+		}
+
+		&.bubble-stage-4:after {
+			background: #e8a53a;
+		}
+
+		&.bubble-stage-4:before {
+			border-color: #e8a53a transparent;
+		}
+
+		&.bubble-stage-5:after {
+			background: #F9763D;
+		}
+
+		&.bubble-stage-5:before {
+			border-color: #ea7356 transparent;
+		}
+	}
+}

@@ -1,0 +1,60 @@
+﻿.home-page-button-container {
+  display: flex;
+  .open-home-page-designer-button {
+    padding: initial;
+
+    &[data-item-marker="OpenHomePageDesignerButton"] {
+      .t-btn-image {
+        width: 24px;
+        height: 24px;
+      }
+    }
+
+    .t-btn-image {
+      height: 32px;
+      width: 32px;
+    }
+
+    &.t-btn-disabled .t-btn-image {
+      opacity: 0.5;
+    }
+  }
+}
+
+#SysWorkplacePageV2HomePageButtonContainerContainer {
+  & span:hover {
+    background-color: transparent;
+  }
+
+  .t-btn-image {
+    background-size: contain;
+  }
+}
+
+#SettingsTab {
+  [data-item-marker="SysModuleDetailContainer"],
+  [data-item-marker="SysAdminUnitInWorkplaceDetailV2Container"] {
+    .ts-controlgroup {
+      .t-btn-wrapper {
+        padding-left: 0;
+        padding-right: 8px;
+        
+        &.filter-element-with-right-space{
+          padding-right: 0px;
+        }
+        
+        .t-btn-image {
+          width: 24px;
+          height: 24px;
+        }
+      }
+    }
+    #grid-SysModuleInWorkplaceDetailV2DataGridGrid-wrap {
+      .grid-row-actions {
+        .t-btn-wrapper.t-btn-text.t-btn-style-default {
+          padding-left: 19px;
+        }
+      }
+    }
+  }
+}

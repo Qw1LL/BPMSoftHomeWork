@@ -1,0 +1,35 @@
+﻿@tabpanel-height: 36px; //same as tabpanel height in tabpanel.css
+
+.next-record-button {
+	margin-top: 5px;
+}
+div#OperatorQueuesContainer {
+	.schema-wrap {
+		.detail {
+			.ts-controlgroup-container {
+				padding-bottom: 1.1em;
+				.grid {
+					padding-left: 0;
+					.grid-pad {
+						padding-left: 6px;
+					}
+				}
+				.grid.grid-tiled {
+					.grid-pad:after {
+						margin: 0;
+					}
+					.grid-pad .grid-module {
+						padding-left: 0;
+					}
+				}
+			}
+		}
+	}
+}
+.supervisor-single-window-page-queue-wrapper .grid.grid-tiled .grid-pad {
+	padding-top: 1px;
+	&::after,
+	.grid-row-actions {
+		display: none;
+	}
+}

@@ -1,0 +1,145 @@
+﻿.esn-notifications-main-container {
+	overflow-y: auto;
+	height: 100%;
+	.schema-wrap {
+		padding-left: 0;
+	}
+	.notification-container {
+		border-bottom: 1px solid #e1e8f2;
+		position: relative;
+		padding: 13px 15px 12px 15px;
+		min-height: 72px;
+		cursor: pointer;
+
+		* {
+			cursor: pointer;
+		}
+
+		&:after {
+			content: "";
+			display: block;
+			width: 6px;
+			height: 1px;
+			position: absolute;
+			bottom: -1px;
+			right: 0;
+			background-color: white;
+		}
+
+		&:before {
+			content: "";
+			display: block;
+			width: 6px;
+			height: 1px;
+			position: absolute;
+			bottom: -1px;
+			left: 0;
+			background-color: white;
+		}
+		
+		&.selected {
+			background-color: #EEF2FA;
+			border-bottom-color: white;
+		}
+
+		.ts-image-edit-wrap.author-image-container {
+			margin: 0;
+			width: 42px;
+			height: 42px;
+			position: absolute;
+			top: 16px;
+		}
+
+		.ts-image-edit-wrap.author-image-container img {
+			width: 42px;
+			height: 42px;
+			border-radius: 50%;
+			cursor: pointer;
+		}
+
+		.message-container {
+			margin-left: 51px;
+		}
+
+		.message-text-container {
+			line-height: 16px;
+		}
+
+		.message-created-by {
+			cursor: pointer;
+			color: #0e84cf;
+		}
+
+		.message-created-by,
+		.message-type-text {
+			display: inline;
+		}
+
+		.message-labels-container {
+			position: relative;
+			line-height: 16px;
+		}
+
+		.ts-image-edit-wrap.type-image-container {
+			margin: 0;
+			line-height: 8px;
+			width: 16px;
+			height: 16px;
+			position: absolute;
+			top: 1px;
+		}
+
+		.ts-image-edit-wrap.type-image-container img {
+			width: 16px;
+			height: 16px;
+		}
+
+		.message-created-on {
+			color: #999;
+			display: inline;
+			margin-left: 27px;
+			font-size: 1.3em;
+		}
+
+		.social-message-container {
+			position: relative;
+		}
+
+		.social-message-text {
+			text-overflow: ellipsis;
+			white-space: nowrap;
+			width: 100%;
+			line-height: 16px;
+			overflow: hidden;
+
+			&:after {
+				content: "\"";
+				position: absolute;
+				top: 0;
+				right: 0;
+			}
+
+			&:before {
+				content: "\"";
+			}
+		}
+	}
+}
+
+.x-gecko .esn-notifications-main-container {
+
+	.notification-container {
+		padding-top: 12px;
+		padding-bottom: 12px;
+		min-height: 76px;
+	}
+
+	.message-text-container {
+		line-height: 15px;
+		margin-top: 1px;
+	}
+	
+	.message-created-on {
+		margin-left: 28px;
+	}
+}

@@ -1,0 +1,233 @@
+﻿@header-height: 126px;
+
+body {
+	background-color: #ebeeef;
+}
+.detail-properties-control-group-container {
+	padding: 20px 180px 30px 20px;
+	background-color: white;
+	border: 1px solid #e6e6e6;
+	border-radius: 8px;
+}
+.top-control-group-label {
+	display: block;
+	margin-bottom: 0.5em;
+	color: #444167;
+	font-family: 'Segoe UI Light', 'Segoe UI';
+	font-size: 24px;
+	line-height: 24px;
+	font-weight: normal;
+	text-align: left;
+}
+
+#DetailMainSettingsContainer {
+	display: flex;
+	padding-right: 38%;
+	padding-left: 16px;
+	#DetailMainSettingsDetailPropertiesControlGroupContainer {
+		height: 85vh;
+		width: 100%;
+		padding-right: 494px;
+		margin-top: 65px;
+			#DetailMainSettingsTopControlGroupTextLabel {
+				margin-bottom: 21px;
+				size: 18px;
+				color: #252f40;
+				font-weight: 600;
+			}
+			#DetailMainSettingsCaptionContainer {
+				padding-bottom: 30px;
+				.base-edit-input::placeholder {
+					opacity: 1;
+				}
+			}
+			#DetailMainSettingsNewObjectPropertiesControlGroupContainer {
+				#DetailMainSettingsIsUseExistingLookupForDetailCaptionLabel { 
+					padding-bottom: 10px;
+				}
+				#DetailMainSettingsIsUseExistingLookupForDetailContainer #DetailMainSettingsIsUseExistingLookupForDetailTrueContainer {
+					margin-bottom: 16px;
+				}
+			}
+			#DetailMainSettingsEntitySchemaUIdContainer {
+				padding-top: 14px;
+				.base-edit-input::placeholder {
+					opacity: 1;
+				}
+			}
+			#DetailMainSettingsIsEditableContainer {
+				padding-top: 4px;
+				display: flex;
+				flex-direction: row-reverse;
+				justify-content: flex-end;
+				#DetailMainSettingsIsEditableContainer_Label {
+					min-width: 21em;
+					#DetailMainSettingsIsEditableLabel {
+						color: #252f40;
+					}
+				}
+				#DetailMainSettingsIsEditableContainer_Control {
+					width: 30px;
+				}
+
+			}
+			#DetailMainSettingsNewSchemaCaptionContainer {
+				padding-top: 14px;
+				.base-edit-input::placeholder {
+					opacity: 1;
+				}
+			}
+			#DetailMainSettingsNewSchemaNameContainer {
+				padding-top: 24px;
+				.base-edit-input::placeholder {
+					opacity: 1;
+				}
+			}
+	}
+}
+
+.wizard-container.detail-wizard {
+	#centerPanelContainer {
+		padding-bottom: 68px !important;
+		
+		.design-container-wrapClass {
+			margin-top: 66px !important;
+			
+			.draggable-items-list.fixed {
+				position: fixed;
+				top: 72px !important;
+				padding-right: 10px;
+				max-height: calc(~'100vh - 139px');
+				overflow-x: hidden;
+
+				[data-item-marker="data-model-Elements"] .ts-controlgroup-caption-wrap {
+					border-top: none;
+				}
+
+				[data-item-marker="data-model-Contact"] .ts-controlgroup-container {
+					padding-bottom: 150px;
+				}
+				
+				.data-model-item {
+					border: none;
+				}
+			}
+
+			.card-content-container {
+				min-height: calc(~'100vh - 140px');
+			}
+		}
+	}
+}
+
+#wizardContainer {
+	.grid-layout-edit-item-actions-wrap {
+		[data-tag="openModelItemSettingWindow"],
+		[data-tag="removeModelItem"] {
+			padding: 0;
+
+			.t-btn-image {
+				width: 24px;
+				height: 24px;
+			}
+		}
+	}
+
+	.ts-tabpanel-scroll-left {
+		top: 0;
+	}
+	.wizard-header {
+		height: 64px;
+
+		.utils {
+			.wizard-steps-collection {
+				.t-btn-pressed {
+					position: relative;
+					border: none;
+	
+					&::after {
+						content: "";
+						position: absolute;
+						bottom: 0;
+						left: 0;
+						width: 100%;
+						height: 4px;
+						border-radius: 2px;
+						background-color: #F9763D;
+					}
+				}
+			}
+		}
+	}
+
+	.center-panel {
+		.default-center-panel-content {
+			margin-top: 0;
+		}
+	}
+	
+	.grid-layout-edit-wrap {
+		margin-right: 8px;
+	}
+
+	#ContactPageV2Container {
+		.design-container-wrapClass {
+			margin-top: 66px !important;
+
+			.draggable-items-list {
+				top: 72px !important;
+				padding-left: 5px;
+			}
+		}
+
+		.draggable-items-list {
+			.view-model-schema-designer-item-content-image-wrap {
+				.view-model-schema-designer-item-content-image {
+					width: 24px;
+					height: 24px;
+				}
+			}
+		}
+	
+		.tabs-container {
+			.ts-tabpanel-tools {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+		}
+	
+		.card-content-container {
+			.grid-layout-edit-table {
+	
+				.grid-layout-edit-item-wrap {
+					border: 1px solid #D8DBE2;
+					border-radius: 8px;
+	
+					.grid-layout-edit-item-content-image-wrap {
+						.grid-layout-edit-item-content-image {
+							width: 24px;
+							height: 24px;
+						}
+					}
+				}
+			}
+	
+			.left-modules-container,
+			.center-main-container {
+				margin-top: 0 !important;
+			}
+	
+			.center-main-container {
+				.action-dashboard-container {
+					height: 98px;
+	
+					.img-action-dashboard {
+						width: 946px;
+						height: 66px;
+					}
+				}
+			}
+		}
+	}
+}

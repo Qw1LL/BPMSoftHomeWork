@@ -1,0 +1,341 @@
+﻿@section-settings-width: 1100px;
+@header-height: 0px;
+@padding-width: 6px;
+
+.section-designer-shown {
+	height: 100%;
+
+	#ViewModuleContainer {
+		height: 100%;
+
+		.wizard-container {
+			height: 100%;
+
+			.center-panel {
+				top: 64px;
+				bottom: 80px;
+				padding-bottom: 0 !important;
+				margin-top: 0;
+				.default-center-panel-content {
+					div[data-item-marker*="GridSettings"] > {
+						.card-content-container {
+							margin-top: @header-height;
+							.actions-container {
+								position: absolute;
+								width: 100%;
+								padding: 0;
+								margin: 0;
+								top: 0;
+								height: 7em;
+								border-radius: 8px;
+								.left-container-wrapClass {
+									padding: 20px;
+								}
+							}
+						}
+					}
+					.separate-action-buttons-right-container-wrapClass {
+						position: absolute;
+						top: 12px;
+						right: 19px;
+						margin: 0;
+					}
+					.right-summary-container-wrapClass {
+						margin-right: 8px;
+					}
+
+					.grid-settings,
+					#main-summary-settings-view {
+						position: absolute;
+						width: calc(~"100%" - @padding-width * 2);
+						padding: 20px;
+						background-color: white;
+						border: 1px solid #e6e6e6;
+						border-radius: 8px;
+						
+
+						&.center-main-container {
+							border: none;
+							background: none;
+							padding: 0;
+							left: 30px;
+							width: calc(100% - 30px);
+							position: static;
+							top: 0;
+							margin-top: 55px;
+						}
+					}
+					#main-summary-settings-view{
+						width: calc(~"100%" - 32px);
+						margin-right: 16px;
+					}
+
+					.cases-settings {
+						height: auto;
+						overflow: visible;
+						display: flex;
+						flex-direction: column;
+
+						.section-dcm-settings {
+							max-width: @section-settings-width;
+							width: 100%;
+							margin-bottom: 8px;
+
+							.schema-wrap.one-el {
+								min-width: inherit;
+							}
+
+							.sys-dcm-settings {
+								width: 100%;
+								background-color: white;
+								display: flex;
+								flex-direction: column;
+								justify-content: flex-start;
+								align-items: stretch;
+								padding: 16px;
+								position: relative;
+								border-radius: 8px;
+								box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+
+								.t-btn-wrapper.cases-icon:hover {
+									.t-btn-image {
+										animation: rotate 1s cubic-bezier(0.74, -0.55, 0.63, 0.63);
+									}
+									@keyframes rotate {
+										100% {
+											transform: rotate(360deg);
+										}
+									}
+								}
+
+								.control-width-15 {
+									margin: 15px 0;
+
+									.label-wrap {
+										display: block;
+										width: 100%;
+										max-width: none;
+										min-width: 0;
+										padding: 0;
+										margin: 0 0 6px 0;
+
+										.t-label {
+											text-align: left;
+											color: #67748E;
+											font-weight: 400;
+											font-size: 12px;
+											line-height: 16px;
+
+											&.t-label-is-required:after {
+												position: static;
+											}
+										}
+									}
+
+									.control-wrap {
+										display: block;
+										margin: 0;
+										padding: 0;
+									}
+								}
+								
+								.combobox-edit-right-icon {
+									left: 13px;
+								}
+							}
+						}
+
+						.section-dcm-library {
+							position: relative;
+							max-width: @section-settings-width;
+							width: 100%;
+							background-color: white;
+							padding: 16px;
+							border-radius: 8px;
+							box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+							z-index: 0;
+
+							.section {
+								margin-left: inherit;
+								background-color: white;
+
+								.viewmodel-scrolltop-btn {
+									margin-top: -80px;
+								}
+
+								.right-section-container {
+									border: 0;
+									padding-bottom: 0;
+									margin-top: 0;
+									min-width: 50%;
+
+									#VwDcmLibSectionLeftGridUtilsContainerContainer {
+										max-width: 77%;	
+									}
+									
+									& [id$="GridDataViewContainer"] {
+										margin-top: 0;
+
+										.grid-dataview-container-mask.grid-dataview-container-wrapClass {
+											min-height: initial;
+										}
+									}
+								}
+
+								.left-section-container {
+									max-width: 520px;
+									.extended-filters-container-wrapClass {
+										left: 0;
+										position: static;
+									}
+									.extended-filters-container-wrapClass{
+										max-width: inherit;
+									}
+
+									.folders-container-wrapClass {
+										left: 0;
+									}
+								}
+							}
+
+							.schema-wrap.one-el .section-wrap {
+								background-color: white;
+
+								#RightSectionContainer {
+									overflow: visible;
+								}
+
+								.data-views-container-wrapClass {
+									padding-top: 0px;
+								}
+
+								.action-buttons-container-wrapClass {
+									background-color: white;
+									margin-left: 0;
+									position: static;
+									padding: 0;
+									border: none;
+									width: 100%;
+
+									#VwDcmLibSectionSeparateModeAddRecordButtonButton-textEl {
+
+										&:after {
+											content: '';
+											width: 20px;
+											transform: translateX(5px);
+											height: 20px;
+											background-position: center;
+											background-repeat: no-repeat;
+											background-image: url("data:image/svg+xml,%3Csvg width='10' height='10' viewBox='0 0 10 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M5 0C4.44772 0 4 0.447715 4 1V4L1 4C0.447715 4 0 4.44772 0 5C0 5.55228 0.447715 6 1 6H4V9C4 9.55229 4.44772 10 5 10C5.55228 10 6 9.55228 6 9V6H9C9.55228 6 10 5.55229 10 5C10 4.44772 9.55228 4 9 4L6 4V1C6 0.447715 5.55228 0 5 0Z' fill='white'/%3E%3C/svg%3E");
+										}
+									}
+
+									&:before {
+										display: none;
+									}
+								}
+
+								.content-container-wrapClass > .section {
+									.utils-container-wrapClass {
+										width: auto !important;
+										position: static;
+										border: 0;
+										background-color: white;
+										padding: 0;
+										padding-left: 0 !important;
+									}
+
+									.utils-container-wrapper-wrapClass {
+										margin-top: -1em;
+										background-color: white;
+
+										.filters-container-wrapClass {
+											.label-wrap + .control-wrap {
+												margin-left: 0;
+												padding-right: 0;
+											}
+										}
+									}
+								}
+
+								.section-inner-wrap.one-el .grid.grid-tiled:not(.grid-empty):before {
+									display: none;
+								}
+
+								.grid {
+									& > div:not(.empty-grid-message):nth-child(2) {
+										border-top: 1px solid #D8DBE2;
+									}
+
+									.empty-grid-message {
+										margin-top: 50px;
+									}
+								}
+							}
+
+							.ts-image-edit-container img {
+								background-color: inherit;
+							}
+						}
+
+						.section-caption {
+							color: #252F40;
+							font-weight: 600;
+							font-size: 18px;
+							line-height: 24px;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	#VwDcmLibSectionModule {
+		.grid-captions {
+			position: static !important;
+		}
+
+		.extended-filters-container-wrapClass {
+			height: 100%;
+		}
+
+		.left-section-container {
+			margin-top: 0;
+		}
+
+		.folders-container-wrapClass.left-inner-el {
+			position: initial;
+			max-height: 500px;
+		}
+	}
+	#VwDcmLibSectionGridUtilsContainerWrapperContainer {
+		height: auto !important;
+		margin-top: 0 !important;
+	}
+	#VwDcmLibSectionHasActiveProcessFilterLabel {
+		padding-top: 0;
+	}
+	#VwDcmLibSectionHasActiveProcessFilterContainer_Label {
+		max-width: unset;
+		margin-bottom: 0;
+	}
+	#SectionWizardCasesSettingsSectionDcmLibraryContainer {
+		padding-bottom: 80px !important;
+	}
+	#utilsFooterContainerContainer {
+		z-index: 999;
+	}
+}
+#VwDcmLibSectionSeparateModeViewOptionsButtonButton-markerEl{
+	left: 2px;
+}
+
+#GridSettingsPageActionButtonsContainerContainer::before {
+	display: none;
+}
+
+#VwDcmLibSectionDataGridContainerContainer {
+	.grid {
+		padding-top: 0 !important;
+	}
+}

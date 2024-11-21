@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="ru-RU">
+	<Group Type="String">
+		<Items>
+			<Item Name="Caption" Value="Заявки на транспорт" />
+			<Item Name="Columns.UsrCar.Caption" Value="Автомобиль" />
+			<Item Name="Columns.UsrCompany.Caption" Value="Компания" />
+			<Item Name="Columns.UsrDeliveryAddress.Caption" Value="Адрес доставки" />
+			<Item Name="Columns.UsrDescription.Caption" Value="Описание" />
+			<Item Name="Columns.UsrDriver.Caption" Value="Водитель" />
+			<Item Name="Columns.UsrName.Caption" Value="Название" />
+			<Item Name="Columns.UsrNotes.Caption" Value="Заметки" />
+			<Item Name="Columns.UsrOwner.Caption" Value="Ответственный" />
+			<Item Name="Columns.UsrRequestNumber.Caption" Value="Номер заявки" />
+			<Item Name="Columns.UsrStatus.Caption" Value="Статус" />
+			<Item Name="EventsProcessSchema.Caption" Value="Бизнес-процесс" />
+		</Items>
+	</Group>
+</Resources>

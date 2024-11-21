@@ -1,0 +1,61 @@
+﻿.right-panel-container *[data-item-type="mjhero"][data-page-exists="true"] {
+	.ts-controlgroup-caption-wrap > span {
+		color: #252F40;
+	}
+	.background-label-wrapper > label {
+		color: #252F40;
+	}
+	.properties-content > *:first-child {
+		height: 100%;
+		margin-top: 0;
+		padding-bottom: 0;
+	}
+	.base-edit-with-clear-icon[data-item-marker="BackgroundImage"] {
+		&:not(.clear-icon-not-visible):hover .base-edit-input {
+			padding-right: 0;
+		}
+
+		.base-edit-clear-icon {
+			right: 0;
+		}
+	}
+}
+
+.content-properties-container .mjhero-properties-container {
+	box-sizing: border-box;
+	height: 100%;
+
+	.ts-controlgroup .ts-controlgroup-marker-wrap {
+		display: none;
+	}
+	.ts-controlgroup .ts-controlgroup-caption-wrap {
+		pointer-events: none;
+	}
+	.size-control-group {
+		overflow: visible;
+	}
+	.background-properties-grid .align-label {
+		display: flex;
+		padding: 5px 0;
+		font-size: 1.3em;
+		color: #999999;
+	}
+	.background-properties-grid .grid-layout-row {
+		display: table;
+		table-layout: fixed;
+		min-height: 100%;
+	}
+	.background-properties-grid .grid-layout-column {
+		display: table-cell;
+		vertical-align: bottom;
+		min-height: 100%;
+		float: none;
+	}
+	.background-properties-grid .control-wrap {
+		flex-basis: auto;
+	}
+	.background-properties-grid .content-builder-align-container {
+		flex-direction: column;
+		align-items: initial;
+	}
+}

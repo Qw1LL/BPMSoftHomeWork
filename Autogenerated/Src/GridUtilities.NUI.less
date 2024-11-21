@@ -1,0 +1,77 @@
+﻿/*buttons-classes*/
+.image-size(@width, @height) {
+	width: @width;
+	height: @height;
+}
+
+.image-size(@size) {
+	width: @size;
+	height: @size;
+}
+
+.open-button-image-size {
+	.image-size(21px);
+}
+
+.open-button-wrapperEl {
+	padding-right: 0px;
+}
+
+.open-button-markerEl {
+	display: none;
+}
+
+.delete-button-image-size {
+	.image-size(7px, 8px);
+}
+
+.delete-button-wrapperEl {
+	vertical-align: bottom;
+}
+
+/*container-classes*/
+.container-mixin(none, @float) {
+}
+
+.container-mixin(inline-block, @float) {
+	display: inline-block;
+}
+
+.container-mixin(@_, @float) {
+	float: @float;
+}
+
+.summary-main-container {
+	.container-mixin(inline-block, right);
+}
+
+.summary-item-container {
+	.container-mixin (none, right);
+	margin: 0px 8px;
+}
+
+.summaries-container {
+
+}
+
+/*label-classes*/
+.summary-item-label(@color, @size) {
+	color: @color;
+	font-size: @size;
+}
+
+.summary-item-caption {
+	.summary-item-label(#999, 1.6em);
+}
+.summary-item-value {
+	.summary-item-label(#88C658, 2.2em);
+	padding-left: 5px;
+}
+.load-more-btn-user-class {
+	color: #444444;
+	font-size: 14px;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	width: 175px;
+}

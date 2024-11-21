@@ -1,0 +1,480 @@
+﻿@system-action-element-color: #839DC3;
+@pale-text: #999999;
+@left-padding: 52px;
+
+.sync-settings-page {
+	padding-bottom: 10px;
+	background: #F5F7FB;
+
+	#buttonsMenu, #SyncSettingsTabsPanelTabPanel-wrap, [data-item-marker='tab-content-container-marker'] {
+		background: white;
+	}
+	
+	#SyncSettingsTabsPanelTabPanel-wrap {
+		margin: 0;
+		padding: 12px 30px 52px 25px;
+		border-radius: 8px 8px 0 0;
+	}
+
+	.buttons-menu-container {
+		padding: 0 0 15px 23px;
+		margin-bottom: 8px;
+		border-radius: 0 0 8px 8px;
+
+		 .t-btn-wrapper[data-item-marker = "SaveButton"]:hover {
+			color: #fff !important;
+			background: #E56229 !important;
+		 }
+
+		 #SyncSettingsCancelButtonButton-textEl, #SyncSettingsCloseButtonButton-textEl, #SyncSettingsChangeEmailSettingsButton-textEl {
+			padding: 0.56em 20px; 
+		 }
+
+		 #SyncSettingsChangeEmailSettingsButton-textEl {
+			text-transform: none;
+		 }
+	}
+
+	div[data-item-marker = "tab-content-container-marker"] {
+		padding-bottom: 20px;
+		border-radius: 0 0 8px 8px;
+
+		.settings-page-reverse-toggle-edit {
+			margin-top: 0;
+		}
+
+		.module-container {
+			margin-left: 26px;
+		}
+	}
+	
+	.ts-tabpanel-scroll-left {
+		background-position: 5px 6px;
+	}
+
+	#EmailSyncSettingsSendHelpMsgLabel, #EmailSyncSettingsSharedMailboxsHelpMsgLabel {
+		width: 43%;
+	}
+
+	.t-label.help-label {
+		color: #67748E;
+		font-size: 14px;
+		padding-bottom: 10px;
+		width: 95%;
+		white-space: pre-wrap;
+		line-height: 20px;
+	}
+
+	.label-wrap + .control-wrap {
+		margin-left: 0;
+		padding-right: 0;
+	  }
+
+	  .t-checkboxedit-checked .toggle-label {
+		background: #F9763D;
+	  }
+
+	  .toggle-wrap.t-checkboxedit-focus.t-checkboxedit-checked .toggle-label {
+		background: #F9763D;
+	}
+
+	.checkbox-display-container {
+		display: flex;
+		flex-direction: row-reverse;
+		justify-content: space-around;
+		width: 100%;
+	}
+
+	#EmailSyncSettingsMailSyncPeriodLabel {
+		padding-right: 10px;
+	}
+
+	.language-edit {
+		padding-left: @left-padding;
+		margin-top: 10px;
+		
+		.control-wrap {
+			max-width: 40em;
+		}
+	}
+
+	.ts-tabpanel {
+		padding: 15px 30px 15px 25px;
+	}
+	
+	.grid-multiselect {
+			 div[level='0'] .t-checkboxedit-wrap {
+				display: none;
+			}
+	}
+
+	.grid-captions {
+		display: none;
+	}
+
+	.grid-listed-row.grid-active-selectable {
+		.t-checkboxedit-wrap.grid-listed-row-control {
+			margin-right: 0;
+		}
+		
+		.grid-toggle-empty.grid-listed-row-control {
+			margin-right: 21px;
+		}
+
+		&[id*="ActivitySyncSettingsTabFoldersGridGrid"], 
+		&[id*="ActivitySyncSettingsTabTasksFoldersGridGrid"], 
+		&[id*="ActivitySyncSettingsTabExportFoldersGridGrid"],
+		&[id*="ContactSyncSettingsTabFoldersGridGrid"] {
+
+			&:nth-child(2) .grid-cols-24{
+				padding-left: 16px !important;
+			}
+
+			.grid-cols-24 {
+				padding-bottom: 4px;
+			}
+		}
+	}
+
+	.grid {
+		margin-left: 47px;
+		margin-right: 30px;
+		width: 95%;
+
+		.grid-listed-row::after{
+			background: none !important;
+		}
+		
+		.grid-toggle-empty {
+			width: 16px;
+		}
+	}
+
+	.control-wrap {
+		max-width: 280px;
+	}
+
+	.t-label {
+		color: #67748E;
+	}
+
+	.control-width-15.settings-page-reverse-toggle-edit {
+		margin-top: 15px;
+		margin-bottom: 15px;
+	}
+	.control-width-15:not(.settings-page-reverse-toggle-edit) {
+		margin-top: 3px;
+		margin-bottom: 3px;
+
+		.label-wrap { 
+			max-width: 100em;
+			width: auto;
+		}
+	}
+
+	.radio-button-container {
+		margin-left: 0;
+
+		.t-label {
+			padding-bottom: 10px;
+			padding-top: 2px;
+		}
+		.t-radio-wrap {
+			color: #F9763D;
+		}
+	}
+
+	.settings-page-import-from-date .label-wrap {
+		width: 18.5em;
+		max-width: 18.5em;
+	}
+
+	.settings-page-reverse-checkbox, .settings-page-reverse-toggle-edit {
+		display: flex;
+		flex-direction: row-reverse;
+		justify-content: flex-end;
+		padding-bottom: 5px;
+
+		.label-wrap {
+			display: flex;
+			width: auto;
+			max-width: 80%;
+			align-items: center;
+
+			.t-label {
+				text-align: left;
+			}
+		}
+
+		.control-wrap {
+			margin-left: 0;
+			padding-left: 0;
+			width: 35px;
+			height: 30px;
+			display: flex;
+		}
+	}
+	.date-combobox {
+		display: flex;
+		flex-direction: column;
+		padding-bottom: 25px;
+
+		.label-wrap {
+			padding-bottom: 10px;
+		}
+
+		.t-label {
+			text-align: left;
+		}
+	}
+
+	.settings-page-reverse-checkbox {
+
+		.label-wrap {
+			.t-label {
+				padding: 0;
+				margin-top: -8px;
+			}
+		}
+	}
+
+	.settings-page-reverse-toggle-edit {
+		flex-basis: 40%;
+		font-family: "Golos Regular";
+
+		.control-wrap {
+			width: 50px;
+			padding-top: 4px;
+		}
+
+		.label-wrap {
+			.t-label {
+				color: #252F40;
+				padding: 0;
+				font-size: 20px;
+			}
+		}
+	}
+
+	.edit-with-checkbox-container {
+		display: flex;
+
+		.control-no-label {
+			display: flex;
+			flex-basis: 30px;
+			margin: 25px 5px 0px 0px;
+		}
+
+		.edit-wrap {
+			flex-direction: column;
+			display: flex;
+			padding-bottom: 15px;
+		
+			.label-wrap {
+				max-width: 210px;
+				margin-bottom: 5px;
+				.t-label {
+					text-align: left;
+				}
+			}
+			.control-wrap {
+				max-width: 300px;
+				margin: 0;
+				padding: 0;
+			}
+		}
+	}
+
+	.edit-with-checkbox-container {
+		margin-top: 3px;
+		margin-bottom: 8px;
+	}
+
+	.signature-edit-container {
+		max-width: 840px;
+		margin-top: 15px;
+
+		.control-wrap {
+			max-width: 100%;
+		}
+	
+		.html-editor {
+			.html-edit-textarea .cke_reset {
+				height: 200px !important;
+			}
+
+			.instance-ready {
+				width: 100%;
+				height: 200px;
+	
+				.cke_bottom {
+					background-color: #fff;
+					margin-bottom: 2px;
+	
+					.cke_resizer {
+						border-color: transparent @pale-text transparent transparent;
+						margin-right: 4px;
+					}
+				}
+			}
+		}
+
+
+		.add-macros-button-image {
+			margin-top: 1px;
+		}
+	}
+
+	.settings-page-radio-group {
+		display: inline-block;
+		margin-bottom: 10px;
+	}
+
+
+	.add-rights-detail {
+		width: 100%;
+		margin: 7px 0 12px 0;
+		padding-right: 15px;
+		display: flex;
+		flex-direction: column;
+
+		.page-container-list-items {
+
+			.admin-rights-display-container {
+				padding: 15px 0 15px 0;
+				border-bottom: 1px solid #D8DBE2;
+				display: flex;
+				flex-direction: row;
+			}
+			.controlCaption {
+				color: #252F40;
+				padding-left: 15px;
+			}
+
+			.t-btn-wrapper[data-item-marker = "DeleteRowButton"] {
+				background: none !important;
+				border: none!important;
+				color: #BABABA !important;
+				top: 6px;
+			}
+		}
+
+		.t-title-label-proc {
+			color: #252F40;
+			width: inherit;
+			font-size: 15px;
+			padding-top: 4px;
+			padding-right: 4px;
+			line-height: 18px;
+		}
+
+		.add-rule-button {
+			padding-left: 26px!important;
+		}
+		
+		.add-button-image {
+			left: 0;
+			background-size: cover;
+			width: 24px;
+			height: 24px;
+		}
+		.rights-items-header-container {
+			margin-bottom: 6px;
+			margin-top: 20px;
+			min-height: 16px;
+			flex-direction: row;
+			width: 100%;
+			display: flex;
+			justify-content: space-between;
+			border-bottom: 1px solid #D8DBE2;
+			padding-bottom: 15px;
+
+			.rights-items-header-label {
+				max-width: 239px;
+				color: #67748E;
+				font-size: 14px;
+				line-height: 20px;
+				padding-left: 15px;
+			}
+			.rights-items-header-images-container {
+				display: flex;
+				flex-direction: row;
+				justify-content: space-around;
+				width: 100%;
+
+				.rights-items-header-label-end {
+					width: auto;
+					min-width: 95px;
+					padding-left: 10px;
+					height: 20px;
+					float: left;
+					margin-right: 0;
+				}
+			}
+			.rights-items-header-buttom-container {
+				height: 1px;
+				margin-top: 6px;
+				background-color: #D8DBE2;
+			}
+		}
+		.container-list-empty {
+			text-align: center;
+		}
+	}
+
+	.admin-rights-container {
+		width: 100%;
+	}
+
+	.admin-rights-display-container {
+		.label-display-container {
+			display: flex;
+			flex-direction: row;
+			min-width: 263px;
+
+			&:hover .t-btn-wrapper .t-btn-image {
+				visibility: visible;
+			}
+		}
+
+		.t-label {
+			margin-top: 0;
+			overflow: hidden;
+			margin-bottom: 0;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+			max-width: 210px;
+			width: auto;
+		}
+
+		.t-btn-wrapper {
+			padding-left: 0;
+			padding-bottom: 6px;
+			margin-left: 8px;
+
+			.t-btn-image {
+				visibility: hidden;
+			}
+		}
+
+		.rights-checkbox {
+			margin-left: 0;
+			margin-right: 0;
+			margin-top: 4px;
+
+			.control-wrap {
+				height: 16px;
+			}
+		}
+
+		.admin-unit-lookup {
+			width: auto;
+			display: inline-block;
+		}
+
+		.controlCaption {
+			margin-top: 4px;
+		}
+	}
+
+}

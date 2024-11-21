@@ -1,0 +1,137 @@
+﻿.calendar-container {
+	flex-direction: row;
+	display: flex;
+
+	&[data-item-marker="RightGridContainerVisible"] {
+		.calendar-left-grid-container {
+			.grid {
+				.marketing-calendar-grid-listed-row {
+					padding: 0;
+				}
+			}
+		}
+	}
+
+	&[data-item-marker="RightGridContainerNotVisible"] {
+		.calendar-left-grid-container {
+			.grid {
+				.grid-row-selected {
+					height: auto;
+				}
+			}
+		}
+	}
+}
+
+.calendar-left-grid-container {
+	height: calc(~'100% - 23px');
+	display: flex;
+	flex-basis: 100%;
+	min-width: 509px;
+}
+
+.calendar-right-grid-container {
+	width: calc(~'100% - 520px');
+	height: calc(~'100% - 20px');
+	margin-left: 8px;
+}
+
+.button-container-wrapClass {
+  height: 40px;
+  white-space: nowrap;
+}
+
+.right-tools-buttons-container-wrapClass {
+  display: inline-block;
+  float: right;
+  position: relative;
+  z-index: 1;
+}
+
+.module-container {
+  height: 100%;
+  width: 100%;
+  padding-top: 0px;
+}
+
+.toggle-calendar-wrapper {
+	height: 24px;
+	width: 60px;
+	padding-left: 0.38em;
+	padding-right: 0.38em;
+	margin-top: 7px;
+
+	.toggle-calendar-image {
+		background-repeat: no-repeat;
+		width: 60px;
+		height: 48px;
+		background-position-y: 12px;
+	}
+
+	&[data-item-marker="RightGridContainerNotVisible"] {
+		.toggle-calendar-image {
+			background-position-y: -12px;
+		}
+	}
+}
+
+#MktgActivitySectionCalendarYearContainer {
+	& #MktgActivitySectionCalendarYearContainer_Label {
+		min-width: auto;
+		width: 24px;
+		margin-right: 10px;
+	}
+
+	.control-wrap {
+		width: inherit;
+
+		.base-edit-input {
+			width: inherit;
+		}
+	}
+
+	width: auto;
+	height: 24px;
+}
+
+#MktgActivitySectionCalendarYearComboBoxEdit-el {
+	background-color: transparent;
+}
+
+#MktgActivitySectionCalendarYearLabel {
+	width: 24px;
+	height: 24px;
+	background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='3' y='5' width='18' height='16' rx='3' stroke='%2367748E' stroke-width='2'/%3E%3Cpath d='M8 7L8 3' stroke='%2367748E' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M16 7L16 3' stroke='%2367748E' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M3 10L21 10' stroke='%2367748E' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Crect x='15' y='15' width='2' height='2' fill='%2367748E' stroke='%2367748E' stroke-width='2'/%3E%3C/svg%3E%0A");
+	background-size: 24px 24px;
+	background-repeat: no-repeat;
+}
+
+#MktgActivitySectionLeftGridUtilsContainerContainer {
+	align-items: center;
+}
+
+.menu-wrap.menu[data-item-marker="SeparateModeViewOptionsButton"] {
+	& [data-tag="Sorting"] {
+		display: none;
+	}
+}
+
+#MktgActivitySectionGridDataViewContainer {
+ .calendar-right-grid-container {
+	.grid-layout-table-edit-columns-header {
+		.grid-layout-table-edit-columns-header-cell {
+			color:#252F40;
+			line-height: 20px;
+		}
+	}
+ }
+
+	#MarketingCalendarId-grid-layout-table-edit-grid {
+		padding-bottom: 4px;
+	}
+}
+
+.grid-layout-table-edit-wrap {
+	border-radius: 8px;
+	padding-left: 10px;
+}

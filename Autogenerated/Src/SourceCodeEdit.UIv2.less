@@ -1,0 +1,56 @@
+﻿.base-edit {
+	&.source-code-edit {
+		padding-right: 0;
+		padding-left: 0;
+		border: 1px solid #D8DBE2;
+		border-radius: 8px;
+	}
+	.ace_editor {
+		font: 14px/normal 'Courier', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace !important;	
+	}
+
+	.ace-crimson-editor {
+		.ace_gutter {
+			color: #67748E;
+			background: #F1F1F1;
+		  }
+		  .ace_print-margin {
+			background: transparent;
+		  }
+		  .ace_string, .ace_identifier {
+			color: #9C2F29;
+		  }
+
+		  .ace_comment {
+			  color: #A5886B;
+		  }
+	}
+	
+	  &.source-code-edit.base-edit-focus {
+		border: 1px solid #D8DBE2 !important;
+		border-radius: 8px !important;
+	}
+}
+
+
+.base-edit.source-code-edit, .base-edit.source-code-edit .base-edit-input.ace-edit {
+	width: 100%;
+	height: 100%;
+	background-color: transparent;
+	padding-right: 0;
+	padding-left: 0;
+}
+
+/*
+Remove after aceEdit bug fix https://github.com/ajaxorg/ace/issues/2872
+Scroll bar is not visible on Safari
+*/
+.x-safari .base-edit.source-code-edit {
+	.ace_scrollbar {
+		z-index: auto;
+	}
+}
+
+.ace_scrollbar {
+	cursor: default;
+}

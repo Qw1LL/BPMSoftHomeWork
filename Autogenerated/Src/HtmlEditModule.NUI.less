@@ -1,0 +1,258 @@
+﻿.html-editor, .html-edit-toolbar, .html-edit-textarea, .html-edit-toolbar-buttongroup, .html-edit-toolbar-top{
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	position: relative;
+	background: none;
+}
+
+.html-editor {
+	display: table;
+
+	.base-edit {
+		border-bottom: none;
+
+		&:hover {
+			border-bottom: none;
+		}
+
+		&:not(.base-edit-focus) {
+			border-bottom: none;
+
+			&:hover {
+				border-bottom: none;
+			}
+		}
+	}
+	
+	#html-edit-toolbar-font-family,
+	#html-edit-toolbar-font-size {
+		.base-edit {
+			border-bottom: 1px solid #D8DBE2;
+		}
+	}
+
+	.base-edit.memo-edit-core {
+		overflow: hidden;
+	}
+
+	.cke_top {
+		display: none;
+	}
+
+	.base-edit-voice-to-text-wrapper {
+		display: none;
+	}
+
+	:hover {
+		.base-edit-voice-to-text-wrapper {
+			display: block;
+		}
+	}
+	.base-edit-input {
+		padding-bottom: 0;
+	}
+}
+
+.html-edit-toolbar {
+	padding-bottom: 10px;
+	display: table-cell;
+
+	.ts-color-button-viewer {
+		width: 15px;
+		height: 3px;
+		outline: none;
+		position: absolute;
+		bottom: 6px;
+		left: 15px;
+	}
+	
+	.html-edit-toolbar-buttongroup {
+		.t-btn-image {
+			height: 24px;
+			width: 24px;
+		}
+	}
+
+	.base-edit {
+		border-bottom: 1px solid #D8DBE2;
+		padding: 0;
+	}
+}
+
+.html-edit-toolbar-top {
+	padding-bottom: 6px;
+	display: table-cell;
+}
+
+.html-edit-toolbar-buttongroup {
+	padding-right: 6px;
+	padding-top: 6px;
+	display: inline-block;
+	.t-btn-wrapper {
+		overflow: visible;
+		padding: 3px 10px;
+		margin-right: 5px;
+		border-radius: 2px;
+		&.t-btn-pressed {
+			background-color: #ffefe9;
+		}
+		.t-btn-menu {
+			right: 0;
+			.t-btn-marker {
+				border-top-color: #67748e;
+			}
+		}
+	}
+
+	.base-edit {
+		padding-left: 8px;
+	}
+}
+
+.html-edit-textarea {
+	border: 1px solid #BABABA;
+	border-radius: 8px;
+	overflow: hidden;
+	display: table-cell;
+	width: 100%;
+	height: 100%;
+
+	.virtual {
+		min-height: 304px;
+	}
+
+	.base-edit-voice-to-text-wrapper {
+		position: absolute;
+		top: 6px;
+		right: 16px;
+		background-color: white;
+		border-radius: 50%;
+
+		.mat-button-wrapper{
+			span {
+				top: 10px;
+				position: relative;
+			}
+		} 
+	}
+}
+
+
+.x-ie8 .html-edit-textarea {
+	padding-right: 1px;
+}
+
+.html-edit-validation {
+	display: none;
+	background-color: #58aeda;
+	color: #ffffff;
+	font-size: 1.3em;
+	padding-left: 5px; padding-right: 5px; padding-top: 0px; padding-bottom: 2px;
+	position: absolute;
+	left: -1px;
+	z-index: 10;
+	word-wrap: break-word;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.html-edit-error {
+	outline: none;
+	border-color: rgba(86, 180, 239, 0.7);
+	border-color: #56b4ef;
+	-webkit-box-shadow: 0 0 3px 0 rgba(86, 180, 239, 0.7);
+	-moz-box-shadow: 0 0 3px 0 rgba(86, 180, 239, 0.7);
+	box-shadow: 0 0 3px 0 rgba(86, 180, 239, 0.7);
+}
+
+.html-edit-textarea .cke_reset {
+	height: 100%;
+}
+
+.html-edit-textarea .cke_chrome {
+	border: none;
+	box-shadow: none;
+}
+
+html[dir="rtl"] .listview li {
+	text-align: left;
+}
+
+.html-edit-toolbar-maximized {
+	position: absolute;
+	top: 0;
+	z-index: 1999;
+	padding: 5px 10px;
+	background-color: white;
+	.base-edit-input {
+		padding-right: 20px;
+	}
+}
+.cke_maximized {
+	z-index: 1998 !important;
+}
+.html-link-popup {
+	height: 307px;
+
+	.base-edit-focus {
+		border: 1px solid #67748E !important;
+		color: #252F40;
+		border-radius: 8px !important;
+	  }
+	
+	.base-edit {
+		padding: 6px 15px;
+	}
+	
+	.html-button-save {
+		margin-top: 32px;	
+	}
+
+	.html-button-cancel {
+		margin-top: 36px;
+	}
+
+	.controlCaption {
+		font-style: normal;
+		font-weight: 400;
+		font-size: 12px;
+		line-height: 16px;
+		color: #67748E;
+		margin-top: 24px;
+	}
+	  
+	.ts-inputbox-control {
+		.t-btn-style-default {
+			border: none;
+		  }
+	}
+
+	label:nth-of-type(2), [data-item-marker *= "linktextedit"] {
+		width: 65%;
+		float: left;
+	}
+
+	label:last-of-type, [data-item-marker *= "linkcoloredit"] {
+		width: 18%;
+		float: left;
+		text-align: center;
+	}
+
+	div[data-item-marker *= "linkcoloredit"] {
+		.t-btn-wrapper {
+			float: none;
+			padding: 5px 0;
+			margin-left: 0;
+			.t-btn-marker {
+				border-top-color: #67748E;
+			}
+		}
+	}
+
+	label:last-of-type {
+		width: 25%;
+		margin-top: -18px;
+	}
+}

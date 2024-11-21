@@ -1,0 +1,445 @@
+﻿.detail {
+
+	.load-more-button-class {
+		margin-top: 10px;
+		border: 1px solid #F9763D;
+		color: #F9763D;
+		text-align: center;
+		padding: 8px 0 !important;
+		width: 100%;
+		border-radius: 8px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		& > span {
+			background-image: none !important;
+		}
+
+		&:hover {
+			color: #E56229 !important;
+			border: 1px solid #F9763D;
+		}
+	}
+
+	.ts-controlgroup-tools {
+
+		.detail-tools-button-wrapper {
+			padding-right: 0.462em;
+			padding-left: 0.385em;
+			display: flex;
+			align-items: center;
+			.t-btn-image {
+				width: 24px;
+				background-position: center;
+			}
+			&[data-item-marker="AddRecord"] {
+				.t-btn-menu {
+					display: none;
+				}
+			}
+		}
+
+		.t-btn-wrapper[data-item-marker="ToolsButton"] {
+			padding-right: 0;
+		}
+
+		.t-btn-wrapper[data-item-marker="UpButton"],
+		.t-btn-wrapper[data-item-marker="DownButton"] {
+			margin-right: 10px;
+			.t-btn-image {
+				width: 24px;
+				height: 24px;
+				background-size: cover;
+				background-position: 0 -24px;
+			}
+		}
+
+		.t-btn-disabled.t-btn-wrapper[data-item-marker="UpButton"],
+		.t-btn-disabled.t-btn-wrapper[data-item-marker="DownButton"] {
+			.t-btn-image {
+				background-position: 0 0;
+			}
+		}
+
+		.t-btn-wrapper[data-item-marker="CalculateProjectFinance"] {
+			.t-btn-image {
+				width: 24px;
+				height: 24px;
+			}
+		}
+
+		.detail-tools-button-menu {
+			display: none;
+		}
+
+		.detail-relationship-button-wrapper {
+			padding-right: 0.462em;
+			padding-left: 0.385em;
+
+			.t-btn-image {
+				width: 1.16em;
+  				height: 1.16em;
+			}
+		}
+
+		.t-btn-pressed {
+  			background: #e4eaf9;
+		}
+
+		.t-btn-style-default {
+			.t-btn-image {
+				width: 18px;
+				height: 18px;
+			}
+		}
+
+		&#WebServiceMethodDetailDetailControlGroup-tools {
+			gap: 4px;
+
+			.t-btn-wrapper[data-item-marker="ToolsButton"] {
+				padding-left: 0;
+			}
+		}
+	}
+}
+#SysProcessElementLogDetailV2DetailControlGroup-tools.ts-controlgroup-tools .t-btn-wrapper[data-item-marker="ToolsButton"] {
+	padding-top: 3px;
+}
+
+#MessageHistory{
+	[id^="HistoryV2Container"] {
+		.historyV2-message-footer-container {
+			.ts-controlgroup.messageHistory-files-detail.detail.grid-detail {
+				.ts-controlgroup-container.no-line {
+					padding-bottom: 2.2em;
+				}
+			}
+		}
+	}
+}
+
+#FinApplicationPageTabsContainerContainer {
+	#FinApplicationPageHistoryTabControlGroupControlGroup,
+	#FinApplicationPageHistoryTabFirstControlGroupControlGroup {
+		padding-bottom: 0;
+	}
+}
+
+.ts-controlgroup-container {
+	padding-bottom: 2.6em;
+
+	.grid.grid-tiled {
+		&#grid-ContactCareerDetailV2DataGridGrid-wrap {
+			padding-left: 0;
+			border-radius: 8px;
+			overflow: hidden;
+		}
+
+		.grid-pad {
+			padding-left: 0px;
+
+			&:first-child:before {
+				margin: 0;
+			}
+
+			&:after{
+				margin: 6px 0px 0px 0px;
+			}
+
+			.grid-module {
+				padding-left: 6px;
+			}
+		}
+	}
+
+	.grid.grid-tiled.grid-multiselect .grid-pad .grid-module {
+		padding-left: 32px;
+	}
+
+	&#ProcessExecutionGranteeDetailDetailControlGroup,
+	&#SysAdminOperationGranteeDetailV2DetailControlGroup,
+	&#ServiceEngineerDetailDetailControlGroup,
+	&#ServiceRelationshipDetailDetailControlGroup,
+	&#ConfItemInServiceDetailDetailControlGroup {
+		.grid-listed-row::after {
+			display: none;
+		}
+	}
+}
+
+.ts-controlgroup-container.ts-controlgroup-empty-caption {
+
+}
+
+#ProjectStructureDetailV2DetailControlGroup .grid-listed-row-control{
+	margin-right: 0px;
+}
+
+.ts-controlgroup .grid-layout {
+	margin-bottom: 1px;
+}
+
+.detail-tools-filters-container {
+	display: flex;
+	padding-left: 15px;
+
+	.control-width-15 {
+
+		.label-wrap + .control-wrap{
+			margin-left: 0;
+			padding-left: 0;
+		}
+		.control-wrap {
+			float: left;
+			width: auto;
+		}
+		.t-checkboxedit-wrap {
+			margin-top: 5px;
+		}
+	}
+	.label-wrap {
+		width: 100%;
+		padding-left: 10px;
+
+		&.checkbox-label-wrap {
+			.t-label {
+				min-width: 128px;
+				text-align: left;
+			}
+		}
+		.t-label {
+			white-space: nowrap;
+			color: #444444;
+			width: auto;
+		}
+	}
+}
+
+#SysWorkplacePageV2Container {
+	#SysWorkplacePageV2HeaderContainerContainer {
+		[data-item-marker="Header"] {
+			.home-page-button-container {
+				margin-top: 25px;
+			}
+		}
+	}
+}
+
+#VisaDetailV2Container {
+	.grid.grid-tiled {
+		.grid-pad:after {
+			display: none;
+		}
+	}
+}
+
+#VisaDetailV2ToolsFilterContainerContainer{
+	padding-left: 0px;
+}
+
+html[dir="rtl"] {
+	.detail-tools-filters-container .control-width-15 .label-wrap{
+		width: auto;
+	}
+}
+
+#SysAdminOperationPageV2Container {
+
+	#CardContentContainer {
+		margin-top: 1.3em;
+	}
+
+	.actions-container {
+		padding-top: 0;
+		height: 0;
+		min-height: 6.5em;
+	}
+
+	.center-main-container > .header-container-margin-bottom > *, .center-main-container > div, .left-modules-container > div {
+		border: none;
+	}
+
+	#SysAdminOperationPageV2DetailOperationContainer {
+		padding: 10px 20px;
+	}
+
+	.grid-listed .grid-captions [class*="grid-cols"][grid-caption-type~="number"], .grid-listed [grid-cell-type~="number"] [grid-data-type="number"] {
+		text-align: left;
+	  }
+
+	.control-width-15 .base-edit:not(.base-edit-focus) {
+		height: auto;
+	  }
+
+	.ts-controlgroup-caption-wrap {
+		height: 4em;
+	  }
+
+	  #SysAdminOperationGranteeDetailV2DetailControlGroup-wrap {
+		padding-top: 1em;
+	  }
+
+	.control-no-label .base-edit {
+		padding-bottom: 0;
+	  }
+
+	  .grid-row-controls {
+		flex-basis: 100%;
+	}
+
+	.grid.grid-listed.grid-listed-zebra .grid-listed-row.grid-active-selectable span {
+		font-size: inherit;
+	}
+
+	.configuration-grid .configuration-grid-row-active .configuration-grid-row-actions .t-btn-image {
+		font-size: 16px !important;
+	  }
+
+	  #SysAdminOperationGranteeDetailV2GridLayout .grid-layout-row {
+		padding: 5px 5px;
+	  }
+	  .ts-controlgroup-tools .t-btn-wrapper[data-item-marker="AddRecordButton"]:not(.padding-left-34px) {
+		margin-top: 0;
+	  }
+
+	  .configuration-grid .configuration-grid-row-active .grid-row-controls .number-edit-align .base-edit-disabled-el-icon {
+		left: 25px;
+	  }
+
+}
+
+#LDAPServerSettingsContainer {
+	#ServerSettingsContainerLDAP-item-HeaderContainer {
+		#HeaderContainer {
+			width: calc(~"100% - 240px - 7.2em") !important;
+			position: fixed !important;
+			min-height: 70px;
+			background-color: #fff;
+			border-radius: 0 0 8px 8px;
+		}
+		#LDAPServerSettingsSaveButtonButton-textEl, #LDAPServerSettingsCancelButtonButton-textEl {
+			padding: 8px 20px;
+			margin-top: 15px;
+		}
+		#LDAPServerSettingsSaveButtonButton-textEl {
+			margin-left: 20px;
+		}
+	}
+	#ServerSettingsContainerLDAP-item-LDAPProperties {
+		padding-top: 46px;
+	}
+
+	.ts-controlgroup-caption-wrap .ts-controlgroup-marker-wrap {
+		order: 1;
+		flex: 0;
+		margin-top: -0.8em;
+		margin-left: 2.3em;
+	  }
+	  .ts-controlgroup-container.no-line {
+		padding-left: 20px;
+	  }
+
+	  #LDAPProperties {
+		background: #fff;
+		border-radius: 8px;
+	  }
+
+	  #CommonServerSettings-wrap {
+		.ts-controlgroup-caption-wrap {
+			margin-top: 15px;
+		}
+	  }
+
+	  #LDAPServerSettingsLDAPSynchIntervalContainer_Label {
+		max-width: 100%;
+	  }
+
+	  .grid-layout .control-width-15 .t-label {
+		margin-bottom: 0;
+	  }
+
+	  .control-width-15 .base-edit:not(.base-edit-focus) {
+		height: auto;
+	  }
+
+	  .control-width-15 .base-edit .base-edit-input {
+		padding: 10px 0 10px 0;
+	  }
+
+	  .base-edit-right-icon {
+		height: 20px;
+	  }
+
+	  .grid-layout .control-width-15.checkbox-control-item .control-wrap {
+		margin-right: 0;
+	  }
+
+
+		#LDAPServerSettingsLDAPSynchronizeOnlyGroupsTipLabel-tip, #LDAPServerSettingsLDAPUseSecureConnectionTipLabel-tip {
+			right: 0;
+			bottom: 0;
+		}
+
+		.checkbox-control-item {
+			margin-top: -50px;
+		}
+
+		#CommonServerSettings-wrap {
+			padding-top: 20px;
+		}
+
+}
+
+#SysAdminOperationSectionV2Container {
+	.left-section-container .extended-filters-container-wrapClass {
+		left: 24em;
+		border-radius: 8px;
+	}
+
+   #CardContentWrapper {
+	   margin-top: 2em;
+   }	
+}
+
+#FileDetailV2SetListedModeButtonButton-wrapperEl, #FileDetailV2SetTiledModeButtonButton-wrapperEl {
+	top: -11px;
+}
+
+#ContactCommunicationDetailDetailControlGroup {
+	.t-btn-image {
+		background-size: 20px;
+	}
+}
+
+.ts-controlgroup.detail.grid-detail  {
+	&.ts-controlgroup-collapsed {
+		.ts-controlgroup-tools {
+			display: none;
+		}
+	}
+}
+
+#PortalOrderPageOrderReceiverInformationResultsControlBlockControlGroup {
+	padding-top: 1em;
+}
+
+#SysWorkplacePageV2TabsContainerContainer {
+	#SysWorkplacePageV2SysModuleContainer {
+		.grid-listed-row {
+			padding-left: 6px;
+		}
+	}
+}
+
+#PortalCasePageMessageHistoryGroupControlGroup {
+	.historyV2-container-wrap {
+		.historyV2-message-footer-container {
+			height: auto;
+		}
+	}
+}
+
+#FileDetailV2loadMoreButton-wrapperEl {
+	margin-bottom: 10px;
+}

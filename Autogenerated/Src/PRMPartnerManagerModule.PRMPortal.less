@@ -1,0 +1,58 @@
+﻿@color-widget: #7299F8;
+@width-hundred-percent: 100%;
+@height-hundred-percent: 100%;
+
+.manager-widget-metrics-container {
+  display: table;
+  height: @height-hundred-percent;
+  overflow: hidden;
+  text-align: center;
+  width: @width-hundred-percent;
+}
+.manager-main-widget-metrics-container {
+  background-color: @color-widget;
+  display: table-cell;
+  vertical-align: middle;
+  border-radius: 8px;
+}
+#PRMPartnerManagerSchemaContainer.schema-wrap.one-el {
+  display: table;
+  min-width: 0px;
+  height: @height-hundred-percent;
+  width: @width-hundred-percent;
+}
+.manager-profile-margin {
+  display: flex;
+  justify-content: space-between;
+  margin: 16px;
+
+  .photo-icon {
+    height: 40px;
+    width: 40px;
+  }
+  
+  .mail-to-btn {
+    align-items: flex-start;
+    
+    .t-btn-image {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  #PRMPartnerManagerSchemaCaptionContainerContainer {
+    position: absolute;
+    bottom: 0;
+
+    .manager-name-label {
+      color: #ffffff;
+      line-height: 38px;
+    }
+  }
+}
+
+.manager-name-caption-label {
+  font-size: 20px;
+  margin-top: 0px;
+  max-width: 200px;
+}

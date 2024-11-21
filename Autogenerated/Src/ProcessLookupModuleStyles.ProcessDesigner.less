@@ -1,0 +1,85 @@
+﻿.process-lookup-modal-box {
+	height: auto!important;
+	max-height: 600px;
+	.ts-modalbox-innerbox {
+		width: 100%;
+		height: 100%;
+		display: block;
+	}
+
+	.modal-page-fixed-container {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		height: 100%;
+		padding: 0 19px 0 19px;
+
+		::-webkit-scrollbar {
+			-webkit-appearance: none;
+			width: 8px;
+		}
+	
+		::-webkit-scrollbar-thumb {
+			background-color: #DADCE1;
+		}
+
+		.center-area-grid-container {
+			height: 330px;
+			overflow-y: auto;
+
+			.grid .grid-captions {
+				display: inherit;
+			}
+			
+			.grid-listed-row .grid-fixed-col,
+			.grid-listed-row .grid-fixed-col-2 {
+				margin-left: 3px;
+			}
+		}
+
+		.close-btn-user-class {
+			position: absolute;
+			right: 1em;
+			top: 15px;
+			.t-btn-image {
+				background-position: center;
+			}
+		}
+
+		.controls-container-modal-page {
+			padding-top: 21px;
+			padding-right: 21px;
+		}
+
+		.header {
+			display: inline-block;
+			width: 100%;
+			margin-bottom: 0px;
+		}
+
+		.header-name-container {
+			display: inline-block;
+			vertical-align: top;
+			width: 62%;
+			padding-right: 15px;
+			box-sizing: border-box;
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+		}
+
+		.header-name-container-full {
+			padding-top: 4px;
+		}
+
+		.header-name-container .t-label {
+			color: #252F40;
+			font-size: 20px;
+			line-height: 28px;
+			letter-spacing: -0.02em;
+		}
+
+		.utils-buttons {
+			margin: 0 9px 0 0;
+		}
+	}
+}

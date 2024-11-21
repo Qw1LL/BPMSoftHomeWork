@@ -1,0 +1,3 @@
+﻿define("ServiceResponseParameterValuePage", [], function() {
+	return {};
+});

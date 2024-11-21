@@ -1,0 +1,54 @@
+﻿.historyContainer {
+	margin: 0 0 10px 0;
+	.multiline-label-wrap {
+		.label-content-container {
+			overflow: auto;
+		}
+	}
+	.createdByImage {
+		width: 32px;
+		height: 32px;
+		float: right;
+		margin-right: 0;
+	}
+	.historyMessageWrap {
+		margin: 0px 54px 0 85px;
+		padding: 10px 15px;
+		position: relative;
+		.historyMessageHeader {
+				min-height: 20px;
+				display: table;
+				width: 100%;
+			* {
+				font-size: 13px;
+				width: auto;
+			}
+			.createdByLabel {
+				float: left;
+				width: 69%;
+				margin-right: 1%;
+			}
+			.creationInfoLabel {
+				color: #999;
+				float: right;
+				width: 30%;
+				text-align: right;
+			}
+		}
+	}
+	.historyMessageWrap::after {
+		top: 16px;
+		right: -16px;
+		bottom: auto;
+		left: auto;
+		border-width: 0 0 16px 16px;
+		border-style: solid;
+		content: "";
+		position: absolute;
+		display: block;
+		width: 0;
+	}
+}
+.inlineEmailMessageHistoryFiles {
+	max-height: none;
+}

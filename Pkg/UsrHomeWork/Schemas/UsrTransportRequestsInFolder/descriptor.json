@@ -1,0 +1,13 @@
+﻿{
+  "Descriptor": {
+    "UId": "ffe5641f-3d06-452e-93f2-9aa69450bc9e",
+    "Name": "UsrTransportRequestsInFolder",
+    "ModifiedOnUtc": "\/Date(1731913851000)\/",
+    "Parent": {
+      "UId": "4f63bafb-e9e7-4082-b92e-66b97c14017c",
+      "Name": "BaseItemInFolder"
+    },
+    "ManagerName": "EntitySchemaManager",
+    "Caption": "Заявки на транспорт в группе"
+  }
+}

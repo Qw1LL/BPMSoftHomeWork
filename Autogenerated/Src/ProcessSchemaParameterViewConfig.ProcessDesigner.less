@@ -1,0 +1,91 @@
+﻿.hierarchical-container-list-item {
+	.ts-controlgroup-caption-wrap {
+		margin-left: 24px;
+		display: inline-flex;
+		flex-direction: row-reverse;
+		.ts-controlgroup-marker {
+			cursor: pointer;
+			height: 16px;
+			width: 16px;
+			top: 1px;
+			position: relative;
+		}
+	}
+
+	.ts-controlgroup-collapsed .ts-controlgroup-caption-wrap .ts-controlgroup-marker {
+		transform: rotate(180deg);
+	}
+
+	.ts-controlgroup-marker-wrap {
+		display: inline-block;
+	}
+
+	.ts-controlgroup-container {
+		padding-bottom: 0px;
+		margin-left: 5px;
+	}
+
+	.ts-controlgroup-caption-wrap .ts-controlgroup-marker-wrap, .ts-controlgroup-caption-wrap span {
+		cursor: pointer;
+	}
+
+	.nested-parameters-add {
+		font-size: 14px;
+		color: #67748E;
+		padding-left: 10px;
+
+		span.t-btn-text {
+			padding-left: 5px;
+		}
+
+		&:hover:not(.t-btn-disabled) {
+			background: #F2F5FF;
+			color: #252F40 !important;
+		}
+	}
+
+	.nested-parameters {
+		margin-left: 10px;
+
+		.ts-controlgroup-caption-wrap {
+			margin-left: 34px;
+		}
+
+		.nested-parameters {
+			margin-left: 20px;
+		}
+
+		.parameter-ct:not(#item-view) {
+			margin-left: 10px;
+			padding-top: 8px;
+		}
+	}
+
+	.tools-container-wrapClass {
+		width: 100%;
+		display: inline-flex;
+		align-items: start;
+		justify-content: space-between;
+		.label-container-wrapClass, .tools-button-container-wrapClass {
+			float: none;
+		}
+		label {
+			width: 100%;
+			word-break: break-all;
+		}
+	}
+}
+
+#ProcessSchemaPropertiesPageParametersContainerContainerList{
+	.ts-controlgroup-container{
+		padding-bottom: 1.1em;
+	}	
+
+	span[id$="-textEl"]{
+		width: 220px;		
+	}
+
+	.t-btn-menu{
+		right: 5px;
+	}
+}

@@ -1,0 +1,15 @@
+﻿{
+  "Descriptor": {
+    "UId": "e8e4458b-88d2-45c6-ae36-6c77ebe6d6dc",
+    "Name": "Campaign",
+    "ModifiedOnUtc": "\/Date(1729599991000)\/",
+    "Parent": {
+      "UId": "1f9bb71a-eb9c-4220-a40e-9b623eacfec8",
+      "Name": "Campaign"
+    },
+    "ExtendParent": true,
+    "ManagerName": "EntitySchemaManager",
+    "Caption": "Кампания",
+    "DependsOn": []
+  }
+}

@@ -1,0 +1,54 @@
+﻿#LeadPageV2Container,
+#LeadSectionV2Container {
+  #LeftModulesContainer {
+    #ProfileContainer {
+      #LeadPageV2LeadCreatedOnTimeEdit-wrap {
+        width: 110px;
+      }
+    }
+  }
+
+  .combined-action-buttons-card-left-container-wrapClass,
+  #LeadPageV2LeftContainerContainer {
+    display: flex;
+
+    [data-item-marker*="TagsButton"] {
+      order: 1;
+    }
+  }
+  
+  #CardContentContainer {
+    #DcmActionsDashboardContainer {
+      background-color: white;
+      margin-top: 44px;
+
+      #LeadSectionActionsDashboardTabsTabPanel-items-wrap {
+        height: 40px;
+
+        &::before {
+          left: 20px;
+          right: 20px;
+          width: auto;
+        }
+
+        #LeadSectionActionsDashboardTabsTabPanel-tabpanel-items {
+          & > li:first-child {
+            height: inherit;
+            font-size: 18px;
+          }
+        }
+      }
+    }
+
+    #LeadSectionActionsDashboardContentContainerContainer {
+      margin-top: 30px;
+
+      #LeadSectionActionsDashboardTabsTabPanel-tabpanel-items {
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 24px;
+        letter-spacing: -0.02em;
+      }
+    }
+  }
+}

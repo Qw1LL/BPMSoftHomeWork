@@ -1,0 +1,310 @@
+﻿namespace BPMSoft.Configuration.OData
+{
+
+	using BPMSoft.Core;
+	using BPMSoft.Core.Entities.Extensions;
+	using System;
+	using System.Collections.Generic;
+	using System.Drawing;
+
+	#region Class: KnowledgeBase
+
+	/// <exclude/>
+	public class KnowledgeBase : BPMSoft.Core.Entities.Entity
+	{
+
+		#region Constructors: Public
+
+		public KnowledgeBase(UserConnection userConnection)
+			: base(userConnection) {
+			SchemaName = "KnowledgeBase";
+		}
+
+		public KnowledgeBase(BPMSoft.Core.Entities.Entity source)
+			: base(source) {
+			SchemaName = "KnowledgeBase";
+			this.CopyEntityLookupProperties(source);
+		}
+
+		#endregion
+
+		#region Properties: Public
+
+		public IEnumerable<Comment> CommentCollectionByKnowledgeBase {
+			get;
+			set;
+		}
+
+		public IEnumerable<Favorites> FavoritesCollectionByKnowledgeBase {
+			get;
+			set;
+		}
+
+		public IEnumerable<KnowledgeBaseFile> KnowledgeBaseFileCollectionByKnowledgeBase {
+			get;
+			set;
+		}
+
+		public IEnumerable<KnowledgeBaseInCase> KnowledgeBaseInCaseCollectionByKnowledgeBase {
+			get;
+			set;
+		}
+
+		public IEnumerable<KnowledgeBaseInFolder> KnowledgeBaseInFolderCollectionByKnowledgeBase {
+			get;
+			set;
+		}
+
+		public IEnumerable<KnowledgeBaseInTagV2> KnowledgeBaseInTagV2CollectionByEntity {
+			get;
+			set;
+		}
+
+		public IEnumerable<KnowledgeBaseTagDecoupling> KnowledgeBaseTagDecouplingCollectionByKnowledgeBase {
+			get;
+			set;
+		}
+
+		public IEnumerable<Like> LikeCollectionByKnowledgeBase {
+			get;
+			set;
+		}
+
+		public IEnumerable<Playbook> PlaybookCollectionByKnowledgeBase {
+			get;
+			set;
+		}
+
+		/// <summary>
+		/// Id.
+		/// </summary>
+		public Guid Id {
+			get {
+				return GetTypedColumnValue<Guid>("Id");
+			}
+			set {
+				SetColumnValue("Id", value);
+			}
+		}
+
+		/// <summary>
+		/// Дата создания.
+		/// </summary>
+		public DateTime CreatedOn {
+			get {
+				return GetTypedColumnValue<DateTime>("CreatedOn");
+			}
+			set {
+				SetColumnValue("CreatedOn", value);
+			}
+		}
+
+		/// <exclude/>
+		public Guid CreatedById {
+			get {
+				return GetTypedColumnValue<Guid>("CreatedById");
+			}
+			set {
+				SetColumnValue("CreatedById", value);
+				_createdBy = null;
+			}
+		}
+
+		/// <exclude/>
+		public string CreatedByName {
+			get {
+				return GetTypedColumnValue<string>("CreatedByName");
+			}
+			set {
+				SetColumnValue("CreatedByName", value);
+				if (_createdBy != null) {
+					_createdBy.Name = value;
+				}
+			}
+		}
+
+		private Contact _createdBy;
+		/// <summary>
+		/// Создал.
+		/// </summary>
+		public Contact CreatedBy {
+			get {
+				return _createdBy ??
+					(_createdBy = new Contact(LookupColumnEntities.GetEntity("CreatedBy")));
+			}
+		}
+
+		/// <summary>
+		/// Дата изменения.
+		/// </summary>
+		public DateTime ModifiedOn {
+			get {
+				return GetTypedColumnValue<DateTime>("ModifiedOn");
+			}
+			set {
+				SetColumnValue("ModifiedOn", value);
+			}
+		}
+
+		/// <exclude/>
+		public Guid ModifiedById {
+			get {
+				return GetTypedColumnValue<Guid>("ModifiedById");
+			}
+			set {
+				SetColumnValue("ModifiedById", value);
+				_modifiedBy = null;
+			}
+		}
+
+		/// <exclude/>
+		public string ModifiedByName {
+			get {
+				return GetTypedColumnValue<string>("ModifiedByName");
+			}
+			set {
+				SetColumnValue("ModifiedByName", value);
+				if (_modifiedBy != null) {
+					_modifiedBy.Name = value;
+				}
+			}
+		}
+
+		private Contact _modifiedBy;
+		/// <summary>
+		/// Изменил.
+		/// </summary>
+		public Contact ModifiedBy {
+			get {
+				return _modifiedBy ??
+					(_modifiedBy = new Contact(LookupColumnEntities.GetEntity("ModifiedBy")));
+			}
+		}
+
+		/// <summary>
+		/// Название.
+		/// </summary>
+		public string Name {
+			get {
+				return GetTypedColumnValue<string>("Name");
+			}
+			set {
+				SetColumnValue("Name", value);
+			}
+		}
+
+		/// <summary>
+		/// Решение.
+		/// </summary>
+		public string Notes {
+			get {
+				return GetTypedColumnValue<string>("Notes");
+			}
+			set {
+				SetColumnValue("Notes", value);
+			}
+		}
+
+		/// <summary>
+		/// Код.
+		/// </summary>
+		public string Code {
+			get {
+				return GetTypedColumnValue<string>("Code");
+			}
+			set {
+				SetColumnValue("Code", value);
+			}
+		}
+
+		/// <summary>
+		/// Теги.
+		/// </summary>
+		public string Keywords {
+			get {
+				return GetTypedColumnValue<string>("Keywords");
+			}
+			set {
+				SetColumnValue("Keywords", value);
+			}
+		}
+
+		/// <exclude/>
+		public Guid TypeId {
+			get {
+				return GetTypedColumnValue<Guid>("TypeId");
+			}
+			set {
+				SetColumnValue("TypeId", value);
+				_type = null;
+			}
+		}
+
+		/// <exclude/>
+		public string TypeName {
+			get {
+				return GetTypedColumnValue<string>("TypeName");
+			}
+			set {
+				SetColumnValue("TypeName", value);
+				if (_type != null) {
+					_type.Name = value;
+				}
+			}
+		}
+
+		private KnowledgeBaseType _type;
+		/// <summary>
+		/// Тип.
+		/// </summary>
+		public KnowledgeBaseType Type {
+			get {
+				return _type ??
+					(_type = new KnowledgeBaseType(LookupColumnEntities.GetEntity("Type")));
+			}
+		}
+
+		/// <summary>
+		/// Активные процессы.
+		/// </summary>
+		public int ProcessListeners {
+			get {
+				return GetTypedColumnValue<int>("ProcessListeners");
+			}
+			set {
+				SetColumnValue("ProcessListeners", value);
+			}
+		}
+
+		/// <summary>
+		/// Количество просмотров.
+		/// </summary>
+		public int ViewsCount {
+			get {
+				return GetTypedColumnValue<int>("ViewsCount");
+			}
+			set {
+				SetColumnValue("ViewsCount", value);
+			}
+		}
+
+		/// <summary>
+		/// Решение без HTML тегов.
+		/// </summary>
+		public string NotHtmlNote {
+			get {
+				return GetTypedColumnValue<string>("NotHtmlNote");
+			}
+			set {
+				SetColumnValue("NotHtmlNote", value);
+			}
+		}
+
+		#endregion
+
+	}
+
+	#endregion
+
+}
+

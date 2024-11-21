@@ -1,0 +1,154 @@
+﻿@offset: 10px;
+@defaultColor: #999;
+
+.multi-currency-control-wrap {
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-ms-flex-direction: row;
+	-webkit-flex-direction: row;
+	flex-direction: row;
+	align-items: center;
+}
+
+.multi-currency-control-wrap.base-edit-error {
+	outline: initial;
+	border-color: initial;
+	border-color: initial;
+	-webkit-box-shadow: initial;
+	-moz-box-shadow: initial;
+	box-shadow: initial;
+}
+
+.multi-currency-control-wrap.base-edit-error .base-edit {
+	outline: none;
+	border-color: rgba(86, 180, 239, 0.7);
+	border-color: #56b4ef;
+	-webkit-box-shadow: 0 0 3px 0 rgba(86, 180, 239, 0.7);
+	-moz-box-shadow: 0 0 3px 0 rgba(86, 180, 239, 0.7);
+	box-shadow: 0 0 3px 0 rgba(86, 180, 239, 0.7);
+}
+
+.multi-currency-button-wrap .t-btn-wrapper {
+	padding-top: 0;
+	padding-bottom: 0;
+	text-align: right;
+	color: @defaultColor;
+}
+
+.multi-currency-button-wrap .t-btn-style-transparent:not(.t-btn-disabled):hover {
+	color: @defaultColor;
+}
+
+.multi-currency-edit-expandable {
+	padding: 24px 16px;
+	width: 360px !important;
+	border-radius: 8px;
+	.data-container > div {
+		display: -ms-flexbox;
+		display: -webkit-flex;
+		display: flex;
+		flex-direction: column;
+		color: #67748E;
+		margin-bottom: 24px;
+		.item-label {
+			margin-bottom: 10px;
+			.t-label {
+				font-size: 12px;
+				line-height: 16px;
+			}
+		}
+		.base-edit {
+			border: none;
+			padding: 0 24px 0 0;
+			background: none;
+			border-bottom: 1px solid #D8DBE2;
+			.base-edit-input {
+				background: none;
+				padding-bottom: 10px;
+				text-align: left;
+				color: #67748E;
+			}
+		}
+		&#RateContainer {
+			.item-control-rate {
+				display: -ms-flexbox;
+				display: -webkit-flex;
+				display: flex;
+				align-items: flex-end;
+				.base-edit {
+					max-width: 100px;
+					margin-right: 16px;
+				}
+				.item-label {
+					margin-bottom: 0;
+					.t-label {
+						font-size: 14px;
+						line-height: 20px;
+					}
+				}
+			}
+		}
+	}
+	.data-container {
+		#CurrencyContainer {
+			.item-control {
+				#PaymentAmountEdit-currency-right-icon-wrapper {
+					right: 5px;
+				}
+			}
+		}
+	}
+	.footer-container {
+		text-align: right;
+		padding-top: @offset;
+	}
+	.footer-container:not(:first-child) > span {
+		margin-left: 0.692em;
+	}
+}
+
+.currency-button {
+	color: @defaultColor;
+	text-align: right;
+	.t-btn-menu {
+		margin-bottom: 3px;
+	}
+}
+
+.currency-button .t-btn-left {
+	float: right;
+}
+
+.currency-button .t-btn-wrapper {
+	padding-left: 0;
+	padding-right: 0.9em;
+}
+
+.currency-button .wrapper-with-centered-right-menu .t-btn-menu {
+	right: 0;
+}
+
+.multi-currency-edit-disabled {
+	padding-right: 70px;
+	&:hover {
+		.base-edit-disabled-el-icon {
+			display: block;
+		}
+	}
+	&.base-edit-with-right-icon {
+		.base-edit-disabled-el-icon {
+			right: 50px;
+		}
+	}
+	.base-edit-right-icon-wrapper {
+		cursor: pointer;
+		display: flex;
+		align-items: center;
+	}
+	.base-edit-input {
+		background-color: white;
+		cursor: default;
+		padding-right: 68px;
+	}
+}

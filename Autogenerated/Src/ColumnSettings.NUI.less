@@ -1,0 +1,296 @@
+﻿.grid-settings {
+	width: 800px;
+}
+
+.label(@color, @size) {
+	color: @color;
+	font-size: @size;
+}
+.page-caption-label {
+	.label(#444444, 3.5em);
+	margin-bottom: 25px;
+	font-family: "Segoe UI Light";
+	letter-spacing: -0.01em;
+}
+
+.column-caption-label {
+	.label(#67748E, 12px);
+}
+
+.column-caption-label-value {
+	.label(#252F40, 16px);
+}
+
+.title-label {
+	.label(#67748E, 12px);
+	margin-top: 22px;
+	margin-bottom: 5px;
+}
+
+.left-column-settings-container .ts-controlgroup .ts-controlgroup-caption-wrap {
+	height: 3.9em;
+}
+
+.text-size-label {
+	.label(#444444, 14px);
+	margin-bottom: 5px;
+}
+
+.hide-title-settings-container,
+.left-column-settings-container .ts-controlgroup {
+	display: flex;
+	align-items: center;
+	margin-top: 22px;
+	margin-bottom: 19px;
+}
+
+.cancel-button {
+	margin-left: 9px;
+}
+
+.top-settings-container {
+	border-bottom-left-radius: 8px;
+	border-bottom-right-radius: 8px;
+	padding: 10px 80px 10px 20px;
+	position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+	left: 0;
+}
+
+.center-panel-content {
+	.top-settings-container {
+		padding-right: 450px;
+	}
+}
+
+.header-container-container{
+	background-color: white;
+	border-radius: 0 0 8px 8px;
+	padding: 16px;
+}
+
+.page-caption-container {
+	width: 100%;
+}
+
+.column-settings-container {
+
+	#isCaptionHiddenEdit-wrapEl {
+		margin-top: 0 !important;
+	}
+}
+
+.column-settings-container .ts-controlgroup-caption-wrap {
+	border-top: none;
+	border-bottom: none;
+	height: 3em;
+}
+
+.column-properties-settings-container {
+	background-color: white;
+	border-radius: 8px;
+	display: flex;
+	flex-direction: column;
+	padding: 10px 20px;
+	margin-top: 10px;
+	min-height: calc(~"100vh - 163px");
+
+	.base-edit {
+		.base-edit-input {
+			min-height: 1.28em;
+		}
+	}
+
+	.base-edit-focus,
+	.base-edit:hover {
+		border-color: #67748E !important;
+		color: #252F40;
+	}
+
+	.filteredit {
+		min-width: 320px;
+		.filteredit-group {
+			.filteredit-group-rules-list {
+				.filteredit-rule,
+				.filteredit-aggregative-rule {
+					max-width: 320px;
+				}
+			}
+		}
+	}
+}
+
+.t-btn-style-transparent:not(.t-btn-disabled):not(.t-btn-loading):hover {
+	color: #252F40;
+}
+
+.left-column-settings-container {
+	float: left;
+	width: 50%;
+	.base-edit {
+		padding: unset;
+		border: unset;
+		border-bottom: 1px solid #D8DBE2;
+	}
+}
+
+.right-column-settings-container {
+	margin-top: 34px;
+	margin-left: 0px;
+
+	.ts-controlgroup-caption-wrap{
+		> span {
+			font-style: normal;
+			font-weight: 600;
+			font-size: 18px;
+			line-height: 24px;
+			letter-spacing: -0.02em;
+			color: #252F40;
+		}
+	}
+}
+
+.hide-title-label {
+	width: auto;
+	margin-left: 10px;
+	vertical-align: top;
+}
+
+.radio-settings-container {
+	&:first-of-type {
+		margin-top: 16px;
+	}
+
+	&:not(:first-of-type) {
+		margin-top: 12px;
+	}
+}
+
+.function-label {
+	margin-left: 10px;
+	padding-bottom: 2px;
+}
+
+.ts-modalbox-innerbox{
+	display: block;
+    height: auto;
+	.column-settings-container::before{
+		 background-color: unset;
+	}
+	.column-settings-container {
+		height: auto;
+		.top-settings-container {
+			right: 10px;
+			padding-right: 12px;
+			display: flex;
+			position: absolute;
+			width: 100vh;
+			bottom: 24px;
+			justify-content: flex-end;
+		}
+		.column-properties-settings-container {
+			display: flex;
+			flex-direction: column;
+			.left-column-settings-container {
+				width: 400px;	
+			}
+			.right-column-settings-container{
+				padding-top: 15px;
+				width: 240px;
+				margin-top: 0px;
+				margin-left: 3px;
+				.ts-controlgroup-caption-wrap > span{
+					color: #252F40;
+    				font-weight: 600;
+    				font-size: 18px;
+				}
+			}
+		}
+	}
+
+	#headerContainer {
+		display: flex;
+		padding-left: 18px;
+		padding-right: 10px;
+		justify-content: space-between;
+
+		.close-btn-user-class {
+			width: 24px;
+			height: 24px;
+			padding: 0px 0px 0px 0px;
+		}
+		.t-btn-image {
+			width: 24px;
+			height: 24px;
+				padding-right: 30px;
+		}
+	}
+	#HeaderLabel {
+		font-weight: 400;
+		font-size: 20px;
+		line-height: 28px;
+		color: #252F40;
+	}
+} 
+
+.header-caption-label {
+	font-style: normal;
+	font-weight: 600;
+	font-size: 24px;
+	line-height: 32px;
+	letter-spacing: -0.02em;
+	color: #252F40;
+}
+
+.column-settings-page {
+	.caption-class > .t-label {
+		height: 76px;
+		white-space: unset;
+	}
+
+	#mainHeader + #centerPanelContainer {
+		#centerPanel {
+			padding-top: 29px;
+
+			&:before {
+				content: '';
+				position: relative;
+				background-color: #D8DBE2;
+				top: 1px;
+				height: 1px;
+				left: 16px;
+				display: block;
+				width: calc(~'100% - 32px');
+			}
+		}
+	}
+
+	#left-header-container {
+		border-left-width: 0;
+		
+		.caption-class {
+			padding: 16px 0 16px 16px;
+
+		}
+	}
+
+	.ts-controlgroup-marker-wrap {
+		margin: 0 4px;
+		vertical-align: middle;
+	}
+}
+
+#FilterPropertiesFilterContainerToolbar {
+	.t-btn-wrapper {
+		padding-left: 4px;
+	}
+}
+
+#ViewModuleContainer > #centerPanel {
+	.column-properties-settings-container {
+		min-height: calc(~"100vh - 93px");
+	}
+}

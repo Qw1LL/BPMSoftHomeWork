@@ -1,0 +1,117 @@
+﻿.process-settings-container {
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+	border-radius: 8px;
+	background-color: white;
+	min-height: 85.9vh;
+	height: max-content;
+	max-width: 1076px;
+
+
+	#SectionProcessExecutingDetailDetailControlGroup-tools {
+		margin-left: 0;
+		margin-top: 15px;
+		display: block;
+	}
+
+	#SectionProcessExecutingDetailDetailControlGroup {
+		padding-bottom: 75px;
+		margin-top: 32px;
+	}
+
+	& > div {
+		padding: 16px;
+	}
+
+	div[data-item-marker="ProcessExecutingDetailDetailContainer"] {
+		padding-bottom: 0;
+	}
+
+	#SectionProcessExecutingDetailDetailControlGroup-wrap-marker,
+	#DetailProcessExecutingDetailDetailControlGroup-wrap-marker {
+		display: none;
+	}
+
+	#SectionProcessSettingsProcessExecutingDetailContainer,
+	#DetailProcessSettingsProcessExecutingDetailContainer {
+		.grid-captions {
+			background-color: transparent;
+			border-bottom: 1px solid #D8DBE2;
+			padding-left: 0;
+			height: 29px;
+			.gridHeaderSeparator {
+				background: #67748E;
+			}
+			label {
+				color: #67748E;
+			}
+		}
+		.grid-listed-row {
+			padding-left: 0;
+		}
+		.grid {
+			padding-left: 0;
+			padding-top: 0px;
+
+			&.grid-empty {
+				background-color: #ffffff;
+			}
+		}
+
+		.ts-controlgroup-caption-wrap {
+			flex-direction: column;
+			justify-content: flex-start;
+			align-items: flex-start;
+			height: auto;
+			padding: 0;
+
+			span {
+				order: 1;
+			}
+
+			#DetailProcessExecutingDetailDetailControlGroup-tools {
+				margin-top: 10px;
+				margin-left: 0;
+			}
+		}
+	}
+	
+}
+
+#DetailProcessExecutingDetailDetailControlGroup-wrap {
+	
+	#DetailProcessExecutingDetailDetailControlGroup-caption {
+		padding-left: 30px;
+		&::after{
+			content: '';
+			position: absolute;
+			background-image: url("data:image/svg+xml,%0A%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.7 8.71047L17.29 13.3005C17.68 13.6905 17.68 14.3205 17.29 14.7105C16.9 15.1005 16.27 15.1005 15.88 14.7105L11.99 10.8305L8.11002 14.7105C7.72002 15.1005 7.09002 15.1005 6.70002 14.7105C6.31002 14.3205 6.31002 13.6905 6.70002 13.3005L11.29 8.71047C11.67 8.32047 12.31 8.32047 12.7 8.71047Z' fill='%2367748E'/%3E%3C/svg%3E%0A");
+			height: 24px;
+			width: 24px;
+			left: 0;
+		}
+	}
+	
+	&.ts-controlgroup-collapsed{
+		#SectionProcessExecutingDetailDetailControlGroup-caption,
+		#DetailProcessExecutingDetailDetailControlGroup-caption {
+			&::after{
+				transform: rotate(180deg);
+			}
+		}
+
+	}
+}
+
+.ts-controlgroup-collapsed #SectionProcessExecutingDetailDetailControlGroup{
+	display: block;
+}
+
+.grid-row-actions{
+	.padding-left-34px{
+		padding-left: 18px !important;
+
+		.t-btn-image {
+			display: none;
+		}
+	}
+}

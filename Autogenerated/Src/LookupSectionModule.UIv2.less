@@ -1,0 +1,102 @@
+﻿body[OldUI=false] .schema-wrap.one-el {
+	.content-container-wrapClass .lookup-views-container-wrapClass {
+		padding-top: 4.8em;
+		.utils-container-wrapClass {
+			padding-top: 5em;
+		}
+		.grid-dataview-container-mask.grid-dataview-container-wrapClass {
+			min-height: calc(~"100vh - 319px");
+		}
+	}
+	.section-inner-wrap.one-el .lookup-content-block-section .grid.grid-tiled:not(.grid-empty):before {
+		margin-top: -0.2em;
+	}
+}
+
+body[OldUI=false] {
+	.center-panel .schema-wrap .section-wrap {
+		.lookup-views-container-wrapClass .section-header-container-wrapClass {
+			height: 60px;
+			padding-top: 0.2em;
+			z-index: 999;
+			position: fixed;
+			max-width: 800px;
+			display: none;
+			top: 110px;
+			align-items: center;
+		}
+	}
+}
+
+.lookup-views-container-wrapClass .utils-container-wrapper-wrapClass {
+	margin-top: 0;
+}
+
+.utils-container-wrapClass {
+	height: 60px;
+	width: 1185px;
+	display: flex;
+	align-items: center;
+}
+
+.grid-listed-row:not(.grid-row-selected) {
+	background-color: #FFFFFF !important;
+}
+
+#SectionHeaderContainer {
+	background-color: #FFF;
+	padding-left: 0em !important;
+	white-space: nowrap;
+	margin-top: 16px;
+	position: relative;
+	z-index: 1000;
+	width: 100%;
+	height: 33px;
+	font-size: 24px;
+	font-weight: bold;
+	letter-spacing: -0.04em;
+	color: #252F40;
+	overflow-wrap: normal;
+	font-family: "Golos Regular";
+}
+
+#ActionButtonsContainer {
+
+	.separate-action-buttons-container-wrapClass {
+		padding-bottom: 16px;
+	}
+	#BaseLookupConfigurationSectionSeparateModeViewOptionsButtonButton-menuEl {
+		right: 1em;
+	}
+}
+#BaseLookupConfigurationSectionSectionWrapContainerContainer {
+	position: relative;
+	#RightSectionContainer{
+		overflow: visible;
+	}
+}
+
+#ContentContainer {
+	top: 65px;
+	#BaseLookupConfigurationSectionGridUtilsContainerContainer {
+		padding-top: 38px;
+	}
+}
+
+#ProductCatalogueLevelSectionV2Container {
+	#ContentContainer {
+		top: 0;
+	}
+}
+
+#FileImportLookupSectionContainer {
+	.lookup-views-container-wrapClass {
+		padding-bottom: 10px;
+	}
+}
+
+#ActionTypeLookupPageV2Container {
+	.grid-listed-row::after {
+		display: none;
+	}
+}

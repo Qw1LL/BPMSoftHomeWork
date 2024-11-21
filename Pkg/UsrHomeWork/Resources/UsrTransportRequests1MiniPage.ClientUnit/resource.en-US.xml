@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="en-US">
+	<Group Type="String">
+		<Items>
+			<Item Name="Caption" Value="UsrTransportRequests1MiniPage" />
+			<Item Name="Images.6d103736-950b-49f9-9862-189b7f142922.Image" Type="Image" ContentType="Data" FileExtension=".svg" Value="PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTQuMjkyODkgMTYuMzczM0M0LjEwNTM2IDE2LjU2MDggNCAxNi44MTUyIDQgMTcuMDgwNFYxOUM0IDE5LjU1MjMgNC40NDc3MiAyMCA1IDIwSDYuOTE5NThDNy4xODQ4IDIwIDcuNDM5MTUgMTkuODk0NiA3LjYyNjY5IDE5LjcwNzFMMTcuMTcwNyAxMC4xNjMxTDEzLjgzNjkgNi44MjkyOEw0LjI5Mjg5IDE2LjM3MzNaTTE5Ljc0IDcuNTkzODNDMjAuMDg2NyA3LjI0NzEyIDIwLjA4NjcgNi42ODI1OSAxOS43NCA2LjMzNTg4TDE3LjY2NDEgNC4yNjAwNEMxNy4zMTc0IDMuOTEzMzIgMTYuNzUyOSAzLjkxMzMyIDE2LjQwNjIgNC4yNjAwNEwxNC43NzkzIDUuODg2OTNMMTguMTEzMSA5LjIyMDczTDE5Ljc0IDcuNTkzODNaIiBmaWxsPSIjNjc3NDhFIi8+Cjwvc3ZnPgo=" />
+		</Items>
+	</Group>
+</Resources>

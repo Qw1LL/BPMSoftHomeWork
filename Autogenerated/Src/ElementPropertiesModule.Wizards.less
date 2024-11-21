@@ -1,0 +1,106 @@
+﻿.base-element-properties-page {
+	.modal-box-schema-module-header {
+		margin-top: 9px;
+	}
+	.ts-modalbox-innerbox {
+		height: 100%;
+		width: 100%;
+		display: block;
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+
+	.schema-wrap.one-el {
+		min-width: 0;
+	}
+
+	.modal-box-title {
+		color: #252F40;
+		font-size: 20px;
+		margin-bottom: 14px;
+	}
+
+	.buttons-container {
+		margin-bottom: 14px;
+		display: flex;
+		justify-content: flex-end;
+	}
+
+	.main-grid-container {
+		.label-wrap {
+
+			label {
+				text-align: left;
+			}
+
+			.t-label-disabled {
+				color: #bbbbbb !important;
+			}
+		}
+		&#PageDesignerPropertyPageMainGridContainerGridLayout {
+			.control-width-15 {
+				flex-direction: column;
+				.base-edit {
+					border: 1px solid #D8DBE2!important;
+					border-radius: 8px!important;
+				}
+			}
+		}
+	}
+
+	&.button-properties-page {
+		.buttons-container {
+			margin-bottom: 10px;
+		}
+
+		.grid-layout {
+			.control-width-15 {
+				flex-direction: column;
+
+				&.control-left.control-right {
+					& > .label-wrap {
+						margin-top: 14px;
+					}
+
+					.control-wrap {
+						min-height: 28px;
+					}
+
+					&.checkbox-left-position {
+						flex-direction: row;
+						margin-top: 10px;
+
+						.control-wrap {
+							order: 1;
+							flex-basis: 32px;
+						}
+
+						.label-wrap {
+							order: 2;
+							margin-top: 6px;
+							width: 100%;
+							max-width: 100%;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.wizard-settings-close-button {
+	position: absolute;
+	right: 23px;
+	top: 27px;
+}
+
+#PageDesignerPropertyPageContainer {
+	display: flex;
+	flex-direction: column;
+	.base-edit-input.ts-box-sizing {
+		padding-bottom: 0;
+	}
+	.base-edit-disabled-el-icon {
+		top: 6px;
+	}
+}

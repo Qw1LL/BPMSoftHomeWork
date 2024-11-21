@@ -1,0 +1,184 @@
+﻿.base-mini-page-container {
+	width: 380px
+}
+html.ts-minipage-opened {
+	overflow: hidden;
+}
+.label-in-header-container {
+	font-size: 20px;
+	margin: 6px 0 10px 0;
+	color: #64b8df;
+	width: 100%;
+	z-index: 2001;
+	line-height: 32px;
+}
+.header-buttons {
+	display: flex;
+}
+.lookup-with-communication-buttons {
+	margin-right: auto;
+	display: flex;
+}
+.lookup-with-communication-buttons .extended-menu-button-wrap {
+	margin-top: 10px;
+}
+
+[class*="mini-page-container"] {
+	.label-wrap + .control-wrap {
+		margin-top: -5px;
+	}
+}
+
+#MiniPageContainer {
+	.ts-date-edit-right-icon {
+		transform: translate(-50%, -50%);
+	}
+	.minipage-alignable-container {
+		filter: drop-shadow(0px 4px 12px rgba(3, 13, 45, 0.1));
+		background-color: white;
+		box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+		border-radius: 8px;
+
+		.control-wrap {
+			padding-right: 0 !important;
+		}
+
+		#AccountMiniPageMiniPageEditModeContainerContainer {
+			margin-bottom: 0px;
+		}
+
+		.header-mini-wrap {
+			margin-bottom: 14px;
+		}
+
+		.label-in-header-container {
+			font-style: normal;
+			font-weight: 400;
+			font-size: 20px;
+			line-height: 140%;
+			letter-spacing: -0.02em;
+			color: #252F40;
+		}
+
+		.label-wrap + .control-wrap {
+			padding-right: 0;
+		}
+
+		.required-columns-container {
+
+			&:empty {
+				display: none;
+			}
+
+			padding: 0 30px 10px 30px;
+			margin-top:-10px;
+
+			.required-model-wrapper > div {
+				margin-bottom: 10px;
+			}
+		}
+
+		.base-minipage-edit-button-container {
+			text-align: right;
+			padding: 8px 14px 14px 10px;
+
+			&:empty {
+				display: none;
+			}
+		}
+
+		.t-label.label-link {
+			color: #F9763D;
+		}
+		.label-wrap {
+			margin-bottom: 13px;
+		}
+	}
+
+	#HeaderContainer {
+		position: static;
+	}
+
+	.minipage-alignable-container.align-bottom {
+	
+		.grid-layout:not(#ActivityMiniPageMiniPageGridLayout, #OpportunityMiniPageMiniPageGridLayout) {
+			.label-wrap + .control-wrap {
+				width: auto;
+				margin-top: 0;
+			}
+
+		.control-width-15 {
+			.t-label {
+				margin-bottom: 0;
+				line-height: 24px;
+			}
+		}
+
+		.t-label.label-link {
+			line-height: 24px;
+		}
+
+		.header-mini-wrap {
+			margin-bottom: 0;
+		}
+	}
+
+	.label-mini-wrap.minipage-view-mode {
+		min-width: auto;
+  		float: left;
+		width: auto;
+		margin-bottom: 4px;
+	}
+
+	.control-width-15.container-mini-wrap {
+		margin-bottom: 0;
+		margin-top: 8px;
+	}
+
+	.buttons-container {
+		display: flex;
+  		float: right;
+	}
+}
+}
+.minipage-content-container {
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+#MiniPageContainer .align-bottom  .grid-layout .grid-layout-row:nth-last-child(3) {
+  margin-top: 16px;
+}
+
+.minipage-alignable-container.align-bottom .account-mini-page-container.grid-layout .grid-layout-row:nth-last-child(3)::before {
+  content: "";
+  height: 1px;
+  top:  0;
+  position: absolute;
+  background-color: #D8DBE2;
+  width: 100%;
+  margin-top: -6px;
+}
+
+#ActivityMiniPageMiniPageGridLayout {
+	.date-period-control-container[data-item-marker="ActivityGeneralInfoContainer"] {
+		padding-right: 120px;
+
+		.date-period-item-container {
+			#StartDateMiniPageDateTimeContainer .base-edit-input,
+			#DueDateMiniPageDateTimeContainer .base-edit-input {
+				padding-left: 5px;
+			}
+		}
+	}
+}
+
+#ExternalAccessMiniPageAccessInfoComponent a {
+	color: #f9763d;
+	&:hover {
+		color: #E56229;
+	}
+	&:active {
+		color: #D15C17;
+	}
+}

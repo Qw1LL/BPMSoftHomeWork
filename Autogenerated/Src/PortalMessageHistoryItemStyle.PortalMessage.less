@@ -1,0 +1,76 @@
+﻿.historyMessageWrap.historyPortalMessageWrap {
+	.messageContent {
+		background-color: #f0f6fd;
+		.messageHeader {
+			min-height: 20px;
+		}
+		.portalMessageVisibilityContainer {
+			.portalMessageVisibilityLabel {
+				font-size: 12px;
+				color: #252F40;
+				cursor: pointer;
+			}
+			.portalMessageVisibilityLabel:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+	.messageContent.speech-bubble::after {
+		border-color: transparent #f0f6fd;
+	}
+}
+
+.historyPortalMessageWrap[data-item-marker="IncomingPortalHistoryMessageWrapContainer"] {
+	.createdByImage {
+		float: left;
+	}
+	.messageContent {
+		margin: 0 85px 0 54px;
+	}
+	.messageContent::after {
+		right: auto;
+		left: -16px;
+		border-width: 0 16px 16px 0;
+	}
+}
+.historyV2-message-footer-container {
+	.portalMessage-visibility-container {
+		margin-right: 0;
+		margin-left: auto;
+		width: max-content;
+		padding-top: 10px;
+		float: right;
+		display: flex;
+		align-items: flex-end;
+
+		.visibilityIcon {
+			width: 16px;
+			height: 16px;
+			margin-right: 8px;
+			vertical-align: bottom;
+			display: inline-block;
+			img {
+				width: 16px;
+				height: 16px;
+				margin: 0;
+			}
+		}
+		.portalMessageVisibilityLabel {
+			font-size: 12px;
+			color: #67748E;
+			line-height: 16px; 
+			letter-spacing: -0.24px;
+			cursor: pointer;
+		}
+		.portalMessageVisibilityLabel:hover {
+			text-decoration: underline;
+		}
+	}
+}
+
+#AddFilesTiledContainer{
+	display: none !important;
+}
+.multiline-label-wrap .read-button-label:hover{
+  color: #F9763D;
+}

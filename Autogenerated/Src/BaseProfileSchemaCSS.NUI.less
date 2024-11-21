@@ -1,0 +1,217 @@
+﻿@accountProfileColor: #67748E;
+@contactProfileColor: #67748E;
+@clientProfileColor: #67748E;
+@imgBackgroundColor: transparent;
+
+.getProfileColors(@fontColor, @imageColor) {
+	.profile-icon img,
+	.blank-slate-icon img {
+		background-color: @imageColor;
+	}
+	.blank-slate-header {
+		color: @fontColor;
+	}
+}
+
+.module-container {
+	.grid-layout.collapse-empty-row {
+		&.blank-slate-container {
+			label.blank-slate-header {
+				min-height: 0;
+			}
+		}
+	}
+
+	.profile-module-actions {
+		&:after {
+			content: '';
+			clear: both;
+			font-size: 0;
+			display: block;
+		}
+
+		.actions-button-right {
+			float: right;
+		}
+
+		.actions-button-clear {
+			width: 16px;
+			height: 16px;
+			padding: 0;
+			position: absolute;
+			right: 0px;
+			top: 0px;
+			z-index: 10;
+
+			&:hover {
+				background-color: inherit;
+			}
+
+			.t-btn-image {
+				width: 16px;
+				height: 16px;
+				opacity: 1;
+			}
+		}
+	}
+
+	.profile-content-container {
+		.profile-icon img[src*='SysImage'] {
+			background-color: #fff;
+			border-radius: 0%;
+		}
+
+		.profile-icon img[src*='ProfileIcon'] {
+			background-color: #fff;
+			border-radius: 0% !important;
+		}
+
+		.warning-icon {
+			width: 12px;
+			position: absolute;
+			margin: 0;
+			height: 12px;
+			z-index: 1;
+			top: 22px;
+			left: -5px;
+		}
+
+		.warning-icon:hover {
+			cursor: help;
+		}
+
+		.warning-icon img {
+			width: 12px;
+			height: 12px;
+		}
+
+		.grid-layout-row {
+			.grid-layout-column {
+				* {
+					font-size: 14px;
+					font-family: 'Golos Regular';
+					font-style: normal;
+					font-weight: 400;
+					line-height: 16px;
+					letter-spacing: -0.02em;
+				}
+
+				label {
+					font-size: 13px;
+				}
+
+				.t-label {
+					margin-bottom: 0;
+					font-size: 12px;
+					color: #67748E;
+					&.blank-slate-header {
+						font-size: 14px;
+						line-height: 26px;
+					}
+					&.label-link.profile-header-link {
+						color: #F9763D;
+						font-size: 14px;
+						margin-top: 10px;
+					}
+				}
+
+				.base-edit-input {
+					font-size: 14px;
+					color: #252F40;
+				}
+
+				#ContactProfileSchemaProfileHeaderValueHyperlink {
+					font-size: 14px;
+					color: #F9763D;
+				}
+
+				.base-edit {
+					border: 1px #fff;
+					border-bottom: 1px solid #D8DBE2;
+					border-radius: 0;
+				}
+
+				&[id$="ImageEdit"] + .grid-layout-column {
+					margin-top: 2px;
+				}
+
+				.placeholder {
+					opacity: 0.8;
+					font-size: 12px;
+					font-style: italic;
+				}
+
+				input::-webkit-input-placeholder {
+					.placeholder;
+				}
+
+				input::-moz-placeholder {
+					.placeholder;
+				}
+
+				input:-ms-input-placeholder {
+					.placeholder;
+				}
+
+				input:-moz-placeholder {
+					.placeholder;
+				}
+
+				input:-ms-input-placeholder {
+					.placeholder;
+				}
+
+				> *:not(.grid-layout-spacer) {
+					padding-bottom: 0px;
+				}
+
+				> .ts-image-edit-wrap {
+					padding: 0;
+					margin-right: 10px;
+				}
+			}
+		}
+	}
+
+	.blank-slate-container {
+		label {
+			&.blank-slate-header {
+				font-size: 14px;
+				color: #67748E;
+				letter-spacing: -0.02em;
+			}
+		}
+
+	}
+
+	.client-profile {
+		.getProfileColors(@clientProfileColor, @imgBackgroundColor);
+	}
+
+	.account-profile {
+		.getProfileColors(@accountProfileColor, @imgBackgroundColor);
+	}
+
+	.contact-profile {
+		.getProfileColors(@contactProfileColor, @imgBackgroundColor);
+	}
+}
+
+#ClientProfileSchemaClientProfilesContainerContainer {
+	#ClientContactProfileSchemaContainer {
+		#ClientContactProfileSchemaProfileContentContainerGridLayout {
+			.ts-image-edit-wrap {
+				&[id^='ProfileIcon'] {
+					width: 40px;
+    				height: 40px;
+				}
+			}
+		}
+	}
+}
+
+#ClientContactProfileSchemaFullSlateHeaderLabel,
+#ClientAccountProfileSchemaFullSlateHeaderLabel,
+#PortalClientAccountProfileSchemaFullSlateHeaderLabel {
+	margin-top: 4px;
+}

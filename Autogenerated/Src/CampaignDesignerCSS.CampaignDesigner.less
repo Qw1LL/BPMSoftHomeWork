@@ -1,0 +1,220 @@
+﻿.main-content-wrapper {
+	width: 100%;
+	height: 100%;
+
+	#schema-designer-caption {
+		color: rgb(51, 51, 51);
+		font-size: 28px;
+		font-family: "Golos Regular";
+		white-space: nowrap;
+		text-overflow: ellipsis;
+	}
+}
+
+.description-toggle-btn {
+	margin-left: 20px;
+	.t-btn-image {
+		margin-top: 0;
+	}
+	&.untoggle {
+		opacity: 0.4;
+	}
+}
+
+#schema-designer-diagram-ct {
+	#schema-designer-diagram-header{
+		flex-wrap: wrap;
+		padding: 0;
+
+		#schema-designer-diagram-caption-ct{
+			height: inherit;
+			flex-direction: row;
+			background: #fff;
+			padding: 0 41px;
+		}
+
+		#schema-designer-toolbar {
+			position: relative;
+			top: 10px;
+			align-items: center;
+			border: 0;
+			border-radius: 0;
+			padding-top: 0;
+			padding-bottom: 0;
+			
+			#schema-designer-toolbar-left {
+				margin-left: 16px;
+			}
+		}
+	}
+	#schema-designer-load-storage-panel {
+		top: 75px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		border-left: none;
+		background: #FFFFFF;
+		border-radius: 8px;
+		padding: 24px;
+		margin-left: 16px !important;
+
+		#schema-designer-load-storage-label{
+			border-left: 4px solid #F9763D;
+			font-style: normal;
+			font-weight: 400;
+			font-size: 14px;
+			line-height: 20px;
+			text-align: center;
+			letter-spacing: -0.02em;
+			color: #252F40;
+			padding-left: 12px;
+			padding-top: 0;
+			padding-bottom: 0;
+		}
+
+		#schema-designer-load-storage-buttons{
+			align-self: end;
+		}
+	}
+
+	.toolbar .toolbar-left [data-item-marker="save"].t-btn-wrapper.t-btn-style-grey {
+		background-color: #006CE0;
+	}
+
+	.toolbar .toolbar-left [data-item-marker="close"] {
+		background-color: white;
+	}
+
+	#schema-designer-toolbar-right {
+		color: #54657D;
+		align-items: center;
+		position: relative;
+		top: -70px;
+		right: 20px;
+	}
+
+	#diagram-schema-designer {
+		.djs-palette{
+			right: calc(~"(100% - 800px) / 2");
+
+			.djs-palette-entries > .group[data-group="subtools"] {
+				width: auto;
+				display: flex;
+				align-items: center;
+				
+				& > *:not(:first-child) {
+					margin-top: unset;
+					margin-left: 16px;
+				}
+			}
+		}
+	}
+}
+
+#schema-designer-properties-ct {
+	.t-btn-wrapper {
+		[data-item-marker$="InfoButton"],
+		[data-item-marker$="InformationButton"],
+		&[id$="HintButton"] {
+			top: 10px;
+			
+			.t-btn-image {
+				background-size: 16px 16px;
+				background-position: center;
+			}	
+		} 
+		&[data-item-marker="TitleButton"] {
+			min-width: 40px !important;
+			min-height: 40px;
+			background-color: transparent;
+
+			&[id$="PropertiesPageTitleButtonButton-wrapperEl"] {
+				&[id^="CampaignConditionalSequenceFlow"],
+				&[id^="EmailConditionalTransition"],
+				&[id^="EventConditionalTransition"] {
+					background-color: white;
+				}
+			} 
+			
+			.t-btn-image {
+				width: 40px;
+				height: 40px;
+				border: 0;
+			}
+		}
+	}
+}
+
+.container-lookup-page-fixed{
+	.rightContainerLookupPage {
+		visibility: hidden;
+	}
+}
+
+html[dir="rtl"] body {
+	.tip .tip-content {
+		direction: rtl !important;
+	}
+	.properties-container {
+		.t-label {
+			direction: rtl !important;
+		}
+	}
+}
+
+#SaveTemplatePageContainer {
+	font-family: "Golos Regular", "Regular", sans-serif;
+	padding: 0 10px;
+
+	#CampaignTemplateEditPageEditPageCaptionLabel {
+		margin-top: 10px;
+		margin-bottom: 24px;
+		font-size: 2.2em;
+		color: #64b8df;
+	}
+
+	#CampaignTemplateEditPageCloseButtonButton-imageEl {
+		margin-top: 6px;
+		background-repeat: no-repeat;
+	}
+
+	#TemplateCaptionInputCaption {
+		margin-top: 4px;
+		color: gray;
+	}
+
+	#CampaignTemplateEditPageTemplateCaptionTextEdit-wrap {
+		border: 1px solid white;
+		border-bottom: 1px dotted #c8c8c8;
+	}
+
+	#PreviewImageContainer {
+		max-height: 430px;
+		height: 430px;
+		max-width: 610px;
+		width: 610px;
+		text-align: center;
+
+		.template-edit-page-preview-image {
+			max-height: 100%;
+			max-width: 100%;
+			padding-top: 20px;
+		}
+	}
+
+	#EditButtonsContainer {
+		text-align: right;
+	}
+}
+
+[data-item-marker="ColumnSelectButton"] .t-btn-image {
+	width: 24px;
+	height: 24px;
+}
+
+.schema-designer {
+	.properties-ct {
+		width: 383px;
+	}
+}

@@ -1,0 +1,66 @@
+﻿.grid-layout-table-edit-columns-header-row[id^="MarketingCalendarId"] {
+    margin-top: -1px;
+}
+
+.grid-layout-table-edit-grid-row[id^="MarketingCalendarId"][has-rows-captions="0"] {
+    border-left: none;
+}
+
+.grid-layout-table-edit-grid-row[id^="MarketingCalendarId"][category="1"] {
+    background-color:#f7f7f7;
+}
+
+.grid-layout-table-edit-grid-row[id^="MarketingCalendarId"][data-row-index="0"][has-columns-captions="0"] {
+    border-top: 1px solid #e2e2e2;
+}
+
+.grid-layout-table-edit-grid-row[id^="MarketingCalendarId"] {
+    position: static;
+    display: flex;
+    height: 72px;
+}
+
+.grid-layout-table-edit-right-wrap[id^="MarketingCalendarId"] {
+    overflow-x: auto;
+    overflow-y: hidden;
+    display: inline-block;
+    vertical-align: top;
+    width: calc(~"100% - 20px");
+    height: auto;
+}
+
+.marketing-calendar-item-wrap {
+	background: #F9763D;
+    border-radius: 4px;
+	overflow: hidden;
+    .grid-layout-table-edit-item-content-text-wrap{
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 16px;
+        color: #fff;
+    }
+}
+
+#MarketingCalendarCampaignsModule{
+    
+    .grid-layout-table-edit-columns-header-cell{
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+        color: #252F40;
+    }
+    .grid-layout-table-edit-grid-cell{
+        border-color: #D8DBE2;
+    }
+    .grid-layout-table-edit-grid{
+        padding-bottom: 5px;
+        &::-webkit-scrollbar-track {
+            background: #fff;
+        }
+        &::-webkit-scrollbar-thumb {
+            background: #D8DBE2;
+            border-radius: 2px;
+        }
+    }
+}

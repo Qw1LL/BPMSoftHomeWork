@@ -1,0 +1,15 @@
+﻿@rowActionsHeight: 32px;
+.grid-row-actions .audio-player-button {
+	line-height: 1.15em;
+}
+.grid-row-selected > .grid-row-actions {
+	.audio-player-button {
+		line-height: 1.45em;
+	}
+	audio {
+		vertical-align: bottom;
+		margin-right: 9px;
+		margin-bottom: 1px;
+		height: @rowActionsHeight - 1px; // needs only for ie
+	}
+}

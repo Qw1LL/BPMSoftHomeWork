@@ -1,0 +1,516 @@
+﻿@orange: #F9763D;
+@actions-buttons-margin-bottom: 1.6em;
+@default-border: 1px solid #e6e6e6;
+
+.font-style-mixin {
+	font-style: normal;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 20px;
+	letter-spacing: -0.02em;
+}
+
+.ts-metrics-container {
+	color: #999999;
+	display: flex;
+	flex-wrap: wrap;
+	overflow: hidden;
+	row-gap: 32px;
+	padding-bottom: 16px !important;
+	.ts-metric-item {
+		flex: 1 1 50%;
+		text-align: center;
+	}
+	.ts-round-progress-bar-wrap {
+		display: inline-block;
+	}
+}
+#PortalOpportunityPageV2OpportunityPageGeneralBlockControlGroup{
+	padding-bottom: 0;
+}
+.stage-item .t-btn-menu .t-btn-marker{
+	border-top: 4px solid #67748e;
+	top: -2px;
+	margin-right: 11px;
+}
+.ts-metric-item {
+	cursor: default;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 4px;
+	label {
+		display: block;
+		font-size: 11px;
+		margin-top: 4px;
+	}
+	.ts-metric-item-caption {
+		max-width: 100px;
+	}
+
+	.ts-round-progress-bar-wrap {
+		clear: both;
+		float: none;
+		.overlay {
+			font-size: 33px;
+			color: #252F40 !important;
+			font-weight: 600;
+			font-size: 16px;
+		}
+		.caption-suffix {
+			font-size: 16px;
+			position: absolute;
+		}
+	}
+}
+.ts-metric-item.ts-probability-container {
+	.ts-round-progress-bar-wrap {
+		.overlay {
+			.caption {
+				margin-left: -8px;
+				letter-spacing: -1px;
+			}
+		}
+	}
+}
+.ts-metric-item.ts-mood-container {
+	cursor: pointer;
+	img {
+		height: 7.8em;
+		width: 7.8em;
+	}
+}
+
+#ClientContactProfileSchemaProfileHeaderValueLabelLabel{
+	min-height: auto;
+}
+
+#ClientContactProfileSchemaProfileHeaderValueHyperlink{
+	border-bottom: 1px solid #D8DBE2;
+	margin-bottom: 16px;
+}
+
+#PortalOpportunityPageV2Container {
+	#LeftModulesContainer {
+		#ProfileContainer {
+			.ts-metric-item.ts-mood-container {
+				img {
+					width: 64px;
+					height: 64px;
+				}
+			}
+			label::first-letter {
+				text-transform: uppercase;
+			}
+			.t-label.ts-metric-item-caption {
+				font-size: 12px;
+				line-height: 16px;
+				letter-spacing: -0.02em;
+				color: #252F40;
+			}
+			#PortalOpportunityPageV2DaysAtStageMetricContainerContainer {
+				display: flex;
+				justify-content: center;
+				flex-direction: row;
+			}
+			.base-edit-with-left-icon {
+				padding-left: 25px;
+				.base-edit-left-icon {
+					margin: 0;
+				}
+			}
+		}
+		#BantContainer {
+			[data-item-marker="BantProfileHeaderContainer"] {
+				.bant-icon {
+					padding-bottom: 0;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+				}
+			}
+			#PortalOpportunityPageV2BantProfileHeaderContainerGridLayout-item-PortalOpportunityPageV2BantHeaderCaptionLabel {
+				display: flex;
+				label {
+					padding-bottom: 0;
+					margin: auto 8px;
+				}
+			}
+		}
+		#ClientProfile {
+			.profile-module-actions {
+				display: flex;
+				justify-content: start;
+				align-items: center;
+				.ts-image-edit-wrap {
+					margin-right: 10px;
+				}
+			}
+			#PortalClientProfileSchemaProfileContentContainerGridLayout {
+				#ClientContactProfileSchemaProfileContentContainerGridLayout {
+					#ClientContactProfileSchemaProfileHeaderValueHyperlink {
+						font-size: 14px;
+						line-height: 20px;
+						letter-spacing: -0.02em;
+						color: #F9763D;
+					}
+				}
+			}
+		}
+	}
+	#CardContentContainer {
+		#OpportunityActionsDashboardTabsTabPanel-tabpanel-items {
+			li:first-child {
+				font-weight: 600;
+				font-size: 18px;
+				line-height: 24px;
+				letter-spacing: -0.02em;
+				color: #252F40;
+			}
+		}
+	}
+}
+
+.left-modules-container .label-wrap {
+	justify-content: flex-start;
+}
+.left-modules-container .period-items-container {
+	text-align: right;
+	padding: 0;
+	margin-bottom: 16px;
+	.control-width-15 {
+		margin: 0;
+	}
+}
+.left-modules-container .period-items-container label {
+	width: auto;
+}
+.left-modules-container .period-item-caption {
+	font-size:1.3em;
+}
+.left-modules-container .period-item-value {
+	font-size: 1.6em;
+	margin-left: 5px;
+	line-height: 1.2em;
+}
+.left-modules-container .profile-container .client-edit-field .base-edit.base-edit-with-right-icon {
+	padding-right: 34px; 
+}
+.left-modules-container .profile-container .client-edit-field .base-edit.base-edit-with-left-icon {
+	padding-left: 34px; 
+}
+.left-modules-container .profile-container .client-edit-field .base-edit .base-edit-link {
+	width: calc(100% - 12px);
+	display: inline-block;
+	text-overflow: ellipsis;
+}
+
+@bantColor: #9AD99F;
+
+.bant-header-caption {
+	font-size: 2em;
+	letter-spacing: -0.02em;
+	color: @bantColor;
+}
+.bant-icon {
+	width: 32px;
+	height: 32px;
+	border-radius: 2em;
+	img {
+		margin-top: -2px;
+	}
+}
+
+html[dir="rtl"] body.x-ie:not(.x-edge) {
+	.ts-metric-item .ts-round-progress-bar-wrap .caption-suffix {
+		right: 18px;
+	}
+}
+
+#OpportunityPageV2Container {
+
+	#OpportunityPageV2LeftContainerContainer,
+	#OpportunitySectionV2CombinedModeActionButtonsCardLeftContainerContainer {
+		display: flex;
+	}
+	#OpportunityPageV2CloseButtonButton-textEl,
+	#OpportunitySectionV2CloseButtonButton-textEl {
+		order: 1;
+	}
+	#OpportunityPageV2CreateOrderFromOpportunityButtonButton-textEl,
+	#OpportunitySectionV2CreateOrderFromOpportunityButtonButton-textEl {
+		order: 2;
+	}
+	#OpportunityPageV2actionsButton-wrapperEl,
+	#OpportunitySectionV2CombinedModeActionsButtonButton-wrapperEl {
+		order: 3;
+	}
+	#OpportunityPageV2TagButtonButton-wrapperEl,
+	#OpportunitySectionV2CombinedModeTagsButtonButton-wrapperEl {
+		order: 4;
+	}
+	#DcmActionsDashboardContainer {
+		border: 20px solid #FFFFFF;
+		background-color: #FFFFFF;
+		padding: 0;
+	}
+	.ts-box-sizing.ts-tab-align-left.ts-tabpanel-active-item-arrow {
+		font-weight: 600;
+		font-size: 18px;
+		line-height: 24px;
+	}
+	#OpportunityPageV2FirstOpportunityLabel,
+	#OpportunityPageV2SecondOpportunityLabel {
+		.font-style-mixin;
+		padding-top: 0;
+		color: #252F40;
+	}
+	.radio-button-container {
+		margin-left: 0;
+	}
+	#OpportunityPageV2OpportunityPageGeneralBlockGridLayout-item-OpportunityPageV2IsPrimaryContainer {
+		margin-bottom: @actions-buttons-margin-bottom;
+	}
+	
+	.control-width-15.control-left,
+	.control-width-15.control-right {
+		display: flex;
+		flex-direction: column;
+	}
+	.client-control {
+		margin-bottom: 0;
+		.t-label-tip {
+			margin-left: 12px;
+		}
+		.label-wrap {
+			margin-bottom: 10px;
+		}
+		.base-edit {
+			padding-bottom: 5px;
+			display: flex;
+			align-items: center;
+			.base-edit-left-icon {
+				bottom: 7px;
+				margin-left: 0;
+				margin-right: 0;
+			}
+			.base-edit-clear-icon {
+				bottom: 7px;
+			}
+			.base-edit-link-wrap {
+				left: 28px;
+			}
+		}
+	}
+	#OpportunityPageV2DaysAtStageMetricContainerContainer {
+		text-align: center;
+	}
+	#OpportunityPageV2BantHeaderCaptionLabel {
+		.font-style-mixin;
+		padding-bottom: 0;
+		text-transform: lowercase;
+		position: relative;
+		right: 8px;
+		top: 1px;
+	}
+	#OpportunityPageV2BantHeaderCaptionLabel::first-letter {
+		text-transform: capitalize;
+	}
+	.bant-icon {
+		background-color: #FFFFFF;
+	}
+
+	#OpportunityPageV2OwnerLookupEdit-link-el {
+		color: #000;
+	}
+	#OpportunityPageV2TabsContainerContainer {
+			#OpportunityPageV2OpportunityTacticAndCompetitorBlockGridLayout-item-OpportunityPageV2TacticContainer,
+			#OpportunityPageV2OpportunityTacticAndCompetitorBlockGridLayout-item-OpportunityPageV2CheckDateContainer {
+				.control-wrap,
+				.label-wrap {
+					padding-left: 0;
+				}
+			}
+	}
+	#OpportunityPageV2ViewOptionsButtonButton-markerEl {
+		border-top: 4px solid #67748E;
+	}
+	#OpportunityPageV2MoodCaptionLabel,
+	#OpportunityPageV2ProbabilityCaptionLabel,
+	#OpportunityPageV2DaysInFunnelCaptionLabel {
+		font-style: normal;
+		font-weight: 400;
+		font-size: 12px;
+		line-height: 16px;
+		text-align: center;
+		letter-spacing: -0.02em;
+		color: #252F40;
+	}
+	#OpportunityPageV2MetricsContainerContainer {
+		.ts-font-light.ts-round-progress-bar-wrap {
+			.overlay {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				.caption {
+					font-style: normal;
+					font-weight: 600;
+					font-size: 16px;
+					color: #252F40;
+					.caption-suffix {
+						top: 0;
+					}
+				}
+			}
+		}
+		#MoodImageList-image-view {
+			width: 64px !important;
+			height: 64px !important;
+		}
+		
+	}
+	#OpportunityPageV2OpportunityClientLookupEdit-link-el {
+		color: #67748E;
+	}
+	#ClientProfileSchemaBlankSlateContainerGridLayout {
+		.grid-layout-row {
+			min-height: auto;
+		}
+	}
+	.card-content-container .left-modules-container #ClientProfile {
+		.sale-profile-state-button,
+		.sale-profile-add-button {
+			font-size: 14px;
+			padding: 0 28px 0 0;
+		}
+	}
+	.profile-header-container.control-width-15 {
+		min-height: auto!important;
+	}
+	[id$="ClientContactProfileSchemaProfileHeaderValueHyperlink"] {
+		width: 100%!important;
+		font-size: 14px;
+	}
+}
+
+.opportunity-statistics-container {
+	padding-bottom: 0;
+	.control-width-15 {
+		margin-bottom: 15px;
+	}
+}
+
+#OpportunityPageV2CreatedByLabelLabel .opportunity-statistics-caption {
+	color: #252F40;
+	font-size: 14px!important;
+	padding-left: 12px!important;
+	position: relative;
+	overflow: visible;
+	&::before {
+		content: '';
+		width: 4px;
+		height: 20px;
+		position: absolute;
+		left: 0;
+		top: 50%;
+		transform: translateY(-50%);
+		background: #7299F8;
+		border-radius: 2px;
+	}
+}
+
+#ClientProfileSchemaProfileModuleActionsContainer {
+	display: flex;
+	align-items: center;
+	.ts-image-edit-wrap {
+		margin-right: 8px;		
+	}
+}
+
+.profile-icon-full {
+	line-height: 1;
+}
+
+[id$="item-OpportunityPageV2IsPrimaryContainer"] {
+	margin-bottom: 32px;
+}
+
+#OpportunityPageV2Container {
+	.actions-container {
+		.left-container-wrapClass {
+			[data-item-marker="CreateOrderFromOpportunityButton"] + 
+			[data-item-marker="CloseButton"] + 
+			[data-item-marker="actions"],
+
+			[data-item-marker="CloseButton"] +
+			[data-item-marker="CreateOrderFromOpportunityButton"] + 
+			[data-item-marker="actions"] {
+				padding-left: 10px;
+				padding-right: 16px;
+
+				.t-btn-menu {
+					right: 0;
+				}
+			}
+			
+			[data-item-marker="CreateOrderFromOpportunityButton"] + 
+			[data-item-marker="CloseButton"] + 
+			[data-item-marker="actions"] +
+			[data-item-marker="TagButton"],
+			
+			[data-item-marker="CloseButton"] + 
+			[data-item-marker="CreateOrderFromOpportunityButton"] + 
+			[data-item-marker="actions"] +
+			[data-item-marker="TagButton"] {
+				padding-left: 6px;
+			}
+		}
+
+		.right-container-wrapClass {
+			[data-item-marker="ShowTaskDetailsButton"] {
+				padding: 7px;
+				height: 40px;
+			}
+		}
+	}
+}
+
+#centerPanelContainer {
+	&.opened-right-panel {
+		#OpportunityPageV2Container {
+			.actions-container {
+				.right-container-wrapClass {
+					margin-right: 22px;
+
+					[data-item-marker="ViewOptionsButton"],
+					[data-item-marker="ShowTaskDetailsButton"] {
+						height: auto;
+						padding: 0;
+					}
+				}
+
+				#OpportunityPageV2RightContainerContainer {
+					top: 20px;
+
+					.run-process-wrapClass {
+						display: none;
+					}
+
+					[data-item-marker="ViewOptionsButton"] {
+						.t-btn-text {
+							padding-right: 16px;
+						}
+	
+						.t-btn-menu {
+							right: 0;
+						}
+					}
+				}
+				
+				#OpportunityPageV2TaskDetailsButtonContainerContainer { 
+					top: 40px;
+				}
+			}
+		}
+	}
+}

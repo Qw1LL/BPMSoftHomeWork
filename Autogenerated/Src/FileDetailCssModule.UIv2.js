@@ -1,0 +1,4 @@
+﻿define("FileDetailCssModule", [],
+		function() {
+			return {};
+		});

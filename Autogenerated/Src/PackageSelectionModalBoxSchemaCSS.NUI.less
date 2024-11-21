@@ -1,0 +1,48 @@
+﻿.package-selection-edit-container {
+	padding: 20px 35px 24px 35px;
+	max-width: 409px;
+	min-height: 165px;
+
+	.package-selection-edit-caption {
+		font-size: 21px;
+		font-family: "Golos Regular";
+		color: #006CE0;
+		line-height: 28px;
+	}
+
+	.control-width-15 {
+		display: flex;
+		flex-direction: column;
+		margin-top: 8px;
+
+		.control-wrap {
+			flex-basis: auto;
+			margin: 0;
+			padding: 0;
+			max-width: 339px;
+		}
+
+		.label-wrap {
+			justify-content: flex-start;
+			max-width: none;
+
+			.t-label {
+				text-align: left;
+				margin-bottom: 0;
+			}
+		}
+	}
+}
+
+html[dir="rtl"] {
+	.package-selection-edit-caption {
+		direction: rtl;
+	}
+}
+
+.package-selection-edit-button-container {
+	padding: 0 35px;
+	max-width: 409px;
+	display: flex;
+	flex-direction: row-reverse;
+}

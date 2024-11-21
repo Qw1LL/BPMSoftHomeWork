@@ -1,0 +1,156 @@
+﻿@configuration-grid-color: #F9763D;
+@configuration-grid-actions-color: @configuration-grid-color;
+@configuration-grid-border-color: @configuration-grid-color;
+@configuration-grid-underline-color: @configuration-grid-color;
+
+.configuration-grid {
+	padding-right: 1px;
+
+	.grid-listed-row {
+		min-height: 36px;
+		padding: 0 20px;
+		margin: 0;
+	}
+
+	&.grid-listed-zebra {
+
+		.grid-listed-row:nth-child(odd) {
+			background-color: white;
+		}
+
+		.grid-listed-row:nth-child(odd):not(.configuration-grid-row-active) {
+			background-color: #fff;
+		}
+
+	}
+
+	.grid-active-selectable {
+		border: 1px solid white;
+
+		&:not(.configuration-grid-row-active) div[class*="grid-cols-"] {
+			padding-left: 0;
+			line-height: 2.43em;
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
+
+		&:not(.configuration-grid-row-active) div[class*="grid-cols-"] > * {
+			white-space: nowrap;
+		}
+
+	}
+
+	.configuration-grid-row-active {
+		border: 1px solid @configuration-grid-color;
+		border-bottom: 1px solid  @configuration-grid-color !important;
+		padding-top: 1px;
+		line-height: 32px;
+
+		div[class*="grid-cols-"] {
+			display: none;
+		}
+
+		.grid-row-controls {
+			width: 100%;
+
+			input,
+			.base-edit-validation {
+				font-size: 1em;
+			}
+
+			.base-edit-error {
+				-webkit-box-shadow: 0 0 0 0;
+				-moz-box-shadow: 0 0 0 0;
+				box-shadow: 0 0 0 0;
+			}
+
+			.number-edit-align {
+				.number-edit-input-align {
+					text-align: left;
+				}
+			}
+
+			.grid-layout-row,
+			.grid-layout-column {
+				float: none;
+				min-height: 30px;
+			}
+
+			.grid-layout-row {
+				max-width: 100%;
+				display: flex;
+			}
+
+			.t-checkboxedit-wrap {
+				margin-top: 5px;
+			}
+			.base-edit-link {
+				font-size: 1.0em;
+				margin-top: 3px;
+			}
+			.base-edit-clear-icon {
+				right: 20px;
+			}
+
+		}
+
+		.configuration-grid-row-actions {
+			background-color: #FFF;
+			position: absolute;
+			height: 46px;
+			bottom: -48px;
+			right: -1px;
+			z-index: 1001;
+			border-radius: 8px;
+			box-shadow: 0 4px 12px rgba(3,13,45,.1);
+
+			.configuration-grid-action-button {
+				padding: 0;
+				vertical-align: top;
+				margin: 3px 5px 0 5px;
+			}
+
+			.t-btn-image {
+				font-size: 0.8em;
+				width: 40px;
+ 				height: 40px;
+				margin-right: 8px !important;
+			}
+
+		}
+
+	}
+
+	&.grid-multiselect {
+
+		.configuration-grid-row-selected .grid-layout-column:first-child,
+		.grid-active-selectable div[class*="grid-cols-"]:nth-child(2),
+		.configuration-grid-row-active:not(.configuration-grid-row-selected) .grid-row-controls {
+			padding-left: 32px;
+		}
+
+		.grid-listed-row .grid-fixed-col {
+			position: absolute;
+			top: 50%;
+			margin-top: -10px;
+
+			.grid-listed-row-control {
+				margin-top: 0px;
+			}
+		}
+	}
+
+}
+
+.ts-controlgroup .configuration-grid {
+	padding-bottom: 17px;
+}
+.configuration-grid .memo-edit-area {
+	font-size: 1em;
+}
+
+.configuration-grid .memo-edit-core {
+	overflow-y: auto;
+	max-height: 150px;
+	position: static;
+}

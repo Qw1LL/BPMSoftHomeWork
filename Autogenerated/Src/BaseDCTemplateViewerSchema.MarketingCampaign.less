@@ -1,0 +1,96 @@
+﻿.base-dc-template-viewer-control-group {
+	overflow: visible;
+	max-width: none !important;
+
+	.blank-slate-message {
+		width: 100%;
+		display: block;
+		.t-label {
+			color: #999999;
+			text-align: center;
+		}
+	}
+	
+
+	.base-dc-template-viewer-inner-container {
+		position: relative;
+		display: flex;
+		flex-direction: row;
+		@left-sidebar-width: 262px;
+
+		.toggle-list-button {
+			position: absolute;
+			left: -15px;
+			top: 0;
+			padding: 0;
+			margin: 0;
+			z-index: 100;
+
+			.t-btn-image {
+				width: 15px;
+				height: 35px;
+				background-repeat: no-repeat;
+				background-position: 0px -35px;
+				background-size: 15px 70px;
+			}
+
+
+			&.toggle-list-button-pressed {
+				left: 248px !important;
+
+				.t-btn-image {
+					background-position: 0px 0px;
+				}
+			}
+		}
+
+		.base-dc-template-viewer-left-container {
+			width: @left-sidebar-width;
+			overflow-y: auto;
+			border-right: 1px solid #dedede;
+
+			.replica-item-wrapper-container {
+				padding: 11px 20px 12px 20px;
+				display: flex;
+				flex-direction: column;
+
+				.t-label {
+					font-family: "Golos Regular";
+					font-size: 14px;
+					color: #444444;
+					display: inline;
+					width: 100%;
+					word-wrap: normal;
+				}
+
+				.replica-recipient-count-info-label {
+					width: 100%;
+					font-size: 13px;
+					color: #999999;
+				}
+			}
+
+			.selected {
+				background-color: #e4ebfa;
+			}
+		}
+
+		.base-dc-template-viewer-right-container {
+			width: 100%;
+			position: relative;
+			overflow: auto;
+
+			> .template-html-iframe {
+				display: block;
+				width: 100%;
+				height: 100%;
+				border: none;
+			}
+		}
+
+		.base-dc-template-viewer-left-container:not([style='display: none;']) +
+				.base-dc-template-viewer-right-container {
+			width: calc(~'100% - '@left-sidebar-width) !important;
+		}
+	}
+}

@@ -1,0 +1,160 @@
+﻿@keyframes opacityAnimation {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+#MiniPageContainer {
+	
+	.forecast-minipage-alignable-container, 
+	.forecast-column-designer-alignable-container {
+		#MiniPageEditButtonsContainer {
+			padding: 8px 24px 5px 10px;	
+		}
+	}
+
+	.forecast-minipage-alignable-container {
+		#ForecastMiniPageCommonControlGroupControlGroup, 
+		#ForecastMiniPageAutomationControlGroupControlGroup {
+			margin-top: 15px;
+		}	
+	}
+
+	.forecast-column-designer-button-container {
+		padding: 8px 24px 0 10px;	
+	}
+
+	  .choose-column-control-group, .choose-column-container, .column-designer-container {
+		.ts-controlgroup-container {
+			padding-bottom: 0;
+		}
+
+		.ts-controlgroup-caption-wrap {
+			height: 4em;
+			> span {
+				font-size: 14px;
+				color: #F9763D;
+				font-weight: 400;	
+			}
+			.ts-controlgroup-marker-wrap {
+				order: 2;
+				margin-left: auto;	
+			}
+		}
+
+		.filters-container {
+			padding-bottom: 15px;
+		}
+
+		.calc-method-designer-layout, .common-designer-layout {
+			padding: 0;
+		}
+	  }
+
+	.forecast-column-designer-alignable-container {
+		top: 10% !important;
+		width: 500px;
+		animation: 0.5s ease-out 0s 1 opacityAnimation;
+
+		#MiniPageEditButtonsContainer {
+			padding: 10px 24px 15px 10px;
+		}
+
+		.base-edit[data-item-marker = "Coefficient"] {
+			padding-top: 6px;
+			padding-bottom: 6px;
+			display: flex;
+			flex-direction: row;
+
+			.number-edit-input-align {
+				padding: 0;
+				color: #67748E;
+			}
+
+			.base-edit-validation {
+				left: 0 !important;
+				padding-left: 0;
+			}
+
+			&::after {
+				content: '%';
+				display: inline-block;
+				margin-top: 3px;
+				font-size: 14px;
+				color: #67748E;
+			}
+		}
+
+		.header-mini-wrap span:first-child {
+			margin-left: 0;
+		}
+
+		#ForecastColumnDesignerMiniPageMiniPageHeaderCaptionLabel {
+			margin: 0;
+			font-weight: 400;
+			font-size: 20px;
+			line-height: 28px;
+			color: #252F40;
+		}
+
+		.base-minipage-edit-button-container.forecast-column-designer-button-container {
+			padding-top: 0px;
+		}
+
+		.forecast-column-designer-container {
+
+			.grid-layout {
+				width: 100%;
+				padding-bottom: 0px;
+				padding: 18px 16px 0;
+
+			}
+
+			.label-wrap {
+				padding-right: 14px;
+				margin-right: 0px;
+				max-width: 100%;
+			}
+
+			.checkbox-label-wrap {
+				margin-bottom: 0;
+				margin-left: 0;
+			}
+
+			.t-checkboxedit-wrap {
+				vertical-align: middle;
+			}
+
+			.base-edit-right-icon.lookup-edit-right-icon {
+				transform: translate(-50%, -50%);	
+			}
+		}
+
+		.checkbox-control-item .control-wrap {
+			margin-right: 15px;
+			margin-top: 0;
+		}
+
+		.fractional-part-checkbox-container,
+		.hide-column-checkbox-container {
+			.control-wrap {
+				float: left;
+				width: auto;
+				display: inline-block;
+				padding-right: 5px;
+			}
+		}
+	}
+}
+
+#ForecastColumnDesignerMiniPageCommonControlGroupControlGroup{
+	.t-label{
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 20px;
+		color: #252F40;
+	}
+}

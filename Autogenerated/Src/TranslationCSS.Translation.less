@@ -1,0 +1,37 @@
+﻿[data-item-marker='LanguageSectionContainer'] .grid .grid-row [class*='grid-cols-']:nth-of-type(2n) {
+	padding: 0 10px 0 0;
+
+	img {
+		display: none;
+	}
+}
+
+#TranslationSectionGridUtilsContainerContainer {
+	.t-btn-style-transparent:not(.t-btn-disabled):not(.t-btn-loading) {
+		color: #67748E;
+
+		&:hover {
+			color: #252F40;
+		}
+	}
+}
+
+#TranslationSectionDataGridContainerContainer {
+	div:after {
+		display: none;
+	}
+}
+
+[data-item-marker='TranslationSectionContainer'] {
+	.predefined-filters-container-wrapClass {
+		display: inline-block;
+		float: left;
+
+		.schema-wrap.one-el {
+			min-width: initial;
+			.filter-container > * {
+				float: left;
+			}
+		}
+	}
+}

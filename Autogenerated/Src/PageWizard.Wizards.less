@@ -1,0 +1,381 @@
+﻿body {
+	background-color: #ebeeef;
+}
+
+.ts-mask-container.wizard-mask {
+	z-index: 2020;
+}
+
+.page-wizard {
+	#SaveButtonButton-textEl {
+		margin-top: 0;
+	}
+
+	#ActionDashboardContainer {
+		margin-top: 0;
+		padding-top: 0;
+		height: auto;
+
+		img {
+			width: 100%;
+			max-width: 970px;
+			background-size: contain;
+			height: auto;
+		}
+	}
+
+	.wizard-header {
+		border: none;
+		left: 0px;
+		right: 0px;
+		border-radius: 0px;
+		position: absolute;
+	}
+
+	.wizard-header-container {
+		border: none;
+		height: 64px;
+		top: 0;
+		width: 100%;
+		background-color: #fff;
+		display: flex;
+		border-radius: 8px;
+		align-items: center;
+
+		.wizard-container {
+			.header {
+				display: none;
+			}
+		}
+		.wizard-header {
+			padding: 0 16px;
+		}
+	}
+	.schema-wrap {
+		padding-bottom: 8px;
+		
+		&[data-item-marker="BusinessRuleSectionContainer"] {
+			&.one-el {
+				height: auto;
+				padding-bottom: 70px;
+			}
+		}
+		
+		#BusinessRuleSectionDataGridContainerContainer {
+			display: flex;
+			flex-direction: column;
+			padding-left: 0px!important;
+		}
+
+		#BusinessRuleSectionDataGridToolsContainerContainer,
+		#grid-BusinessRuleSectionDataGridGrid-wrap {
+			order: 1;
+			padding-left: 20px;
+		}
+		
+		#BusinessRuleSectionDataGridToolsContainerContainer, #SspBusinessRuleSectionDataGridToolsContainerContainer {
+			padding-top: 14px;
+		}
+
+		#SspBusinessRuleSectionDataGridToolsContainerContainer {
+			padding-left: 16px;
+		}
+		
+		#grid-BusinessRuleSectionDataGridGrid-wrap {
+			padding-top: 23px;
+		}
+
+		.base-grid-dataview-container-wrapClass {
+			min-height: calc(~"100vh" - 142px);
+			box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+			border-radius: 8px;
+
+			.section-label {
+				width: auto;
+				font-weight: 600;
+				font-size: 18px;
+				line-height: 24px;
+				color: #252F40;
+				padding: 16px 20px 0;
+			}
+		}
+	}
+	.utils {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		.utils-left {
+			position: relative;
+			left: 16px;
+
+			[data-item-marker="CancelButton"] {
+				margin-right: 0;
+			}
+			.t-btn-style-default {
+				min-height: auto;
+			}
+		}
+		.utils-right {
+			margin-left: 0;
+		}
+		span[data-item-marker="PreviousButton"],
+		span[data-item-marker="NextButton"] {
+			display: none;
+		}
+		span[data-item-marker="StepButton"] {
+			padding-bottom: 12px;
+			text-transform: none;
+		}
+
+		.schema-properties-button {
+			width: 24px;
+			height: 24px;
+			-moz-user-select: none;
+			padding: 0;
+
+			.t-btn-image {
+				width: 26px;
+				height: 26px;
+				cursor: pointer;
+			}
+		}
+	}
+	.grid-layout-edit-wrap {
+		.grid-layout-edit-table {
+			.grid-layout-edit-cell {
+				border-radius: 8px;
+			}
+
+			.grid-layout-edit-item-wrap {
+				border-radius: 8px;
+				border-color: #D8DBE2;
+				background-color: #FFEFE9;
+			}
+		}
+	}
+	.center-panel {
+		.design-container-wrapClass .draggable-item-list {
+			top: 70px !important;
+		}
+
+		div.design-container-wrapClass {
+			margin-top: 65px !important;
+		}
+	}
+}
+
+.page-wizard {
+	.wizard-header {
+		height: 64px;
+
+		.wizard-container {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			.utils {
+				&-left {
+					position: absolute;
+					top: 12px;
+					left: 0;
+				}
+
+				&-right {
+					.wizard-steps-collection {
+						display: flex;
+						align-items: flex-end;
+						.t-btn-pressed {
+							position: relative;
+							border: none !important;
+
+							&::after {
+								content: "";
+								position: absolute;
+								bottom: 0;
+								left: 0;
+								height: 4px;
+								width: 100%;
+								background-color: #F9763D;
+								border-radius: 2px;
+							}
+						}
+					}
+				}
+
+				&-tools {
+					position: absolute;
+					top: 22px;
+					right: 22px;
+				}
+			}
+		}
+	}
+
+	.center-panel {
+		.default-center-panel-content {
+			[data-item-marker="ContactPageV2Container"] {
+				.design-container-wrapClass {
+
+					.draggable-items-list {
+						border: 1px solid transparent;
+						border-radius: 0 8px 8px 0;
+						box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+
+						.view-model-schema-designer-item-content-image {
+							width: 24px;
+							height: 24px;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.card-content-container {
+		[data-item-marker="ProfileContainer"] {
+			.grid-layout-edit-table {
+				.grid-layout-edit-row {
+					background-color: #FFF;
+
+					.grid-layout-edit-cell {
+						border: 1px solid #D8DBE2;
+					}
+				}
+
+				.grid-layout-edit-item-wrap {
+					background-color: #FFF;
+					border: none;
+				
+					&:not([data-valid-column='true']) {
+						border-left: solid 1px #D8DBE2;
+						border-right: solid 1px #D8DBE2;
+						left: 0 !important;
+						width: 100% !important;
+					}
+
+					&:hover {
+						background-color: #FFEFE9;
+					}
+
+					&[data-selected-item="true"] {
+						border: 1px solid #F9763D;
+					}
+					
+					.grid-layout-edit-item-actions-wrap {
+						.t-btn-wrapper {
+							padding: 0;
+							
+							.t-btn-image {
+								width: 24px;
+								height: 24px;
+							}
+						}
+					}
+
+					.grid-layout-edit-item-content-image {
+						width: 24px;
+						height: 24px;
+					}
+				}
+			}
+		}
+	}
+
+	.center-main-container {
+		.grid-layout-edit-item-content-image {
+			width: 24px;
+			height: 24px;
+		}
+
+		.grid-layout-edit-table {
+			.grid-layout-edit-item-wrap {
+				background-color: #FFF;
+				border: 1px solid #D8DBE2;
+				
+				&:hover {
+					background-color: #FFEFE9;
+				}
+
+				.grid-layout-edit-item-actions-wrap {
+					.t-btn-wrapper {
+						padding: 0;
+
+						.t-btn-image {
+							width: 24px;
+							height: 24px;
+						}
+					}
+				}
+			}
+		}
+
+		#ActionDashboardContainer {
+			padding: 16px;
+
+			.img-action-dashboard {
+				width: 946px;
+				height: 66px;
+			}
+		}
+	}
+}
+
+.lookup-page-item-properties-page {
+	.mat-radio-button  {
+		.mat-radio-label-content {
+			white-space: normal;
+		}
+	}
+}
+
+#PageTypeSettingsPageContainer {
+	.bottom-buttons-wrapper {
+		display: flex;
+		justify-content: flex-end;
+	}
+}
+
+.tab-item-content-draggable-item-grabbed,
+#wizardContainer #DesignedView #TabsContainerContainer {
+	.ts-controlgroup {
+		&-tools {
+			.btn-details-tools-wrapp.t-btn-wrapper {
+				width: 24px;
+				height: 24px;
+				padding: 0 !important;
+				margin: 0 0 0 12px;
+
+				&:nth-child(2) {
+					margin-left: 8px
+				}
+
+				.t-btn-image {
+					left: 0;
+					width: 24px;
+					height: 24px;
+					margin: 0;
+				}
+			}
+		}
+	}
+}
+
+#BusinessRuleSectionContainer {
+	.grid-listed-row:not([id*="foldersGrid"]):not(.empty-actions).grid-active-selectable.grid-row-selected {
+		&::after {
+			transform: rotate(0deg);	
+		}
+	}	
+}
+
+#wizardContainer.page-wizard #centerPanelContainer.center-panel {
+	top: 0;
+}
+
+#MiniPageContentContainer {
+	.t-btn-image {
+		width: 24px;
+		height: 24px;
+	}
+}

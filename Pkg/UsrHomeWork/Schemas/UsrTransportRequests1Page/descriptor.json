@@ -1,0 +1,13 @@
+﻿{
+  "Descriptor": {
+    "UId": "9ab93a00-e504-4a23-b0bd-194c83cd9ed9",
+    "Name": "UsrTransportRequests1Page",
+    "ModifiedOnUtc": "\/Date(1732104430000)\/",
+    "Parent": {
+      "UId": "d62293c0-7f14-44b1-b547-735fb40499cd",
+      "Name": "BaseModulePageV2"
+    },
+    "ManagerName": "ClientUnitSchemaManager",
+    "Caption": "Страница редактирования: \"Заявки на транспорт\""
+  }
+}

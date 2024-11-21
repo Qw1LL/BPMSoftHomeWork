@@ -1,0 +1,353 @@
+﻿@text-primary-color: #252F40;
+@text-secondary-color: #67748E;
+@light-gray: #D8DBE2;
+@orange: #F9763D;
+
+.circle-on-pseudo-class-16 {
+	content: '';
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	border-radius: 50%;
+}
+
+.multiline-base {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	-ms-text-overflow:ellipsis;
+	display:block;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+}
+
+.multiline {
+	.multiline-base;
+	max-height: 72px;
+	-webkit-line-clamp: 4;
+	padding-bottom: 2px;
+}
+
+.activity-mini-page-container {
+	width: 448px;
+
+	.activity-status-wrapper {
+
+		.activity-status-label-caption {
+			line-height: 20px;
+			font-size: 14px !important;
+		}
+
+		.label-wrap {
+			margin-bottom: 4px;
+
+			.activity-status-label-caption {
+				color: @text-primary-color;
+			}
+		}
+
+		.control-wrap {
+			.activity-status-label-caption {
+				color: @text-secondary-color;
+			}
+		}
+	}
+
+	.activity-mini-page-title {
+		.label-link {
+			.multiline-base;
+			@lines-num: 2;
+			@line-height: 28px;
+			line-height: @line-height;
+			height: @line-height * @lines-num;
+			-webkit-line-clamp: @lines-num;
+			font-size: 20px;
+
+			&:hover {
+				text-decoration: none;
+			}
+
+			&:before {
+				.circle-on-pseudo-class-16;
+				background-color: @orange;
+				margin-right: 8px;
+				white-space: initial;
+			}
+		}
+	}
+	.control-mini-wrap {
+		.activity-result {
+			.multiline;
+			padding-right: 5px;
+			word-break: break-all;
+			word-break: break-word;
+			word-wrap: break-word;
+		}
+	}
+	.date-period-control-container {
+		width: 100%;
+
+		> label {
+			text-align: left;
+		}
+
+		[data-item-marker="TimezoneButton"] {
+			right: 0;
+			top: 0;
+		}
+	}
+	.timezone-button {
+		padding: 0px 10px 0px 0px;
+	}
+	.communications-container {
+		&:empty {
+			margin-top: 0;
+		}
+		.communications-image {
+			border-radius: 50%;
+			border: 1px solid #c8c8c8;
+			float: left;
+			height: 32px;
+			margin: 0px;
+			padding: 0px;
+			width: 32px;
+		}
+		.communications-label {
+			font-style: normal;
+			font-weight: 400;
+			font-size: 14px;
+			color: @text-primary-color;
+
+			height: 32px;
+			line-height: 32px;
+			margin-left: 14px;
+			width: inherit;
+		}
+		.communications-add-button {
+			height: 24px;
+			width: 24px;
+			padding: 5px 32px 5px 0;
+			margin-top: 4px;
+			.t-btn-image {
+				background-position: center;
+				background-repeat: no-repeat;
+				height: 24px;
+				width: 24px;
+				background-color: #F9763D;
+				border-radius: 8px;
+				margin-right: -24px !important;
+			}
+			.t-btn-menu {
+				display: none;
+			}
+		}
+		.entity-connection-container {
+			margin-left: 34px;
+
+			.selectable {
+				padding-left: 34px;
+
+				.base-edit-right-icon-wrapper {
+					right: 0;
+				}
+
+				.base-edit-clear-icon {
+					display: block;
+					top: 8px;
+				}
+			}
+			.entity-connection-lookup {
+				margin-top: 4px;
+			}
+			.entity-connection-hyperlink {
+				padding-top: 1px;
+			}
+		}
+	}
+
+	.activity-mini-page--divider-container {
+		border-bottom: 1px solid @light-gray;
+		margin-top: 5px;
+		margin-bottom: 12px;
+	}
+}
+
+.label-wrap + .control-wrap {
+	padding-right: 0;
+}
+
+.memo-edit-core.base-edit .base-edit-voice-to-text {
+	position: absolute;
+	top: 50%;
+	right: 5px;
+	transform: translateY(-50%);
+	margin-top: 0;
+}
+.activity-mini-page-container.grid-mini-wrap {
+	margin-left: 0px;
+	.extended-menu-button-wrap {
+		margin: 0px;
+	}
+}
+.activity-minipage-status-container {
+	text-align: center;
+}
+
+.show-overlay {
+	.activity-mini-page-container {
+		.timezone-button {
+			margin-right: -20px;
+			padding: 25px 0px 0px 0px;
+		}
+	}
+}
+.minipage-content-container:not(.entity-initialized) .activity-mini-page-container .communications-container:empty {
+	height: 120px;
+}
+[data-item-marker='AddCommunicationButton'] .menu-item-image {
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+#ActivityMiniPageActivityGeneralInfoContainerContainer {
+	flex-direction: column-reverse;
+}
+
+#ActivityMiniPageActivityStatusContainer_ControlMiniPage {
+	font-size: 14px;
+	color: #67748E;
+}
+
+div[id*='AddCommunicationImage']{
+	display: none
+}
+
+#ActivityMiniPageAddCommunicationLabelLabel, #ActivityMiniPageCommunicationsContainerList {
+	margin-left: 0;
+}
+
+#ActivityMiniPageResultInfoContainer {
+	margin-bottom: 0;
+}
+
+#ActivityMiniPageStatusButtonContainerContainer {
+	display: flex;
+	justify-content: flex-end;
+	gap: 20px;
+}
+
+#ActivityMiniPageCommunicationsContainerContainer {
+	.entity-connection-container {
+		.selectable {
+			padding-left: 0;
+			column-gap: 10px;
+
+			.entity-connection-image-wrap {
+				padding: 0;
+			}
+		}
+	}
+}
+
+#MiniPageContainer {
+	.quick-final-status-submit-mode .activity-mini-page-container .container-mini-wrap {
+		&.activity-status-wrapper {
+			margin-top: 12px;
+
+			.control-wrap {
+				min-height: unset;
+			}
+		}
+
+		&.activity-mini-page-result-container {
+			margin-top: 20px;
+		}
+
+		&.activity-mini-page-detailed-result-container {
+			margin-top: 24px;
+		}
+	}
+
+	.activity-mini-page-title .control-wrap .label-link {
+		color: @text-primary-color;
+	}
+}
+
+#ActivityMiniPageContainer {
+	.alignable-container {
+		padding: 24px 5px 24px 25px;
+
+		.activity-mini-page-container {
+			padding: 0 15px 0 0;
+		}
+
+		.base-minipage-edit-button-container {
+			padding: 0;
+			margin: 16px 19px 0 0;
+		}
+	}
+
+	#ActivityGeneralInfoContainer {
+		.date-period-item-container {
+			#StartDateMiniPageDateTimeContainer,
+			#DueDateMiniPageDateTimeContainer {
+				.base-edit {
+					width: 140px;
+				}
+			}
+			.t-label.t-label-is-required.label-mini-wrap {
+				font-size: 12px;
+				margin-bottom: 8px;
+				line-height: 16px;
+				overflow: inherit;
+			}
+		}		
+	}
+}
+
+#AlignableMiniPageContainer {
+	#MiniPageContentContainer {		
+		#ActivityMiniPageMiniPageGridLayout {
+			.base-edit-clear-icon {
+				right: 30px;
+			}
+
+			.base-edit-validation {
+				left: 0px;
+				letter-spacing: -0.02em;
+				line-height: 12px;
+				padding: 0px 4px 2px 4px;
+				
+			}
+
+			.label-wrap.label-mini-wrap {
+				margin-bottom: 8px;				
+			}
+
+			.control-wrap.control-mini-wrap {
+				margin-top: 0;
+			}			
+			
+			#ActivityMiniPageMiniPageGridLayout-item-ActivityGeneralInfoContainer {
+
+				.base-edit.ts-box-sizing.base-edit-with-right-icon.date-edit.datetime-datecontrol, 
+				.base-edit.ts-box-sizing.base-edit-with-right-icon.time-edit.datetime-timecontrol {
+					margin-bottom: 24px;
+				}
+
+				#StartDateMiniPageContainer {
+					.base-edit.ts-box-sizing.base-edit-with-right-icon.date-edit.datetime-datecontrol.base-edit-error,
+					.base-edit.ts-box-sizing.base-edit-with-right-icon.time-edit.datetime-timecontrol.base-edit-error {
+						margin-bottom: 36px;
+					}
+				}
+
+				#DueDateMiniPageContainer {
+					.base-edit.ts-box-sizing.base-edit-with-right-icon.date-edit.datetime-datecontrol.base-edit-error,
+					.base-edit.ts-box-sizing.base-edit-with-right-icon.time-edit.datetime-timecontrol.base-edit-error {
+						margin-bottom: 48px;
+					}
+				}
+			}
+		}
+	}
+}

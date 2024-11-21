@@ -1,0 +1,304 @@
+﻿div[id*="FileDetail"] {
+
+	.grid-listed{
+		padding-left: 0 !important;
+
+		.grid-listed-row:last-of-type {
+			border-bottom: 1px solid #D8DBE2;
+		}
+	}
+
+	.grid-status-message-empty {
+		display: none;
+	}
+
+	.grid-empty > .grid-bottom-spinner-space {
+		height: 5px;
+	}
+
+	.dropzone {
+		height: 35px;
+		width: auto;
+		border: 1px dashed #999999;
+		text-align: center;
+		line-height: 35px;
+	}
+
+	.dropzone-hover {
+		border: 1px dashed #4b7fc7;
+	}
+
+	.DragAndDropLabel {
+		color: #252F40;
+		font-style: normal;
+		font-weight: 400;
+		font-size: 20px;
+		line-height: 28px;
+		text-align: center;
+		letter-spacing: -0.02em;
+	}
+	.DragAndDropLabelOr {
+		color: #252F40;
+		font-style: normal;
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 28px;
+		text-align: center;
+		letter-spacing: -0.02em;
+	}
+
+	.DragAndDropLabelLinkedText {
+		font-style: normal;
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 20px;
+		text-align: center;
+		letter-spacing: -0.02em;
+		color: #F9763D;
+		margin: 0;
+    	padding: 0;
+	}
+	.AddFileButtonLabel{
+		font-style: normal;
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 20px;
+		letter-spacing: -0.02em;
+		color: #F9763D;
+		padding: 4px;
+	}
+
+	.AddFileButtonTileModeLabel{
+		font-style: normal;
+		font-weight: 400;
+		font-size: 12px;
+		line-height: 20px;
+		letter-spacing: -0.02em;
+		color: #67748E;
+	}
+
+	#AddFilesContainer{
+		display: flex;
+    	align-items: center;
+    	justify-content: start;
+    	flex-direction: row;
+		padding: 16px 0px 24px;
+
+		.t-btn-wrapper[data-item-marker = "AddFilesButtonForListedModeCrossButton"] {
+			padding: 4px;
+
+			.t-btn-image {
+				height: 16px;
+				width: 16px;
+			}
+		}
+	}
+
+	
+	.ts-controlgroup-tools {
+		width: 100%;
+	}
+	#EmailFileDetailV2DetailControlGroup-tools {
+		align-items: baseline;
+	}
+
+	.tiled-mode-button,
+	.listed-mode-button {
+		height: 24px;
+		width: 36px;
+		background-size: 24px 48px;
+		top: -3px;
+		padding: 0;
+		top: -11px;
+	}
+
+	.listed-mode-button {
+		right: 0;
+    	position: absolute;
+	}
+
+	.tiled-mode-button {
+		position: absolute;
+		right: 30px;
+	}
+
+	.t-btn-wrapper[data-item-marker = "AddFilesButtonForTiledModeCrossButton"] {
+		.t-btn-image {
+			height: 24px;
+			width: 24px;
+			background-position: center bottom;
+			padding: 38px 55px 2px;
+		}
+	}
+
+	.t-btn-wrapper[data-item-marker = "AddFilesButtonForTiledModeLabel"] {
+		padding: 6px 23px 32px;
+	}
+
+	#AddFilesTiledContainer {
+		width: 136px;
+		height: 124px;
+		background: #F5F7FB;
+		border: 1px solid #D8DBE2;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		font-size: 12px;
+		border-radius: 8px;
+		margin-bottom: 16px;
+	}
+
+	.AddFilesButtonForTiledModeCrossButton{
+		width: 24px !important;
+		height: 24px !important;
+	}
+
+	.grid-captions{
+		background: #D8DBE2;
+	}
+
+	.ts-controlgroup-caption-wrap {
+		> span {
+			margin: 0;
+			padding: 0;
+			white-space: nowrap;
+			order: 0;
+		}
+	}
+}
+
+div[data-item-marker*="FileDetail"] {
+	div[data-item-marker*="tiled"], div[data-item-marker*="listed"] {
+
+		.entity-image-class {
+			width: 165px;
+		}
+
+		.entity-image-container-class {
+			float: right;
+			width: 128px;
+			height: 128px;
+			text-align: center;
+			line-height: 128px;
+		}
+
+		.entity-image-view-class {
+			max-width: 82px;
+			max-height: 82px;
+			vertical-align: middle;
+		}
+
+		.images-list-class {
+			min-height: 0.8em;
+			display: flex;
+    		flex-direction: row;
+    		align-items: center;
+			flex-wrap: wrap;
+		}
+
+		.images-list-class > .selectable {
+			margin-right: 10px;
+			display: inline-block;
+		}
+
+		.entity-label {
+			display: block;
+			max-width: 128px;
+			margin-bottom: 10px;
+			text-align: center;
+		}
+
+		.entity-link-container-class > a {
+			font-size: 1.4em;
+			line-height: 1.5em;
+			display: block;
+			max-width: 128px;
+			margin-bottom: 10px;
+			color: #444;
+			text-decoration: none;
+			text-overflow: ellipsis;
+			overflow: hidden;
+			white-space: nowrap;
+		}
+
+		.entity-link-container-class > a:hover {
+			color: #e56229;
+		}
+
+		.entity-link-container-class {
+			float: right;
+			width: 128px;
+			text-align: center;
+		}
+
+		.select-entity-container-class {
+			float: left;
+			width: 2em;
+		}
+
+		.listed-mode-button {
+			border-top-right-radius: 1px;
+			border-bottom-right-radius: 1px;
+
+			.t-btn-image {
+				background-position: 0px 0px !important;
+			 }
+		}
+
+		.tiled-mode-button {
+			border-top-left-radius: 1px;
+			border-bottom-left-radius: 1px;
+
+			.t-btn-image {
+				background-position: 0px 0px !important;
+			 }
+		}
+
+		.tiled-mode-button, .listed-mode-button {
+			padding-left: 0.308em;
+			padding-right: 0.462em;
+
+			.t-btn-image {
+				width: 24px;
+				height: 24px; 	
+			}
+		}
+	}
+
+	.button-pressed {
+		background: #fff;
+
+		.t-btn-image {
+			background-position: 0px -24px !important;
+		}
+	}
+
+	div[data-item-marker*="tiled"] {
+		.tiled-mode-button {
+			.button-pressed;
+		}
+	}
+
+	div[data-item-marker*="listed"] {
+		.listed-mode-button {
+			.button-pressed;
+		}
+	}
+}
+#PortalPartnershipPageTabsContainerContainer #DragAndDropContainer {
+	margin-top: 18px;
+	height: 294px !important;
+}
+
+#CampaignPageContainer, #CampaignPlannerPageContainer {
+	[id$='PageTabsContainerContainer'] {
+		#NotesAndFilesTab, #CampaignLinkedEntitiesTab, #CampaignParticipantTab {
+			.detail {
+				.grid-active-selectable .grid-fixed-col {
+					z-index: 1;
+				}
+			}
+		}
+	}
+}

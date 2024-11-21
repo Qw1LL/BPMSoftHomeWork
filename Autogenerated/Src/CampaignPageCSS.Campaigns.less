@@ -1,0 +1,462 @@
+﻿.ts-campaign-message-box {
+	width: 550px;
+
+	.ts-inputbox-caption {
+		font-size: 22px;
+	}
+
+	.memo-edit-core {
+		box-sizing: content-box;
+	}
+}
+
+.left-modules-container .island-block-container .control-width-15 {
+	display: inline-block;
+}
+
+.left-modules-container .island-block-container .label-wrap label {
+	text-align: left;
+	padding-left: 1px;
+}
+
+.left-modules-container .island-block-container .grid-layout .grid-layout-row .grid-layout-column>*:not(.grid-layout-spacer) {
+	padding-bottom: 8px;
+}
+
+.left-modules-container .island-block-container .grid-layout .grid-layout-row .grid-layout-column {
+	min-height: 1px;
+}
+
+.left-modules-container .island-block-container .grid-layout .grid-layout-row {
+	min-height: 1px;
+}
+
+.tabs-container {
+	display: flex;
+	flex-direction: column;
+}
+
+#CampaignAnalyticsTab {
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+
+	.open-designer-button {
+		position: absolute;
+		right: 0;
+	}
+
+	.not-selected-image {
+		width: 83px;
+		align-self: center;
+		text-align: center;
+		margin-right: 0;
+		padding-top: 25px;
+		padding-bottom: 30px;
+	}
+
+	.description-container {
+		width: 100%;
+		text-align: center;
+		color: #999999;
+		font-size: 1.2em;
+
+		.description-label {
+			max-width: 320px;
+			box-shadow: -4px 0 0 0 #f9763d;
+			font-family: 'Golos Regular';
+			font-style: normal;
+			font-weight: 400;
+			font-size: 14px;
+			line-height: 20px;
+			text-align: center;
+			letter-spacing: -0.02em;
+			color: #252F40;
+		}
+	}
+}
+
+.analytics-container {
+	display: flex;
+	flex-grow: 1;
+	position: relative;
+
+	#CampaignViewer {
+		flex-grow: 1;
+		margin: 0 -20px;
+		border-top: 1px solid #dbdbdb;
+		position: absolute;
+		height: 100%;
+		width: calc(~'100% + 40px');
+
+		.reload-diagram-button,
+		.description-toggle-btn,
+		.schema-properties-button {
+			height: 24px;
+			width: 24px;
+			min-width: auto;
+			margin: 0 16px 0 0!important;
+
+			.t-btn-image {
+				min-height: auto;
+				min-width: auto;
+				margin: 0;
+			}
+			
+			&.description-toggle-btn.untoggle {
+				opacity: 0.4;
+			}
+		}
+
+		.schema-designer .diagram {
+			width: inherit;
+			position: relative;
+		}
+
+		.e-datavisualization-diagram svg {
+			position: inherit !important;
+		}
+
+		.diagram .ej-diagram {
+			flex-basis: auto;
+			-webkit-flex-basis: auto;
+			height: 100%;
+		}
+
+		.diagram .header {
+			position: absolute;
+			left: 16px;
+			height: auto;
+			top: 16px;
+			padding: 0;
+			z-index: 10;
+			background: transparent;
+			.t-btn-image {
+				min-height: auto;
+			}
+		}
+
+		.toolbar {
+			margin: 0;
+			min-height: auto;
+			.toolbar-right {
+				position: absolute;
+				top: 5px;
+			}
+		}
+
+		#schema-designer-properties-ct {
+			top: 0;
+			margin-top: -1px;
+
+			.schema-wrap.one-el {
+				min-width: 356px;
+			}
+
+			#CustomCronExpressionModule,
+			#MonthlyStartModule,
+			#WeeklyStartModule {
+				.schema-wrap.one-el {
+					min-width: 306px;
+				}
+			}
+
+			.properties-container {
+				.t-btn-wrapper.t-btn-disabled:not(.t-btn-no-text-padding) {
+					border: unset;
+					color: unset;
+					background-color: unset;
+				}
+				
+				.control-right .control-wrap {
+					padding-left: 0;
+				}
+
+				.header-container .top-container-wrapClass .title-button {
+					background-color: transparent;
+
+					&[id$="PropertiesPageTitleButtonButton-wrapperEl"] {
+						&[id^="CampaignConditionalSequenceFlow"],
+						&[id^="EmailConditionalTransition"] {
+							background-color: white;
+						}
+					}
+				}
+				
+				.editors-ct {
+					position: relative;
+
+					.readonly-properties-background {
+						position: absolute;
+						width: 100%;
+						height: 100%;
+						background: #fff;
+						opacity: 0.3;
+						top: 0;
+						left: 0;
+						right: 0;
+						z-index: 100;
+					}
+				}
+			}
+		}
+	}
+}
+
+body[OldUI=false] {
+	.center-main-container.campaign-card-content-container>div {
+		padding-bottom: 0;
+	}
+
+	.center-main-container .campaign-analytics-header-container .grid-layout-row {
+		max-width: 100%;
+	}
+
+	.left-modules-container>div.island-block-container {
+		padding-bottom: 11px;
+		padding-left: 16px;
+	}
+
+	ts-campaign-diagram>.ts-mask-container {
+		opacity: 0.5;
+	}
+}
+
+.control-no-label.campaign-properties-title-wrap .base-edit.base-edit-disabled {
+	background-color: transparent;
+}
+
+#CampaignSectionV2GridDataViewContainer {
+	#CampaignSectionV2DataGridContainerContainer {
+		.grid-empty{
+			background: #F5F7FB;
+		}
+
+		div [class*='grid-cols-'] {
+			font-family: 'Golos Regular';
+			font-style: normal;
+			font-weight: 400;
+			font-size: 14px;
+			line-height: 20px;
+			letter-spacing: -0.02em;
+			color: #252F40;
+
+			.grid-label {
+				font-size: 12px;
+				line-height: 16px;
+				letter-spacing: -0.02em;
+				color: #67748E;
+			}
+			
+		}
+	}
+
+	#RegistryDivContainer {
+		display: flex;
+		order: -1;
+		margin: 16px 16px 32px 16px;
+
+		#RegistryDivLabel {
+			font-family: 'Golos Regular';
+			font-style: normal;
+			font-weight: 600;
+			font-size: 18px;
+			line-height: 24px;
+			letter-spacing: -0.02em;
+			color: #252F40;
+		}
+	}
+}
+
+#ScheduledStartDateDateTimeContainer,
+#ScheduledStopDateDateTimeContainer,
+#StartDateDateTimeContainer,
+#NextFireTimeDateTimeContainer,
+#EndDateDateTimeContainer{
+	display: flex;
+}
+
+#ProfileContainer {
+	[id^="ProfileContainer-item-Indicator"] {
+		height: 130px !important;
+		
+		.indicator-module-wraper {
+			height: 100%;
+			display: block;
+			
+			.indicator-wrap {
+				background-color: transparent;
+				border: none;
+			}
+
+			&.widget-blue {
+				border-color: #1E90FF;
+				.t-label {
+					color: #1E90FF;
+				}
+			}
+
+			&.widget-green {
+				border-color: #33B864;
+				.t-label {
+					color: #33B864;
+				}
+			}
+
+			.t-label {
+				width: auto;
+				line-height: 20px;
+				
+				&.indicator-value {
+					font-weight: 600;
+					font-size: 40px;
+					line-height: 40px;
+				}
+
+				&.indicator-caption {
+					margin-top: 35px;
+				}
+			}
+		}	
+	}
+} 
+
+#CampaignPageViewOptionsButtonButton-textEl{
+	text-transform: none;
+}
+
+#CampaignPageScheduledStartDateDateEdit-wrap,
+#CampaignPageScheduledStopDateDateEdit-wrap,
+#CampaignPageStartDateDateEdit-wrap,
+#CampaignPageNextFireTimeDateEdit-wrap,
+#CampaignPageEndDateDateEdit-wrap{
+	margin-right: 0px;
+}
+
+#CampaignPageContainer {
+	.left-container-wrapClass {
+		display: flex;
+    justify-content: flex-start;
+    align-items: center;
+	}
+
+	.right-container-wrapClass {
+		margin-top: 0;
+    margin-right: 0;
+		padding-top: 9px;
+
+		[data-item-marker="ViewOptionsButton"] {
+      .t-btn-text {
+        padding-right: 20px;
+      }
+
+      .t-btn-menu {
+        right: 4px;
+      }
+    }
+	}
+
+	.left-modules-container {
+		.grid-layout {
+			padding: 16px;
+		}
+	}
+
+	.center-main-container {
+		.tabs-container {
+			.djs-minimap {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				top: 16px;
+				right: 16px;
+			}
+
+			.djs-popup.zoom {
+				bottom: 63%;
+				right: 10px;
+			}
+
+			#CampaignPageTabsTabPanel-wrap {
+				.ts-tabpanel-items {
+					.ts-box-sizing {
+						position: relative;
+	
+						&.ts-tabpanel-active-item {
+							&::after {
+								display: block;
+								content: "";
+								width: 100%;
+								height: 4px;
+								position: absolute;
+								left: 0;
+								bottom: 0;
+								background-color: #F9763D;
+								border-radius: 2px;
+							}
+						}
+					}
+				}
+			}
+
+			#NotesAndFilesTab {
+				.ts-controlgroup-caption-wrap {
+					display: flex;
+					justify-content: flex-start;
+					align-items: center;
+
+					.ts-controlgroup-tools {
+						margin-left: 8px;
+						margin-bottom: 2px;
+					}
+				}
+			}
+		}
+	}
+}
+
+#CampaignPageContainer {
+	[data-item-marker="LeftModulesContainer"] {
+		.island-block-container {
+			.grid-layout {
+				padding: 0;
+			}
+		}
+	}
+
+	.tabs-container {
+		[data-item-marker="NotSelectedImage"] {
+			img {
+				width: 83px;
+				height: 74px;
+			}
+		}
+	}
+}
+
+#wizardContainer {
+	#CampaignPageContainer {
+		#DesignedView {
+			#LeftModulesContainer {
+				top: 0;
+			}
+		}
+	}
+}
+
+#centerPanel {
+	#CardContentWrapper.page-with-left-el {
+		#CardContentContainer,
+		#LeftModulesContainer {
+			margin-top: 23px;
+		}
+	}
+
+	#AccountSectionV2Container {
+		#CardContentWrapper.page-with-left-el {
+			#CardContentContainer {
+				margin-top: 28px;
+			}
+		}
+	}
+}

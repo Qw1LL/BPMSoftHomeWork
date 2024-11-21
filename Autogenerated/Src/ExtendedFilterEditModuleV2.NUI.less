@@ -1,0 +1,111 @@
+﻿.getImageButtonStyle(@size) {
+	width: @size;
+	height: @size;
+	overflow: visible;
+
+	.t-btn-image {
+		background-size: @size @size;
+		background-position: center;
+	}
+}
+
+.header-name {
+	color: #444444;
+	font-size: 35px;
+	letter-spacing: -0.01em;
+	margin-bottom: 25px;
+}
+
+.extended-filter-btn-actions-wrapper {
+	margin-right: 9px;
+	margin-top: 7px;
+	margin-bottom: 7px;
+	vertical-align: bottom;
+}
+
+.extended-filter-caption {
+	width: auto;
+}
+
+#extendedFilterEdit {
+	width: 280px;
+}
+
+.period-fixed-filter-image-class,
+.custom-filter-button-container .wrapper-with-centered-right-menu {
+  margin-left: 10px;
+}
+
+.action-buttons-container-wrapClass {
+	margin-bottom: 0;
+	padding-bottom: 1em;
+}
+
+.section .left-section-container .extended-filters-container-wrapClass {
+	overflow: hidden;
+}
+
+.dashboard-container .section .left-section-container .extended-filters-container-wrapClass {
+	height: calc(~"100% - 114px");
+	padding: 16px 12px 0 12px;
+}
+
+.filter-edit {
+	height: 100%;
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+}
+
+.extended-filters-container-wrapClass {
+	width: inherit;
+	height: calc(~"100vh - 186px");
+	position: fixed;
+	left: 24em;
+	border-radius: 8px;
+	overflow-x: auto;
+	padding: 16px 12px 0 12px;
+
+	.extended-filter-button-container {
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+		
+		.t-btn-wrapper[data-tag="BackButton"],
+		.t-btn-wrapper[data-tag="CloseButton"] {
+			.getImageButtonStyle(24px);
+		}
+
+		.extended-filter-folder-icon {
+			.getImageButtonStyle(16px);
+		}
+
+		.folder-title-container-wrap {
+			width: 100%;
+			display: flex;
+			align-items: center;
+			margin-left: 10px;
+		}
+
+		.extended-filter-folder-caption {
+			width: calc(~"100% - 30px");
+			margin-left: 7px;
+		}
+	}
+	
+	.filter-edit {
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		margin: 0;
+	}
+
+	.folder-buttons-container-wrap {
+		display: flex;
+		flex-direction: column;
+
+		& > * {
+			margin-bottom: 10px;
+		}
+	}
+}

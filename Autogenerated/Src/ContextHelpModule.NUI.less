@@ -1,0 +1,155 @@
+﻿@greenColor: #8ecb60;
+
+.help-button {
+	padding: 0;
+}
+.help-button-image {
+	display:inline;
+	width: 24px;
+	height: 24px;
+}
+.context-help-class {
+	.schema-wrap.one-el {
+		min-width: 0;
+	}
+}
+.context-help-menu.menu-wrap {
+	padding:0;
+	position: fixed !important;
+}
+
+.menu-wrap.menu,
+.menu-scroll-wrap.menu {
+	color: #67748E;
+	position: absolute !important;
+
+	&[data-item-marker="EmailTabActions"] {
+		.menu-item {
+			padding-left: 10px;
+		}
+	}
+
+	.menu-item{
+		margin-top: 4px;
+		margin-bottom: 4px;
+		text-align: left;
+		display: flex;
+		align-items: center;
+		gap: 5px;
+
+		span {
+			background-size: cover;
+			background-repeat: no-repeat;
+			display: inline-block;
+		}
+	}
+	.menu-item-selected {
+		color: #252F40;
+		border-radius: 4px;
+		background-color: #FFEFE9;
+	}
+	&[data-item-marker="QuickSetupButton"] {
+		.menu-separator-first {
+			margin-left: 12px;
+		}
+		.menu-separator-header {
+			padding-left: 4px;
+		}
+	}
+}
+
+.context-help-menu {
+	.menu-item-image {
+		right: 0px;
+		left: inherit;
+		top: 0;
+		bottom: 0;
+		width: 0px;
+		height: 0px;
+		background-position: 50%;
+		background-repeat: no-repeat;
+	}
+	.menu-item {
+		padding: 0 20px 0 20px;
+	}
+}
+.context-tips-mode-container {
+	.context-tips-mode-tools {
+		.context-tips-mode-tool {
+			.t-btn-image {
+				background-position: 50%;
+				background-repeat: no-repeat;
+				width: 32px;
+				height: 32px;
+				box-sizing: border-box;
+			}
+			.t-btn-image:hover {
+				background-color: #80b756;
+			}
+		}
+	}
+}
+
+li[data-item-marker*="Chat"] {
+	span {
+		background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M21 14.5C21 10.3579 17.6421 7 13.5 7H13C9.13401 7 6 10.134 6 14C6 17.866 9.13401 21 13 21H21V14.5Z' stroke='%2367748E' stroke-width='2' stroke-linejoin='round'/%3E%3Cpath d='M7 15H3V9.35294C3 5.84431 5.91015 3 9.5 3H9.95139C13.2919 3 16 5.82353 16 7.5' stroke='%2367748E' stroke-width='2' stroke-linejoin='round'/%3E%3Cpath d='M9.75 14.25H10.5' stroke='%2367748E' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M13.5 14.25H14.25' stroke='%2367748E' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M17.25 14.25H18' stroke='%2367748E' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A") !important;
+		background-repeat: no-repeat;
+		width: 20px;
+    height: 20px;
+    background-position: -2px;
+	}
+}
+
+li[data-item-marker*="Contact"] {
+	span {
+		background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 4C17.5227 4 22 6.686 22 10V14C22 17.314 17.5227 20 12 20C6.57545 20 2.16 17.409 2.00455 14.177L2 14V10C2 6.686 6.47727 4 12 4ZM12 16C8.61818 16 5.62727 14.993 3.81818 13.45V14C3.81818 15.882 7.34818 18 12 18C16.5545 18 20.0345 15.97 20.1773 14.118L20.1818 14L20.1827 13.45C18.3736 14.992 15.3827 16 12 16ZM12 6C7.34818 6 3.81818 8.118 3.81818 10C3.81818 11.882 7.34818 14 12 14C16.6518 14 20.1818 11.882 20.1818 10C20.1818 8.118 16.6518 6 12 6Z' fill='%2367748E'/%3E%3C/svg%3E%0A") !important;
+		background-repeat: no-repeat;
+		width: 20px;
+    height: 20px;
+    background-position: -2px;
+	}
+}
+
+ul.menu[data-item-marker = "Добавить"], 
+.menu[data-item-marker = "system-designer"], 
+.menu[data-item-marker = "addActions"],
+.menu[data-item-marker = "SeparateModeAddRecordButton"]
+ {
+	.menu-item {
+		padding: 0 28px 0 10px;
+	}
+	.menu-separator {
+		.menu-separator-header {
+			padding: 12px 26px 0px 3px;	
+		}
+	} 
+}
+
+.menu[data-item-marker = "StartProcessMenu"],
+.menu[data-item-marker = "MainMenu"] {
+	padding: 10px 4px;
+	.menu-item {
+		padding: 6px 12px;
+		line-height: 20px;
+		height: auto;
+		letter-spacing: -0.02em;
+	}
+	.menu-separator {
+		.menu-separator-header {
+			padding: 12px 12px 4px 12px;
+			margin: 6px 0px 0px 0px;
+			line-height: 20px;
+		}
+		.menu-separator-no-caption {
+			margin: 6px 0px -14px 0px;
+		}
+	}
+	.menu-separator-first {
+		margin: 10px 12px;
+		line-height: 20px;
+	}
+}
+
+.menu-wrap.menu .menu-item, .menu-scroll-wrap.menu .menu-item[data-item-marker="LinkRelation"]{
+	padding-right: 24px;
+}

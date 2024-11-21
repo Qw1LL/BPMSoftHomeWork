@@ -1,0 +1,3 @@
+﻿define("SubProcessDetail", function() {
+	return {};
+});

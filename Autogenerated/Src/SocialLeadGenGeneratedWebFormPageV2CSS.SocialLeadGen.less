@@ -1,0 +1,101 @@
+﻿.leadgen-settings-panel {
+
+	.base-edit {
+		padding-left : 0px;
+		padding-right: 0px;
+	}
+
+	.base-edit-focus {
+		border-left : none;
+		border-right: none;
+		border-top  : none;
+	}
+
+	.grid-layout-row {
+		min-height: 0px !important;
+
+		.grid-layout-column {
+			min-height: 0px !important;
+		}
+	}
+
+	.header-container {
+		display       : flex;
+		flex-direction: row;
+		align-items   : center;
+
+		.header-container-icon {
+			display        : flex;
+			justify-content: center;
+			align-content  : center;
+			margin         : 0.3em 0 0 0;
+			width          : 1.6em;
+			height         : 1.6em;
+		}
+
+		.header-container-label {
+			color              : #006CE0;
+			font-size          : 1.5em;
+			margin-inline-start: 0.3em;
+			margin-inline-end  : 0.3em;
+			white-space        : nowrap;
+		}
+
+		.header-container-toggle {
+			margin-top: 2px;
+		}
+
+	}
+
+	.leadgen-settings-section-panel {
+
+		.section-panel-label {
+			direction: inherit;
+			padding-top   : 12px;
+			padding-bottom: 12px;
+		}
+
+		.field-wrapper {
+
+			padding-bottom: 8px;
+
+			.field-label {
+				direction: inherit;
+				color: #999999;
+			}
+
+		}
+
+		.action-buttons-wrapper {
+			display        : flex;
+			flex-direction : row;
+			justify-content: space-between;
+
+			&.reverse {
+				flex-direction: row-reverse;
+			}
+		}
+
+		.button-wrapper {
+			padding       : 0.7em 0 0 0 !important;
+			display       : flex;
+			flex-direction: row;
+
+
+		}
+
+		.button-image {
+			position: relative !important;
+			left    : 0;
+			top     : 0.1em;
+		}
+
+		.button-text {
+			font-size: 1em;
+			padding  : 0.2em;
+			color    : #8aa0cf;
+		}
+
+	}
+
+}

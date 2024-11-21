@@ -1,0 +1,161 @@
+﻿.process-lookup-page {
+	.process-lookup-page-selected-rows-count-label {
+		color: #F9763D;
+		font-style: normal;
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 20px;
+		letter-spacing: -0.02em;
+		padding: 0 4px;
+	}
+	.process-lookup-page-options-container {
+		display: flex;
+		align-items: center;
+		white-space: nowrap;
+		height: 100%;
+		margin-right: 24px;
+	}
+	.process-lookup-page-right-container {
+
+	}
+	.process-lookup-page-label-edit {
+		color: #67748E;
+		font-style: normal;
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 20px;
+		letter-spacing: -0.02em;
+		overflow: initial;
+	}
+	.process-lookup-page-filtering-container {
+		display: flex;
+		width: 100%;
+		position: relative;
+		padding-bottom: 8px;
+	}
+	.search-edit.control-no-label .base-edit {
+		width: 366px;
+	}
+	.search-edit.control-no-label .base-edit:not(.base-edit-focus) {
+		border: 1px solid #c8c8c8;
+	}
+	.process-lookup-page-controls-container {
+		margin-top: 10px;
+	}
+	.vertical-align-top {
+		margin-left: 8px;
+		border: none;
+	}
+	.base-edit .search-edit {
+		width: 366px;
+		padding-left: 0px;
+	}
+	.center-area-grid-container-process-lookup-page{
+		padding-right: 2px;
+		overflow-y: auto;
+		max-height: 340px;
+		&::-webkit-scrollbar {
+			width: 4px;
+			border-radius: 2px;
+		}
+
+		.grid .grid-captions {
+			display: inherit;
+		}
+		.grid-listed-row .grid-fixed-col,
+		.grid-listed-row .grid-fixed-col-2 {
+			margin-left: 3px;
+		}
+
+		.grid-row-selected {
+			background-color: initial !important;
+		}
+	}
+
+	.column-lookup-page-actions-container {
+		width: 100%;
+		display: flex;
+		justify-content: flex-end;
+		padding: 10px;
+		margin-top: auto;
+	}
+
+	.search-edit {
+		.control-wrap {
+			.base-edit {
+				height: auto;
+				border-radius: 8px !important;
+				border: 1px solid #D8DBE2 !important;
+				padding: 0;
+
+				input,
+				textarea {
+					padding: 10px 16px;
+					border-radius: 8px;
+				}
+			}
+
+			.base-edit-focus {
+				border: 1px solid #67748E !important;
+				color: #252F40;
+			}
+		}
+	}
+}
+
+.schema-wrap {
+	height: 100%;
+}
+
+#ProcessLookupPagecenter-area-grid-containerContainer{
+	.grid-captions{
+		background-color: rgba(255,255,255,0);
+		padding: 0 0 0 3px;
+		border-bottom: 1px solid #D8DBE2;
+		margin: 1em 0;
+		height: auto;
+		
+		div{
+			padding-bottom: 10px;
+		}
+	}
+	.grid-listed-row{
+		border-bottom: none;
+		min-height: auto;
+		div[class*='grid-cols-']{
+			padding-left: 12px;
+		}
+	}
+}
+
+#ProcessLookupPagefiltering-containerContainer {
+	.control-no-label .base-edit:hover .base-edit-input,
+	.base-edit-with-clear-icon:not(.clear-icon-not-visible):hover .base-edit-input {
+		padding: 10px 16px !important;
+	}
+	.t-btn-wrapper.t-btn-text.t-btn-style-orange.vertical-align-top {
+		display: none;
+	}
+	.base-edit-disabled-el-icon {
+		display: none;
+	}
+	#ProcessLookupPageSearchInputTextEdit-validation {
+		display: none;
+	}
+	#ProcessLookupPageSearchInputTextEdit-disabled-el-icon {
+		display: none;
+	}
+	#ProcessLookupPageSearchInputTextEdit-right-icon-wrapper {
+		width: 24px;
+		right: 13px;
+		#ProcessLookupPageSearchInputTextEdit-right-icon {
+			transform: translate(-50%, -50%);
+		}
+	}
+	#ProcessLookupPageSearchInputTextEdit-wrap {
+		width: 439px;
+	}
+	#ProcessLookupPageSearchInputTextEdit-el {
+		width: 400px;
+	}
+}

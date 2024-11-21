@@ -1,0 +1,96 @@
+﻿html[dir="rtl"] {
+  body[OldUI=false].home-page {
+    .main-header {
+      .left-header-container-class {
+        border-radius: 0 8px 8px 0;
+
+        .caption-class.fix-width {
+          flex-basis: inherit;
+          position: inherit;
+        }
+
+        .header-section-caption-class {
+          position: inherit;
+        }
+      }
+
+      .right-header-container-class {
+        border-radius: 8px 0 0 8px;
+      }
+    }
+  }
+}
+
+.home-page {
+  .center-panel {
+    background: #F5F7FB;
+    padding-top: 0;
+    padding-left: 0;
+    margin-top: 0;
+    min-height: 100vh;
+    padding-bottom: 8px;
+  }
+  .center-panel.opened-right-panel {
+    padding-right: 8px;
+  }
+  &.scroll .main-header {
+    box-shadow: 0 3px 3px -2px #d8d9d9;
+    .left-header-container-class {
+      border-bottom-left-radius: 0 !important;
+    }
+    .right-header-container-class {
+      border-bottom-right-radius: 0 !important;
+    }
+  }
+}
+body[OldUI=false].home-page {
+  @media screen and (max-width: 1439px) {
+    .right-panel {
+      margin-top: initial;
+      box-shadow: none;
+    }
+    .opened-right-panel .inner-context-right-image-class {
+      box-shadow: none;
+    }
+  }
+  .right-panel {
+    border-top-left-radius: 8px;
+    border-right: none;
+    border-bottom: none;
+  }
+
+  &:not(.x-ie) .left-panel:after {
+    display: none;
+  }
+  :not(.x-ie) .communication-panel:after {
+    display: none;
+  }
+  div.center-panel {
+    padding-top: 88px;
+  }
+  .main-header {
+    .left-header-container-class {
+      border: 1px solid #ffffff;
+      border-radius: 8px 0 0 8px;
+      border-right: none;
+    }
+    .right-header-container-class {
+      border: 1px solid #ffffff;
+      border-radius: 0 8px 8px 0;
+      border-left: none;
+    }
+   &[is-main-menu-header=true] {
+      height: 80px;
+    }
+    &.opened-right-panel {
+      .right-header-container-class {
+        margin-right: 442px;
+      }
+    } 
+  }
+  .center-panel.opened-right-panel {
+    .center-panel-content {
+      margin-right: 375px;
+    }
+  }
+}

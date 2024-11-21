@@ -1,0 +1,348 @@
+﻿@orange: #F9763D;
+@border: 1px solid #d8d9d9;
+
+.center-panel {
+	height: 100vh;
+}
+
+.center-panel-content {
+	height: 100%;
+}
+
+.default-center-panel-content {
+	height: 100%;
+}
+
+.workingAreaContainer-class {
+	display: flex;
+	height: 95%;
+	width: 100%;
+}
+
+.center-panel-content #utilsContainer {
+	min-width: 1030px;
+}
+
+.left-panel-collapsed .center-panel-content #utilsContainer {
+	width: calc(91.5% * 0.98 - 345px);
+}
+
+.actionButtonsContainer-class {
+	min-width: 88em;
+	.t-btn-wrapper {
+		margin-right: 10px;
+	}
+}
+
+.leftModulesContainer-class {
+	overflow-x: hidden;
+	overflow-y: hidden;
+	min-width: 320px;
+	height: auto;
+	border-right: solid 1px #e1e8f2;
+}
+
+.leftModulesContainer-class:hover {
+	overflow-y: auto;
+}
+
+.rightModulesContainer-class {
+	flex: 3;
+	min-width: 56em;
+}
+
+.viewActionsContainer-class {
+	display: inline-block;
+	float: right;
+	margin-right: 1.3em;
+}
+
+.folder-manager-button-right {
+	right: 12px;
+}
+
+.folder-manager-left-container .grid-row-actions {
+	margin-left: auto;
+}
+
+#quickSearchModuleButtons-container {
+	display: flex;
+	align-items: center;
+}
+
+/*
+ ContainerList columns classes
+*/
+.productSelectionContainer-class {
+	height: 100%;
+
+	.grid-label, .grid label {
+		margin-right: 0;
+	}
+	.grid-layout-column {
+		padding-right: 1em;
+	}
+	.gridContainer-class {
+		width: 100%;
+	}
+
+	@media (max-height: 850px) {
+		.productsList {
+			max-height: 68vh;
+		}
+	}
+
+	@media (min-height: 850px) {
+		.productsList {
+			max-height: 80vh;
+		}
+	}
+
+	.productsList {
+		margin-left: 6px;
+		overflow-y: auto;
+		.grid-label, label {
+			color: inherit;
+		}
+	}
+	.gridCaption-container {
+		background-color: white;
+		min-width: 80em;
+		border-bottom: 1px solid #e0e0e0;
+		top: 14em;
+		height: 4em;
+		vertical-align: middle;
+		padding-top: 1.3em;
+		color: #999999;
+	}
+	.rowContainer {
+		vertical-align: middle;
+		display: block;
+		margin: 0;
+		padding: 0 6px 0 0;
+	}
+	.rowContainer label,
+	.gridRowCheckBoxCheckBoxEdit {
+		margin-top: 0.5em;
+		padding-left: 8px;
+	}
+	.rowContainer .base-edit > input {
+		font-size: 1em !important;
+	}
+	.gridRowLabel {
+		margin-right: 10px;
+		vertical-align: middle;
+	}
+	.gridRowTextEdit {
+		margin-right: 10px;
+	}
+	.gridRowComboBoxEdit {
+		margin-right: 10px;
+	}
+	.gridRowAvailableLabel,
+	.gridRowAvailableLabelLabel {
+		text-align: right;
+		padding-right: 10px !important;
+	}
+	.gridRowAvailableLabelLabel {
+		text-overflow: ellipsis;
+	}
+	.gridRowAvailableInImageImageView {
+		margin-top: 0.5em;
+	}
+	.gridRowAvailableInImageImageView img {
+		width: 1.4em;
+	}
+	.gridRowAvailableInLabelLabel {
+		width: auto;
+	}
+	.summary-label-class {
+		color: #999999;
+		font-size: 1.4em;
+		margin: 0.15em 0 -0.25em 0;
+	}
+	.summary-highlight-label-class {
+		color: #8ecb60;
+		font-size: 1.6em;
+	}
+	.summary-label-container-class {
+		padding-right: 0.5em;
+		margin: 0.1em 0 -0.25em 0;
+		float: left;
+		/* overflow: visible; */
+	}
+	.grid-listed-row [class*='grid-cols-'].base-edit {
+		font-size: 0.75em;
+		height: 30px;
+		margin-right: 6px;
+		padding-left: 6px;
+		border: 1px solid transparent;
+		border-bottom: 1px dotted #c8c8c8;
+		clear: none;
+	}
+	.grid-listed-row [class*='grid-cols-'].base-edit:hover {
+		border: 1px solid #c8c8c8;
+	}
+	.grid.grid-listed [class*='grid-cols-'].data-label {
+		color: rgb(68, 68, 68);
+	}
+	.extend-catalogue-filter-container {
+		margin-top: 1em;
+		margin-left: 0px !important;
+	}
+	.extended-filter-attributes-button-container {
+		margin-left: 0px !important;
+	}
+	.no-folders > .leftModulesContainer-class {
+		display: none;
+	}
+	.no-folders > .rightModulesContainer-class {
+		left: -3em;
+	}
+	.gridRowUnitEnumListComboBoxEdit .base-edit-right-icon-wrapper {
+		background-color: white;
+	}
+	.gridRowCountLabelCaption {
+		text-align: right;
+		padding-right: 10px;
+	}
+	.specification-filter-container .grid-listed-row {
+		padding-left: 30px;
+	}
+	.grid-listed-icon-16x16 {
+		margin-top: 0.175em;
+		height: 16px;
+		width: 16px;
+		min-height: 16px;
+		min-width: 16px;
+	}
+	.base-edit-validation {
+		font-size: inherit;
+	}
+}
+
+
+&.x-edge {
+	.main-header .left-header-container-class {
+		z-index: -1;
+	}
+}
+
+#QuickSearchTextEdit-wrap {
+	padding: 9px 15px;
+	border-radius: 8px;
+	.base-edit-input {
+		min-height: auto;
+		font-size: 14px;
+		line-height: 20px;
+	}
+}
+
+#ApplyQuickSearchFilterButton-wrapperEl {
+	min-height: 28px;
+}
+
+#ProductSelectionSchemaDataGridContainer {
+	margin-left: 0;
+}
+
+#ProductSelectionSchemaContainer {
+	.actionButtonsContainer-class.left-container {
+		background-color: #FFFFFF;
+		padding: 15px 0 20px 20px;
+		border-radius: 0 0 8px 8px;
+		position: relative;
+	}
+	.actionButtonsContainer-class.left-container::before {
+		content: '';
+		border-top: @border;
+		position: absolute;
+		top: 0;
+		left: 20px;
+		right: 18px;
+	}
+	.rightModulesContainer-class {
+		background-color: #FFFFFF;
+		margin: 8px 0 8px 0;
+		border-radius: 8px;
+		padding: 24px 16px;
+		#gridCaptionContainer {
+			#caption-Name-label,
+			#caption-Price-label,
+			#caption-Quantity-label,
+			#caption-Unit-label
+			 {
+				border-left: 1px solid #67748E;
+				padding-left: 8px;
+			}
+		}
+		label[id^='Product_Code-Label-'] {
+			padding-left: 0;
+		}
+	}
+	.leftModulesContainer-class {
+		background-color: #FFFFFF;
+		margin: 8px 8px 8px 0;
+		border-radius: 8px;
+		padding: 0 20px;
+	}
+	#viewOptionsContainer {
+		margin-right: 0;
+	}
+		.summaryStringContainer-class {
+		.summary-highlight-label-class {
+			color: @orange;
+		}
+	}
+	.summaryContainer-class {
+		margin-bottom: 32px;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: center;
+		width: 100%;
+		.summaryStringContainer-class {
+			float: right;
+		}
+		.quickSearchModuleApplyFilterButton-container {
+			float: none;
+			margin: 0 1.6em;
+			[data-item-marker="ApplyQuickFilterButton"] {
+				width: 20px;
+				height: 20px;
+				border-radius: 4px;
+				min-height: auto;
+				padding: 0;
+				margin: 0;
+				.t-btn-image#ApplyQuickSearchFilterButton-imageEl {
+					width: 20px;
+					height: 20px;
+					background-position: center 5px!important;
+				}
+			}
+		}
+	}
+	.searchContainer-class {
+		.quickSearchModule-container {
+			display: flex;
+			align-items: center;
+		}
+		.quickSearchModuleSearchTextEdit-container {
+			float: none;
+		}
+	}
+	#ProductSelectionSchemaDataGridContainer {
+		.grid-layout-row.ts-box-sizing {
+			.grid-layout-colum.ts-box-sizing   {
+				padding-left: 4px;
+			}
+		}
+	}
+	#ApplyQuickSearchFilterButton-wrapperEl {
+		padding-left: 0;
+		#ApplyQuickSearchFilterButton-imageEl {
+			background-position: center 0;
+		}
+		
+	}
+}

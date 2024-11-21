@@ -1,0 +1,553 @@
+﻿#MLModelSectionContainer, #MLRecommendationModelPageContainer, #MLScoringModelPageContainer, #MLClassificationModelPageContainer, #MLRegressionModelPageContainer, #MLTextSimilarityModelPageContainer  {
+
+	#LeftModulesContainer, #CardContentContainer {
+		margin-top:1em;
+
+		#ProfileContainer {
+			margin-top: 0;
+
+			div[data-item-marker = "StateProgressBar"] {
+				.ts-progress-bar-caption {
+					margin-bottom: 10px;
+				}	
+			}
+		  }
+
+		  div[data-item-marker = "FaqContainer"] {
+			.profile-icon {
+				margin-top: 5px;
+				}
+			
+			div[data-item-marker = "FaqUrls"] {
+				label {
+					color: #67748E;
+					font-size: 14px;
+					text-transform: none;
+				}
+				span {
+					color: #F9763D;
+				}
+			}
+		}
+	  } 
+
+	  .section.left-el {
+		#RightSectionContainer {
+			padding-bottom: 80px;	
+		}
+		.grid-pad {
+			.grid-module:nth-child(3n+3) {
+
+				&:nth-child(3n+3) {
+					margin-bottom: 10px;
+				}
+			}	
+		}
+	  }
+
+	  .actions-container {
+		padding-bottom: 0;
+		height: 5.5em;
+	  }
+
+	.center-main-container > div, .left-modules-container > div {
+		border: none;
+	}
+
+	.prediction-enabled-control-container {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		margin-top: 30px;
+
+		.label-wrap {
+			min-width: 100%;
+		}
+
+		.label-wrap label.t-label {
+			margin-left: 5px;
+		}
+	}
+
+	#ProfileContainer-item-MetricIndicator {
+		
+		.indicator-module-wraper, [custom-style="widget-blue"].indicator-module-wraper {
+			.indicator-wrap {
+				background: #fff;
+				padding: 49px;
+				text-align: center;
+
+				.t-label {
+					color: #F9763D;
+					left: 0;
+				}
+			}
+		  }
+	}
+
+	  #TrainingTab {
+		.ts-controlgroup-tools .t-btn-wrapper[data-item-marker="ToolsButton"] {
+			min-height: 40px;
+		  }
+
+		  .grid.grid-listed.grid-listed-zebra {
+			.grid-captions {
+				background: #D8DBE2;
+			}
+			.grid-listed-row.grid-active-selectable:not(.configuration-grid-row-active) {
+				align-items: flex-start;
+				padding-top: 10px;
+				padding-left: 10px;
+			  }
+			  .grid-listed-row.grid-active-selectable {
+				height: auto;
+			  }
+		  }
+
+		  #MLModelTrainSessionDetailV2DetailControlGroup-wrap {
+			.grid-pad {
+				display: block;
+
+				&:first-child::before {
+					display: block;
+					height: 1px;
+					position: relative;
+					top: -1px;
+					content: "";
+				}
+				.grid-row .grid-module {
+					display: block;
+				  }
+				.grid-row .grid-label {
+					margin-bottom: 15px;
+				}
+				&::after {
+					display: none;
+				}
+			}
+
+		  }
+	  }
+
+	  .t-btn-wrapper[data-item-marker = "AddColumnMenuButton"] {
+		display: block;
+		padding-left: 0;
+		color: #67748E;
+		font-size: 14px;
+
+		.t-btn-image {
+			width: 24px;
+			height: 24px;
+		}
+
+	  }
+}
+
+
+.ml-model-card-content-container {
+	.faq-header {
+		font-size: 14px !important;
+		margin-top: 5px;
+		margin-bottom: 16px;
+		width: 120px;
+	}
+
+	.label-green-color {
+		color: #8ecb60;
+	}
+
+	.t-btn-wrapper.ml-model-page-info-button-control-group {
+		border: 0 !important;
+		margin: 0;
+	}
+
+	.t-btn-wrapper.faq-button {
+		padding: 0;
+		text-decoration: none;
+		color: #252F40;
+		outline: none;
+		overflow: hidden;
+		font-size: 1.4em;
+		text-align: left;
+		margin-bottom: 8px;
+		white-space: normal;
+		max-width: 200px;
+	}
+
+	.t-btn-wrapper.faq-button:hover {
+		text-decoration: underline;
+	}
+
+	.root-schema-control-container, .prediction-enabled-control-container {
+		.tip-label-wrap {
+			text-align: left;
+		}
+	}
+
+	#MLModelPageAdvancedModelParametersGroupControlGroup {
+		.base-edit {
+			width: 50%;
+		}
+	}
+
+	#ModelSettingsTab, #AdvancedModelSettingsTab, #NotesTab {
+		#MetaData-wrap {
+			height: 300px;
+			margin-bottom: 10px;
+		}
+
+		#TrainingSetQuery-wrap, #BatchPredictionQuery-wrap {
+			height: 200px;
+		}
+
+		.memo-label {
+			color: #67748E;
+			font-size: 1.3em;
+			margin: 4px 0 0 4px;
+		}
+
+		.add-columns-menu-button {
+			.t-btn-menu {
+				display: none;
+			}
+		}
+
+		.target-column.base-edit-focus, .predicted-result-column.base-edit-focus {
+			border-top: 0;
+			border-left: 0;
+			border-right: 0;
+		}
+
+		@columnListRowHeight: 31px;
+
+		.placeholder-label {
+			color: #999999;
+			text-align: center;
+			margin-top: 10px;
+		}
+
+		.toggle-edit {
+			display: inline-block;
+		}
+
+		.toggle-edit-label {
+			display: inline;
+			vertical-align: middle;
+			margin-left: 10px;
+		}
+
+		.ts-controlgroup-caption-wrap {
+			height: auto;
+			display: -ms-flexbox;
+			display: -webkit-flex;
+			display: flex;
+			align-items: baseline;
+
+			.ts-controlgroup-tools {
+				display: -ms-flexbox;
+				display: -webkit-flex;
+				display: flex;
+				position: relative;
+				top: 5px;
+				align-items: center;
+			}
+
+			> span {
+				min-height: 2.5em;
+				height: auto;
+			}
+		}
+
+		.ts-controlgroup-container, .batch-prediction-filters-container, .batch-prediction-filters-label {
+		}
+
+		.training-settings-control-group {
+			.toggle-edit {
+				margin-bottom: 10px;
+			}
+		}
+
+		.batch-prediction-filters-label {
+			margin-top: 10px;
+		}
+
+		.t-information-btn.t-btn-image {
+			width: 24px;
+			height: 24px;
+		}
+
+		.tip-label-wrap {
+			text-align: left;
+		}
+
+		#MLRecommendationModelPageTrainingSettingsGroupGridGridLayout {
+			margin-top: 25px;
+		}
+
+		.t-checkboxedit-checked .toggle-label {
+			background: #F9763D;
+		}
+
+		#MLRecommendationModelPageAdvancedQuerySettingsGroupControlGroup-wrap {
+			margin-bottom: 15px;
+		}
+	}
+
+	.ml-explanation-widget {
+		height: 320px;
+
+		.empty-training-data-message {
+			height: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			color: #999999;
+			text-align: center;
+
+			.ts-controlgroup-empty-caption {
+				display: flex;
+				flex-direction: column;
+			}
+
+			.placeholder-label{
+				font-style: normal;
+				font-weight: 400;
+				font-size: 20px;
+				line-height: 28px;
+				letter-spacing: -0.02em;
+				color: #252F40;
+				margin-bottom: 16px;
+			}
+
+			.placeholder-description-label,
+			.placeholder-recomendation-label{
+				font-style: normal;
+				font-weight: 400;
+				font-size: 14px;
+				line-height: 20px;
+				letter-spacing: -0.02em;
+				color: #252F40;
+				border-left: 4px solid #F9763D;
+				width: auto;
+				padding-left: 12px;
+			}
+			
+			.ts-image-edit-wrap {
+				margin-right: 0;
+				margin-bottom: 14px;
+			}
+		}
+	}
+
+	#MLConsultationBannerContainer {
+		padding: 0 0 0 0;
+		height: 128px;
+		position: relative;
+
+		.ml-consultation-banner {
+			position: absolute;
+			z-index: 10;
+			width: 296px;
+			height: 100%;
+			margin: 0 0 0 0;
+			display: flex;
+			justify-content: flex-end;
+			background: transparent linear-gradient(81deg, #22AC14 0%, #8BCF00 100%) 0 0 no-repeat padding-box;
+			border: 1px solid #E6E6E6;
+			opacity: 1;
+			border-radius: 3px;
+
+			img {
+				opacity: 0.7;
+				mix-blend-mode: darken;
+			}
+		}
+
+		label, span {
+			position: absolute;
+			z-index: 15;
+			left: 24px;
+		}
+
+		.ml-consultation-banner-text {
+			top: 24px;
+			width: 90%;
+			color: white;
+			opacity: 1;
+		}
+
+		.ml-consultation-banner-button {
+			top: 74px;
+			color: white;
+			border: solid 1px;
+			text-transform: uppercase;
+			opacity: 1;
+			line-height: 19px;
+		}
+	}
+
+	#MLFilterForTrainingGroup {
+		display: flex;
+
+		#TrainErrorText {
+			display: flex;
+			flex-direction: column;
+			background-color: #FFE9E9;
+			padding: 16px;
+			gap: 10px;
+			border-radius: 8px;
+			height: fit-content;
+			flex-basis: 30%;
+			overflow-wrap: break-word;
+			text-align: justify;
+
+			h3 {
+				color: #F53939;
+				margin: 0;
+			}
+		}
+	}
+}
+
+#MLRecommendationModelPageContainer, #MLClassificationModelPageContainer, #MLRegressionModelPageContainer, #MLTextSimilarityModelPageContainer {
+	.actions-container {
+		padding-bottom: 0;
+		height: 5.5em;
+	}
+
+	  #LeftModulesContainer, #CardContentContainer {
+		margin-top:1em;
+	  } 
+}
+
+
+#MLModelSectionContainer {
+
+	.action-buttons-container-wrapClass {
+		padding-bottom: 0;
+	}
+
+	#MLModelSectionSeparateModeAddRecordButtonButton-textEl {
+		text-transform: none;
+	}
+
+	#MLModelSectionSeparateModeAddRecordButtonButton-markerEl {
+		border-top: 0.32em solid #fff !important;
+	}
+
+	.content-container-wrapClass .card.right-el {
+		padding-top: 0;
+	  }
+
+	  .combined-action-buttons-card-right-container-wrapClass {
+		margin-top: 0;
+	  }
+
+	  #LeftModulesContainer, #CardContentContainer {
+		margin-top: 6.5em !important;
+	  } 
+}
+
+#MainMiniPageContainer {
+
+	#MLModelMiniPageContainer {
+	.grid-layout .grid-layout-row .base-edit .base-edit-right-icon-wrapper {
+		right: 15px;
+	}
+
+
+	.minipage-alignable-container .label-wrap{
+		margin-bottom: 14px;
+		padding-bottom: 0;
+	}
+
+	.grid-layout .grid-layout-row .base-edit .base-edit-validation{
+		left: 0;
+		padding-left: 0;
+	}
+
+	#MLModelMiniPagePredictionSchemaTipLabel-wrap::after{
+		display: none;
+	}
+
+	.lookup-edit-right-icon{
+		left: 0;
+	}
+}
+
+.ts-modalbox-innerbox {
+
+	#autoGeneratedContainer {
+
+		#header {
+			.header-name {
+				color: #252F40;
+			}
+
+			.close-btn-user-class {
+				height: auto;
+			  }
+		}
+
+		#utils {
+			#utils-left {
+				.t-btn-style-green:hover {
+					color: #fff;
+					background-color: #E56229;
+				}
+			}
+		}
+
+		#firstItemConfig .t-label.object-name {
+			color: #252F40;
+		}
+
+		#autoGeneratedMainContainer {
+
+			#autoGeneratedLeftContainer {
+				
+				.removeButton {
+					top: 15px;
+				  }
+			}
+
+			.base-edit-right-icon {
+				height: 16px;
+			}
+
+			#autoGeneratedBottomContainer {
+				.base-edit-focus {
+					border-radius: 8px !important;
+					border: 1px solid #67748E !important;
+				}
+				.base-edit-disabled-el-icon {
+					top: 10px;
+				}
+			}
+		}
+	}
+}
+}
+
+
+#EntityColumnLookupPageContainer {
+
+	.header-name-container {
+		margin-bottom:0;
+	
+	.t-label {
+		font-family: "Golos Regular";
+		color: #252F40;
+		font-size: 20px;
+		letter-spacing: -0.01em;
+	  }
+	}
+
+	  .column-lookup-page .column-lookup-page-selected-rows-count-label {
+		color: #F9763D;
+	  }
+
+	  .t-checkboxedit-wrap {
+		margin-top: 0 !important;
+	  }
+}

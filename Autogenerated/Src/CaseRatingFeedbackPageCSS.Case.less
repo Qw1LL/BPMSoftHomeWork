@@ -1,0 +1,125 @@
+﻿//general consts
+@viewport-width: 100vw;
+@viewport-height: 100vh;
+@half: 50%;
+@full: 100%;
+
+//content box settings
+@min-width-threshold: 750px;
+@content-width: 475px;
+@content-heigth: 422px;
+
+//logo settings
+@logo-container-height: 168px;
+@logo-heigth: 26px;
+
+//comment settings
+@comment-edit-height: 80px;
+
+body.x-body {
+    background: #F5F7FB;  
+}
+
+html[dir="rtl"] {
+	.main-container .logo-container .logo {
+		.x-translate-rtl(@half, @half);
+	}
+    .main-container .thanks-message-container .thanks {
+        .x-translate-rtl(@half, @half);
+    }
+	.main-container .container:only-of-type {
+		.x-translate-rtl(@half, @half);
+	}
+}
+
+.schema-wrap {
+    .feedback-container {
+        ::-webkit-input-placeholder {
+            opacity: 1;
+        }
+        :-moz-placeholder {
+            opacity: 1;
+        }
+        ::-moz-placeholder {
+            opacity: 1;
+        }
+        :-ms-input-placeholder {
+            opacity: 1;
+        }
+    }
+}
+
+//functions
+.X-translate(@x: 0, @y: 0) {
+    top: @y;
+    left: @x;
+    transform: translate(-@x, -@y);
+    -webkit-transform: translate(-@x, -@y);
+    -ms-transform: translate(-@x, -@y);
+}
+
+.x-translate-rtl(@x: 0, @y: 0) {
+    transform: translate(@x, -@y);
+    -webkit-transform: translate(@x, -@y);
+    -ms-transform: translate(@x, -@y);
+}
+
+//styles
+.main-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    .X-translate(@half, @half);
+    .content-container {
+				box-sizing: content-box;
+        border-radius: 8px;
+        background: #FFF;
+        box-shadow: 0px 4px 12px 0px rgba(3, 13, 45, 0.1);
+        width: 398px;
+        height: 230px;
+        padding: 25px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .success-label, 
+    .thanks {
+        color: #252F40;
+        font-size: 20px;
+        text-align: center;
+        max-width: 300px;
+    }
+    .thanks-message-container {
+        margin-bottom: 24px;
+    }
+    .feedBack-buttons-container {
+        margin-top: 35px;
+        width: 100%;
+
+        .post-button {
+            width: 100%;
+        }
+    }
+    .feedback-container {
+        width: 100%;
+        .control-wrap {
+            height: @comment-edit-height;
+            background-color: #fff;
+            overflow: hidden;
+            border-radius: 8px;
+            border: 1px solid #D8DBE2;
+            .base-edit {
+                border: none;
+                .base-edit-input {
+                    padding-top: 10px;
+                }
+            }
+            .cke_editable {
+                margin: 12px;
+            }
+            .cke_chrome {
+                border: none;
+            }
+        }
+    }
+}

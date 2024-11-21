@@ -1,0 +1,13 @@
+﻿{
+  "Descriptor": {
+    "UId": "026fea1d-5414-47eb-9982-b5f2fe275e16",
+    "Name": "UsrCarPark",
+    "ModifiedOnUtc": "\/Date(1731921487000)\/",
+    "Parent": {
+      "UId": "1bab9dcf-17d5-49f8-9536-8e0064f1dce0",
+      "Name": "BaseEntity"
+    },
+    "ManagerName": "EntitySchemaManager",
+    "Caption": "Автопарк"
+  }
+}

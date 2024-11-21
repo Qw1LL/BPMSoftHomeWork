@@ -1,0 +1,65 @@
+﻿.multiline-label-wrap {
+	font-size: 1.4em;
+
+	.label-content-container {
+		overflow: hidden;
+
+		position: relative;
+		max-height: 152px;
+
+		p {
+			margin: 0;
+		}
+	}
+
+	.read-more {
+		display: none;
+		color: #F9763D;
+		cursor: pointer;
+
+		&:hover {
+			color: #e56229;
+		}
+	}
+
+	&:after{
+		display: none;
+		content: "";
+		text-align: left;
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		left: 0;
+		height: 1.2em;
+		background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1) 7%);
+	}
+
+	&.content-visble .label-content-container.content-visble {
+		max-height: none;
+	}
+
+	&.read-more-button-visible {
+		.label-content-container:after {
+			display: block;
+		}
+
+		.read-more {
+			display: inline-block;
+			margin-top: 4px;
+		}
+	}
+
+	a {
+		color: #F9763D;
+		text-decoration: none;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+	
+	iframe {
+		width: 100%;
+		border: none;
+	}
+}

@@ -1,0 +1,119 @@
+﻿.button-reordable-container {
+	margin-right: 14px;
+	margin-left: -4px;
+	min-height: 48px;
+
+	&#ProcessActionButtons_ReorderableContainer .tools-container .t-btn-wrapper{
+		background-color: transparent;
+	}
+}
+.button-reordable-item {
+	margin-right: 4px;
+	margin-left: 4px;
+	display: inline-block;
+	position: relative;
+	z-index: 100;
+}
+.button-reordable-item .tools-container {
+	position: absolute;
+	right: 0;
+	top: 0;
+	opacity: 0;
+	transition: right 0.2s, top 0.2s, opacity 0.2s;
+}
+.button-reordable-item .tools-container .t-btn-wrapper {
+	padding: 0;
+	cursor: pointer;
+	width: 0;
+	height: 0;
+	border-radius: 8px;
+	background-color: white;
+	transition: width 0.2s, height 0.2s;
+}
+.button-reordable-item .tools-container .t-btn-wrapper .t-btn-image {
+	width: 0;
+	height: 0;
+	background-repeat: no-repeat;
+	transition: width 0.2s, height 0.2s;
+}
+.button-reordable-item .page-designer-btn-wrapper {
+	padding: 4px;
+	border-radius: 8px;
+	border: 1px dashed #BABABA;
+	filter: contrast(0.5) brightness(1.4);
+}
+
+.button-reordable-item.button-selected .page-designer-btn-wrapper {
+	filter: none;
+}
+.button-reordable-item .page-designer-btn-wrapper .t-btn-style-default {
+	min-height: inherit;
+	background-color: white;
+}
+.button-reordable-item.button-selected .page-designer-btn-wrapper {
+	border: 1px dashed #7299F8;
+}
+.button-reordable-container .button-reordable-item.button-selected .tools-container {
+	display: block;
+	opacity: 1;
+}
+.button-reordable-item.button-selected .tools-container {
+	right: -7px;
+	top: -5px;
+	z-index: 20;
+}
+.button-reordable-item.button-selected .tools-container .t-btn-wrapper {
+	width: 24px;
+	height: 24px;
+}
+.button-reordable-item.button-selected .tools-container .t-btn-wrapper .t-btn-image {
+	width: 24px;
+	height: 24px;
+}
+.page-designer-button-reorderable-position {
+	display: inline-block;
+	position: absolute;
+	width: 0;
+	height: 0;
+}
+.page-designer-button-reorderable-position:before {
+	content: "";
+	position: absolute;
+	width: 0;
+	height: 0;
+	left: -5px;
+	top: 0;
+	border: 3px solid transparent;
+	border-right-color: #F9763D;
+	border-top-color: #F9763D;
+}
+.page-designer-button-reorderable-position:after {
+	content: "";
+	position: absolute;
+	width: 0;
+	height: 0;
+	left: 0;
+	top: 0;
+	border: 3px solid transparent;
+	border-left-color: #F9763D;
+	border-top-color: #F9763D;
+}
+.page-designer-button-reorderable-zero-element {
+	position: absolute;
+	width: 19px;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background: none;
+}
+
+#DesignedView {
+	#ActionButtonsContainerContainer {
+		#ProcessActionButtons_ReorderableContainer {
+			.button-reordable-item {
+				border: 1px dashed #BABABA;
+    			border-radius: 8px;
+			}
+		}
+	}
+}

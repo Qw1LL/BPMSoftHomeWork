@@ -1,0 +1,82 @@
+﻿#settings-section-panel {
+	#settings-section-buttons-container {
+		margin-bottom: 30px;
+
+		span {
+			margin-right: 9px;
+		}
+	}
+
+	.t-label {
+		text-align: right;
+		color: #999999;
+		text-overflow: ellipsis;
+	}
+
+	label[id^="settings-section-panel"] {
+		min-height: 40px;
+	}
+
+	div[id$="picker-color-button"] {
+		margin-left: 5px;
+	}
+
+	&[data-item-marker="sys-color-settings"] {
+		position: relative;
+
+		#settings-section-panel-item-settings-section-buttons-container {
+			padding: 16px 16px;
+			background-color: #FFF;
+			margin-bottom: 8px;
+			border-radius: 0 0 8px 8px;
+
+			&::before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 15px;
+				width: 98.5%;
+				height: 1px;
+				background-color: #D8DBE2;
+			}
+
+			#settings-section-buttons-container {
+				margin-bottom: 0;
+			}
+		}
+		#settings-section-panel-item-settings-section-panel-checkboxes-container {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			min-height: calc(~"100vh" - 195px);
+			background-color: #FFF;
+			padding: 16px 16px;
+			border-radius: 8px;
+
+			#settings-section-panel-checkboxes-container {
+				display: flex;
+				flex-direction: column;
+				align-items: flex-start;
+	
+				#settings-section-panel-first-checkbox,
+				#settings-section-panel-second-checkbox,
+				#settings-section-panel-third-checkbox,
+				#settings-section-panel-fourth-checkbox {
+					display: flex;
+					flex-direction: row;
+					align-items: flex-start;
+
+					.t-btn-wrapper {
+						padding-left: 4px;
+					}
+
+					.t-label {
+						color: #252F40;
+						letter-spacing: -0.02em;
+						margin-top: 4px;
+					}
+				}
+			}
+		}
+	}
+}

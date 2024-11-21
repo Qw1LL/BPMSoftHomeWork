@@ -1,0 +1,850 @@
+﻿.getBaseLookupMargin() {
+	margin: 0 24px;
+}
+
+#ServiceParameterGridContainer {
+	display: flex;
+	align-items: flex-start;
+	flex-wrap: nowrap;
+	flex-flow: column;
+}
+
+.service-parameter-grid-main-container {
+	display: flex;
+	width: 100%;
+	height: 100%;
+	overflow-y: auto;
+	overflow-x: hidden;
+
+	>.grid.grid-listed {
+		width: calc(~"100% - 523px");
+		max-width: calc(~"100% - 523px");
+		padding-left: 0px;
+		padding-top: 8px;
+		height: 100%;
+		overflow-y: auto;
+		min-height: 300px;
+	}
+}
+
+.service-method-builder-parameters .service-parameter-grid-main-container>.grid.grid-listed {
+	min-height: initial;
+}
+
+.service-parameter-grid-page {
+	min-height: 300px;
+	border-left: 1px solid #e0e0e0;
+	width: 523px;
+	max-width: 65%;
+	padding: 0px 0px 0px 10px;
+	margin-right: 20px;
+	z-index: 1021;
+}
+
+.parameter-grid-column-with-icon {
+	display: flex;
+	align-items: start;
+	word-break: break-all;
+	-ms-flex-align: start;
+
+	img {
+		margin-top: 2px;
+		width: 16px;
+		height: 16px;
+	}
+}
+
+.service-parameter-grid-page>.schema-wrap.one-el {
+	min-width: 35%;
+}
+
+#WebServiceMethodPageTabsContainerContainer .ts-tabpanel.ts-tabpanel-scroll-visible {
+	padding-right: 0;
+}
+
+.parameter-edit-container {
+	padding: 10px;
+}
+
+.web-service-method-card-content-container {
+	margin-top: 15px !important;
+	box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.25);
+}
+
+.method-page-container {
+	width: 100% !important;
+	height: 100% !important;
+	position: fixed !important;
+	display: block;
+	top: 0 !important;
+	left: 0 !important;
+	background: rgba(128, 128, 128, 0.5);
+	z-index: 1040;
+	margin: 0px !important;
+	padding-left: 80px !important;
+	padding-top: 30px !important;
+	padding-right: 50px !important;
+	padding-bottom: 30px !important;
+}
+
+.parameter-actions-container {
+	margin-top: 20px;
+	display: flex;
+	flex-direction: row-reverse;
+}
+
+#ServiceParameterValuePageInputContainerContainer {
+	display: flex;
+	align-items: center;
+	flex-direction: row;
+}
+
+#ServiceParameterValuePageValuesContainer {
+	flex-grow: 2;
+}
+
+#ValueCaption {
+	width: auto;
+	color: #252F40;
+	font-size: 14px!important;
+}
+
+body[hide-scroll=true] {
+	overflow: hidden !important;
+}
+
+.detail-tools-button-menu {
+	display: none;
+}
+
+.service-method-builder-caption {
+	font-size: 21px;
+	font-family: "Golos Regular";
+}
+
+.service-method-builder-caption-16 {
+	font-size: 16px;
+	padding-top: 2px;
+	width: auto;
+	color: #252F40 !important;
+}
+
+.UriRequestBuilderMethodUriLabel {
+	margin-top: 10px;
+}
+
+#UriRequestBuilderMethodPropertiesCaptionLabel {
+	margin-top: 15px;
+}
+
+#ServiceBuilderParameterGridCombinedModeCustomActionsButtonButton-wrapperEl {
+	margin-left: 8px;
+	vertical-align: baseline;
+
+	.t-btn-image {
+		width: 24px;
+		height: 24px;
+	}
+}
+
+.service-builder-action-buttons-wrapper #UriRequestBuilderSaveButtonButton-textEl {
+	background: #F9763D;
+	color:#fff;
+	border-radius: 8px;
+	padding: 8px 20px;
+}
+
+.service-builder-action-buttons-wrapper #UriRequestBuilderBackButtonButton-textEl {
+	background: #fff;
+	color:#F9763D;
+	border-radius: 8px;
+	padding: 8px 20px;
+	border: 1px solid #F9763D;
+	min-height: auto;
+}
+
+.bubble-image-panel {
+	padding-top: 10px;
+	margin-left: 350px;
+	margin-right: 350px;
+}
+
+.border-container {
+	border-left: 3px solid #ff7a64;
+	padding-top: 1em;
+	padding-left: 1em;
+	padding-bottom: 1em;
+	color: #999;
+	margin-left: 100px;
+	margin-top: 50px;
+	font-family: "Golos Regular";
+	font-size: 18px;
+	max-width: 620px;
+
+	.t-label {
+		margin-left: 5px;
+	}
+}
+
+.result {
+	font-size: 18px;
+}
+
+.result-message {
+	padding-top: 10px;
+}
+
+.service-builder-input-container {
+	height: 100%;
+}
+
+.webservice-auth-container {
+	display: flex;
+
+	.webservice-auth-setting {
+		width: 22px;
+		height: 22px;
+	}
+
+	.t-btn-no-text-padding {
+		padding: 0.36em 0.5em 0.1em 0.4em !important;
+	}
+}
+
+.service-builder-action-buttons-wrapper>.t-btn-wrapper {
+	margin-left: 8px;
+}
+
+#grid-ServiceBuilderParameterGridDataGridControlGrid-wrap {
+	min-width: 100%;
+
+	.grid-listed-row {
+		.grid-fixed-col-2 {
+			width: unset;
+		}
+	}
+}
+
+#grid-ServiceBuilderResponseParameterGridDataGridControlGrid-wrap {
+	min-width: 100%;
+}
+
+.service-parameter-value-caption {
+	width: auto;
+	color: #999;
+}
+
+.service-parameter-value-input {
+	display: flex;
+	align-items: center;
+	margin-right: 20px;
+}
+
+.service-parameter-value-values {
+	flex-grow: 2;
+
+	.base-edit-focus {
+		outline: none;
+		border: 1px solid #fff;
+		border-bottom: 1px solid #F9763D;
+		box-shadow: none;
+		-webkit-box-shadow: none;
+		-moz-box-shadow: none;
+	}
+
+	.base-edit.ts-box-sizing.base-edit-with-right-icon.date-edit.datetime-datecontrol {
+		width: calc(~"100% - 92px");
+	}
+}
+
+.service-quick-setup-header-wrap .service-method-builder-caption {
+	display: initial;
+}
+
+.service-mini-card-uri {
+	border-left-width: 0px;
+	border-right-width: 0px;
+	border-top-width: 0px;
+	border-radius: 0px;
+}
+
+.app-select {
+	.base-edit-left-icon {
+		background-size: 16px 16px !important;
+	}
+
+	.base-edit-input {
+		padding-left: 0;
+	}
+}
+
+.grid-listed-row .grid-primary-column img {
+	width: 16px;
+	height: 16px;
+	max-width: 16px;
+	max-height: 16px;
+}
+
+.grid-listed-row .icon-spacer-32x32 {
+	padding-left: 24px !important;
+	min-height: 20px;
+}
+
+.label-top {
+	align-items: end;
+
+	.t-label {
+		margin-top: 4px;
+	}
+}
+
+.web-service-card-content-container {
+	.ts-tabpanel {
+		padding-right: 0 !important;
+	}
+}
+
+body[OldUI=false] .web-service-confirm-dialog,
+.web-service-confirm-dialog {
+	.ts-messagebox-caption {
+		font: 14px "Golos Regular";
+		max-height: 600px;
+		overflow: scroll;
+		margin-bottom: 28px;
+		padding-bottom: 0;
+	}
+
+	width: 610px;
+	max-height: 708px;
+	padding: 25px;
+}
+
+.ts-mask-container.save-service-schema-mask {
+	z-index: 3000;
+}
+
+.ts-tabpanel {
+	border-bottom: none;
+
+	.ts-tabpanel-wrap:before {
+		left: 20px;
+		right: 20px;
+		width: auto;
+	}
+}
+ 
+
+#RestWebServiceV2PageActionButtonsContainerContainer, #SoapWebServiceV2PageActionButtonsContainerContainer {
+	top: 16px;
+	left: 10px;
+	height: 78px;
+	margin: 0;
+	border-radius: 8px;
+}
+
+.center-panel {
+	#RestWebServiceV2PageActionButtonsContainerContainer, #SoapWebServiceV2PageActionButtonsContainerContainer {
+		top: 96px;
+		left: auto;
+		border-radius: 0 0 8px 8px;
+	}
+}
+
+.schema-wrap .section.left-el .grid-captions::after {
+	border-bottom: none;
+}
+
+  #WebServiceMethodDetailContainer {
+	.grid-listed-row {
+		padding: 5px 6px 0;
+	}
+  }
+
+#WebServiceV2SectionContainer {
+	.left-section-container .extended-filters-container-wrapClass {
+		left: 24em;
+		border-radius: 8px;
+	  }
+
+	#simpleFilterEditContainer_SectionModuleV2_WebServiceV2Section_QuickFilterModuleV2 {
+		.base-edit-focus {
+			border-radius: 8px !important;
+			border: 1px solid #252F40 !important;
+		}
+	}
+
+	.custom-filter-arrow {
+		.t-btn-wrapper[data-item-marker="applyButton"] {
+			background-color: #F9763D;
+		  }
+	}
+
+	#WebServiceV2SectionSaveRecordButtonButton-textEl {
+		color: #fff;
+		background-color: #F9763D;
+		text-transform: none;
+		border-radius: 8px;
+		padding: 8px 20px;
+		min-height: auto;
+	}
+
+	#WebServiceV2SectionDiscardChangesButtonButton-textEl, #WebServiceV2SectionCloseButtonButton-textEl {
+		text-transform: none;
+		color: #F9763D;
+		background-color: #fff;
+		border: 1px solid #F9763D;
+		border-radius: 8px;
+		min-height: auto;
+		font-size: 1.6em;
+		padding: 8px 20px;
+	}
+
+	.action-buttons-container-wrapClass {
+		padding-bottom: 0;
+
+		#WebServiceV2SectionSeparateModeActionsButtonButton-textEl {
+			text-transform: none;
+		}
+		#WebServiceV2SectionSeparateModeActionsButtonButton-markerEl {
+			border-top: 0.32em solid #fff !important;
+		}
+	}
+
+	.section {
+
+		.utils-container-wrapClass {
+			margin-left: 0;
+		}
+
+		.grid-captions .grid-label,
+		.grid-captions label {
+			font-size: 14px;
+			color: #252F40;
+		}
+
+		.grid-listed-row {
+			padding: 10px 20px;
+		}
+	}
+}
+
+
+#RestWebServiceV2PageContainer, #SoapWebServiceV2PageContainer {
+	.center-main-container > .header-container-margin-bottom > * {
+		border: none;
+		margin-top: 1em;
+	}
+
+	.service-parameter-grid-main-container {
+		.grid-listed-row::after {
+			display: none;
+		}
+	}
+
+	.center-main-container > div, .left-modules-container > div {
+		border: none;
+	}
+
+	.grid a {
+		color: #F9763D;
+
+		span {
+			color: #F9763D !important;
+		}
+	}
+
+	.schema-wrap .ts-controlgroup-caption-wrap .ts-controlgroup-marker-wrap {
+		margin-right: 5px;
+	}
+
+	.schema-wrap .ts-controlgroup-caption-wrap span {
+		order: 0;
+	}
+
+	.quick-setup-button {
+		padding: 7px 35px 7px 19px;
+		border: 1px solid #f9763d;
+	}
+
+	.t-btn-wrapper[data-item-marker="ToolsButton"]  {
+		height: 25px;
+	}
+
+	.ts-controlgroup-tools .t-btn-wrapper[data-item-marker="AddRecordButton"]:not(.padding-left-34px) {
+		margin-top: 0;
+	}
+}
+
+#RestWebServiceMethodPageContainer, #SoapWebServiceMethodPageContainer {
+
+	.grid-layout.collapse-empty-row .grid-layout-row .grid-layout-column> :not(.grid-layout-spacer), .checkbox-control-item {
+		min-height: auto;
+	}
+
+	#RestWebServiceMethodPageQuickSetupButtonButton-textEl {
+		margin-right: 10px;
+	  }
+
+	.t-btn-marker {
+		border-top: 0.32em solid #F9763D;
+	}
+}
+
+#UriRequestBuilderHeaderTitleLabel, #ServiceBuilderParameterGridlabelLabel {
+	color: #F9763D;
+}
+
+#WebServiceV2SectionToggleSectionButtonButton-wrapperEl {
+	display: none;
+}
+
+#autoGeneratedContainer {
+	.base-edit-disabled-el-icon {
+		top: 8px;
+	}
+	#itemButtonsContainer span:not([data-item-marker="addObject"]):not([data-tag="ButtonExpand"] ) span{
+		background-image: url("data:image/svg+xml,%0A%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_6055_13489)'%3E%3Crect width='24' height='24' rx='8' fill='%23F9763D'/%3E%3Cpath d='M5 11.5H19C19.1326 11.5 19.2598 11.5527 19.3536 11.6464C19.4473 11.7402 19.5 11.8674 19.5 12C19.5 12.1326 19.4473 12.2598 19.3536 12.3536C19.2598 12.4473 19.1326 12.5 19 12.5H5C4.86739 12.5 4.74022 12.4473 4.64645 12.3536C4.55268 12.2598 4.5 12.1326 4.5 12C4.5 11.8674 4.55268 11.7402 4.64645 11.6464C4.74022 11.5527 4.86739 11.5 5 11.5Z' fill='white' stroke='white'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_6055_13489'%3E%3Crect width='24' height='24' rx='8' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A") !important;
+		width: 24px;
+		height: 24px;
+	}
+
+	span[data-tag="ButtonClose"] span{
+		background-image: url("data:image/svg+xml,%0A%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_6055_13489)'%3E%3Crect width='24' height='24' rx='8' fill='%23F9763D'/%3E%3Cpath d='M5 11.5H19C19.1326 11.5 19.2598 11.5527 19.3536 11.6464C19.4473 11.7402 19.5 11.8674 19.5 12C19.5 12.1326 19.4473 12.2598 19.3536 12.3536C19.2598 12.4473 19.1326 12.5 19 12.5H5C4.86739 12.5 4.74022 12.4473 4.64645 12.3536C4.55268 12.2598 4.5 12.1326 4.5 12C4.5 11.8674 4.55268 11.7402 4.64645 11.6464C4.74022 11.5527 4.86739 11.5 5 11.5Z' fill='white' stroke='white'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_6055_13489'%3E%3Crect width='24' height='24' rx='8' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A") !important;
+		width: 24px;
+		height: 24px;
+	}
+
+	span[data-item-marker="addObject"] span,span[data-tag="ButtonExpand"] span{
+		background-image: url("data:image/svg+xml,%0A%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_1210_190158)'%3E%3Crect width='24' height='24' rx='8' fill='%23F9763D'/%3E%3Cpath d='M19 11H13V5C13 4.73478 12.8946 4.48043 12.7071 4.29289C12.5196 4.10536 12.2652 4 12 4C11.7348 4 11.4804 4.10536 11.2929 4.29289C11.1054 4.48043 11 4.73478 11 5V11H5C4.73478 11 4.48043 11.1054 4.29289 11.2929C4.10536 11.4804 4 11.7348 4 12C4 12.2652 4.10536 12.5196 4.29289 12.7071C4.48043 12.8946 4.73478 13 5 13H11V19C11 19.2652 11.1054 19.5196 11.2929 19.7071C11.4804 19.8946 11.7348 20 12 20C12.2652 20 12.5196 19.8946 12.7071 19.7071C12.8946 19.5196 13 19.2652 13 19V13H19C19.2652 13 19.5196 12.8946 19.7071 12.7071C19.8946 12.5196 20 12.2652 20 12C20 11.7348 19.8946 11.4804 19.7071 11.2929C19.5196 11.1054 19.2652 11 19 11Z' fill='white'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_1210_190158'%3E%3Crect width='24' height='24' rx='8' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A") !important;
+		width: 24px;
+		height: 24px;
+	}
+
+	span[data-item-marker="closeButton"] span,span[data-tag="ButtonRemove"] span{
+		background-image: url("data:image/svg+xml,%0A%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M6.70711 5.29289C6.31658 4.90237 5.68342 4.90237 5.29289 5.29289C4.90237 5.68342 4.90237 6.31658 5.29289 6.70711L10.5858 12L5.29289 17.2929C4.90237 17.6834 4.90237 18.3166 5.29289 18.7071C5.68342 19.0976 6.31658 19.0976 6.70711 18.7071L12 13.4142L17.2929 18.7071C17.6834 19.0976 18.3166 19.0976 18.7071 18.7071C19.0976 18.3166 19.0976 17.6834 18.7071 17.2929L13.4142 12L18.7071 6.70711C19.0976 6.31658 19.0976 5.68342 18.7071 5.29289C18.3166 4.90237 17.6834 4.90237 17.2929 5.29289L12 10.5858L6.70711 5.29289Z' fill='%2367748E'/%3E%3C/svg%3E%0A") !important;		width: 24px;
+		height: 16px;
+		width: 16px;
+		background-size: 16px;
+	}
+
+	span[data-item-marker="closeButton"] span{
+		height: 24px;
+		width: 24px;
+		background-size: 24px;
+	}
+
+	.close-btn-user-class,.removeButton{
+		width: 24px !important;
+		height: 24px !important;;
+		padding: 0;
+	}
+
+
+	.t-label {
+		font-family: 'Golos Regular';
+		font-style: normal;
+		font-weight: 400;
+		font-size: 20px;
+		line-height: 28px;
+		color: #252F40;
+	}
+	#autoGeneratedBottomContainer .t-label {
+		font-family: 'Golos Regular';
+		font-style: normal;
+		font-weight: 400;
+		font-size: 12px;
+		line-height: 16px;
+		color: #67748E;
+	}
+
+	.base-edit-focus {
+		border-radius: 8px !important;
+        border: 1px solid #67748E !important;
+	}
+}
+
+#TabElementsMapping {
+	.getBaseLookupMargin();
+}
+
+#TabSystemVariablesMapping, #TabFunctionsMapping {
+	margin: 0 20px;
+}
+
+#TabElementsMapping,#TabParametersMapping,#TabSystemVariablesMapping,#TabFunctionsMapping,#TabDateTimeMapping{
+	margin-top: 16px;
+	height: 260px;
+	overflow: auto;
+	&::-webkit-scrollbar {
+		width: 4px;
+		border-radius: 2px;
+	}
+	.grid-container {
+		&::-webkit-scrollbar {
+			width: 4px;
+			border-radius: 2px;
+		}
+	}
+}
+
+#ProcessParameterSelectionPageContainer {
+	#TabElementsMapping {
+		height: 390px;
+	}
+}
+
+#ProcessElementParametersMappingPageElementsGridSearchTextSearchEdit-wrap{
+	border-radius: 0;
+}
+
+#ProcessMappingPageTabsTabPanel-tabpanel-items{
+	margin: 0 20px 20px 20px;
+
+	li{
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 20px;
+		color: #67748E;
+
+		&.ts-tabpanel-active-item {
+			font-style: normal;
+			font-weight: 400;
+			font-size: 14px;
+			line-height: 20px;
+			color: #252F40;
+		}
+	}
+}
+
+#ProcessMappingPageLookupSchemaComboBoxEdit-wrap{
+	border: none;
+	padding: 0;
+
+	#ProcessMappingPageLookupSchemaComboBoxEdit-el{
+		font-style: normal;
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 20px;
+		color: #67748E;
+	}
+}
+
+#ProcessSystemVariablesMappingPageContainer,#ProcessFunctionsMappingPageContainer {
+	.grid-listed-row {
+		cursor: pointer;
+		span{
+			font-style: normal;
+			font-weight: 400;
+			font-size: 14px;
+			line-height: 20px;
+			color: #252F40;
+		}
+	}
+}
+
+#ProcessDateTimeMappingPageDateDateEdit-el,#ProcessDateTimeMappingPageTimeTimeEdit-el,#ProcessDateTimeMappingPageDateTimeDateEdit-el,#ProcessDateTimeMappingPageDateTimeTimeEdit-el{
+	background-color: #fff;
+	border-radius: 8px;
+	border: 1px solid #D8DBE2;
+	padding: 10px 16px;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 20px;
+	color: #67748E;
+	width: 169px;
+}
+
+#ProcessDateTimeMappingPageDateDateEdit-wrap,#ProcessDateTimeMappingPageTimeTimeEdit-wrap,#ProcessDateTimeMappingPageDateTimeTimeEdit-wrap,#ProcessDateTimeMappingPageDateTimeDateEdit-wrap{
+	border: none;
+	padding: none;
+	border-bottom: none !important;
+}
+
+#ProcessDateTimeMappingPageProcessDateTimeMappingContainerGridLayout{
+	&>div {
+	height: 56px;
+	}
+	.date-container{
+		height: 56px;
+	}
+
+	#ProcessDateTimeMappingPageSelectDateButtonButton-textEl,#ProcessDateTimeMappingPageSelectTimeButtonButton-textEl,#ProcessDateTimeMappingPageSelectDateTimeButtonButton-textEl{
+		border: none;
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 20px;
+		color: #F9763D;
+		padding-top: 16px;
+		background-color: unset;
+	}
+}
+
+#ProcessMappingPageFormulaEditTextEdit-el{
+	border-radius: 8px;
+}
+
+#ProcessDateTimeMappingPageDateDateEdit-right-icon-wrapper{
+	height: 54px;
+	top: -3px;
+	right: -10px;
+}
+#ProcessDateTimeMappingPageTimeTimeEdit-right-icon-wrapper,#ProcessDateTimeMappingPageDateTimeDateEdit-right-icon-wrapper,#ProcessDateTimeMappingPageDateTimeTimeEdit-right-icon-wrapper{
+	height: 54px;
+}
+
+#ProcessDateTimeMappingPageDateTimeDateEdit-wrap{
+	margin-right: 50px;
+}
+
+#ProcessDateTimeMappingPageDateTimeContainer{
+	width: 450px;
+}
+
+#ProcessDateTimeMappingPageDateTimeTimeEdit-right-icon-wrapper{
+	right: -80px;
+}
+
+#ProcessDateTimeMappingPageDateTimeDateEdit-right-icon-wrapper{
+	right: -34px;
+}
+
+.formula-modal-box {
+	#TabDateTimeMapping {
+		[data-item-marker="selected-date-container"] {
+			background-color: #FFEFE9;
+		}
+		.t-label {
+			display: flex;
+			align-items: center;
+		}
+		.t-btn-wrapper.t-btn-text.t-btn-style-default {
+			padding: 6px 19px !important;
+		}
+		#ProcessDateTimeMappingPageDateContainer, 
+		#ProcessDateTimeMappingPageTimeContainer, 
+		#ProcessDateTimeMappingPageDateTimeContainer {
+			width: 290px;
+			padding-top: 0;
+			display: flex;
+			align-items: center;
+		}
+		#ProcessDateTimeMappingPageDateSTDateNDDateEdit-wrap, #ProcessDateTimeMappingPageTimeSTTimeNDTimeEdit-wrap {
+			width: 290px;
+			background-color: #ffffff !important;
+			overflow: hidden;
+			border-radius: 8px;
+			.base-edit-input {
+				width: auto;
+				background-color: #ffffff !important;
+				padding: 5px 0;
+			}
+			&:not(.base-edit-focus) {
+				border: 1px solid #D8DBE2;
+			}
+		}
+		#ProcessDateTimeMappingPageDateTimeSTDateTimeNDDateEdit-right-icon-wrapper {
+			top: 50%;
+			right: 16px;
+		}
+		#ProcessDateTimeMappingPageDateTimeContainer_Control {
+			width: auto;
+			#DateTimeSTDateTimeNDDateTimeContainer {
+				width: 288px;
+				padding: 0;
+				[data-item-marker="DateTimeSTDateTimeND"], [data-item-marker="DateTimeSTDateTimeNDTimeEdit"] {
+					width: 140px;
+					background-color: #ffffff !important;
+					overflow: hidden;
+					border-radius: 8px;
+					.base-edit-input {
+						background-color: #ffffff !important;
+						padding: 5px 0;
+					}
+					&:not(.base-edit-focus) {
+						border: 1px solid #D8DBE2;
+					}
+				}
+				[data-item-marker="DateTimeSTDateTimeND"] {
+					margin-right: 8px;
+					#ProcessDateTimeMappingPageDateTimeSTDateTimeNDDateEdit-right-icon-wrapper {
+						right: 16px;
+					}
+				}
+				[data-item-marker="DateTimeSTDateTimeNDTimeEdit"] {
+					#ProcessDateTimeMappingPageDateTimeSTDateTimeNDTimeEdit-right-icon-wrapper {
+						right: 16px;
+					}
+				}
+			}
+		}
+		.base-edit.base-edit-with-right-icon {
+			padding-right: 0 !important;
+		}
+	}
+}
+
+#ProcessDateTimeMappingPageTimeContainer_Control{
+	width: 190px;
+}
+
+#ProcessDateTimeMappingPageDateContainer_Control{
+	width: 173px;
+}
+
+#ProcessMappingPageFormulaEditContainer{
+	border-radius: 8px;
+	margin: 20px 20px 0 20px;
+}
+
+#ProcessMappingPageFormulaEditTextEdit-wrap,#ProcessMappingPageFormulaEditTextEdit-wrap{
+	border: none;
+	border-bottom: none !important;
+}
+#AuthInfoPasswordValuePageSourceButton-wrapperEl, #AuthInfoUsernameValuePageSourceButton-wrapperEl {
+	display: none;
+}
+#AuthInfoPasswordValuePageLabelContainerContainer {
+	padding-top: 3px;
+    padding-bottom: 1px;
+}
+#RestWebServiceV2PageViewOptionsButtonButton-wrapperEl {
+	display: none;
+}
+#OAuth20ServiceAuthInfoValuesPageAppButtonsGroupControlGroup {
+	display: inline-flex;
+	padding-top: 30px;
+	padding-bottom: 0px;
+	padding-left: 4px;
+}
+#AuthInfoUsernameValuePageSysSettingValueTextEdit-el::placeholder{
+	opacity: 1 !important;
+}
+#AuthInfoPasswordValuePageSysSettingValueTextEdit-el::placeholder{
+	opacity: 1 !important;
+}
+
+#ProcessMappingPagecenter-area-editPageContainer {
+	padding: 0;
+}
+
+#ProcessMappingPageFormulaEditTextEdit-el::placeholder {
+	color: #BABABA;
+}
+
+#ServiceResponseParameters .service-parameter-value-source {
+	display: flex;
+	flex-direction: row;
+
+	.service-parameter-value-wrap {
+		flex: 30%;
+	}
+
+	[data-item-marker="Source"] {
+		flex: 25%;
+	}
+
+	.service-parameter-value-values {
+		flex: 35%;
+	}
+}

@@ -1,0 +1,4 @@
+﻿namespace BPMSoft.Configuration.MandrillService
+{
+}
+

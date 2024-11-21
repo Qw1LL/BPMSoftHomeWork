@@ -1,0 +1,150 @@
+﻿@borderSize: 7px;
+@leftPanelSize: 224px;
+@leftPanelCollapsedSize: 72px;
+
+@defaultBorder: @borderSize solid #ebeeef;
+@menuButtonColor: #CA13FF;
+@processButtonColor: #006CE0;
+@quickAddButtonColor: #22AC14;
+@collapseButtonColor: #1A4580;
+@leftPanelShadow: 1px 0 3px 0 rgba(0, 0, 0, 0.3);
+
+body[OldUI=false]:not(.x-ie) {
+	.shadow(@panelSize) {
+		&:before {
+			content: "";
+			position: fixed;
+			left: @panelSize - @borderSize - 1px;
+			width: 1px;
+			height: 100vh;
+			box-shadow: @leftPanelShadow;
+			-webkit-box-shadow: @leftPanelShadow;
+			-moz-box-shadow: @leftPanelShadow;
+		}
+	}
+
+	
+
+	
+
+	&[is-main-header-visible="false"] {
+		.left-panel {
+			&:after {
+				display: none;
+			}
+		}
+	}
+}
+
+body[OldUI=false] {
+	.button-image-size {
+		width: 32px;
+		height: 32px;
+		background: no-repeat center;
+		position: absolute;
+		top: 60%;
+		left: 60%;
+		margin-left: -19px;
+		margin-top: -19px;
+	}
+
+	.default-button-size {
+		height: 32px;
+  		width: 32px;
+	}
+
+	.collapsed-button-size {
+		height: 32px;
+		width: 32px;
+	}
+
+	.getButtonWrapper(@order, @margin, @bgColor) {
+		&.t-btn-wrapper {
+			-webkit-order: @order;
+			-ms-flex-order: @order;
+			order: @order;
+			margin: @margin;
+		}
+	}
+
+	.getCollapseButtonImageEl(@scaleX) {
+		#collapse-button-imageEl {
+			-moz-transform: scaleX(@scaleX);
+			-o-transform: scaleX(@scaleX);
+			-webkit-transform: scaleX(@scaleX);
+			transform: scaleX(@scaleX);
+		}
+	}
+
+	&.left-panel-collapsed {
+		.left-panel {
+			width: @leftPanelCollapsedSize;
+		}
+	}
+	.left-panel {
+		width: @leftPanelSize;
+		.ts-sidebar-item-image {
+			width: 32px;
+  		height: 32px !important;
+
+			img {
+				width: inherit;
+				height: 100%;
+			}
+		}
+
+		.ts-sidebar-list[collapsed="true"] {
+			.ts-sidebar-item-image  {
+				margin-right: 0;
+			}
+		}
+	}
+
+	.top-menu-module-container {
+		.getCollapseButtonImageEl(1);
+		.menu-button-wrapperEl {
+			.default-button-size;
+			.getButtonWrapper(0, 0 18px 0 0, @menuButtonColor);
+		}
+		.menu-startprocess-button-wrapperEl {
+			.default-button-size;
+			.getButtonWrapper(1, 0 18px 0 0, @processButtonColor);
+		}
+		.menu-quickadd-button-wrapperEl {
+			.default-button-size;
+			.getButtonWrapper(2, 0 40px 0 0, @quickAddButtonColor);
+		}
+		.collapse-button-wrapperEl {
+			.default-button-size;
+			.getButtonWrapper(3, 0, @collapseButtonColor);
+		}
+	}
+
+	&.left-panel-collapsed {
+		.getCollapseButtonImageEl(-1);
+		.top-menu-module-container {
+			height: 160px;
+			display: block;
+		}
+		.collapse-button-wrapperEl {
+			.collapsed-button-size;
+			.getButtonWrapper(0, 0 0 14px 0, "transparent");
+		}
+		.menu-button-wrapperEl {
+			.collapsed-button-size;
+			.getButtonWrapper(1, 0 0 14px 0, @menuButtonColor);
+		}
+		.menu-startprocess-button-wrapperEl {
+			.collapsed-button-size;
+			.getButtonWrapper(2, 0 0 14px 0, @processButtonColor);
+		}
+		.menu-quickadd-button-wrapperEl {
+			.collapsed-button-size;
+			.getButtonWrapper(3, 0 0 14px 0, @quickAddButtonColor);
+		}
+	}
+}
+
+.ts-sidebar-list > li.ts-sidebar-selected-item .ts-sidebar-item-image{
+	opacity: 1 !important;
+}

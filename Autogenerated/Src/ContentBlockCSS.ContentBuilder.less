@@ -1,0 +1,353 @@
+﻿@background-color: #ebeeef;
+
+.image-edit-container.content-block {
+	width: 100%;
+
+	.ts-image-edit-full-size-element {
+		max-width: 142px;
+		max-height: 142px;
+		height: auto;
+	}
+	.ts-image-edit-inner-container {
+		border: none;
+	}
+	.ts-image-edit-wrap {
+		max-width: 142px;
+		margin-right: auto;
+		margin-left: auto;
+	}
+}
+
+.grid-icon-fixed-32x32 {
+	display: none;
+}
+
+.icon-spacer-32x32 {
+	padding-left: 0;
+}
+
+.grid-icon-128x128 {
+	max-height: 128px;
+	max-width: 100%;
+	border: 1px solid #cccccc;
+	margin-top: 5px;
+	box-shadow: 4px 4px 6px #cdcdcd;
+}
+
+.icon-spacer-128x128 {
+	padding-left: 20px;
+}
+
+.grid-icon-128x64 {
+	display: block;
+	max-height: 64px;
+	max-width: 100%;
+}
+
+.icon-spacer-128x64 {
+	height: 64px;
+}
+
+.content-block-designer-mask {
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #737ca1 !important;
+	opacity: 0.4;
+	z-index: 1100;
+	display: block;
+}
+
+.content-block-designer-container {
+	position: fixed;
+	left: 12%;
+	right: 12%;
+	top: 30px;
+	bottom: 30px;
+	width: auto;
+	height: auto;
+	z-index: 2000;
+	background-color: white;
+	margin-bottom: 28px;
+	box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.25);
+}
+.content-builder-container {
+	.schema-wrap.one-el {
+		width: 100%;
+		min-width: auto;
+
+		.ts-tabpanel {
+			margin: 0 !important;
+		}
+
+		.right-panel-container {
+			height: auto;
+		}
+	}
+}
+
+.block-content-tab {
+	.blank-slate-container {
+		display: flex;
+		padding-top: 30px;
+		justify-content: center;
+
+		.ts-image-edit-wrap {
+			margin-right: 20px;
+
+			img {
+				height: 100px;
+				width: 100px;
+				padding-top: 5px;
+			}
+		}
+		.description-label {
+			font-size: 18px;
+			font-family: "Golos Regular", serif;
+			white-space: nowrap;
+			color: #999999;
+
+			p {
+				margin: 5px 0 0;
+			}
+		}
+
+		.t-btn-wrapper {
+			margin: 22px 0 0 0;
+		}
+	}
+}
+
+.preview-builder-container-mask {
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #737ca1 !important;
+	opacity: 0.4;
+	z-index: 1100;
+	display: block;
+}
+
+.preview-builder-container {
+	left: 0px;
+	right: 0px;
+	top: 0px;
+	bottom: 0px;
+	z-index: 2000;
+	position: fixed;;
+	background-color: #ebeeef;
+	min-width: 465px;
+
+	.header-buttons-container {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		position: absolute;
+		z-index: -1;
+	}
+
+	.schema-wrap {
+		width: 100%;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		overflow: auto;
+
+		.header-preview-container {
+			position: fixed;
+			display: flex;
+			padding: 8px 16px 0 16px;
+			background-color: white;
+			margin-right: 0;
+			height: 40px;
+			border: none;
+			left: 0;
+			right: 0;
+			border-radius: 0;
+			box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+
+			
+			.t-btn-style-default:not(.t-btn-disabled){
+				color: #67748E;
+				border-bottom: 3px solid #fff;
+				padding:  0 0 16px 0;
+				border-radius: 0;
+				margin-right: 24px;
+			}
+
+			.t-btn-style-default.t-btn-pressed {
+				background: transparent;
+				border-bottom: 3px solid #F9763D !important;
+				color: #252F40;
+			}
+
+			.new-tab-button {
+				padding: 4px;
+				margin-left: 10px;
+				z-index: 1000;
+
+				.t-btn-image {
+					background-repeat: no-repeat;
+					width: 24px;
+					height: 24px;
+				}
+			}
+
+			.back-to-designer {
+				z-index: 1000;
+			}
+
+			.t-preview-caption {
+				font-size: 21px;
+				font-family: "Golos Regular";
+				color: #F9763D;
+				padding-bottom: 10px;
+				text-align: left;
+			}
+		}
+
+		.center-container {
+			height: 100%;
+			align-self: center;
+			overflow-x: auto;
+			margin-top: 44px;
+			background: white;
+
+			.preview-document-iframe {
+				border: none;
+				height: calc(~"100%" - 4px);
+				width: 100%;
+			}
+
+			.outsider-container {
+				height: 100%;
+				width: 100%;
+				display: flex;
+
+				.inside-container {
+					height: 100%;
+					width: 100%
+				}
+			}
+		}
+
+		.center-container[is-desktop-mode='false'] {
+			border: 2px solid #67748E;
+			border-radius: 50px;
+			min-height: 700px;
+			height: 800px;
+			margin-top: 56px;
+			background: white;
+
+			.outsider-container {
+				.inside-container {
+					margin: 40px 16px;
+					border: 1px solid #67748E;
+					height: calc(~"100%" - 68px);
+					width: 100%;
+				}
+			}
+		}
+	}
+}
+
+#centerContainer {
+	padding-right: 0;
+}
+
+#ContentBlockDesignerbuttonContainerContainer {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	background-color: #ffffff;
+	padding: 12px 8px 12px 0;
+	.t-btn-wrapper {
+		margin-right: 8px;
+	}
+}
+
+#ContentBlockDesignerHeaderContainer {
+	height: 64px;
+	.t-label.t-designer-caption {
+		font-weight: 600;
+		font-size: 24px;
+		line-height: 32px;
+	}
+}
+
+#RightPanelContainer {
+	#ContentBlockDesignerGroupButton-wrapperEl {
+		margin-right: 8px;
+	}
+	#ContentBlockDesignerGroupInfoButtonButton-wrapperEl {
+		.t-btn-image {
+			background-size: contain;
+			width: 16px;
+			height: 16px;
+		}
+	}
+	#ContentBlockDesignerGroupButton-imageEl,
+	#ContentBlockDesignerUngroupButton-imageEl {
+		top: 5px;
+	}
+	#ContentBlockDesignerUngroupButton-textEl {
+		margin-left: 5px;
+	}
+}
+
+#ContentBlockDesignerLeftPanelContainer {
+	#ContentBlockDesignerBlockElementsButton-imageEl {
+		width: 24px;
+		height: 24px;
+	}
+	#ContentBlockDesignerBlockElementsButton-textEl {
+		margin-left: 8px;
+	}
+}
+
+#ContentBlockDesignerclose-iconButton-imageEl {
+	background-position: center;
+}
+
+#BulkEmailContentWizardPreview-content-preview {
+	.ts-controlgroup-tools {
+		background-color: transparent;
+	}
+}
+
+
+#PreviewContentBuilder-preview-content-builder {
+	#centerContainer[is-desktop-mode="false"]{
+		margin-top: 100px;
+		position: relative;
+		overflow: unset;
+		&::before{
+			content: "";
+			position: absolute;
+			width: 2px;
+			height: 60px;
+			background-color: #67748E;
+			border-radius: 0px 30px 30px 0px;
+			right: -4px;
+    		top: 300px;
+		}
+		&::after{
+			content: "";
+			position: absolute;
+			width: 2px;
+			height: 97px;
+			background-color: #67748E;
+			border-radius: 0px 30px 30px 0px;
+			right: -4px;
+    		top: 100px;
+		}
+	}
+}

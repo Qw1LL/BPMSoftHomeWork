@@ -1,0 +1,269 @@
+﻿.getBaseLayout() {
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;  
+}
+
+//buttons-classes
+.image-size(@width, @height) {
+  width: @width;
+  height: @height;
+}
+
+.image-size(@size) {
+  width: @size;
+  height: @size;
+}
+
+.delete-button-wrapperEl {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.delete-button-image-size {
+  .image-size(16px, 16px);
+}
+
+.edit-button-wrapperEl {
+  font-size: 0.825em;
+  margin-left: 9px;
+}
+
+.edit-button-image-size {
+  .image-size(16px);
+}
+
+.function-button {
+  margin-top: -4px;
+}
+
+//container-classes
+.container-mixin(none, @float) {
+}
+
+.container-mixin(inline-block, @float) {
+  display: inline-block;
+}
+
+.container-mixin(@_, @float) {
+  float: @float;
+}
+
+.top-container {
+  .container-mixin(inline-block, left);
+  width: 100%;
+}
+
+.check-box-container {
+  margin: 0;
+  
+  .t-checkboxedit-wrap {
+    margin-top: 0;
+  }
+}
+
+.edit-caption-container {
+  position: relative;
+}
+
+.display-caption-container {
+  position: relative;
+  padding-top: 4.5px;
+}
+
+.edit-buttons-caption-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  
+  & > .t-btn-wrapper,
+  & > .t-btn-wrapper:hover {
+    min-height: unset !important;
+    padding: 5px;
+  }
+}
+
+.edit-text-caption-container {
+  padding-right: 96px;
+}
+
+.grid-cols-summary {
+  padding-top: 4.5px;
+}
+
+.grid-captions-summary {
+  height: 44px;
+  background: white;
+  border-bottom: 1px solid #D8DBE2;
+  margin: 3px 0px 6px;
+  padding: 0 6px;
+}
+
+//label-classes
+.label(@color, @size) {
+  color: @color;
+  font-size: @size;
+}
+
+.row-label(@right: 10px) {
+  margin-right: @right;
+}
+
+.page-caption-label {
+  .label(#67748E, 3.5em);
+  margin-bottom: 30px;
+  letter-spacing: -0.01em;
+}
+
+.check-box-label {
+  .label(#67748E, 14px);
+  vertical-align: top;
+  padding-left: 12px;
+}
+
+.grid {
+  .t-btn-wrapper .t-btn-text,
+  label.row-label-column {
+    .row-label();
+    .label(#252F40, 14px);
+    display: inline-block;
+    vertical-align: middle;
+    float: left;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding-right: 35px;
+  } 
+}
+
+.grid label.caption-label-column {
+  .label(#67748E, 14px);
+  margin-right: 0;
+  
+  &:nth-of-type(n+2)::before {
+    content: "\007c";
+    font-size: 20px;
+    color: #67748E;
+    margin-right: 5px;
+  }
+}
+
+//edit classes
+.caption-edit {
+  font-size: 0.725em;
+  border-radius: 8px;
+}
+
+.grid-cols-summary-button {
+	line-height: 0.8em;
+}
+
+#main-summary-settings-view .grid-listed-row.label-grid-listed-row {
+  padding: 0 5px 0 5px;
+  
+  & > *:nth-of-type(n+2) {
+    padding-left: 1em;
+    & > *:first-child {
+      padding-left: 0;
+    }
+  }
+  
+  .t-btn-marker {
+    border-top-color: #67748E;
+  }
+
+  .t-btn-wrapper.t-btn-no-text-padding.t-btn-style-transparent.delete-button-wrapperEl {
+    top: 3px;
+    right: -5px;
+  }
+  &::after {
+    display: none;
+  }
+  [id*="combo-box-containerrow"] {
+    padding-top: 2px;
+  }
+  [id*="path-containerrow"] {
+    padding-top: 0;
+  }
+  [id*="caption-containerrow"] {
+    .display-caption-container {
+      padding-top: 0;
+    }
+  }
+}
+
+.menu-wrap.menu {
+  .menu-item {
+    padding-left: 15px;
+  }
+}
+
+#main-summary-settings-view {
+  background-color: #F5F7FB;
+
+  .top-container {
+    border-radius: 0 0 8px 8px;
+    float: none;
+    padding-bottom: 70px;
+
+    .grid .grid-captions.grid-captions-summary {
+      label:first-child {
+        padding-left: 0 !important;
+      }
+      &::after {
+        content: none;
+      }
+    }
+
+    .top-buttons-container {
+     .getBaseLayout();
+      border-radius: 0 0 8px 8px;
+      
+      & > *:nth-of-type(n+2) {
+        margin-left: 10px;
+      }
+    }
+
+    .content-container {
+      .getBaseLayout();
+      margin-top: 10px;
+      min-height: calc(~"100vh - 345px");
+
+      .content-upper-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .t-btn-wrapper {
+          padding-right: 35px;
+        }
+
+        .t-btn-wrapper.t-btn-text.t-btn-style-default::after {
+          right: 16px;
+          content: '+';
+          position: absolute;
+          font-size: 25px;
+        }
+      }
+
+      .content-down-container {
+        margin-top: 20px;
+        padding-bottom: 84px;
+
+        .grid-cols-6.grid-cols-summary-button {
+          .t-btn-text.t-btn-left {
+            padding-right: 0;
+            margin-right: 0;
+          }
+        }
+        [id^='caption-containerrow'] {
+          padding-right: 0;
+        }
+      }
+    }
+  }
+}

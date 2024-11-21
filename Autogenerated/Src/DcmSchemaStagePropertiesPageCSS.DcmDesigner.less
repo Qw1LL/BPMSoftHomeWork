@@ -1,0 +1,129 @@
+﻿@between-properties-margin: 24px;
+.font_styling_all(@fontfamily: 'Golos Regular',
+	@fontstyle: normal,
+	@fontweight: 400,
+	@fontsize: 14px,
+	@lineheight: 20px,
+	@letterspace: -0.02em,
+	@color: #252F40) {
+	font-family: @fontfamily;
+	font-style: @fontstyle;
+	font-weight: @fontweight;
+	font-size: @fontsize;
+	line-height: @lineheight;
+	letter-spacing: @letterspace;
+	color: @color;
+}
+
+#DcmSchemaStagePropertiesPageEditorsContainerContainer {
+	height: calc(~"100vh - 216px");
+	max-height: calc(~"100vh - 216px");
+	padding-bottom: 0;
+	border-radius: 0 0 0 8px;
+}
+
+.dcm-schema-stage-properties-page {
+	display: block;
+
+	.base-edit-input[readonly="readonly"],
+	.base-edit-readonly {
+		background-color: white;
+		color: #444444;
+	}
+
+	.t-title-label-stage {
+		color: #8ecb60;
+		font-size: 15px;
+	}
+
+	.color-button-label {
+		font-size: 14px;
+		color: #444444;
+		padding-top: 4px;
+	}
+
+	.ts-box-sizing {
+		input {
+			.font_styling_all;
+		}
+
+		label {
+			.font_styling_all(@fontweight:400,@fontsize:12px,@lineheight: 24px);
+			padding: 0;
+		}
+	}
+}
+
+.schema-designer {
+	.editors-ct .base-edit-input {
+		.font_styling_all;
+	}
+
+	.properties-ct .base-data-modification-user-task-properties-page .add-record-column-values-button {
+		.font_styling_all(@lineheight: 16px,@fontsize: 12px);
+		height: 24px;
+		align-items: center;
+	}
+}
+
+#DcmSchemaStagePropertiesPageEditorsContainerContainer {
+	#DcmSchemaStagePropertiesPageDcmSchemaStageLayoutGridLayout {
+		#DcmSchemaStagePropertiesPageColorCaptionLabel {
+			font-size: 12px;
+			font-weight: 400;
+		}
+	}
+}
+
+#DcmSchemaStagePropertiesPageDcmSchemaStageLayoutGridLayout-item-DcmSchemaStagePropertiesPageColorundefined {
+	#DcmSchemaStagePropertiesPageColorundefined-color-button {
+		#DcmSchemaStagePropertiesPageColorundefined-button-wrapperEl {
+			border-radius: 4px;
+		}
+	}
+}
+
+#EditableContainerListAddButtonButton-imageEl {
+	background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGcgY2xpcC1wYXRoPSJ1cmwoI2NsaXAwXzExMzJfMjM3Njk4KSI+CjxyZWN0IHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgcng9IjgiIGZpbGw9IiNGOTc2M0QiLz4KPHBhdGggZD0iTTE5IDExSDEzVjVDMTMgNC43MzQ3OCAxMi44OTQ2IDQuNDgwNDMgMTIuNzA3MSA0LjI5Mjg5QzEyLjUxOTYgNC4xMDUzNiAxMi4yNjUyIDQgMTIgNEMxMS43MzQ4IDQgMTEuNDgwNCA0LjEwNTM2IDExLjI5MjkgNC4yOTI4OUMxMS4xMDU0IDQuNDgwNDMgMTEgNC43MzQ3OCAxMSA1VjExSDVDNC43MzQ3OCAxMSA0LjQ4MDQzIDExLjEwNTQgNC4yOTI4OSAxMS4yOTI5QzQuMTA1MzYgMTEuNDgwNCA0IDExLjczNDggNCAxMkM0IDEyLjI2NTIgNC4xMDUzNiAxMi41MTk2IDQuMjkyODkgMTIuNzA3MUM0LjQ4MDQzIDEyLjg5NDYgNC43MzQ3OCAxMyA1IDEzSDExVjE5QzExIDE5LjI2NTIgMTEuMTA1NCAxOS41MTk2IDExLjI5MjkgMTkuNzA3MUMxMS40ODA0IDE5Ljg5NDYgMTEuNzM0OCAyMCAxMiAyMEMxMi4yNjUyIDIwIDEyLjUxOTYgMTkuODk0NiAxMi43MDcxIDE5LjcwNzFDMTIuODk0NiAxOS41MTk2IDEzIDE5LjI2NTIgMTMgMTlWMTNIMTlDMTkuMjY1MiAxMyAxOS41MTk2IDEyLjg5NDYgMTkuNzA3MSAxMi43MDcxQzE5Ljg5NDYgMTIuNTE5NiAyMCAxMi4yNjUyIDIwIDEyQzIwIDExLjczNDggMTkuODk0NiAxMS40ODA0IDE5LjcwNzEgMTEuMjkyOUMxOS41MTk2IDExLjEwNTQgMTkuMjY1MiAxMSAxOSAxMVoiIGZpbGw9IndoaXRlIi8+CjwvZz4KPGRlZnM+CjxjbGlwUGF0aCBpZD0iY2xpcDBfMTEzMl8yMzc2OTgiPgo8cmVjdCB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHJ4PSI4IiBmaWxsPSJ3aGl0ZSIvPgo8L2NsaXBQYXRoPgo8L2RlZnM+Cjwvc3ZnPgo=') !important;
+	width: 24px;
+	height: 24px;
+}
+
+#EditableContainerListAddButtonButton-textEl {
+	margin-left: 8px;
+}
+
+#DcmSchemaStagePropertiesPageClosePropertyButtonButton-wrapperEl {
+	display: none;
+}
+
+#DcmSchemaStagePropertiesPageInfoButtonButton-imageEl,
+#DcmSchemaStagePropertiesPageReadRightsGroupInfoButtonButton-imageEl {
+	background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGcgY2xpcC1wYXRoPSJ1cmwoI2NsaXAwXzEzNDgxXzM5NjEpIj4KPGNpcmNsZSBjeD0iMTIiIGN5PSIxMiIgcj0iMTAiIHN0cm9rZT0iIzY3NzQ4RSIgc3Ryb2tlLXdpZHRoPSIyIi8+CjxwYXRoIGQ9Ik0xMC44NTIyIDEzLjMyNkMxMC44NTIyIDEyLjkwNjEgMTAuOTY4MSAxMi41MzA0IDExLjIgMTIuMTk4OUMxMS40MzE5IDExLjg1NjQgMTEuODA4NyAxMS40NzUxIDEyLjMzMDQgMTEuMDU1MkMxMi43NDc4IDEwLjcxMjcgMTMuMDcyNSAxMC40MTQ0IDEzLjMwNDMgMTAuMTYwMkMxMy41NDc4IDkuOTA2MDggMTMuNjY5NiA5LjYwNzczIDEzLjY2OTYgOS4yNjUxOUMxMy42Njk2IDguODQ1MyAxMy41MjQ2IDguNTA4MjkgMTMuMjM0OCA4LjI1NDE0QzEyLjk1NjUgNy45ODg5NSAxMi41NDQ5IDcuODU2MzUgMTIgNy44NTYzNUMxMS41MDE0IDcuODU2MzUgMTEuMDk1NyA3Ljk4ODk1IDEwLjc4MjYgOC4yNTQxNEMxMC40ODEyIDguNTA4MjkgMTAuMzMwNCA4Ljg3MjkzIDEwLjMzMDQgOS4zNDgwN0g4QzggOC44OTUwMyA4LjA5ODU1IDguNDY5NjEgOC4yOTU2NSA4LjA3MTgyQzguNTA0MzUgNy42NjI5OCA4Ljc4MjYxIDcuMzAzODcgOS4xMzA0MyA2Ljk5NDQ4QzkuNDg5ODYgNi42ODUwOCA5LjkxMzA0IDYuNDQxOTkgMTAuNCA2LjI2NTE5QzEwLjg4NyA2LjA4ODQgMTEuNDIwMyA2IDEyIDZDMTIuNjI2MSA2IDEzLjE4MjYgNi4wODI4NyAxMy42Njk2IDYuMjQ4NjJDMTQuMTY4MSA2LjQwMzMxIDE0LjU5MTMgNi42MjQzMSAxNC45MzkxIDYuOTExNkMxNS4yODcgNy4xOTg5IDE1LjU0NzggNy41MzU5MSAxNS43MjE3IDcuOTIyNjVDMTUuOTA3MiA4LjMwOTM5IDE2IDguNzI5MjggMTYgOS4xODIzMkMxNiA5LjQ4MDY2IDE1Ljk3MSA5Ljc1MTM4IDE1LjkxMyA5Ljk5NDQ4QzE1Ljg1NTEgMTAuMjM3NiAxNS43NTY1IDEwLjQ2OTYgMTUuNjE3NCAxMC42OTA2QzE1LjQ4OTkgMTAuOTExNiAxNS4zMTU5IDExLjEzODEgMTUuMDk1NyAxMS4zNzAyQzE0Ljg3NTQgMTEuNTkxMiAxNC42MDg3IDExLjgzNDMgMTQuMjk1NyAxMi4wOTk0QzE0LjAyOSAxMi4zMjA0IDEzLjgyMDMgMTIuNTA4MyAxMy42Njk2IDEyLjY2M0MxMy41MTg4IDEyLjgwNjYgMTMuNDAyOSAxMi45MzkyIDEzLjMyMTcgMTMuMDYwOEMxMy4yNTIyIDEzLjE3MTMgMTMuMjA1OCAxMy4yNzYyIDEzLjE4MjYgMTMuMzc1N0MxMy4xNTk0IDEzLjQ2NDEgMTMuMTQ3OCAxMy41NTggMTMuMTQ3OCAxMy42NTc1VjEzLjk4OUgxMC44NTIyVjEzLjMyNlpNMTIgMThDMTEuNTk0MiAxOCAxMS4yNDY0IDE3Ljg2MTkgMTAuOTU2NSAxNy41ODU2QzEwLjY2NjcgMTcuMzA5NCAxMC41MjE3IDE2Ljk3NzkgMTAuNTIxNyAxNi41OTEyQzEwLjUyMTcgMTYuMTgyMyAxMC42NjY3IDE1Ljg0NTMgMTAuOTU2NSAxNS41ODAxQzExLjI0NjQgMTUuMzE0OSAxMS41OTQyIDE1LjE4MjMgMTIgMTUuMTgyM0MxMi40MDU4IDE1LjE4MjMgMTIuNzUzNiAxNS4zMTQ5IDEzLjA0MzUgMTUuNTgwMUMxMy4zMzMzIDE1Ljg0NTMgMTMuNDc4MyAxNi4xODIzIDEzLjQ3ODMgMTYuNTkxMkMxMy40NzgzIDE2Ljk3NzkgMTMuMzMzMyAxNy4zMDk0IDEzLjA0MzUgMTcuNTg1NkMxMi43NTM2IDE3Ljg2MTkgMTIuNDA1OCAxOCAxMiAxOFoiIGZpbGw9IiM2Nzc0OEUiLz4KPC9nPgo8ZGVmcz4KPGNsaXBQYXRoIGlkPSJjbGlwMF8xMzQ4MV8zOTYxIj4KPHJlY3Qgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiBmaWxsPSJ3aGl0ZSIvPgo8L2NsaXBQYXRoPgo8L2RlZnM+Cjwvc3ZnPgo=') !important;
+}
+
+#DcmSchemaStagePropertiesPageIsInGroupContainer,
+#DcmSchemaStagePropertiesPageUsePermissionsContainer {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+.settings-color-button,
+.record-column-values-container.grid-layout > .control-width-15 > [data-item-marker],
+#EditableContainerListAddButtonButton-wrapperEl {
+	margin-bottom: @between-properties-margin;
+}
+
+[id^="DcmSchemaStagePropertiesPageDcmSchemaStageLayoutGridLayout-item-DcmSchemaStagePropertiesPage"][id$="CaptionLabel"] {
+	margin-bottom: 12px;
+}
+
+.record-column-values-container.grid-layout > .control-width-15 {
+	margin-bottom: 0 !important;
+}
+
+.base-edit-right-icon-wrapper > * {
+    top: 50%
+}

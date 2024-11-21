@@ -1,0 +1,118 @@
+﻿.duplicates-merge-container {
+	height: 100%;
+	width: 740px;
+
+	.close-btn[data-item-marker = "CloseButton"] {
+		.t-btn-image {
+			width: 24px;
+			height: 24px;
+		}	
+	}
+	.grid-layout-row {
+		>.grid-layout-column {
+			float: none;
+			display: none;
+			min-width: 140px;
+		}
+		>.grid-layout-column[id] {
+			display: inline-block;
+		}
+	}
+	.header {
+		width: 100%;
+		margin-left: 10px;
+		padding-right: 10px;
+		.multiline-label-wrap[data-item-marker = "DescriptionLabel"] {
+			.description-label.right-padding {
+				width: 420px;	
+			}
+		}
+		.multiline-label-wrap[data-item-marker = "DescriptionLink"] {
+			margin-left: auto;
+			padding-right: 15px;
+		}
+		.header-label {
+			color: #252F40;
+			font-size: 20px;
+			margin-bottom: 5px;
+		}
+		.description-label {
+			color: #252F40;
+			font-size: 14px;
+
+			a {
+				color: #67748E;	
+			}
+		}
+		.close-btn {
+			position: absolute;
+			right: 1em;
+			top: 11px;
+		}
+	}
+	.content {
+		white-space: nowrap;
+		margin: 20px 10px 0 10px;
+		height: 230px;
+		overflow-x: auto;
+		.grid-layout-row {
+			padding: 5px 0;
+		}
+		.column-header {
+			border-bottom: 1px solid #D8DBE2;
+			.t-label {
+				margin-left: 5px;
+				width: 130px;
+				color: #67748E;
+				font-size: 14px;
+				text-overflow: ellipsis;
+			}
+		}
+		.radio-button-container {
+			margin-left: 5px;
+
+			.t-radio-wrap {
+				margin-top: 2px;
+				margin-right: 10px;
+			}
+
+			.t-label {
+				max-width: 90px;
+				padding-top: 0;
+				padding-left: 5px;
+				display: inline-block;
+				white-space: normal;
+				vertical-align: top;
+				color: #252F40;
+				line-height: 20px;
+				
+				&[style*='url'] {
+					background-repeat: no-repeat;
+					background-size: contain;
+					width: 32px;
+					height: 32px;
+					padding: 0;
+					margin-left: 5px;
+					margin-top: 0;
+				}
+			}
+		}
+	}
+	.description {
+		display: flex;
+		padding-top: 15px;
+	}
+	.footer {
+		bottom: 25px;
+		position: absolute;
+		width: 100%;
+		padding-right: 10px;
+		.t-btn-wrapper, #CancelButtonButton-textEl {
+			float: right;
+			margin: 0 9px 0 0;
+		}
+	}
+	.right-padding {
+		padding-right: 7px;
+	}
+}

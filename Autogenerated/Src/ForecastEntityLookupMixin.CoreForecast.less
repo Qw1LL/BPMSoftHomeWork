@@ -1,0 +1,24 @@
+﻿
+.separator-header {
+	font-weight: 600;
+	color: #252F40;
+	font-size: 20px;
+	background-color: white;
+
+	div {
+		text-align: center;
+		cursor: default;
+	}
+
+	&.listview-selected:hover {
+		background-color: white;
+	}
+}
+
+div[data-item-marker^="ForecastEntity"].listview ul{
+	width: 318px;
+}
+
+div[data-item-marker^="ForecastEntity"][data-item-marker$="Объект планирования"].listview ul{
+	width: 378px;
+}

@@ -1,0 +1,56 @@
+﻿#PageTemplatePageContainer {
+
+	.page-icon-container {
+		padding-top: 20px;
+	}
+
+	.ts-image-edit-wrap {
+		min-width: 150px;
+		max-width: 150px;
+		min-height: 150px;
+		max-height: 150px;
+
+		.ts-image-edit-inner-container {
+			width: 150px;
+			height: 150px;
+		}
+
+		.ts-image-edit-button {
+			background-color: rgba(25, 23, 23, 0.14);
+		}
+
+		.ts-image-edit-button:focus, .ts-image-edit-button:hover {
+			background-color: rgba(0, 0, 0, 0.5);
+		}
+	}
+}
+
+body[is-card-opened="true"] {
+	#PageTemplateSectionContainer {
+		#SectionHeaderContainer {
+			display: none;
+		}
+
+		.card.right-el {
+			padding-top: 0;
+			
+			#CardContentWrapper {
+				padding-top: 0;
+
+				#CardContentContainer {
+					margin-top: 16px;
+				}
+			}
+		}
+
+		#PageTemplateSectionGridDataViewContainer {
+			.grid-row .grid-primary-column span {
+				max-width: 100px;
+			}
+		}
+
+		#PageTemplateSectionGridUtilsContainerContainer {
+			position: static;
+		}
+	}
+} 

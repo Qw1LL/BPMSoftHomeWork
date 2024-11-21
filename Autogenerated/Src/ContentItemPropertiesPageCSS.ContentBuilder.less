@@ -1,0 +1,175 @@
+﻿.breadcrumbs-container-wrapper {
+	max-height: 38px;
+	min-height: 38px;
+	height: 38px;
+	width: 100%;
+	color: #444444;
+	background-color: #fff;
+	padding-top: 10px;
+	padding-bottom: 48px;
+	&::after, &::before {
+		content: "";
+		display: block;
+		position: relative;
+		height: 1px;
+		background-color: #E0E0E0;
+		width: 90%;
+		left: 16px;
+	}
+	&::after {
+		top: 20px;
+	}
+	&::before {
+		bottom: 10px;
+	}
+	.breadcrumbs-container {
+		display: flex;
+		padding-top: 10px;
+		padding-left: 16px;
+		align-items: center;
+
+		.breadcrumbs-item-container {
+			width: auto;
+			overflow: hidden;
+			display: flex;
+
+			label {
+				font-style: normal;
+				line-height: 20px;
+				font-size: 14px;
+			}
+
+			.breadcrumbs-item-caption {
+				width: auto;
+
+				&:hover {
+					cursor: pointer;
+					text-decoration: underline;
+				}
+			}
+
+			.breadcrumbs-item-caption-selected {
+				width: auto;
+				color: #67748E;
+			}
+
+			.breadcrumbs-item-divider {
+				width: 28px;
+				background: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTkuOTk2NDEgOC4yNzY3NEw2LjkzNjQxIDExLjMzNjdDNi42NzY0MSAxMS41OTY3IDYuMjU2NDEgMTEuNTk2NyA1Ljk5NjQxIDExLjMzNjdDNS43MzY0MSAxMS4wNzY3IDUuNzM2NDEgMTAuNjU2NyA1Ljk5NjQxIDEwLjM5NjdMOC41ODMwNyA3LjgwMzRMNS45OTY0MSA1LjIxNjc0QzUuNzM2NDEgNC45NTY3NCA1LjczNjQxIDQuNTM2NzQgNS45OTY0MSA0LjI3Njc0QzYuMjU2NDEgNC4wMTY3NCA2LjY3NjQxIDQuMDE2NzQgNi45MzY0MSA0LjI3Njc0TDkuOTk2NDEgNy4zMzY3NEMxMC4yNTY0IDcuNTkwMDcgMTAuMjU2NCA4LjAxNjc0IDkuOTk2NDEgOC4yNzY3NFoiIGZpbGw9IiM2Nzc0OEUiLz4KPC9zdmc+Cg==") no-repeat center 3px;
+			}
+
+			.breadcrumbs-item-dots {
+				width: auto;
+				padding-right: 5px;
+			}
+		}
+
+	}
+}
+
+.content-styles-container {
+
+	.ts-controlgroup {
+		overflow: initial;
+		.ts-controlgroup-marker-wrap {
+			display: none;
+		}
+		.ts-controlgroup-caption-wrap {
+			pointer-events: none;
+		}
+	}
+
+	.align-label {
+		display: inline-block;
+		width: auto;
+		font-size: 1.5em;
+		color: #F9763D;
+		padding-top: 8px;
+		padding-right: 8px;
+		overflow: hidden;
+	}
+}
+
+.template-settings-container {
+	> div {
+		padding-bottom: 10px;
+
+		.t-label {
+			color: #F9763D;
+		}
+
+		.ts-controlgroup-container.no-line {
+			padding: 0;
+		}
+
+		.template-name {
+			border-bottom: 1px solid #D8DBE2;
+
+			.ts-controlgroup-caption-wrap > span {
+				color: #4a4a4a;
+				line-height: 2.2em;
+			}
+		}
+
+		.t-sub-properties-label {
+			color: #67748E;
+			font-size: 12px;
+			line-height: 22px;
+			text-overflow: ellipsis;
+			padding-top: 8px;
+		}
+
+		.template-width-prop-wrap {
+			padding-top: 8px;
+		}
+
+		.template-breakpoint-label-container {
+			display: inline-flex;
+
+			.t-information-btn {
+				margin: 4px 0 0 2px;
+				padding: 0 2px;
+			}
+		}
+
+		label {
+			display: inline;
+		}
+
+		.ts-controlgroup-marker-wrap {
+			display: none !important;
+		}
+
+		.base-edit {
+			padding-left: 0;
+
+			&.base-edit-focus{
+				border-left: none;
+				border-top: none;
+				border-right: none;
+			}
+		} 
+
+		.t-properties-label[data-item-marker *="TemplateNameLabel"] {
+			color: #67748E;
+		}
+
+		.template-html-mode-toggle {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+
+			.label-wrap.checkbox-label-wrap {
+				width: 100%;
+				max-width: 100%;
+			}
+			.template-html-mode-toggle-label {
+				color: #999999;
+			}
+			.label-wrap + .control-wrap {
+				padding-left: 0 !important;
+				flex: 1;
+			}
+		}
+	}
+}

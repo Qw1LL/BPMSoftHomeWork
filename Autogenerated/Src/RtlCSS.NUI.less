@@ -1,0 +1,137 @@
+﻿.transform(@transform) {
+	transform: @transform;
+}
+
+.rotate-y(@deg) {
+	.transform(rotateY(@deg));
+}
+
+.scale-x(@val) {
+	.transform(scaleX(@val));
+}
+
+html[dir="rtl"] {
+	[class$="icon-wrapper"] [class*="icon"] {
+		.rotate-y(180deg);
+	}
+
+	.ts-image-edit-button > span {
+		.rotate-y(180deg);
+	}
+
+	.ts-tab-image {
+		.rotate-y(180deg);
+	}
+
+	.t-btn-image,
+	.predictable-icon {
+		.rotate-y(180deg);
+	}
+
+	.system-designer img {
+		.rotate-y(180deg);
+	}
+
+	.profile-module-container .ts-image-edit-wrap img {
+		.rotate-y(180deg);
+	}
+
+	.menu-item-image {
+		.rotate-y(180deg);
+	}
+
+	.image-panel {
+		.rotate-y(180deg);
+	}
+
+	.ts-menu-color-picker-hue-pointer {
+		&:after,
+		&:before {
+			.rotate-y(180deg);
+		}
+	}
+
+	.ts-datepicker-arrow {
+		.rotate-y(180deg);
+	}
+
+	.related-profile-img {
+		.rotate-y(180deg);
+	}
+
+	.img-action-dashboard {
+		.rotate-y(180deg);
+	}
+
+	.schema-designer-left-panel {
+		.t-btn-wrapper:before {
+			.rotate-y(180deg);
+		}
+
+		.toolbar-item svg {
+			.rotate-y(180deg);
+		}
+	}
+
+	.ej-d-node image {
+		.rotate-y(180deg);
+		transform-origin: 50% 50%;
+		transform-box: fill-box;
+	}
+
+	.ej-d-label {
+		direction: rtl;
+	}
+
+	.grid-layout-edit-item-content-image {
+		&[src$="LookupEditImage"] {
+			.rotate-y(180deg);
+		}
+	}
+
+	.view-model-schema-designer-item-content-image {
+		&[src$="LookupEditImage"] {
+			.scale-x(-1);
+		}
+	}
+
+	.left-panel {
+		.ts-sidebar-item-image {
+			&[module-name="BulkEmail"],
+			&[module-name="Forecast"] {
+				.rotate-y(0);
+			}
+		}
+	}
+
+	.image-panel[src$="SimpleIntro/AnalyticsIcon"],
+	.menu-item-image[style*="SummariesIcon"] {
+		.rotate-y(0);
+	}
+
+	.filters-container-wrapClass {
+		.t-btn-wrapper {
+			&[data-item-marker="day"],
+			&[data-item-marker="week"] {
+				.t-btn-image {
+					.rotate-y(0);
+				}
+			}
+		}
+	}
+
+	.social-networks-container {
+		.t-btn-image {
+			.rotate-y(0);
+		}
+	}
+}
+
+html[culture="he-IL"] {
+	.help-button-image,
+	.dcm-help-button .t-btn-image,
+	.help-button[data-item-marker="HelpButton"],
+	.photo .t-btn-image[style*="ContactAnonymousPhoto"] {
+		.rotate-y(0);
+	}
+}

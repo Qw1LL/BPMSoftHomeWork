@@ -1,0 +1,125 @@
+﻿.ml-feature-container-wrapper {
+	@font-size: 13px;
+
+	color: #999999;
+	margin-top: 10px;
+	width: 100%;
+	box-shadow: 0 0 0;
+	background-color: white;
+	min-height: 200px;
+	z-index: 1019;
+	padding: 0 10px 10px 10px;
+
+	.ml-feature-header-container {
+		display: -ms-flexbox;
+		display: -webkit-flex;
+		display: flex;
+
+		.ml-record-description {
+			font-size: 2.0em;
+			margin-right: 8px;
+			width: auto;
+			margin-bottom: 17px;
+			white-space: normal;
+			color: #67748E;
+			word-break: break-word;
+		}
+
+		> .ml-feature-close-button {
+			top: -14px;
+			margin-left: auto;
+
+			&:hover {
+				background: none;
+			}
+		}
+	}
+
+	.ml-feature-container {
+		position: relative;
+		min-width: 572px;
+
+		.ml-predicted-value-container {
+			display: -ms-flexbox;
+			display: -webkit-flex;
+			display: flex;
+			font-size: @font-size;
+			margin-bottom: 17px;
+
+			label {
+				text-align: left;
+			}
+		}
+
+		@negative-color: #EF7E63;
+		@positive-color: #F9763D;
+		@neutral-color: #999999;
+		@min-height: 25px;
+		> .grid {
+			max-height: 265px;
+			overflow: auto;
+
+			div [class*='grid-cols-'] {
+				word-wrap: normal;
+				white-space: normal;
+				overflow-wrap: normal;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				min-height: @min-height;
+
+				.control-wrap {
+					min-height: @min-height;
+				}
+			}
+
+			.horizontal-progress-bar {
+				border-style: none;
+
+				.rect {
+					top: 18px;
+					border: 1px solid #f2f2f2;
+				}
+
+				.overlay {
+					top: 25px;
+					left: 0 !important;
+					.caption {
+						color: @positive-color !important;
+					}
+				}
+
+				.caption-suffix {
+					display: none;
+				}
+			}
+			.horizontal-progress-bar[data-item-marker="positive-feature-weight"] {
+				.rect {
+					background-color: @positive-color;
+				}
+				.overlay {
+					color: @positive-color;
+				}
+			}
+			.horizontal-progress-bar[data-item-marker="negative-feature-weight"] {
+				.rect {
+					background-color: @negative-color;
+				}
+				.overlay {
+					color: @negative-color;
+				}
+			}
+			.horizontal-progress-bar[data-item-marker="near-zero-feature-weight"] {
+				.rect {
+					background-color: @neutral-color;
+				}
+				.overlay {
+					color: @neutral-color;
+				}
+			}
+		}
+	}
+}
+
+.ts-modalbox-innerbox .ml-feature-container > .grid {
+	max-height: 265px;
+}

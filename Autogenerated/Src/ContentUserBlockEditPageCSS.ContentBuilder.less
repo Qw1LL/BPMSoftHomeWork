@@ -1,0 +1,87 @@
+﻿#SaveBlockPageContainer {
+	max-width: 630px;
+	max-height: 488px;
+	display: flex;
+	flex-direction: column;
+	padding: 9px 19px 14px 19px;
+	
+	[data-item-marker="CloseButton"] {
+		position: absolute;
+		top: 30px;
+		right: 25px;
+
+		.t-btn-image {
+			width: 24px;
+			height: 24px;
+		}
+	}
+
+	.base-edit-focus, .base-edit-error.base-edit-focus {
+		outline: none;
+		border: 1px solid white;
+		border-bottom: 1px solid #c8c8c8;
+	}
+
+	.t-title-label-user-block-edit-page {
+		letter-spacing: -0.02em;
+		font-size: 20px;
+		line-height: 28px;
+		color: #252F40;
+		margin-bottom: 25px;
+	}
+
+	#BlockNameInputCaption {
+		color: #67748E;
+		display: block;
+		height: 30px;
+		font-size: 12px;
+		line-height: 16px;
+	}
+
+	#ContentUserBlockEditPageBlockNameContainer {
+		height: 50px;
+
+		.control-wrap {
+			border: 1px solid #D8DBE2;
+			border-radius: 8px;
+
+			.base-edit {
+				border: none;
+				border-bottom: none;
+				outline: none;
+
+				&-validation {
+					bottom: -4px;
+				}
+			}
+		}
+	}
+
+	#PreviewImageContainer {
+		height: 100%;
+		max-height: 180px;
+		overflow: scroll;
+		margin-top: 24px;
+
+		.user-block-edit-page-preview-image {
+			width: 100%;
+		}
+	}
+
+	#EditButtonsContainer {
+		position: absolute;
+		bottom: 24px;
+		right: 24px;
+		display: flex;
+		justify-content: flex-end;
+		margin-top: 30px;
+
+		[data-item-marker="SaveButton"] {
+			margin-right: 8px;
+		}
+
+		[data-item-marker="CancelButton"] {
+			margin-right: 0;
+		}
+	}
+}

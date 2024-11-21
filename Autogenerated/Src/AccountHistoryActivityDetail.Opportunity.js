@@ -1,0 +1,3 @@
+﻿define("AccountHistoryActivityDetail", [], function() {
+	return {};
+});

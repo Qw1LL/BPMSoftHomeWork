@@ -1,0 +1,118 @@
+﻿.sys-settings-edit-page {
+	.control-width-15{
+		display: flex;
+		flex-direction: column;
+	}
+	.sys-settings-attributes-container {
+		padding-bottom: 2.6em;
+
+		.sys-settings-attributes-panels {
+			display: flex;
+			flex-direction: row;
+
+			.sys-settings-attributes-panel {
+				flex-basis: 50%;
+				.label-wrap{
+					height: 21px;
+				}
+				&.sys-settings-attributes-left-panel {
+					.left-panel-item {
+						padding-right: 3.6em;
+
+						&.sys-setting-type-container {
+							display: flex;
+							flex-direction: row;
+							align-items: center;
+							padding-right: 0;
+
+							.sys-setting-type {
+								flex-basis: 100%;
+							}
+
+							.sys-setting-type-info-button-container {
+								flex-shrink: 0;
+								margin: 0 5px 0 8px;
+								width: 2.4em;
+								height: 100%;
+
+								.sys-setting-type-info-button {
+									margin: 0;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+
+		.sys-settings-description {
+			height: auto;
+		}
+
+		.header-container-margin-bottom .label-wrap, .grid-layout .label-wrap {
+			max-width: 15em; //https://bugzilla.mozilla.org/show_bug.cgi?id=1136312
+		}
+	}
+
+	.sys-settings-rights-container {
+		.t-information-btn.t-btn-wrapper {
+			margin: 0;
+		}
+
+		.radio-button-container {
+			margin-left: 2.5em;
+		}
+
+		.sys-settings-rights-admin-operation {
+			margin-left: 6.3em;
+
+			.base-edit {
+				padding: 0;
+
+				&.sys-settings-rights-admin-operation-focus {
+					border: none;
+					border-bottom: 1px dotted #c8c8c8;
+				}
+			}
+		}
+
+		.sys-settings-rights-ssp-available-checkbox.checkbox-control-item.control-left.control-right {
+			
+			.label-wrap {
+				order: 2;
+				margin-left: 1.5em;
+			}
+
+			.t-label {
+				font-size: 1.4em;
+				color: #444;
+			}
+
+			.control-wrap {
+				flex-basis: 2em;
+				padding-left: 2.6em !important;
+			}
+
+			.checkbox-label-wrap {
+				max-width: 100%;
+				padding-left: 0 !important;
+			}
+		}
+	}
+}
+
+#SysSettingPageContainer {
+	.radio-button-container {
+		display: flex;
+		align-items: center;
+	}
+
+	.t-label {
+		padding-top: 0;
+		margin-top: 0;
+	}
+
+	.ts-controlgroup-tools {
+		padding-left: 5px;
+	}
+}

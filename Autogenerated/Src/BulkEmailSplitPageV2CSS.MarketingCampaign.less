@@ -1,0 +1,128 @@
+﻿.recipient-percent-label-wrap {
+	min-width: 26em !important;
+}
+.bulk-email-split-test-date-time-header.date-edit {
+	width: 50%;
+}
+.bulk-email-split-test-date-time-header.time-edit {
+	width: 50%;
+}
+.determine-winner-label {
+	padding-left: 40px;
+	color: #999;
+}
+.recipient-percent .base-edit-validation {
+	text-align: initial;
+}
+
+.container-steps {
+	margin-bottom: 27px;
+	.wizard-steps {
+		display: inline-flex;
+		align-items: center;
+		position: relative;
+		.step-icon,.step-connector{
+			display: none;
+		}
+		.step-caption {
+			width: 146px;
+			height: 26px;
+			background: #F5F7FB;
+			margin-right: -4px;
+			font-weight: 400;
+			font-size: 12px;
+			line-height: 16px;
+			color: #67748E;
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		.step-item {
+			width: unset;
+			margin-right: -4px;
+			&:nth-child(1) {
+				clip-path: polygon(0% 0%, 98% 0%, 100% 50%, 98% 100%, 0% 100%);
+			}
+			&:nth-child(2),
+			&:nth-child(3) {
+				clip-path: polygon(98% 0%, 100% 50%, 98% 100%, 0% 100%, 2% 50%, 0% 0%);
+			}
+			&:nth-child(4) {
+				clip-path: polygon(100% 0%, 100% 50%, 100% 100%, 0% 100%, 2% 50%, 0% 0%);
+			}
+
+			&.step-current {
+				.step-caption {
+					background: #FDD6C5;
+					color: #252F40;
+				}
+			}
+
+			&:first-of-type {
+				.step-caption {
+					border-radius: 8px 0 0 8px;
+				}
+			}
+		}
+	}
+}
+
+.start-date-control {
+	#StartDateHeadersSTStartDateHeadersNDDateTimeContainer {
+		display: flex;
+		align-items: center;
+		gap: 5px;
+	}
+}
+
+#BulkEmailSplitPageV2Container {
+	.radio-button-container {
+	  display: flex;
+	  align-items: center;
+	}
+	#BulkEmailSplitPageV2StartDateRadioLabel,
+	#BulkEmailSplitPageV2StartManualRadioLabel {
+	  color: #252F40;
+	  font-size: 16px;
+	  margin-top: 0;
+	  padding-top: 0;
+	}
+	#BulkEmailSplitPageV2StartDateGroupControlGroup {
+	  padding-bottom: 0;
+	}
+	#BulkEmailSplitPageV2DetermineWinnerLabelLabel {
+	  padding-left: 0;
+	  font-weight: 400;
+	  font-size: 14px;
+	  line-height: 20px;
+	  letter-spacing: -0.02em;
+	}
+	.indicator-container {
+	  width: 230px;
+	  height: 127px;
+	}
+	.multiline-label {
+	  color: #252F40;
+	  max-width: 50%;
+	}
+}
+
+#BulkEmailSplitPageV2BulkEmailIndicatorsControlGroup {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 24px;
+	.indicator-container {
+		padding: 0;
+	}
+}
+
+#BulkEmailSplitPageV2WizardStepsContainer-wrap {
+	width: 100%;
+	.step-item {
+		width: 25%;
+		.step-caption {
+			width: 100%;
+		}
+	}
+}

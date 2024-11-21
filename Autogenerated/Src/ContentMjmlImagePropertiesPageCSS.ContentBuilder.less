@@ -1,0 +1,33 @@
+﻿.right-panel-container *[data-item-type="mjimage"] {
+	.properties-header, .properties-content .ts-tabpanel {
+		background-color: #252F40;
+	}
+	.ts-controlgroup-caption-wrap > span {
+		color: #252F40;
+	}
+	.background-label-wrapper > label {
+		color: #252F40;
+	}
+
+	.base-edit-with-clear-icon[data-item-marker="Image"],
+	.base-edit-with-clear-icon[data-item-marker="BackgroundImage"] {
+		&:not(.clear-icon-not-visible):hover .base-edit-input {
+			padding-right: 0;
+		}
+
+		.base-edit-clear-icon {
+			right: 25px;
+		}
+	}
+
+	.image-properties-wrapper {
+		#ImageLinkMacroButton, #ImageTitleMacroButton, #ImageAltMacroButton {
+			padding-top: 22px;
+
+			*[data-item-marker="MacrosButton"] {
+				padding-left: 0;
+				padding-right: 0;
+			}
+		}
+	}
+}

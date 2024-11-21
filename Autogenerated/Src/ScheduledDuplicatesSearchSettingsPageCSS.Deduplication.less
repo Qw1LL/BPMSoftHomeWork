@@ -1,0 +1,123 @@
+﻿#ScheduledDuplicatesSearchSettingsPageContainer {
+
+	.search-settings-buttons-container {
+		background-color: #FFF;
+		border-bottom-left-radius: 8px;
+		border-bottom-right-radius: 8px;
+		padding-left: 16px;
+		padding-bottom: 16px;
+		margin-bottom: 8px;
+	}
+
+	.search-settings-grid-wrap {
+		display: flex;
+		column-gap: 96px;
+		row-gap: 32px;
+		margin-top: 8px;
+		background-color: #FFF;
+		border-radius: 8px;
+		padding: 24px 10px;
+		min-height: calc(~"100vh - 168px");
+		
+		.search-settings-grid {
+			width: 55%;
+
+			.grid {
+				&-listed-row {
+					margin-bottom: 0;
+
+					&:last-of-type {
+						border-radius: 0;
+					}
+				}
+			}
+		}
+
+		.search-settings-panel-container {
+			.search-settings-time-caption {
+				margin-bottom: 10px;
+			}
+			.settings-time-day-container {
+				display: flex;
+				gap: 32px;
+			}
+			.search-settings-time {
+				&-caption {
+					.t-label {
+						font-weight: 600;
+						font-size: 18px;
+						line-height: 24px;
+						letter-spacing: -0.02em;
+						color: #252F40;
+						width: 400px;
+					}
+				}
+				.control-width-15 {
+					display: flex;
+					align-items: center;
+					flex-direction: row;
+					.t-label {
+						padding: 0;
+					}
+				}
+				.label-wrap {
+					width: auto;
+					margin: 0;
+				}
+				.base-edit {
+					width: 226px;
+					margin-left: 16px;
+					border: 1px solid #D8DBE2;
+					border-radius: 8px;
+					padding: 2px 16px 2px 16px;
+					.base-edit-input {
+						padding: 0;
+						&::placeholder {
+							color: #252F40;
+							font-size: 14px;
+							line-height: 20px;
+						}
+					}
+					.base-edit-right-icon-wrapper {
+						right: 10px;
+						top: 50%;
+						transform: translateY(-50%);
+					}
+				}
+			}
+
+			.search-settings-days {
+				display: flex;
+				flex-direction: column;
+				justify-content: flex-start;
+				align-items: flex-start;
+				flex-wrap: nowrap;
+				padding-top: 7px;
+				
+				#ScheduledDuplicatesSearchSettingsPageDaysOfWeekLabelLabel {
+					margin-bottom: 16px;					
+				}
+				.t-label {
+					padding: 0;
+				}
+
+				.checkbox-control-item {
+					flex-direction: row-reverse;
+					justify-content: flex-end;
+					column-gap: 10px;
+					margin-bottom: 10px;
+
+					.label-wrap {
+						margin-left: 0;
+
+						.t-label {
+							line-height: 20px;
+							letter-spacing: -0.02em;
+							color: #67748E;
+						}
+					}
+				}
+			}
+		}
+	}
+}

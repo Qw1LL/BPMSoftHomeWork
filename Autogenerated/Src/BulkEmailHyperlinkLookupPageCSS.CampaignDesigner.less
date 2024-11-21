@@ -1,0 +1,133 @@
+﻿.hl-modal-box {
+    .ts-modalbox-innerbox {
+        width: 100%;
+        height: 100%;
+
+        .schema-wrap{
+            height: 100%;
+        }
+    }
+    padding: 24px;
+    .grid-listed-row {
+        .grid-fixed-col {
+            margin-left: 20px;
+        }
+        .grid-cols-10 {
+            padding-left: 31px;
+        }
+    }
+    #BulkEmailHyperlinkLookupPageHyperlinkLookupButtonsContainerContainer {
+        position: absolute;
+        right: 24px;
+        bottom: 24px;
+        display: flex;
+        align-items: center;
+        .t-btn-wrapper {
+            flex-shrink: 0;
+        }
+        .t-records-label {
+            white-space: nowrap;
+            width: auto;
+            flex-shrink: 0;
+            margin-right: 4px;
+            color: #67748E;
+        }
+        .t-count-label {
+            margin-right: 24px;
+            font-size: 14px;
+            color: #F9763D;
+        }
+        .actions-button-margin-right {
+            margin-right: 0;
+        }
+        [data-item-marker="SelectButton"] {
+            margin-right: 8px;
+        }   
+
+    }
+}
+
+.bulkemail-hyperlink-lookup-container {
+    height: 100%;
+    .hyperlink-lookup-header {
+        display: inline-block;
+        width: 100%;
+        margin-bottom: 24px;
+
+        .t-label {
+            color: #252F40;
+            font-size: 20px;
+            line-height: 28px;
+            letter-spacing: -0.02em;
+        }
+
+        .close-btn-user-class {
+            top: 24px;
+            right: 24px;
+        }
+    }
+
+    .hyperlink-lookup-buttons-container {
+        padding: 15px 24px 5px 0;
+
+        .t-count-label,
+        .t-records-label {
+            float: right;
+            width: auto;
+            margin-right: 5px;
+        }
+
+        .t-records-label {
+            font-size: 16px;
+            color: #999999;
+            padding-top: 6px;
+        }
+
+        .t-count-label {
+            font-size: 14px;
+            color: #F9763D;
+        }
+    }
+
+    > .grid-layout {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+
+        > .grid-layout-row {
+            display: flex;
+            flex-direction: column;
+
+            > .grid-layout-column {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+
+        > .grid-layout-row:nth-child(3) {
+            flex: 1;
+        }
+    }
+
+    .hyperlink-grid-container {
+        display: flex;
+        flex-direction: column;
+        flex: 1 1 auto;
+        overflow: auto;
+        .grid-listed-row::after {
+            background: #D8DBE2;
+            height: 1px;
+            width: 100%;
+            display: block;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+        }
+        
+    }
+
+    .hyperlink-grid-container > .grid {
+        padding-right: 4px;
+    }
+
+}

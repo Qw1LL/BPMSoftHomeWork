@@ -1,0 +1,58 @@
+﻿.event-queue-tasks-wrap {
+	text-align: right;
+
+	.queue-tasks-label {
+		width: auto;
+		text-align: center;
+		padding-top: 10px;
+		padding-right: 10px;
+		color: #181818;
+	}
+
+	.queue-task-spinner {
+		display: inline-block;
+		vertical-align: bottom;
+		width: 32px;
+		height: 32px;
+		padding-top: 4px;
+	}
+
+	#queue-task-spinner {
+		display: inline-block;
+		height: 32px;
+		width: 32px;
+		min-width: 32px;
+		margin: 0;
+		padding: 0;
+
+		.ts-mask-spinner {
+			width: 32px;
+			height: 32px;
+			margin: 0;
+			path {
+				stroke: #86DB45;
+			}
+		}
+		.ts-mask-opacity {
+			display: none;
+		}
+		.ts-mask-spinner-wrap {
+			height: auto;
+		}
+	}
+
+	#EventPageV2EventQueueTasksSpinnerContainer_Label {
+		width: 32px;
+		min-width: 32px;
+		padding: 0;
+		margin: 0;
+	}
+}
+
+#EventPageV2Container {
+	.grid-row.grid-pad {
+		&::after {
+			display: none;
+		}
+	}
+}

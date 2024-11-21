@@ -1,0 +1,172 @@
+﻿.help-text-label {
+	color: #67748E;
+	text-align: justify;
+	margin-bottom: 20px;
+	margin-top: 25px;
+	font-size: 12px;
+}
+
+.template-script-text-box {
+	border: 1px solid #D8DBE2 !important;
+	border-radius: 8px !important;
+	direction: ltr;
+	padding: 0 10px 0 10px !important;
+	min-height: 52px;
+	background: #fff;
+}
+.base-edit.template-script-text-box .base-edit-input {
+	-ltr-rtl-text-align: left;
+	background-color: #fff;
+	margin-top: 14px;
+}
+.webform-island-header {
+	font-size: 14px !important;
+	text-transform: none;
+	margin-top: 5px;
+	margin-bottom: 10px;
+}
+.label-green-color {
+	font-size: 14px !important;
+	text-transform: none;
+}
+.detail.landing-redirect-control-group {
+	.control-wrap {
+		margin-left: 0;
+	}
+}
+.detail .ts-controlgroup-tools .t-btn-wrapper.webform-info-button-control-group {
+	border: 0px !important;
+	height: auto;
+	padding-top: 0;
+	margin-top: 0;
+	margin-left: 0;
+	padding-left: 0;
+	top: 0.2em;
+}
+.t-btn-wrapper.faq-button {
+	padding: 0;
+	text-decoration: none;
+	color: #F9763D;
+	outline: none;
+	overflow: hidden;
+	font-size: 1.4em;
+	text-align: left;
+}
+.t-btn-wrapper.faq-button:hover {
+	text-decoration: underline;
+}
+.webform-info-button-image {
+	margin-left: 0;
+}
+.faq-button-grid-layout {
+	display: flex;
+	align-items: center;
+	&:first-child {
+		.faq-button-grid-column {
+			width: auto!important;
+		}
+	}
+	.ts-image-edit-wrap {
+		margin-right: 10px;
+	}
+	.webform-island-header {
+		margin: 0;
+	}
+
+	.faq-button-grid-column {
+		margin-bottom: 8px;
+		width: 100%!important;
+		min-height: auto;
+		&[data-colspan="1"] {
+			display: none;
+		}
+		.t-btn-wrapper {
+			white-space: normal;
+		}
+	}
+}
+#landing-script-template-iframe {
+	border: 1px solid #D8DBE2;
+	border-radius: 8px;
+	box-sizing: border-box;
+	background-color: #fff;
+	color: #67748E;
+	overflow: auto;
+	height: 200px;
+	width: 100%;
+	white-space: nowrap;
+	direction: ltr;
+	padding: 15px;
+
+	div > span {
+		color: #F9763D !important;
+	}
+}
+
+.t-btn-wrapper.open-process-button {
+	margin-top: 17px;
+
+	&.t-btn-style-default:hover {
+		background: transparent;
+	}
+}
+
+#DefaultsTab, #HistoryTab {
+	.ts-controlgroup-tools {
+		.t-btn-wrapper {
+			min-height: 40px;
+		}
+	}
+}
+
+div[data-item-marker = "LeadDefaultsDetailContainer"], 
+div[data-item-marker = "ObjectDefaultsDetailContainer"] {
+	.ts-controlgroup-container {
+		.grid-listed-row {
+			padding: 2px 20px;
+		}
+	}
+}
+
+#GeneratedWebFormPageV2Container {
+	.control-width-15.checkbox-control-item {
+		display: flex;
+		.t-label {
+			margin-left: 10px;
+		}
+	}
+	div[data-item-marker = 'ProfileContainer']{
+		&>div[class*='grid-layout-row']:nth-last-child(2){
+			&>div[class*='grid-layout-column']:first-child{
+				width: 100% !important;
+				#GeneratedWebFormPageV2CreateContactContainer_Control{
+					width: auto;
+				}
+			}
+		}
+		#GeneratedWebFormPageV2ExternalURLMemoEdit-scroll{
+			display: flex;
+			align-items: end;
+			justify-content: end;
+			#GeneratedWebFormPageV2ExternalURLMemoEdit-el{
+				width: 95%;
+			}
+		}
+	}
+	div[data-item-marker = 'tab-content-container-marker']{
+		.ts-controlgroup-caption-wrap{
+			height: 5em !important;
+		}
+	}
+
+}
+
+.tip-label-wrap {
+	.t-label-tip {
+		right: 0;
+		
+		&#FormSubmitGeneratedWebFormPageV2IdentificationProcessTipLabel-tip {
+			right: -24px;
+		}
+	}	
+}

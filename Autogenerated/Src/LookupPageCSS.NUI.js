@@ -1,0 +1,5 @@
+﻿define("LookupPageCSS",
+		function() {
+			return {};
+		}
+);

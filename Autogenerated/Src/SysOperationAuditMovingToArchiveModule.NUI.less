@@ -1,0 +1,93 @@
+﻿#generalContainer {
+	min-height: 300px;
+	height: 100%;
+
+	.sub-header-caption-container {
+		background: #fff;
+		padding: 0 0 30px 20px;
+
+		.sub-header-caption {
+			font-style: normal;
+			font-weight: 600;
+			font-size: 24px;
+			line-height: 32px;
+			color: #252F40;
+			padding-top: 15px;
+		}
+
+		&::before {
+			content: '';
+			width: 98%;
+			display: inline-block;
+			border-top: 1px solid #D8DBE2;
+		}	
+	}
+
+	.buttons-container {
+		margin-bottom: 10px;
+		padding-left: 20px;
+		background-color: #fff;
+		width: 100%;
+		padding-bottom: 20px;
+		border-radius: 0px 0px 8px 8px;
+	}
+
+	.input-archive-container {
+		padding: 20px;
+		background-color: #fff;
+		border-radius: 8px;
+	}
+
+	.base-edit {
+		border-width: 0 0 1px 0;
+		border-radius: 0px;
+		padding: 8px 0;
+	}
+
+	.caption-label-container,
+	.caption-dateTo-label-container {
+		overflow: hidden;
+		width: 100%;
+	}
+	
+	.caption-dateTo-label-container {
+		margin-left: 3%;
+	}
+
+	.t-label {
+		.label(#67748E, 12px);	
+	}
+	
+	.period-container {
+		margin-bottom: 20px;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+	
+	.operation-type-container {
+		margin-bottom: 20px;
+	}
+	
+	.btnOk-container {
+		display: inline-block;
+		margin-right: 15px;
+	}
+	
+	.btnCancel-container {
+		display: inline-block;
+	}
+	
+	.label(@color, @size) {
+	  color: @color;
+	  font-size: @size;
+	}
+	
+	.page-caption-label {
+	  .label(#67748E, 12px);
+	  margin-bottom: 30px;
+	  margin-left: 5px;
+	  letter-spacing: -0.01em;
+	}
+}
+

@@ -1,0 +1,448 @@
+﻿@mainTextColor: #F9763D;
+
+body[OldUI="false"] {
+
+    #UserProfilePageContainer {
+        border-radius: 0 0 8px 8px;
+
+        #DefaultSettingsButton-wrapperEl {
+            margin-top: 30px;
+            margin-left: -5px;
+
+            .t-btn-restore-settings {
+                width: 24px;
+                height: 24px;
+                left: 7px;
+            }
+
+            .profile-button {
+                margin-top: 0;
+                color: #F9763D;
+                font-size: 14px;
+                background-color: transparent;
+            }
+        }
+
+        #UserProfilePagePopupsStateCheckBoxContainer{
+            flex-direction: row-reverse;
+            justify-content: flex-end;
+        }
+
+        #UserProfilePagePopupsStateCheckBoxContainerContainer {
+            padding-top: 15px;
+            margin-bottom: 0;
+        }
+
+        #buttonsMenu {
+            display: flex;
+            padding-left: 20px;
+
+            #UserProfilePagemyCommandsButton-textEl {
+                margin-left: auto;
+                width: auto;
+                background-color: #fff;
+                color: @mainTextColor;
+                font-size: 14px;
+                padding-right: 18px;
+                margin-top: 6px;
+            }
+        }
+
+        #profileModuleTopContainer > #buttonsMenu {
+            width: calc(~"100% - 312px");
+            background-color: #fff;
+            z-index: 11;
+            position: fixed;    
+            padding-bottom: 16px;
+            border-radius: 0 0 8px 8px;
+
+            span {
+                margin-top: 15px;
+            }
+
+            &::before {
+                content: '';
+                position: absolute;
+                background-color: #D8DBE2;
+                height: 1px;
+                left: 16px;
+                right: 16px;
+            }
+        }
+
+        #profileModuleTopContainer {
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.02);
+            border-radius: 0 0 8px 8px;
+            overflow: hidden;
+            margin-left: 0;
+            min-height: 100vh;
+            position: relative;
+            &::after {
+                content: '';
+                position: absolute;
+                top: 20%;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                background-color: #fff;
+                z-index: -1;
+            }
+        }
+
+        #UserProfilePageTabsContainerContainer {
+            padding-right: 15px;
+            background: #fff;
+            padding-bottom: 25px;
+            border-radius: 0 0 8px 8px;
+        }
+
+        .ts-tabpanel-scroll-visible {
+
+            .ts-tabpanel-items {
+                padding-right: 15px;
+            }
+
+            .ts-tabpanel-scroll-right {
+                background-position: 0 2px;
+            }
+
+            .ts-tabpanel-scroll-left {
+                background-position: 10px 3px;
+                margin-left: -10px;
+            }
+        }
+
+        div[data-item-marker="tab-content-container-marker"] {
+            padding-left: 20px;
+        }
+
+        .ts-tabpanel-scroll-visible .ts-tabpanel-items {
+            margin: 0 30px 0 23px;
+        }
+
+        .ts-tabpanel {
+            border-bottom: none;
+            padding-left: 18px;
+        }
+
+    }
+
+    #UserProfilePagePhotoContainerContainer {
+        padding: 16px 16px 32px;
+        align-items: center;
+        margin-top: calc(~"37px + 4.15em");
+        display: flex;
+        overflow: hidden;
+        border-radius: 8px 8px 0 0;
+        background: #fff;
+        .ts-image-edit-wrap {
+            width: 96px!important;
+            height: 96px!important;
+            min-height: auto;
+            min-width: auto;
+            .ts-image-container-style-rectangular, .ts-image-style-rectangular, .ts-image-edit-inner-container{
+                border-radius: 50%;
+                width: 96px;
+                height: 96px;
+                object-fit: cover;
+                &[src$="DefaultPhoto"] {
+                    width: 72px;
+                    height: 60px;
+                }
+            }
+            
+            .ts-image-edit-upload,
+            .ts-image-edit-clear {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 40px;
+                width: 40px;
+                background-color: #fff;
+                border-radius: 50%;
+            }
+
+            .ts-image-edit-upload {
+                right: -9px;
+                bottom: -6px;
+                left: auto;
+                span {
+                    position: static;
+                }
+            }
+
+            .ts-image-edit-clear {
+                display: none;
+            }
+
+            .ts-image-edit-upload span {
+                background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTMgMTEuMTc2NVYxNS43MDU5QzMgMTcuNTI1MiA0LjM0MzE1IDE5IDYgMTlIMThDMTkuNjU2OSAxOSAyMSAxNy41MjUyIDIxIDE1LjcwNTlWMTEuMTc2NU0zIDExLjU4ODJDMyA5Ljc2ODk0IDQuMTUxMjcgOC41IDUuNTcxNDMgOC41SDUuNjQ3MDZDNi42NzA0MSA4LjUgNy41IDcuNjcwNDEgNy41IDYuNjQ3MDZWNi42NDcwNkM3LjUgNS43Mzc0MSA4LjE3MTU3IDUgOSA1SDE1QzE1LjgyODQgNSAxNi41IDUuNzM3NDEgMTYuNSA2LjY0NzA2VjdDMTYuNSA3LjgyODQzIDE3LjE3MTYgOC41IDE4IDguNVY4LjVDMTkuNjU2OCA4LjUgMjEgOS43Njg5NCAyMSAxMS41ODgyIiBzdHJva2U9IiM2Nzc0OEUiIHN0cm9rZS13aWR0aD0iMiIvPgo8Y2lyY2xlIHI9IjMiIHRyYW5zZm9ybT0ibWF0cml4KDEgMCAwIC0xIDEyIDEzKSIgc3Ryb2tlPSIjNjc3NDhFIiBzdHJva2Utd2lkdGg9IjIiLz4KPGNpcmNsZSByPSIxIiB0cmFuc2Zvcm09Im1hdHJpeCgxIDAgMCAtMSA2IDExKSIgZmlsbD0iIzY3NzQ4RSIvPgo8L3N2Zz4K);
+                width: 24px;
+                height: 24px;
+            }
+
+        }
+
+        #UserProfilePageAccountNameContainer_Label {
+            display: none;
+        }
+
+        .label-wrap+.control-wrap {
+            margin-left: -14.9em;
+        }
+
+        #UserProfilePageAccountNameTextEdit-wrap {
+            border-bottom: none;
+        }
+
+        #UserProfilePageRightInfoContainerContainer {
+            padding-right: 18px;
+            display: flex;
+            flex-direction: column;
+        }
+
+    }
+
+    #UserProfilePageContactGeneralInfoBlockContainer {
+        display: grid;
+        grid-template-columns: repeat(2, 2fr);
+        column-gap: 5rem;
+        row-gap: 2.5rem;
+        list-style: none;
+        padding: 0;
+    }
+
+    #UserProfilePageTabsContainerContainer #SetupTelephonyParametersPageModule #CancelButton-textEl {
+        display: none;
+    }
+
+    .mainHeader-label {
+        margin: 20px 0;
+        font-family: 'Golos Text';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 24px;
+        color: #252F40;
+    }
+
+    #UserProfilePageMailboxesTabInfoBlockContainer {
+
+        .mainView-EmailSettings {
+            margin: 0;
+            padding: 0;
+            margin-top: -60px;
+        }
+        #topButtons {
+            padding-top: 0;
+        }
+
+    }
+
+    #UserProfilePageSocialAccountsTabInfoBlockContainer {
+        .top-buttons {
+            display: flex;
+            justify-content: end;
+            margin: 20px 0;
+        }
+
+        .social-accounts-module {
+            margin-top: -30px;
+        }
+
+        .close-social-account-button {
+            display: none;
+        }
+
+        .AddRecord-social-account-button,
+        .actions-social-account-button {
+
+            background: none;
+            color: #F9763D;
+            border: none;
+            font-size: 14px;
+            width: 64px;
+            text-transform: none;
+        }
+
+        .t-btn-marker {
+            border-top: 0.32em solid #F9763D;
+        }
+    }
+
+
+    .accountName-label {
+        font-size: 20px;
+        margin-left: 10px;
+    }
+
+    .mainPhone-label,
+    .mainEmail-label {
+        font-size: 14px;
+        font-weight: 600;
+    }
+
+    .mainEmail-label {
+        margin-top: 8px;
+    }
+
+    #languageDateTimeZoneContainer {
+        display: grid;
+        grid-template-columns: repeat(2, 2fr);
+        column-gap: 5rem;
+        row-gap: 1rem;
+        list-style: none;
+        padding: 0;
+
+
+        .controlCaption {
+            font-size: 12px;
+            color: #67748E;
+            margin-top: 5px;
+        }
+
+        .combo-box-edit-wrap {
+            border-radius: 0px;
+            padding-left: 0;
+        }
+
+        .base-edit-focus {
+            border-top: none;
+            border-left: none;
+            border-right: none;
+        }
+
+        .base-edit-right-icon {
+            height: 16px;
+        }
+    }
+
+    .stateflag-container {
+
+        .t-label {
+            text-align: left;
+            margin-left: 10px;
+            font-size: 14px;
+            color: #252F40;
+        }
+
+        .check-box-container .t-label {
+            margin-left: -20px;
+            padding-top: 7px;
+            color: #444444;
+            font-size: 1.6em;
+        }
+
+        .label-wrap {
+            max-width: none;
+        }
+
+        .control-wrap {
+            width: 2em;
+            margin-left: 0px;
+            float: left;
+            padding-left: 0px;
+        }
+
+        .t-checkboxedit-wrap {
+            margin-left: 0px;
+            margin-top: 3px !important;
+        }
+    }
+
+    #passwordContainer {
+        display: grid;
+        grid-template-columns: repeat(2, 2fr);
+        column-gap: 5rem;
+        row-gap: 1rem;
+        list-style: none;
+        padding: 0;
+        margin-top: 50px;
+
+        .control-width-15 {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .control-width-15 .t-label {
+            text-align: left;
+            font-size: 12px;
+        }
+
+        .base-edit {
+            border-radius: 0px;
+        }
+
+        .label-wrap {
+            max-width: 100%;
+        }
+    }
+
+    #ChangePasswordTabInfoBlock {
+
+        #buttonsMenu {
+            padding-top: 0;
+            padding-left: 0;
+        }
+
+        #leftPanelContainer {
+            display: grid;
+            grid-template-columns: repeat(2, 2fr);
+            column-gap: 5rem;
+            row-gap: 2.5rem;
+            list-style: none;
+            padding: 0;
+            margin-bottom: 25px;
+
+            .control-width-15 {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .control-width-15 .t-label {
+                text-align: left;
+                font-size: 12px;
+                color: #67748E;
+            }
+
+            .base-edit {
+                border-radius: 0px;
+            }
+
+            .base-edit-validation {
+                background-color: #fff;
+	            color: #F53939 !important;
+            }
+
+            .label-wrap+.control-wrap {
+                margin: 0;
+                padding: 0;
+            }
+        }
+    }
+
+    .center-panel {
+        .center-panel-content {
+            #profileModuleTopContainer > #buttonsMenu {
+                width: calc(~"100% - 682px") !important;
+                }
+        }
+    }
+
+    &.left-panel-collapsed {
+        .default-center-panel-content {
+            #profileModuleTopContainer > #buttonsMenu {
+                width: calc(~"100% - 160px") !important;
+                }
+        }
+    }
+
+    &.left-panel-collapsed {
+        .center-panel-content {
+            #profileModuleTopContainer > #buttonsMenu {
+                width: calc(~"100% - 531px") !important;
+              }
+        }
+    }
+
+}

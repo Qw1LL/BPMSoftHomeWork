@@ -1,0 +1,109 @@
+﻿.calendar-container {
+	background-color: #F5F7FB;
+	max-height: calc(~'100vh - 131px');
+	flex-direction: row;
+	display: flex;
+
+	&[data-item-marker="RightGridContainerVisible"] {
+		.calendar-left-grid-container {
+			.grid {
+				.grid-captions {
+					width: 509px!important;
+				}
+				.marketing-calendar-grid-listed-row {
+					padding: 0;
+				}
+			}
+		}
+	}
+
+	&[data-item-marker="RightGridContainerNotVisible"] {
+		.calendar-left-grid-container {
+			width: 100%;
+			.grid {
+				.grid-captions {
+					width: 100%!important;
+				}
+				.grid-row-selected {
+					height: auto;
+				}
+			}
+		}
+	}
+}
+
+.calendar-left-grid-container {
+	display: flex;
+	min-width: 509px;
+	border-radius: 8px;
+	overflow: hidden;
+}
+
+.calendar-right-grid-container {
+	width: calc(~'100% - 520px');
+	height: calc(~'100% - 20px');
+	margin-left: 8px;
+}
+
+.button-container-wrapClass {
+  height: 40px;
+  white-space: nowrap;
+}
+
+.right-tools-buttons-container-wrapClass {
+  display: inline-block;
+  float: right;
+  position: relative;
+  z-index: 1;
+}
+
+.module-container {
+  height: 100%;
+  width: 100%;
+  padding-top: 0px;
+}
+
+.toggle-calendar-wrapper {
+	height: 24px;
+	width: 60px;
+	padding-left: 0.38em;
+	padding-right: 0.38em;
+	margin-top: 7px;
+
+	.toggle-calendar-image {
+		background-repeat: no-repeat;
+		width: 60px;
+		height: 48px;
+		background-position-y: 12px;
+	}
+
+	&[data-item-marker="RightGridContainerNotVisible"] {
+		.toggle-calendar-image {
+			background-position-y: -12px;
+		}
+	}
+}
+
+.menu-wrap.menu[data-item-marker="SeparateModeViewOptionsButton"] {
+	& [data-tag="Sorting"] {
+		display: none;
+	}
+}
+
+#CampaignPlannerSectionGridDataViewContainer {
+	.grid-empty {
+		position: absolute;
+		top: 170px;
+	}
+}
+.folder-edit-mode{
+	#CampaignPlannerSectionGridDataViewContainer{
+		.grid-empty {
+			left: 164px;
+		}
+	} 
+}
+.grid-layout-table-edit-wrap {
+	border-radius: 8px;
+	padding-left: 10px;
+}

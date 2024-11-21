@@ -1,0 +1,28 @@
+﻿.portal-message-module {
+	padding: 14px;
+	.header-container-margin-bottom {
+		margin-bottom: 14px;
+	}
+
+	.inline-text-edit-placeholder {
+		color: silver;
+	
+		&:after {
+			content:attr(data-placeholder);
+			position: absolute;
+			top: 10px;
+			left: 5px;
+			font-size: 12px;
+			z-index: 1;
+		}
+	}
+}
+.portal-message-content {
+	height: 20px;
+}
+
+#PortalMessageTab {
+	.portal-message-module {
+		padding: 24px;
+	}
+}

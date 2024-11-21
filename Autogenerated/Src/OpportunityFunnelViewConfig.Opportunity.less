@@ -1,0 +1,171 @@
+﻿@breadcrumbs-height: 27px;
+@funnel-filters-height: 41px;
+@funnel-header-height: 35px;
+
+.funnel-main-container {
+	display: block;
+	height: 100%;
+	width: 100%;
+
+	.default-widget-header {
+		position: static;
+	}
+
+	.main-tools-container {
+		display: flex;
+		justify-content: space-between;
+		padding: 0 16px;
+		
+		&::-webkit-scrollbar {
+			height: 2px;
+		}
+
+		.main-filter-container {
+			display: flex;
+			align-items: center;
+
+			.funnel-filter-inner-container {
+				display: flex;
+				align-items: center;
+				width: initial;
+
+				.filter-value-label {
+					cursor: pointer;	
+				}
+			
+				.period-fixed-filter-image-class {
+					width: 24px;
+					height: 24px;
+				}
+			
+				label {
+					line-height: 20px;
+					letter-spacing: -0.02em;
+				}
+				
+				.filter-caption-label {
+					padding: 0 8px;
+				}
+			}
+		}
+	}
+
+	.full-screen-el {
+		.default-widget-header {			
+			.default-widget-header-label {
+				font-size: 20px;
+				padding-left: 0;
+
+				&:before {
+					display: none;
+				}
+			}
+		}
+
+		.main-tools-container {
+			flex-direction: column;
+			align-items: center;
+		}
+	}
+
+	.breadcrumbs-module-container:not(:empty) ~ .funnel-chart-grid-wrapper {
+		height: calc(~"100% - @{funnel-header-height} - @{funnel-filters-height} - @{breadcrumbs-height}");
+		border-bottom: 0;
+	}
+
+	.main-filter-container ~ .funnel-chart-grid-wrapper {
+		height: calc(~"100% - @{funnel-header-height} - @{funnel-filters-height}");
+		border-bottom: 0;
+	}
+}
+
+.highcharts-tooltip {
+	span {
+		z-index: 9999;
+	}
+}
+.funnel-chart-grid-wrapper {
+	height: 90%;
+}
+
+.funnel-buttons-settings-container {
+	background-color: white;
+	text-align: center;
+
+	.t-btn-wrapper {
+		border: 1px solid #D8DBE2;
+		color: #67748E;
+		font-size: 14px;
+		line-height: 20px;
+		letter-spacing: -0.02em;
+
+		&.t-btn-style-default {
+			&:hover {
+				border: 1px solid #D8DBE2;
+	
+				.t-btn-text {
+					color: #67748e;
+				}
+	
+				.t-btn-marker {
+					border-top-color: #67748e;
+				}
+			}
+		}
+
+		.t-btn-marker {
+			border-top-color: #67748e;
+		}
+	}
+}
+
+.default-chart-wrapper .default-widget-header ~ .funnel-chart-grid-wrapper {
+	margin-top: 0;
+}
+
+.default-chart-wrapper {
+	&.breadCrumbsExist[chart-provider="chart-js"] {
+		.highcharts-wrapper {
+			height: calc(~"100%" - 105px);
+		}
+	}
+	&[chart-provider="chart-js"] {
+		.main-tools-container + .highcharts-wrapper {
+			height: calc(~"100% - 125px");
+			padding-top: 0;
+		}
+
+		&.full-screen-el {
+			.funnel-buttons-settings-container {
+				margin-top: 18px;
+			}
+
+			.main-tools-container + .highcharts-wrapper {
+				height: calc(~"100% - 180px");
+			}	
+		}
+	}
+}
+
+span[data-item-marker="ClearPeriodFilter"]{
+	top: 2px;
+	margin-left: 8px;
+}
+
+span[data-item-marker="PeriodButton"] {
+  margin-right: 16px;
+  overflow: visible;
+
+	.t-btn-menu {
+		left: 30px;
+	}
+}
+
+.grid-layout-row .ts-box-sizing .default-widget-header-label {
+	line-height: 20px;
+	letter-spacing: -0.02em;
+}
+
+#fixedFilterPeriodFilterValuesContainer .filter-caption-label {
+	margin: 0 5px;
+}

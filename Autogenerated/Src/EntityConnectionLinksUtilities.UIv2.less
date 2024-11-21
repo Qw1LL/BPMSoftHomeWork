@@ -1,0 +1,143 @@
+﻿/* Find TODO: #CC-1040 */
+.entity-relation-container {
+	display: none;
+}
+.entity-linked-icons-container {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.entity-relation-button-wrapper {
+	padding: 7.8px;
+	margin-right: 5px;
+	margin-left: 5px;
+	.t-btn-image {
+		width: 14px;
+		height: 14px;
+	}
+}
+.linked-relation-button {
+	width: 20px;
+	height: 20px;
+	background-size: 20px;
+}
+.linked-relation-button-wrapper {
+	padding-left: 3px;
+	padding-right: 3px;
+}
+.entity-item-relation-container {
+	display: inline-block;
+	width: 100%;
+	padding-right: 5px;
+	.base-edit {
+		padding-left: 0px;
+	}
+}
+.connection-caption-label {
+	margin-right: 2px;
+	color: #67748E;
+    letter-spacing: -0.02em;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+}
+ul[data-item-marker*="relationMenuItems"] .menu-item-image {
+	width: 16px;
+	height: 16px;
+}
+.entity-relation-container {
+	.label-link {
+		cursor: pointer;
+		color: #252F40;
+	}
+
+	.label-link:hover {
+		text-decoration: underline;
+	}
+
+	.control-wrap {
+		width: 82%;
+		float: right;
+	}
+	.control-wrap ::-webkit-input-placeholder {
+  		opacity: 100;
+	}
+	.control-wrap :-moz-placeholder {
+	  opacity: 100;
+	}
+	.control-wrap ::-moz-placeholder {
+	  opacity: 100;
+	}
+	.control-wrap :-ms-input-placeholder {
+	  opacity: 100;
+	}
+	.control-wrap :focus::-webkit-input-placeholder {
+		color: transparent
+	}
+	.control-wrap :focus::-moz-placeholderr {
+		color: transparent
+	}
+	.control-wrap :focus:-moz-placeholder {
+		color: transparent
+	}
+	.control-wrap :focus:-ms-input-placeholder {
+		color: transparent
+	}
+	.base-edit-right-icon {
+		display: none;
+	}
+	.base-edit:not(.base-edit-disabled):hover .base-edit-right-icon,
+	.base-edit-focus .base-edit-right-icon {
+  		display: block;
+	}
+	.base-edit:not(.base-edit-focus) {
+ 		 border: 1px solid white;
+		 border-bottom: 1px solid #D8DBE2;
+	}
+	.base-edit:not(.base-edit-focus):hover {
+		border: 1px solid #c8c8c8;
+	}
+}
+
+#EmailContainerListGrid {
+	.entity-linked-icons-container {
+		position: relative;
+		justify-content: flex-end;
+		column-gap: 4px;
+
+		.connection-caption-label {
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+	}
+
+	.entity-relation-container {
+		row-gap: 10px;
+
+		.entity-item-relation-container {
+			.t-btn-wrapper {
+				&:not([data-item-marker="setNeedProcessFalse"]) {
+					margin-right: 30px;
+				}
+
+				&.wrapper-with-centered-right-menu {
+					padding-right: 30px;
+					margin-right: 0;
+				}
+
+				.t-btn-image {
+					margin-top: 4px;
+					width: 24px;
+					height: 24px;
+					background-size: 24px;
+				}
+
+				.t-btn-menu {
+					top: 8px;
+				}
+			}
+		}
+	}
+}

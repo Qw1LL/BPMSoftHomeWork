@@ -1,0 +1,52 @@
+﻿.ts-tabpanel-tools {
+	.search-dashboard-button {
+		padding-left: 0;
+		padding-right: 0;
+
+		.t-btn-image {
+			padding-right: 1px;
+			background-repeat: no-repeat;
+		}
+	}
+}
+
+.tip[data-item-marker='dashboards-filterable-list'] {
+	.tip-border {
+		padding: 0;
+	}
+}
+
+.dashboard-el {
+	.ts-tabpanel-items {
+		li {
+			margin-left: 24px;
+			padding-right: 0;
+
+			&:first-child {
+				margin-left: 8px;
+			}
+			
+			&:last-child {
+				padding-right: 6px;
+			}
+
+			&.is-favorite {
+				background-repeat: no-repeat;
+				background-position: 0 1px;
+				padding-left: 23px;
+			}
+		}
+	}
+}
+
+html[dir="rtl"] {
+	.dashboard-el {
+		.ts-tabpanel-items {
+			li {
+				&.is-favorite {
+					background-position-x: right;
+				}
+			}
+		}
+	}
+}

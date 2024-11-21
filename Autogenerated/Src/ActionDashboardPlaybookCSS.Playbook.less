@@ -1,0 +1,27 @@
+﻿.playbook-action {
+	&-button {
+		height: 33px;
+
+		.t-btn-image {
+			left: 0;
+			height: 24px;
+			width: 24px;
+		}
+
+		&:hover .playbook-action-text {
+			color: #F9763D;
+		}
+	}
+}
+
+body[is-main-header-visible="true"] {
+	.playbook-action-button {
+		.t-btn-image {
+			left: 26px;
+		}
+
+		.playbook-action-text {
+			display: none;
+		}
+	}
+}

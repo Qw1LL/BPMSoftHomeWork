@@ -1,0 +1,13 @@
+﻿{
+  "Descriptor": {
+    "UId": "60375376-abcd-4650-a625-6a02b1402042",
+    "Name": "UsrTransportRequestsInTag",
+    "ModifiedOnUtc": "\/Date(1731913860000)\/",
+    "Parent": {
+      "UId": "5894a2b0-51d5-419a-82bb-238674634270",
+      "Name": "BaseEntityInTag"
+    },
+    "ManagerName": "EntitySchemaManager",
+    "Caption": "Тег в записи раздела Заявки на транспорт"
+  }
+}

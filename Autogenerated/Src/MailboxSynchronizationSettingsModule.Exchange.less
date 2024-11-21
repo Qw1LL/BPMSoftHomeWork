@@ -1,0 +1,61 @@
+﻿@mainTextColor: #F9763D;
+
+#ViewModuleContainer:not(:has(#buttonsMenu)) {
+  #left-header-container {
+    border-radius:  8px 0 0 8px;
+  }
+    
+  #right-header-container {
+    border-radius:  0 8px 8px 0;
+  }
+}  
+
+.mainView-EmailSettings {
+    background: #fff;
+    border-radius: 8px;
+
+    .label-addEmail {
+        display: flex;
+        width: auto;
+        font-family: 'Golos Text';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: -0.02em;
+        color: @mainTextColor;
+        cursor: pointer;
+    }
+    
+    .label-addEmail::after {
+        content: "+";
+        font-size: 18px;
+        font-weight: 400;
+        color: @mainTextColor;
+        margin-left: 5px;
+    }
+
+    #topButtons {
+        display: flex;
+        justify-content: end;
+        margin: 16px 12px 16px 16px;
+        padding-top: 20px;
+    }
+
+      .grid.grid-listed .grid-captions {
+        border-bottom: none;
+      }
+
+      .grid-header {
+        font-size: 14px;
+      }
+
+      .grid-captions label {
+        font-size: 14px;
+        color: #252F40;
+    }
+
+    .grid-row-actions {
+      align-items: flex-start;
+    }
+}

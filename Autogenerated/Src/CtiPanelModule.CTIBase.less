@@ -1,0 +1,892 @@
+﻿@EditBorderColor: #C8C8C8;
+@SubscriberDataCaptionColor: #67748E;
+@SubscriberDataColor: #444;
+@BaseColor: #F9763D;
+@CommunicationHistoryItemNameColor: #F9763D;
+@CommunicationHistoryItemNameLinkVerticatOffset: -4px; // вертикальное смещение ссылки, чтобы верхняя часть текста была вровень с верхней точкой окружности фото
+@CommunicationHistoryPanelsInterval: 20px;
+@CommunicationHistoryDataLeftMargin: 11px;
+@EntityRelationEditIndent: 3px;
+@SubscriberNameHoverColor: #F9763D;
+@CallDurationColor: #F9763D;
+@GreyBackgroundColor: #F5F7FB;
+@DtmfContainerBackgroundColor: #FAFAFA;
+@HistoryItemBorder: 1px solid #C5C5C5;
+@DtmfContainerBorder: 1px solid #E5E5E5;
+@DtmfContainerWidth: 140px;
+@DtmfContainerHeight: 198px;
+@ButtonShortSize: 24px;
+@ButtonMiddleSize: 64px;
+@ButtonLongSize: 128px;
+@ButtonsInterval: 9px;
+@IdentificationFontFamily: "Golos Regular";
+@IdentificationPanelHoverOffset: 10px;
+@IdentificationPanelPhotoSize: 40px;
+@SubsciberMenuButtonSize: 30px;
+@PhoneNumberRightIconSize: 16px;
+@PhoneNumberRightIconMarginRight: 8px;
+@EmptySearchResultFontFamily: "Golos Regular";
+@PanelsMarginTop: 30px;
+@ContainerListEmptyDescriptionFontSize: 18px;
+@ContainerListEmptyFontSize: 17px;
+@ContainerListEmptyDescriptionPadding: 15px;
+
+.centerContainer {
+	position: absolute;
+	transform: translateX(-50%);
+	-webkit-transform: translateX(-50%);
+	left: 50%;
+	white-space: nowrap;
+}
+.subscriberItem(@width, @color: @SubscriberDataColor, @fontSize: 12px, @margin: 0) {
+	width: @width;
+	margin: @margin;
+	padding: 0;
+	color: @color;
+	font-family: @IdentificationFontFamily;
+	font-size: @fontSize;
+	text-align: left;
+}
+.singleLineItem {
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+.subscriberPhotoImage {
+	width: @IdentificationPanelPhotoSize;
+	height: @IdentificationPanelPhotoSize;
+	border-radius: @IdentificationPanelPhotoSize;
+	background-size: cover;
+	background-position-x: 50%;
+	background-position-y: 50%;
+	background-repeat: no-repeat;
+}
+.listItemContainer {
+	position: relative;
+	left: -@IdentificationPanelHoverOffset;
+	padding-left: @IdentificationPanelHoverOffset;
+	padding-top: 10px;
+}
+html[dir="rtl"] .ctiPanelMain {
+	.empty-search-result-container {
+		.image-container {
+			transform: translateX(50%);
+		}
+	}
+}
+.ctiPanelMain {
+	.no-connection-msg {
+		background-color: rgb(255, 234, 231);
+		box-sizing: border-box;
+		margin: 10px 0 5px 0;
+		padding: 10px;
+	}
+	.label-caption {
+		vertical-align: top;
+		.subscriberItem(107px, @color: @SubscriberDataCaptionColor, @margin: 0 8px 0 17px);
+	}
+	.call-duration-container {
+		.call-duration {
+			.subscriberItem(141px, @color: @CallDurationColor);
+		}
+	}
+	.control-no-label .base-edit:not(.base-edit-focus) {
+		border: 1px solid @EditBorderColor;
+	}
+	.ts-mask-container {
+		width: 16px;
+		right: 30px;
+		top: -2px;
+		left: auto;
+	}
+	.phone-number-edit {
+		border: 1px solid @EditBorderColor;
+		padding: 0 33px 0 10px;
+		.base-edit-input {
+			cursor: text !important;
+		}
+		.base-edit-right-icon .ts-mask-container .ts-mask-spinner-wrap {
+			padding-bottom: 20px;
+			left: -@PhoneNumberRightIconSize - @PhoneNumberRightIconMarginRight;
+		}
+	}
+	.buttons-panel {
+		width: 100%;
+		margin-top: 20px;
+		margin-bottom: 20px;
+		display: flex;
+		display: -ms-flexbox;
+		display: -webkit-flex;
+		flex-direction: row;
+		-ms-flex-direction: row;
+		-webkit-flex-direction: row;
+		justify-content: center;
+		-ms-flex-pack: center;
+		-webkit-justify-content: center;
+		align-items: center;
+		-webkit-align-items: center;
+
+		.t-btn-wrapper {
+			width: @ButtonShortSize;
+			height: @ButtonShortSize;
+			margin-right: @ButtonsInterval;
+			padding: 0;
+
+			.t-btn-image {
+				height: 100%;
+				width: 100%
+			}
+		}
+		.call-drop-button {
+			margin-right: 0;
+		}
+		.t-btn-style-call-button-short {
+			width: @ButtonShortSize;
+		}
+		.t-btn-style-call-button-middle {
+			width: @ButtonMiddleSize;
+			height: 32px;
+			flex-shrink: 0;
+		}
+		.t-btn-style-call-button-long {
+			width: @ButtonLongSize;
+		}
+		.ts-component-tooltip:hover:before {
+			left: 16px;
+			width: 17px;
+		}
+		.ts-component-tooltip:hover:after {
+			left: -7px;
+			width: 104px;
+		}
+	}
+	.dtmf-buttons-container {
+		position: absolute;
+		width: @DtmfContainerWidth;
+		height: @DtmfContainerHeight;
+		margin-top: 36px;
+		padding: 2px 3px 0 3px;
+		left: 75px;
+		border: @DtmfContainerBorder;
+		background-color: @DtmfContainerBackgroundColor;
+		z-index: 1;
+		.t-btn-text {
+			width: @ButtonShortSize;
+			height: @ButtonShortSize;
+			border: 1px solid;
+			border-radius: @ButtonShortSize;
+			padding: 0;
+			margin: 9px 0 0 9px;
+			background-color: #FFF;
+			font-size: 17px;
+			color: @SubscriberDataCaptionColor;
+			text-align: center;
+			line-height: 28px;
+		}
+		.dtmf-digits-label {
+			width: 100%;
+			margin: 8px 0 0 0;
+			color: @SubscriberDataCaptionColor;
+			font-size: 12px;
+			text-align: center;
+		}
+	}
+	.identification-panel {
+		position: relative;
+		display: flex;
+		display: -ms-flex;
+		display: -webkit-flex;
+		display: -moz-flex;
+
+		.identification-panel-left {
+			width: @IdentificationPanelPhotoSize;
+			float: left;
+		}
+
+		.identification-panel-right {
+			float: left;
+			width: 273px;
+
+			.call-duration-container {
+				[data-item-marker="CallDurationLabel"] {
+					font-size: 14px;
+				}
+
+				[data-item-marker="CallDuration"] {
+					font-weight: 600;
+					font-size: 14px;
+				}
+			}
+		}
+
+		.subsciber-menu-button {
+			.subscriberItem(257px, @color: @SubscriberNameHoverColor, @fontSize: 18px, @margin: 0 0 0 0);
+			height: @SubsciberMenuButtonSize;
+			padding: 4px 0 0 0;
+			margin-bottom: 8px;
+
+			.t-btn-text {
+				overflow: hidden;
+				width: 227px;
+				text-align: left;
+				.singleLineItem;
+			}
+			.t-btn-menuWrap {
+				width: @SubsciberMenuButtonSize;
+				height: @SubsciberMenuButtonSize;
+			}
+			.t-btn-menu {
+				width: @SubsciberMenuButtonSize;
+				height: @SubsciberMenuButtonSize;
+				right: 0;
+				top: 5px;
+			}
+		}
+
+		.subsciber-menu-button:hover {
+			text-decoration: underline;
+		}
+
+		#AccountTypeInfo,
+		#AccountCityInfo {
+			margin-bottom: 4px;
+		}
+
+		.subscriber-info {
+			color: @BaseColor;
+			.subscriberItem(141px);
+		}
+		.subscriber-photo {
+			padding: 0;
+			cursor: auto;
+			z-index: 2;
+			.t-btn-image {
+				.subscriberPhotoImage;
+			}
+		}
+		.subscriber-job-container, .account-city-container {
+			margin-top: 2px;
+		}
+		.t-label {
+			white-space: nowrap;
+			text-overflow: ellipsis;
+		}
+	}
+	.primary-call-info {
+		.subscriberItem(220px, @fontSize: 18px, @margin: 8px 8px 8px 17px);
+		text-align: left;
+		color: @BaseColor;
+	}
+	.ts-controlgroup {
+		margin-top: 15px;
+		overflow: visible;
+
+		#IdentificationItemsControlGroup {
+			.list-item-container {
+				.subscriber-data-container {
+					.subscriber-name {
+						font-weight: 600;
+						color: @BaseColor;
+					}
+				}
+
+				.subscriber-number-container {
+					.subscriber-number {
+						font-weight: 400;
+						color: @BaseColor;
+					}
+				}
+			}
+		}
+
+		.ts-controlgroup-container {
+			padding-bottom: 1.2em;
+		}
+	}
+	.identification-items-list-container {
+		display: flex;
+		flex-direction: column;
+		row-gap: 10px;
+
+		.list-item-container {
+			.listItemContainer;
+			.subscriber-data-container {
+				height: 37px;
+			}
+			.subscriber-number-container {
+				margin-top: 19px;
+				padding-bottom: 12px;
+			}
+			.subscriber-name {
+				.subscriberItem(intrinsic, @color: @SubscriberDataColor, @fontSize: 14px, @margin: 0px 8px 0px 11px);
+				.singleLineItem;
+				display: block;
+				padding-left: 10px;
+				width: auto;
+				width: -moz-max-content;
+				width: -webkit-max-content;
+				width: intrinsic;
+			}
+			.subscriber-number {
+				.subscriberItem(120px, @color: @SubscriberDataColor, @fontSize: 12px, @margin: 3px 5px 0px 26px);
+				.singleLineItem;
+				font-weight: bold;
+			}
+			.subscriber-communication-type-name {
+				.subscriberItem(140px, @color: @SubscriberDataCaptionColor, @fontSize: 12px, @margin: 3px 6px 0px 11px);
+				.singleLineItem;
+			}
+			.subscriber-data {
+				.subscriberItem(115px, @color: @SubscriberDataCaptionColor, @fontSize: 12px, @margin: 3px 6px 0px 11px);
+				.singleLineItem;
+			}
+			.subscriber-photo {
+				padding: 0;
+				cursor: auto;
+				z-index: 2;
+				float: left;
+				.t-btn-image {
+					.subscriberPhotoImage;
+				}
+			}
+		}
+		.list-item-container:last-child {
+			border: none;
+		}
+
+		.list-item-container {
+			.identified-subscriber-item-container {
+				padding: 15px 10px;
+			}
+
+			&:hover {
+				.identified-subscriber-item-container {
+					background-color: #F5F7FB;
+					border-radius: 8px;
+				}
+			}
+		}
+	}
+	.consult-identification-panel {
+		margin-top: @PanelsMarginTop;
+	}
+	.transferring-arrows {
+		position: absolute;
+		top: calc(@IdentificationPanelPhotoSize / 2);
+		left: 0;
+		height: calc(100% + @PanelsMarginTop);
+		padding: 0;
+		cursor: auto;
+		background-color: #edf1f8;
+		z-index: 1;
+		.t-btn-image {
+			width: @IdentificationPanelPhotoSize;
+			height: 100%;
+			background-repeat: no-repeat;
+			background-position: center calc(50% + @PanelsMarginTop / 2 - @IdentificationPanelPhotoSize / 4);
+		}
+	}
+	.communication-history-items-list-container {
+		.list-item-container {
+			position: relative;
+		}
+
+		> .list-item-container {
+			padding: @CommunicationHistoryPanelsInterval 0 @CommunicationHistoryPanelsInterval 0;
+			border-top: @HistoryItemBorder;
+
+			&:first-child {
+				border: none;
+			}
+
+			&:hover .call-button,
+			&:hover .create-link-button {
+				display: inline-block;
+			}
+
+			.call-button,
+			.create-link-button {
+				display: none;
+				position: absolute;
+				top: 14px;
+				height: 24px;
+			}
+		}
+
+		.call-button {
+			width: 24px;
+			right: 40px;
+		}
+
+		.create-link-button {
+			width: 26px;
+			right: 10px;
+		}
+
+		.photo {
+			float: left;
+			padding: 0;
+			cursor: auto;
+			margin-bottom: 10px;
+
+			.t-btn-image {
+				width: 40px;
+				height: 40px;
+				border-radius: @IdentificationPanelPhotoSize;
+				background-size: cover;
+				background-position-x: 50%;
+				background-position-y: 50%;
+				background-repeat: no-repeat;
+			}
+		}
+		.communication-history-name-container {
+			width: auto;
+			margin: 0 0 0 @CommunicationHistoryDataLeftMargin;
+			display: inline-block;
+			.communication-history-name {
+				.subscriberItem(auto, @color: @CommunicationHistoryItemNameColor, @fontSize: 14px, @margin: @CommunicationHistoryItemNameLinkVerticatOffset 0 0 0);
+				.singleLineItem;
+				max-width: 178px;
+			}
+		}
+		.data-container {
+			padding: 0 0 0 @IdentificationPanelPhotoSize;
+		}
+		.data {
+			.subscriberItem(100%, @color: @SubscriberDataCaptionColor, @fontSize: 14px, @margin: 0 0 -2px @CommunicationHistoryDataLeftMargin);
+			.singleLineItem;
+		}
+		.number-container {
+			padding: 0 32px 0 @IdentificationPanelPhotoSize;
+			.call-type {
+				padding: 0;
+				height: 16px;
+				width: 16px;
+				top: 5px;
+				margin-left: 12px;
+				cursor: auto;
+
+				.t-btn-image {
+					width: 16px;
+					height: 16px;
+				}
+			}
+
+			.call-date {
+				.subscriberItem(100%, @color: #999, @fontSize: 14px, @margin: 0 0 0 3px);
+				display: inline;
+			}
+			.call-number {
+				.subscriberItem(auto, @color: @CommunicationHistoryItemNameColor, @fontSize: 14px, @margin: 0 0 0 8px);
+				.singleLineItem;
+				line-height: 18px;
+				vertical-align: top;
+				cursor: pointer;
+			}
+		}
+		.entity-relation-container {
+			display: block;
+			margin-top: 20px;
+			.control-wrap {
+				float: none;
+				width: 82%;
+				.base-edit {
+					padding-left: @CommunicationHistoryDataLeftMargin - @EntityRelationEditIndent;
+				}
+			}
+			.entity-relation-button-wrapper {
+				width: @IdentificationPanelPhotoSize + @EntityRelationEditIndent;
+			}
+			.wrapper-with-centered-right-menu {
+				width: @IdentificationPanelPhotoSize + @EntityRelationEditIndent;
+			}
+			.t-btn-no-text-padding {
+				width: @IdentificationPanelPhotoSize + @EntityRelationEditIndent;
+			}
+		}
+		.entity-item-relation-container {
+			display: flex;
+			align-items: center;
+			justify-content: flex-start;
+			margin-bottom: 10px;
+			column-gap: 10px;
+
+			.t-btn-image {
+				width: 24px;
+				height: 24px;
+			}
+
+			.control-wrap {
+				.base-edit {
+					&-focus {
+						border-radius: 0;
+					}
+				}
+			}
+
+			&:nth-last-child(1) {
+				padding-right: 0px;
+
+				.control-wrap {
+					.base-edit {
+						margin-left: 0px;
+					}
+				}
+
+				.base-edit-right-icon {
+					display: block;
+				}
+			}
+		}
+
+		.communication-history-item-container {
+			min-height: @IdentificationPanelPhotoSize;
+		}
+	}
+	.search-result-items-list-container {
+		padding-top: 10px;
+		width: 328px;
+		>.list-item-container:hover {
+			background-color: @GreyBackgroundColor;
+		}
+		>.list-item-container:last-child {
+			border: none;
+		}
+		>.list-item-container {
+			.listItemContainer;
+		}
+		.subscriber-photo {
+			padding: 0;
+			cursor: auto;
+			z-index: 2;
+			float: left;
+			.t-btn-image {
+				.subscriberPhotoImage;
+			}
+		}
+		.subscriber-data-container {
+			height: 37px;
+		}
+		.subscriber-name {
+			.subscriberItem(intrinsic, @color: @SubscriberNameHoverColor, @fontSize: 14px, @margin: 0px 8px 0px 11px);
+			.singleLineItem;
+			cursor: pointer;
+			display: block;
+			padding-left: 10px;
+			width: 248px;
+		}
+		.subscriber-data {
+			.subscriberItem(115px, @color: @SubscriberDataCaptionColor, @fontSize: 12px, @margin: 3px 6px 0px 11px);
+			.singleLineItem;
+		}
+		.communications-control-group {
+			margin-top: 19px;
+			padding-bottom: 9px;
+
+			.list-item-container {
+				height: 25px;
+
+				.label-caption {
+					.subscriberItem(125px, @color: @SubscriberDataCaptionColor, @fontSize: 12px, @margin: 2px 9px 0px 0px);
+					.singleLineItem;
+				}
+
+				.communication-number {
+					.subscriberItem(143px, @color: @BaseColor, @fontSize: 12px, @margin: 2px 0px 0px 9px);
+					.singleLineItem;
+				}
+
+				.communication-call-button {
+					padding: 0;
+					margin: 0 10px 0 0;
+					float: right;
+					bottom: 3px;
+
+					.t-btn-image {
+						width: 24px;
+						height: 24px;
+					}
+				}
+			}
+		}
+	}
+
+	.empty-search-result-container {
+		font-family: @EmptySearchResultFontFamily;
+		margin-top: 250px;
+
+		.image-container {
+			transform: translateX(-50%);
+			left: 50%;
+			width: 135px;
+			height: 74px;
+		}
+
+		.description-label {
+			position: relative;
+			color: #252F40;
+			font-size: 14px;
+			line-height: 20px;
+			width: auto;
+			margin-top: 24px;
+			margin-left: 50px;
+			padding-left: 20px;
+			max-width: 250px;
+
+			&::before {
+				content: "";
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: 3px;
+				height: 40px;
+				background-color: #F9763D;
+				border-radius: 2px;
+			}
+		}
+	}
+
+	.empty-grid-message {
+		display: none;
+	}
+	.container-list-empty,
+	.academy-message-container {
+		font-family: @EmptySearchResultFontFamily;
+		font-size: @ContainerListEmptyFontSize;
+		color: @SubscriberDataCaptionColor;
+		margin-top: @PanelsMarginTop;
+		.empty-grid-message,
+		.academy-grid-message {
+			display: block;
+			font-family: @EmptySearchResultFontFamily;
+			font-size: @ContainerListEmptyFontSize;
+			color: @SubscriberDataCaptionColor;
+			width: 318px;
+			.image-container {
+				transform: translateX(-50%);
+				left: 50%;
+				width: 135px;
+				height: 139px;
+				margin-left: 0;
+				margin-right: 37px;
+			}
+			.title {
+				width: auto;
+				margin-top: 50px;
+				margin-left: 50px;
+				padding-left: 20px;
+				font-size: @ContainerListEmptyFontSize;
+				.t-label {
+					font-size: @ContainerListEmptyFontSize;
+				}
+			}
+			.description {
+				box-shadow: -2px 0 0 0 #F9763D;
+				border-left: 0;
+				width: auto;
+				margin-top: 30px;
+				margin-left: 50px;
+				padding-left: 20px;
+				font-size: @ContainerListEmptyDescriptionFontSize;
+				padding-top: @ContainerListEmptyDescriptionPadding;
+  				padding-bottom: @ContainerListEmptyDescriptionPadding;
+			}
+		}
+	}
+	.academy-message-container {
+		.academy-grid-message {
+			.description {
+				border-left: 2px solid #F9763D;
+				margin: 0 auto auto 50px;
+				padding: 15px 50px 15px 20px;
+			}
+			a {
+				cursor: pointer;
+				color: #252F40;
+			}
+		}
+	}
+	.ctiPanelVideo {
+		video {
+			width: 100%;
+			margin-bottom: 10px;
+		}
+		video:not([class|="useVideo"]) {
+			display: none !important;
+		}
+	}
+	.video-hidden {
+		display: none;
+	}
+}
+.demo-no-connection-message-link {
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+	display: inline;
+}
+
+#PhoneNumber-wrap {
+	padding: 8px 10px;
+	border: 1px solid #D8DBE2;
+  border-radius: 8px;
+  height: 40px;
+
+	#PhoneNumber-right-icon-wrapper {
+		top: 9px;
+		right: 5px;
+	}
+
+  &.base-edit-focus {
+    border-radius: 8px;
+  }
+
+	#PhoneNumber-right-icon {
+		width: 24px;
+		height: 24px;
+	}
+}
+
+#NoConnectionMessageLabel {
+	background: #FFE9E9;
+	border-radius: 8px;
+}
+
+#CommunicationHistoryContainerList {
+	.empty-grid-message {
+		padding-top: 0;
+	}
+}
+
+#CtiPanelModule_WrapContainer {
+	#CtiPanelButtonsPanelContainer {
+		.call-drop-button {
+			top: 0;
+			margin-left: auto
+		}
+	}
+
+	[data-item-marker="ButtonsPanelWrapper"] {
+		.buttons-panel {
+			[data-tag="DropButton"] {
+				height: 40px;
+				top: -3px;
+				right: 0;
+
+				&.t-btn-style-call-button-long {
+					right: 0;
+				}
+
+				.t-btn-image {
+					max-height: 32px;
+				}
+			}
+		}
+	}
+
+	[data-item-marker="PhoneNumber"] {
+		.base-edit-right-icon-wrapper {
+			top: 2px;
+			right: 6px;
+		}
+	}
+
+	[data-item-marker="CommunicationHistoryContainerList"] {
+		.data-container {
+			.communication-history-name-container {
+				.communication-history-name {
+					font-weight: 600;
+					letter-spacing: -0.02em;
+					line-height: 20px;
+				}
+			}
+
+			[data-item-marker="CreateLinkButton"] {
+				.t-btn-image {
+					display: none;
+				}
+			}
+	
+			[data-item-marker="CallButton"] {
+				.t-btn-image {
+					width: 24px;
+					height: 24px;
+				}
+			}
+
+			.data {
+				line-height: 20px;
+				letter-spacing: -0.02em;
+			}
+		}
+
+		.number-container {
+			display: flex;
+			justify-content: flex-start;
+			align-items: center;
+			padding: 0;
+			margin: 4px 0 0 0;
+
+			[data-item-marker="CallType"] {
+				margin-left: 14px;
+				top: 1px;
+			}
+
+			.call-date {
+				width: max-content;
+				padding-left: 5px;
+				padding-right: 5px;
+				display: flex;
+				justify-content: center;
+			}
+
+			.call-number {
+				margin-left: 0;
+				margin-top: 2px;
+			}
+		}
+
+		[data-item-marker="CallConnections"] {
+			.entity-item-relation-container {
+				.t-btn-wrapper {
+					.t-btn-menu {
+						left: 35px;
+					}
+				}
+
+				.control-wrap {
+					.base-edit-with-right-icon {
+						&:hover,
+						&.base-edit-focus {
+							border: none;
+							border-bottom: 1px solid #D8DBE2;
+						}
+					}
+				}
+			}
+		}
+
+		.entity-linked-icons-container {
+			padding-right: 30px;
+			margin-top: 26px;
+			margin-left: 55px;
+
+			.connection-caption-label {
+				flex: 50%;
+				font-size: 14px;
+			}
+
+			.t-btn-wrapper {
+				margin-right: 6px;
+
+				&:nth-last-child(1) {
+					margin-right: 0;
+				}
+
+				.t-btn-image {
+					width: 24px;
+					height: 24px;
+					background-size: 24px;
+				}
+			}
+		}
+	}
+}

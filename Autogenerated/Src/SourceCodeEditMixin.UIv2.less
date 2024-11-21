@@ -1,0 +1,76 @@
+﻿.source-code-edit-wrap {
+	position: relative;
+}
+
+.source-code-edit-cover {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	filter: alpha(opacity=0);
+	z-index: 10000;
+	background-color: #737CA1;
+	opacity: 0.3;
+}
+
+.source-code-edit-content {
+	border-top: 3px solid;
+	-webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.25);
+	box-shadow: 0 0 8px rgba(0, 0, 0, 0.25);
+	border-top-color: transparent;
+	position: fixed;
+	padding: 24px 27px 0px 30px;
+	background-color: #FFFFFF;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 80%;
+	margin: auto;
+	overflow-y: auto;
+	overflow-x: hidden;
+	z-index: 10000;
+}
+
+.source-code-edit-header {
+	padding-bottom: 48px;
+
+	.t-label {
+		font-family: "Golos Regular";
+		color: #252F40;
+		font-size: 20px;
+		letter-spacing: -0.02em;line-height: 28px;
+	}
+}
+
+.source-code-edit-el {
+	height: 416px !important;
+	.source-code-edit {
+		padding-left: 0;
+
+		.ace_invalid {
+			color: #999999;
+		}
+	}
+}
+
+.source-code-edit-actions {
+	padding-top: 1.5em;
+	display: flex;
+  justify-content: flex-end;
+	.t-btn-wrapper:first-of-type {
+		margin-right: 1em;
+	}
+
+	.t-btn-style-default, .t-btn-wrapper.t-btn-text.t-btn-style-default:hover {
+		color: #F9763D;
+		background-color: #fff;
+		border: 1px solid #F9763D;
+		border-radius: 8px;
+		min-height: 40px;
+		padding: 8px 20px;
+		font-size: 1.6em;
+		text-transform: none;
+	}
+}

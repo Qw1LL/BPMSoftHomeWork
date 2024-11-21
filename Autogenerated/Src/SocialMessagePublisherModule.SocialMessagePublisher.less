@@ -1,0 +1,94 @@
+﻿.social-message-module {
+	padding: 14px;
+	.header-container-margin-bottom {
+		margin-bottom: 14px;
+	}
+	.publisherBottomContainer {
+		height: 30px;
+	}
+	.postMessage[data-item-marker="SocialMessagePublisherEdit"] .html-edit-textarea {
+		border-color: #fbd271;
+		.cke_reset {
+			height: 100px !important;
+		}
+	}
+	.body-container {
+		background-color: #fffefa
+	}
+	.cke_editable {
+		font-size: 14px !important;
+		margin: 10px !important;
+	}
+}
+.social-message-content {
+	height: 20px;
+}
+
+.listview[data-item-marker='SocialMessagePublisherEdit']{
+	min-width: 300px !important;
+	max-width: 600px;
+
+	ul {
+		padding: 2px;
+	}
+
+	li {
+		padding-left: 0;
+		padding-right: 0;
+		border-width: 2px;
+
+		&.listview-selected {
+			background-color: #f4f7f8;
+			border-color: #ffffff;
+		}
+
+		img {
+			width: 32px;
+			height: 32px;
+			border-radius: 50%;
+		}
+	}
+
+	.listview-item {
+		height: 42px;
+
+		display: flex;
+		flex-direction: row;
+
+		&:hover {
+			background-color: #f4f7f8;
+		}
+
+		.listview-item-image {
+			margin-left: 16px;
+			margin-top: 5px;
+			flex-shrink: 0;
+		}
+
+		label:hover {
+			cursor: pointer;
+		}
+
+		.listview-item-info {
+			display:flex;
+			flex-direction: column;
+			flex-wrap: wrap;
+			justify-content: center;
+			display: inline-block;
+			margin-left: 12px;
+			vertical-align: middle;
+			height: 42px;
+			line-height: 40px;
+
+			.listview-item-secondaryInfo {
+				color: #999999;
+				display: block;
+				line-height: 16px;
+			}
+		}
+	}
+}
+
+#SocialMessageModule {
+	padding-bottom: 25px;
+}
