@@ -1132,18 +1132,6 @@
 			}
 		}
 
-		/// <summary>
-		/// Полнота наполнения данными.
-		/// </summary>
-		public int Completeness {
-			get {
-				return GetTypedColumnValue<int>("Completeness");
-			}
-			set {
-				SetColumnValue("Completeness", value);
-			}
-		}
-
 		/// <exclude/>
 		public Guid PriceListId {
 			get {
@@ -1223,6 +1211,77 @@
 			}
 			set {
 				SetColumnValue("AUM", value);
+			}
+		}
+
+		/// <summary>
+		/// Полнота наполнения данными.
+		/// </summary>
+		public int Completeness {
+			get {
+				return GetTypedColumnValue<int>("Completeness");
+			}
+			set {
+				SetColumnValue("Completeness", value);
+			}
+		}
+
+		/// <summary>
+		/// Номер карты.
+		/// </summary>
+		public string RtxCardNumber {
+			get {
+				return GetTypedColumnValue<string>("RtxCardNumber");
+			}
+			set {
+				SetColumnValue("RtxCardNumber", value);
+			}
+		}
+
+		/// <exclude/>
+		public Guid RtxBankId {
+			get {
+				return GetTypedColumnValue<Guid>("RtxBankId");
+			}
+			set {
+				SetColumnValue("RtxBankId", value);
+				_rtxBank = null;
+			}
+		}
+
+		/// <exclude/>
+		public string RtxBankName {
+			get {
+				return GetTypedColumnValue<string>("RtxBankName");
+			}
+			set {
+				SetColumnValue("RtxBankName", value);
+				if (_rtxBank != null) {
+					_rtxBank.Name = value;
+				}
+			}
+		}
+
+		private RtxBank _rtxBank;
+		/// <summary>
+		/// Банк.
+		/// </summary>
+		public RtxBank RtxBank {
+			get {
+				return _rtxBank ??
+					(_rtxBank = new RtxBank(LookupColumnEntities.GetEntity("RtxBank")));
+			}
+		}
+
+		/// <summary>
+		/// Строка реквизитов.
+		/// </summary>
+		public string RtxClientDetails {
+			get {
+				return GetTypedColumnValue<string>("RtxClientDetails");
+			}
+			set {
+				SetColumnValue("RtxClientDetails", value);
 			}
 		}
 
