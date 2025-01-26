@@ -27,23 +27,23 @@
 	using System.IO;
 	using System.Linq;
 
-	#region Class: AccountSchema
+	#region Class: Account_ProductCatalogue_BPMSoftSchema
 
 	/// <exclude/>
-	public class AccountSchema : BPMSoft.Configuration.Account_SSP_BPMSoftSchema
+	public class Account_ProductCatalogue_BPMSoftSchema : BPMSoft.Configuration.Account_SSP_BPMSoftSchema
 	{
 
 		#region Constructors: Public
 
-		public AccountSchema(EntitySchemaManager entitySchemaManager)
+		public Account_ProductCatalogue_BPMSoftSchema(EntitySchemaManager entitySchemaManager)
 			: base(entitySchemaManager) {
 		}
 
-		public AccountSchema(AccountSchema source, bool isShallowClone)
+		public Account_ProductCatalogue_BPMSoftSchema(Account_ProductCatalogue_BPMSoftSchema source, bool isShallowClone)
 			: base(source, isShallowClone) {
 		}
 
-		public AccountSchema(AccountSchema source)
+		public Account_ProductCatalogue_BPMSoftSchema(Account_ProductCatalogue_BPMSoftSchema source)
 			: base(source) {
 		}
 
@@ -54,7 +54,7 @@
 		protected override void InitializeProperties() {
 			base.InitializeProperties();
 			RealUId = new Guid("8c66b865-7ff1-489f-9224-abf8776f841f");
-			Name = "Account";
+			Name = "Account_ProductCatalogue_BPMSoft";
 			ParentSchemaUId = new Guid("25d7c1ab-1de0-4501-b402-02e0e5a72d6e");
 			ExtendParent = true;
 			CreatedInPackageId = new Guid("d4cfcde0-bd2a-4719-a4df-63ed38689467");
@@ -92,7 +92,7 @@
 		#region Methods: Public
 
 		public override Entity CreateEntity(UserConnection userConnection) {
-			return new Account(userConnection) {Schema = this};
+			return new Account_ProductCatalogue_BPMSoft(userConnection) {Schema = this};
 		}
 
 		public override EmbeddedProcess CreateEventsProcess(UserConnection userConnection) {
@@ -100,11 +100,11 @@
 		}
 
 		public override object Clone() {
-			return new AccountSchema(this);
+			return new Account_ProductCatalogue_BPMSoftSchema(this);
 		}
 
 		public override EntitySchema CloneShallow() {
-			return new AccountSchema(this, true);
+			return new Account_ProductCatalogue_BPMSoftSchema(this, true);
 		}
 
 		public override void GetParentRealUIds(Collection<Guid> realUIds) {
@@ -118,22 +118,22 @@
 
 	#endregion
 
-	#region Class: Account
+	#region Class: Account_ProductCatalogue_BPMSoft
 
 	/// <summary>
 	/// Контрагент.
 	/// </summary>
-	public class Account : BPMSoft.Configuration.Account_SSP_BPMSoft
+	public class Account_ProductCatalogue_BPMSoft : BPMSoft.Configuration.Account_SSP_BPMSoft
 	{
 
 		#region Constructors: Public
 
-		public Account(UserConnection userConnection)
+		public Account_ProductCatalogue_BPMSoft(UserConnection userConnection)
 			: base(userConnection) {
-			SchemaName = "Account";
+			SchemaName = "Account_ProductCatalogue_BPMSoft";
 		}
 
-		public Account(Account source)
+		public Account_ProductCatalogue_BPMSoft(Account_ProductCatalogue_BPMSoft source)
 			: base(source) {
 		}
 
@@ -191,10 +191,10 @@
 		#region Methods: Protected
 
 		protected override void InitializeThrowEvents() {
-			Deleted += (s, e) => ThrowEvent("AccountDeleted", e);
-			Inserting += (s, e) => ThrowEvent("AccountInserting", e);
-			Saving += (s, e) => ThrowEvent("AccountSaving", e);
-			Validating += (s, e) => ThrowEvent("AccountValidating", e);
+			Deleted += (s, e) => ThrowEvent("Account_ProductCatalogue_BPMSoftDeleted", e);
+			Inserting += (s, e) => ThrowEvent("Account_ProductCatalogue_BPMSoftInserting", e);
+			Saving += (s, e) => ThrowEvent("Account_ProductCatalogue_BPMSoftSaving", e);
+			Validating += (s, e) => ThrowEvent("Account_ProductCatalogue_BPMSoftValidating", e);
 			base.InitializeThrowEvents();
 		}
 
@@ -203,7 +203,7 @@
 		#region Methods: Public
 
 		public override object Clone() {
-			return new Account(this);
+			return new Account_ProductCatalogue_BPMSoft(this);
 		}
 
 		#endregion
@@ -215,7 +215,7 @@
 	#region Class: Account_ProductCatalogueEventsProcess
 
 	/// <exclude/>
-	public partial class Account_ProductCatalogueEventsProcess<TEntity> : BPMSoft.Configuration.Account_SSPEventsProcess<TEntity> where TEntity : Account
+	public partial class Account_ProductCatalogueEventsProcess<TEntity> : BPMSoft.Configuration.Account_SSPEventsProcess<TEntity> where TEntity : Account_ProductCatalogue_BPMSoft
 	{
 
 		public Account_ProductCatalogueEventsProcess(UserConnection userConnection)
@@ -296,7 +296,7 @@
 	#region Class: Account_ProductCatalogueEventsProcess
 
 	/// <exclude/>
-	public class Account_ProductCatalogueEventsProcess : Account_ProductCatalogueEventsProcess<Account>
+	public class Account_ProductCatalogueEventsProcess : Account_ProductCatalogueEventsProcess<Account_ProductCatalogue_BPMSoft>
 	{
 
 		public Account_ProductCatalogueEventsProcess(UserConnection userConnection)
@@ -315,21 +315,6 @@
 		#region Methods: Public
 
 		#endregion
-
-	}
-
-	#endregion
-
-
-	#region Class: AccountEventsProcess
-
-	/// <exclude/>
-	public class AccountEventsProcess : Account_ProductCatalogueEventsProcess
-	{
-
-		public AccountEventsProcess(UserConnection userConnection)
-			: base(userConnection) {
-		}
 
 	}
 
