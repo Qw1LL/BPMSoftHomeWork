@@ -659,6 +659,41 @@
 			}
 		}
 
+		/// <exclude/>
+		public Guid OpportunityId {
+			get {
+				return GetTypedColumnValue<Guid>("OpportunityId");
+			}
+			set {
+				SetColumnValue("OpportunityId", value);
+				_opportunity = null;
+			}
+		}
+
+		/// <exclude/>
+		public string OpportunityTitle {
+			get {
+				return GetTypedColumnValue<string>("OpportunityTitle");
+			}
+			set {
+				SetColumnValue("OpportunityTitle", value);
+				if (_opportunity != null) {
+					_opportunity.Title = value;
+				}
+			}
+		}
+
+		private Opportunity _opportunity;
+		/// <summary>
+		/// Продажа.
+		/// </summary>
+		public Opportunity Opportunity {
+			get {
+				return _opportunity ??
+					(_opportunity = new Opportunity(LookupColumnEntities.GetEntity("Opportunity")));
+			}
+		}
+
 		/// <summary>
 		/// От кого.
 		/// </summary>
@@ -680,41 +715,6 @@
 			}
 			set {
 				SetColumnValue("Recepient", value);
-			}
-		}
-
-		/// <exclude/>
-		public Guid InvoiceId {
-			get {
-				return GetTypedColumnValue<Guid>("InvoiceId");
-			}
-			set {
-				SetColumnValue("InvoiceId", value);
-				_invoice = null;
-			}
-		}
-
-		/// <exclude/>
-		public string InvoiceNumber {
-			get {
-				return GetTypedColumnValue<string>("InvoiceNumber");
-			}
-			set {
-				SetColumnValue("InvoiceNumber", value);
-				if (_invoice != null) {
-					_invoice.Number = value;
-				}
-			}
-		}
-
-		private Invoice _invoice;
-		/// <summary>
-		/// Счет.
-		/// </summary>
-		public Invoice Invoice {
-			get {
-				return _invoice ??
-					(_invoice = new Invoice(LookupColumnEntities.GetEntity("Invoice")));
 			}
 		}
 
@@ -1031,37 +1031,119 @@
 		}
 
 		/// <exclude/>
-		public Guid EventId {
+		public Guid ContractId {
 			get {
-				return GetTypedColumnValue<Guid>("EventId");
+				return GetTypedColumnValue<Guid>("ContractId");
 			}
 			set {
-				SetColumnValue("EventId", value);
-				_event = null;
+				SetColumnValue("ContractId", value);
+				_contract = null;
 			}
 		}
 
 		/// <exclude/>
-		public string EventName {
+		public string ContractNumber {
 			get {
-				return GetTypedColumnValue<string>("EventName");
+				return GetTypedColumnValue<string>("ContractNumber");
 			}
 			set {
-				SetColumnValue("EventName", value);
-				if (_event != null) {
-					_event.Name = value;
+				SetColumnValue("ContractNumber", value);
+				if (_contract != null) {
+					_contract.Number = value;
 				}
 			}
 		}
 
-		private Event _event;
+		private Contract _contract;
 		/// <summary>
-		/// Мероприятие.
+		/// Договор.
 		/// </summary>
-		public Event Event {
+		public Contract Contract {
 			get {
-				return _event ??
-					(_event = new Event(LookupColumnEntities.GetEntity("Event")));
+				return _contract ??
+					(_contract = new Contract(LookupColumnEntities.GetEntity("Contract")));
+			}
+		}
+
+		/// <exclude/>
+		public Guid InvoiceId {
+			get {
+				return GetTypedColumnValue<Guid>("InvoiceId");
+			}
+			set {
+				SetColumnValue("InvoiceId", value);
+				_invoice = null;
+			}
+		}
+
+		/// <exclude/>
+		public string InvoiceNumber {
+			get {
+				return GetTypedColumnValue<string>("InvoiceNumber");
+			}
+			set {
+				SetColumnValue("InvoiceNumber", value);
+				if (_invoice != null) {
+					_invoice.Number = value;
+				}
+			}
+		}
+
+		private Invoice _invoice;
+		/// <summary>
+		/// Счет.
+		/// </summary>
+		public Invoice Invoice {
+			get {
+				return _invoice ??
+					(_invoice = new Invoice(LookupColumnEntities.GetEntity("Invoice")));
+			}
+		}
+
+		/// <exclude/>
+		public Guid ProjectId {
+			get {
+				return GetTypedColumnValue<Guid>("ProjectId");
+			}
+			set {
+				SetColumnValue("ProjectId", value);
+				_project = null;
+			}
+		}
+
+		/// <exclude/>
+		public string ProjectName {
+			get {
+				return GetTypedColumnValue<string>("ProjectName");
+			}
+			set {
+				SetColumnValue("ProjectName", value);
+				if (_project != null) {
+					_project.Name = value;
+				}
+			}
+		}
+
+		private Project _project;
+		/// <summary>
+		/// Проект.
+		/// </summary>
+		public Project Project {
+			get {
+				return _project ??
+					(_project = new Project(LookupColumnEntities.GetEntity("Project")));
+			}
+		}
+
+		/// <summary>
+		/// Проект.
+		/// </summary>
+		public string FullProjectName {
+			get {
+				return GetTypedColumnValue<string>("FullProjectName");
+			}
+			set {
+				SetColumnValue("FullProjectName", value);
 			}
 		}
 
@@ -1097,6 +1179,41 @@
 			get {
 				return _order ??
 					(_order = new Order(LookupColumnEntities.GetEntity("Order")));
+			}
+		}
+
+		/// <exclude/>
+		public Guid EventId {
+			get {
+				return GetTypedColumnValue<Guid>("EventId");
+			}
+			set {
+				SetColumnValue("EventId", value);
+				_event = null;
+			}
+		}
+
+		/// <exclude/>
+		public string EventName {
+			get {
+				return GetTypedColumnValue<string>("EventName");
+			}
+			set {
+				SetColumnValue("EventName", value);
+				if (_event != null) {
+					_event.Name = value;
+				}
+			}
+		}
+
+		private Event _event;
+		/// <summary>
+		/// Мероприятие.
+		/// </summary>
+		public Event Event {
+			get {
+				return _event ??
+					(_event = new Event(LookupColumnEntities.GetEntity("Event")));
 			}
 		}
 
@@ -1416,6 +1533,76 @@
 			}
 		}
 
+		/// <exclude/>
+		public Guid DocumentId {
+			get {
+				return GetTypedColumnValue<Guid>("DocumentId");
+			}
+			set {
+				SetColumnValue("DocumentId", value);
+				_document = null;
+			}
+		}
+
+		/// <exclude/>
+		public string DocumentNumber {
+			get {
+				return GetTypedColumnValue<string>("DocumentNumber");
+			}
+			set {
+				SetColumnValue("DocumentNumber", value);
+				if (_document != null) {
+					_document.Number = value;
+				}
+			}
+		}
+
+		private Document _document;
+		/// <summary>
+		/// Документ.
+		/// </summary>
+		public Document Document {
+			get {
+				return _document ??
+					(_document = new Document(LookupColumnEntities.GetEntity("Document")));
+			}
+		}
+
+		/// <exclude/>
+		public Guid QueueItemId {
+			get {
+				return GetTypedColumnValue<Guid>("QueueItemId");
+			}
+			set {
+				SetColumnValue("QueueItemId", value);
+				_queueItem = null;
+			}
+		}
+
+		/// <exclude/>
+		public string QueueItemCaption {
+			get {
+				return GetTypedColumnValue<string>("QueueItemCaption");
+			}
+			set {
+				SetColumnValue("QueueItemCaption", value);
+				if (_queueItem != null) {
+					_queueItem.Caption = value;
+				}
+			}
+		}
+
+		private VwQueueItem _queueItem;
+		/// <summary>
+		/// Элемент очереди.
+		/// </summary>
+		public VwQueueItem QueueItem {
+			get {
+				return _queueItem ??
+					(_queueItem = new VwQueueItem(LookupColumnEntities.GetEntity("QueueItem")));
+			}
+		}
+
 		/// <summary>
 		/// Свойства заголовка.
 		/// </summary>
@@ -1534,158 +1721,6 @@
 			}
 		}
 
-		/// <exclude/>
-		public Guid OpportunityId {
-			get {
-				return GetTypedColumnValue<Guid>("OpportunityId");
-			}
-			set {
-				SetColumnValue("OpportunityId", value);
-				_opportunity = null;
-			}
-		}
-
-		/// <exclude/>
-		public string OpportunityTitle {
-			get {
-				return GetTypedColumnValue<string>("OpportunityTitle");
-			}
-			set {
-				SetColumnValue("OpportunityTitle", value);
-				if (_opportunity != null) {
-					_opportunity.Title = value;
-				}
-			}
-		}
-
-		private Opportunity _opportunity;
-		/// <summary>
-		/// Продажа.
-		/// </summary>
-		public Opportunity Opportunity {
-			get {
-				return _opportunity ??
-					(_opportunity = new Opportunity(LookupColumnEntities.GetEntity("Opportunity")));
-			}
-		}
-
-		/// <exclude/>
-		public Guid ContractId {
-			get {
-				return GetTypedColumnValue<Guid>("ContractId");
-			}
-			set {
-				SetColumnValue("ContractId", value);
-				_contract = null;
-			}
-		}
-
-		/// <exclude/>
-		public string ContractNumber {
-			get {
-				return GetTypedColumnValue<string>("ContractNumber");
-			}
-			set {
-				SetColumnValue("ContractNumber", value);
-				if (_contract != null) {
-					_contract.Number = value;
-				}
-			}
-		}
-
-		private Contract _contract;
-		/// <summary>
-		/// Договор.
-		/// </summary>
-		public Contract Contract {
-			get {
-				return _contract ??
-					(_contract = new Contract(LookupColumnEntities.GetEntity("Contract")));
-			}
-		}
-
-		/// <exclude/>
-		public Guid ProjectId {
-			get {
-				return GetTypedColumnValue<Guid>("ProjectId");
-			}
-			set {
-				SetColumnValue("ProjectId", value);
-				_project = null;
-			}
-		}
-
-		/// <exclude/>
-		public string ProjectName {
-			get {
-				return GetTypedColumnValue<string>("ProjectName");
-			}
-			set {
-				SetColumnValue("ProjectName", value);
-				if (_project != null) {
-					_project.Name = value;
-				}
-			}
-		}
-
-		private Project _project;
-		/// <summary>
-		/// Проект.
-		/// </summary>
-		public Project Project {
-			get {
-				return _project ??
-					(_project = new Project(LookupColumnEntities.GetEntity("Project")));
-			}
-		}
-
-		/// <summary>
-		/// Проект.
-		/// </summary>
-		public string FullProjectName {
-			get {
-				return GetTypedColumnValue<string>("FullProjectName");
-			}
-			set {
-				SetColumnValue("FullProjectName", value);
-			}
-		}
-
-		/// <exclude/>
-		public Guid DocumentId {
-			get {
-				return GetTypedColumnValue<Guid>("DocumentId");
-			}
-			set {
-				SetColumnValue("DocumentId", value);
-				_document = null;
-			}
-		}
-
-		/// <exclude/>
-		public string DocumentNumber {
-			get {
-				return GetTypedColumnValue<string>("DocumentNumber");
-			}
-			set {
-				SetColumnValue("DocumentNumber", value);
-				if (_document != null) {
-					_document.Number = value;
-				}
-			}
-		}
-
-		private Document _document;
-		/// <summary>
-		/// Документ.
-		/// </summary>
-		public Document Document {
-			get {
-				return _document ??
-					(_document = new Document(LookupColumnEntities.GetEntity("Document")));
-			}
-		}
-
 		/// <summary>
 		/// Предпросмотр.
 		/// </summary>
@@ -1734,41 +1769,6 @@
 		}
 
 		/// <exclude/>
-		public Guid QueueItemId {
-			get {
-				return GetTypedColumnValue<Guid>("QueueItemId");
-			}
-			set {
-				SetColumnValue("QueueItemId", value);
-				_queueItem = null;
-			}
-		}
-
-		/// <exclude/>
-		public string QueueItemCaption {
-			get {
-				return GetTypedColumnValue<string>("QueueItemCaption");
-			}
-			set {
-				SetColumnValue("QueueItemCaption", value);
-				if (_queueItem != null) {
-					_queueItem.Caption = value;
-				}
-			}
-		}
-
-		private VwQueueItem _queueItem;
-		/// <summary>
-		/// Элемент очереди.
-		/// </summary>
-		public VwQueueItem QueueItem {
-			get {
-				return _queueItem ??
-					(_queueItem = new VwQueueItem(LookupColumnEntities.GetEntity("QueueItem")));
-			}
-		}
-
-		/// <exclude/>
 		public Guid OwnerRoleId {
 			get {
 				return GetTypedColumnValue<Guid>("OwnerRoleId");
@@ -1812,6 +1812,41 @@
 			}
 			set {
 				SetColumnValue("RemoteCreatedOn", value);
+			}
+		}
+
+		/// <exclude/>
+		public Guid UsrTransportRequestId {
+			get {
+				return GetTypedColumnValue<Guid>("UsrTransportRequestId");
+			}
+			set {
+				SetColumnValue("UsrTransportRequestId", value);
+				_usrTransportRequest = null;
+			}
+		}
+
+		/// <exclude/>
+		public string UsrTransportRequestUsrName {
+			get {
+				return GetTypedColumnValue<string>("UsrTransportRequestUsrName");
+			}
+			set {
+				SetColumnValue("UsrTransportRequestUsrName", value);
+				if (_usrTransportRequest != null) {
+					_usrTransportRequest.UsrName = value;
+				}
+			}
+		}
+
+		private UsrTransportRequests _usrTransportRequest;
+		/// <summary>
+		/// Заявка на транспорт.
+		/// </summary>
+		public UsrTransportRequests UsrTransportRequest {
+			get {
+				return _usrTransportRequest ??
+					(_usrTransportRequest = new UsrTransportRequests(LookupColumnEntities.GetEntity("UsrTransportRequest")));
 			}
 		}
 

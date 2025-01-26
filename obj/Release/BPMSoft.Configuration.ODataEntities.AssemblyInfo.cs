@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BPMSoft.Configuration.ODataEntities")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.4.0.3084")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.4.0.3084")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.4.0.3084+ef27098f329d3b2dce5449c02f94d346f1f94f83")]
 [assembly: System.Reflection.AssemblyProductAttribute("BPMSoft.Configuration.ODataEntities")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BPMSoft.Configuration.ODataEntities")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.4.0.3084")]

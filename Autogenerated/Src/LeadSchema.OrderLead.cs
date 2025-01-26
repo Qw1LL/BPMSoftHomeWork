@@ -29,7 +29,7 @@
 	#region Class: Lead_OrderLead_BPMSoftSchema
 
 	/// <exclude/>
-	public class Lead_OrderLead_BPMSoftSchema : BPMSoft.Configuration.Lead_MarketingCampaign_BPMSoftSchema
+	public class Lead_OrderLead_BPMSoftSchema : BPMSoft.Configuration.Lead_PRMBase_BPMSoftSchema
 	{
 
 		#region Constructors: Public
@@ -154,7 +154,7 @@
 	/// <summary>
 	/// Лид.
 	/// </summary>
-	public class Lead_OrderLead_BPMSoft : BPMSoft.Configuration.Lead_MarketingCampaign_BPMSoft
+	public class Lead_OrderLead_BPMSoft : BPMSoft.Configuration.Lead_PRMBase_BPMSoft
 	{
 
 		#region Constructors: Public
@@ -243,7 +243,7 @@
 	#region Class: Lead_OrderLeadEventsProcess
 
 	/// <exclude/>
-	public partial class Lead_OrderLeadEventsProcess<TEntity> : BPMSoft.Configuration.Lead_MarketingCampaignEventsProcess<TEntity> where TEntity : Lead_OrderLead_BPMSoft
+	public partial class Lead_OrderLeadEventsProcess<TEntity> : BPMSoft.Configuration.Lead_PRMBaseEventsProcess<TEntity> where TEntity : Lead_OrderLead_BPMSoft
 	{
 
 		public Lead_OrderLeadEventsProcess(UserConnection userConnection)

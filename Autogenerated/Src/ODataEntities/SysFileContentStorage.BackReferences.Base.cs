@@ -220,6 +220,11 @@
 			set;
 		}
 
+		public IEnumerable<RtxBankFile> RtxBankFileCollectionBySysFileStorage {
+			get;
+			set;
+		}
+
 		public IEnumerable<ServiceItemFile> ServiceItemFileCollectionBySysFileStorage {
 			get;
 			set;
@@ -236,6 +241,11 @@
 		}
 
 		public IEnumerable<SysProcessFile> SysProcessFileCollectionBySysFileStorage {
+			get;
+			set;
+		}
+
+		public IEnumerable<UsrdderFile> UsrdderFileCollectionBySysFileStorage {
 			get;
 			set;
 		}

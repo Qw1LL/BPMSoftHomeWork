@@ -30,7 +30,7 @@
 	#region Class: Lead_SalesEnterprise_BPMSoftSchema
 
 	/// <exclude/>
-	public class Lead_SalesEnterprise_BPMSoftSchema : BPMSoft.Configuration.Lead_EventTracking_BPMSoftSchema
+	public class Lead_SalesEnterprise_BPMSoftSchema : BPMSoft.Configuration.Lead_SocialLeadGen_BPMSoftSchema
 	{
 
 		#region Constructors: Public
@@ -140,7 +140,7 @@
 	/// <summary>
 	/// Лид.
 	/// </summary>
-	public class Lead_SalesEnterprise_BPMSoft : BPMSoft.Configuration.Lead_EventTracking_BPMSoft
+	public class Lead_SalesEnterprise_BPMSoft : BPMSoft.Configuration.Lead_SocialLeadGen_BPMSoft
 	{
 
 		#region Constructors: Public
@@ -190,7 +190,7 @@
 	#region Class: Lead_SalesEnterpriseEventsProcess
 
 	/// <exclude/>
-	public partial class Lead_SalesEnterpriseEventsProcess<TEntity> : BPMSoft.Configuration.Lead_EventTrackingEventsProcess<TEntity> where TEntity : Lead_SalesEnterprise_BPMSoft
+	public partial class Lead_SalesEnterpriseEventsProcess<TEntity> : BPMSoft.Configuration.Lead_SocialLeadGenEventsProcess<TEntity> where TEntity : Lead_SalesEnterprise_BPMSoft
 	{
 
 		public Lead_SalesEnterpriseEventsProcess(UserConnection userConnection)

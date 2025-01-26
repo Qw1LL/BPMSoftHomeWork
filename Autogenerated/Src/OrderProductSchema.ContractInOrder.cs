@@ -26,23 +26,23 @@
 	using System.IO;
 	using System.Linq;
 
-	#region Class: OrderProductSchema
+	#region Class: OrderProduct_ContractInOrder_BPMSoftSchema
 
 	/// <exclude/>
-	public class OrderProductSchema : BPMSoft.Configuration.OrderProduct_PRMOrder_BPMSoftSchema
+	public class OrderProduct_ContractInOrder_BPMSoftSchema : BPMSoft.Configuration.OrderProduct_ProductCatalogueInOrder_BPMSoftSchema
 	{
 
 		#region Constructors: Public
 
-		public OrderProductSchema(EntitySchemaManager entitySchemaManager)
+		public OrderProduct_ContractInOrder_BPMSoftSchema(EntitySchemaManager entitySchemaManager)
 			: base(entitySchemaManager) {
 		}
 
-		public OrderProductSchema(OrderProductSchema source, bool isShallowClone)
+		public OrderProduct_ContractInOrder_BPMSoftSchema(OrderProduct_ContractInOrder_BPMSoftSchema source, bool isShallowClone)
 			: base(source, isShallowClone) {
 		}
 
-		public OrderProductSchema(OrderProductSchema source)
+		public OrderProduct_ContractInOrder_BPMSoftSchema(OrderProduct_ContractInOrder_BPMSoftSchema source)
 			: base(source) {
 		}
 
@@ -53,7 +53,7 @@
 		protected override void InitializeProperties() {
 			base.InitializeProperties();
 			RealUId = new Guid("5fe3bdb7-97af-44cd-ab08-2a88e9f9c99e");
-			Name = "OrderProduct";
+			Name = "OrderProduct_ContractInOrder_BPMSoft";
 			ParentSchemaUId = new Guid("a31247aa-b718-40ed-982e-5b569d7d7b0e");
 			ExtendParent = true;
 			CreatedInPackageId = new Guid("2a36bdd9-0ef6-48f3-957f-b7efa409d0a7");
@@ -91,7 +91,7 @@
 		#region Methods: Public
 
 		public override Entity CreateEntity(UserConnection userConnection) {
-			return new OrderProduct(userConnection) {Schema = this};
+			return new OrderProduct_ContractInOrder_BPMSoft(userConnection) {Schema = this};
 		}
 
 		public override EmbeddedProcess CreateEventsProcess(UserConnection userConnection) {
@@ -99,11 +99,11 @@
 		}
 
 		public override object Clone() {
-			return new OrderProductSchema(this);
+			return new OrderProduct_ContractInOrder_BPMSoftSchema(this);
 		}
 
 		public override EntitySchema CloneShallow() {
-			return new OrderProductSchema(this, true);
+			return new OrderProduct_ContractInOrder_BPMSoftSchema(this, true);
 		}
 
 		public override void GetParentRealUIds(Collection<Guid> realUIds) {
@@ -117,22 +117,22 @@
 
 	#endregion
 
-	#region Class: OrderProduct
+	#region Class: OrderProduct_ContractInOrder_BPMSoft
 
 	/// <summary>
 	/// Продукт в заказе.
 	/// </summary>
-	public class OrderProduct : BPMSoft.Configuration.OrderProduct_PRMOrder_BPMSoft
+	public class OrderProduct_ContractInOrder_BPMSoft : BPMSoft.Configuration.OrderProduct_ProductCatalogueInOrder_BPMSoft
 	{
 
 		#region Constructors: Public
 
-		public OrderProduct(UserConnection userConnection)
+		public OrderProduct_ContractInOrder_BPMSoft(UserConnection userConnection)
 			: base(userConnection) {
-			SchemaName = "OrderProduct";
+			SchemaName = "OrderProduct_ContractInOrder_BPMSoft";
 		}
 
-		public OrderProduct(OrderProduct source)
+		public OrderProduct_ContractInOrder_BPMSoft(OrderProduct_ContractInOrder_BPMSoft source)
 			: base(source) {
 		}
 
@@ -190,7 +190,7 @@
 		#region Methods: Protected
 
 		protected override void InitializeThrowEvents() {
-			Validating += (s, e) => ThrowEvent("OrderProductValidating", e);
+			Validating += (s, e) => ThrowEvent("OrderProduct_ContractInOrder_BPMSoftValidating", e);
 			base.InitializeThrowEvents();
 		}
 
@@ -199,7 +199,7 @@
 		#region Methods: Public
 
 		public override object Clone() {
-			return new OrderProduct(this);
+			return new OrderProduct_ContractInOrder_BPMSoft(this);
 		}
 
 		#endregion
@@ -211,7 +211,7 @@
 	#region Class: OrderProduct_ContractInOrderEventsProcess
 
 	/// <exclude/>
-	public partial class OrderProduct_ContractInOrderEventsProcess<TEntity> : BPMSoft.Configuration.OrderProduct_PRMOrderEventsProcess<TEntity> where TEntity : OrderProduct
+	public partial class OrderProduct_ContractInOrderEventsProcess<TEntity> : BPMSoft.Configuration.OrderProduct_ProductCatalogueInOrderEventsProcess<TEntity> where TEntity : OrderProduct_ContractInOrder_BPMSoft
 	{
 
 		public OrderProduct_ContractInOrderEventsProcess(UserConnection userConnection)
@@ -292,7 +292,7 @@
 	#region Class: OrderProduct_ContractInOrderEventsProcess
 
 	/// <exclude/>
-	public class OrderProduct_ContractInOrderEventsProcess : OrderProduct_ContractInOrderEventsProcess<OrderProduct>
+	public class OrderProduct_ContractInOrderEventsProcess : OrderProduct_ContractInOrderEventsProcess<OrderProduct_ContractInOrder_BPMSoft>
 	{
 
 		public OrderProduct_ContractInOrderEventsProcess(UserConnection userConnection)
@@ -317,21 +317,6 @@
 		}
 
 		#endregion
-
-	}
-
-	#endregion
-
-
-	#region Class: OrderProductEventsProcess
-
-	/// <exclude/>
-	public class OrderProductEventsProcess : OrderProduct_ContractInOrderEventsProcess
-	{
-
-		public OrderProductEventsProcess(UserConnection userConnection)
-			: base(userConnection) {
-		}
 
 	}
 

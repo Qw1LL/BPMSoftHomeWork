@@ -225,6 +225,11 @@
 			set;
 		}
 
+		public IEnumerable<RtxBankFolder> RtxBankFolderCollectionByFolderType {
+			get;
+			set;
+		}
+
 		public IEnumerable<ServiceItemFolder> ServiceItemFolderCollectionByFolderType {
 			get;
 			set;
@@ -276,6 +281,11 @@
 		}
 
 		public IEnumerable<SysTranslationFolder> SysTranslationFolderCollectionByFolderType {
+			get;
+			set;
+		}
+
+		public IEnumerable<UsrdderFolder> UsrdderFolderCollectionByFolderType {
 			get;
 			set;
 		}

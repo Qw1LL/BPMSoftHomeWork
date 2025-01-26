@@ -31,23 +31,23 @@
 	using System.Text.RegularExpressions;
 	using System.Web;
 
-	#region Class: ActivitySchema
+	#region Class: Activity_SalesEnterprise_BPMSoftSchema
 
 	/// <exclude/>
-	public class ActivitySchema : BPMSoft.Configuration.Activity_Release_BPMSoftSchema
+	public class Activity_SalesEnterprise_BPMSoftSchema : BPMSoft.Configuration.Activity_MarketingCampaign_BPMSoftSchema
 	{
 
 		#region Constructors: Public
 
-		public ActivitySchema(EntitySchemaManager entitySchemaManager)
+		public Activity_SalesEnterprise_BPMSoftSchema(EntitySchemaManager entitySchemaManager)
 			: base(entitySchemaManager) {
 		}
 
-		public ActivitySchema(ActivitySchema source, bool isShallowClone)
+		public Activity_SalesEnterprise_BPMSoftSchema(Activity_SalesEnterprise_BPMSoftSchema source, bool isShallowClone)
 			: base(source, isShallowClone) {
 		}
 
-		public ActivitySchema(ActivitySchema source)
+		public Activity_SalesEnterprise_BPMSoftSchema(Activity_SalesEnterprise_BPMSoftSchema source)
 			: base(source) {
 		}
 
@@ -85,7 +85,7 @@
 		protected override void InitializeProperties() {
 			base.InitializeProperties();
 			RealUId = new Guid("e6f9dcd6-cea2-424e-a2c7-3e79fdb2a40c");
-			Name = "Activity";
+			Name = "Activity_SalesEnterprise_BPMSoft";
 			ParentSchemaUId = new Guid("c449d832-a4cc-4b01-b9d5-8a12c42a9f89");
 			ExtendParent = true;
 			CreatedInPackageId = new Guid("d49298f0-b2d7-4a4f-a6ec-ba4bd2ab2cff");
@@ -113,7 +113,7 @@
 		#region Methods: Public
 
 		public override Entity CreateEntity(UserConnection userConnection) {
-			return new Activity(userConnection) {Schema = this};
+			return new Activity_SalesEnterprise_BPMSoft(userConnection) {Schema = this};
 		}
 
 		public override EmbeddedProcess CreateEventsProcess(UserConnection userConnection) {
@@ -121,11 +121,11 @@
 		}
 
 		public override object Clone() {
-			return new ActivitySchema(this);
+			return new Activity_SalesEnterprise_BPMSoftSchema(this);
 		}
 
 		public override EntitySchema CloneShallow() {
-			return new ActivitySchema(this, true);
+			return new Activity_SalesEnterprise_BPMSoftSchema(this, true);
 		}
 
 		public override void GetParentRealUIds(Collection<Guid> realUIds) {
@@ -139,22 +139,22 @@
 
 	#endregion
 
-	#region Class: Activity
+	#region Class: Activity_SalesEnterprise_BPMSoft
 
 	/// <summary>
 	/// Активность.
 	/// </summary>
-	public class Activity : BPMSoft.Configuration.Activity_Release_BPMSoft
+	public class Activity_SalesEnterprise_BPMSoft : BPMSoft.Configuration.Activity_MarketingCampaign_BPMSoft
 	{
 
 		#region Constructors: Public
 
-		public Activity(UserConnection userConnection)
+		public Activity_SalesEnterprise_BPMSoft(UserConnection userConnection)
 			: base(userConnection) {
-			SchemaName = "Activity";
+			SchemaName = "Activity_SalesEnterprise_BPMSoft";
 		}
 
-		public Activity(Activity source)
+		public Activity_SalesEnterprise_BPMSoft(Activity_SalesEnterprise_BPMSoft source)
 			: base(source) {
 		}
 
@@ -181,7 +181,7 @@
 		#region Methods: Public
 
 		public override object Clone() {
-			return new Activity(this);
+			return new Activity_SalesEnterprise_BPMSoft(this);
 		}
 
 		#endregion
@@ -193,7 +193,7 @@
 	#region Class: Activity_SalesEnterpriseEventsProcess
 
 	/// <exclude/>
-	public partial class Activity_SalesEnterpriseEventsProcess<TEntity> : BPMSoft.Configuration.Activity_ReleaseEventsProcess<TEntity> where TEntity : Activity
+	public partial class Activity_SalesEnterpriseEventsProcess<TEntity> : BPMSoft.Configuration.Activity_MarketingCampaignEventsProcess<TEntity> where TEntity : Activity_SalesEnterprise_BPMSoft
 	{
 
 		public Activity_SalesEnterpriseEventsProcess(UserConnection userConnection)
@@ -274,7 +274,7 @@
 	#region Class: Activity_SalesEnterpriseEventsProcess
 
 	/// <exclude/>
-	public class Activity_SalesEnterpriseEventsProcess : Activity_SalesEnterpriseEventsProcess<Activity>
+	public class Activity_SalesEnterpriseEventsProcess : Activity_SalesEnterpriseEventsProcess<Activity_SalesEnterprise_BPMSoft>
 	{
 
 		public Activity_SalesEnterpriseEventsProcess(UserConnection userConnection)
@@ -293,21 +293,6 @@
 		#region Methods: Public
 
 		#endregion
-
-	}
-
-	#endregion
-
-
-	#region Class: ActivityEventsProcess
-
-	/// <exclude/>
-	public class ActivityEventsProcess : Activity_SalesEnterpriseEventsProcess
-	{
-
-		public ActivityEventsProcess(UserConnection userConnection)
-			: base(userConnection) {
-		}
 
 	}
 

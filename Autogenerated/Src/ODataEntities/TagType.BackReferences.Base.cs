@@ -210,6 +210,11 @@
 			set;
 		}
 
+		public IEnumerable<RtxBankTag> RtxBankTagCollectionByType {
+			get;
+			set;
+		}
+
 		public IEnumerable<ServiceItemTag> ServiceItemTagCollectionByType {
 			get;
 			set;
@@ -231,6 +236,11 @@
 		}
 
 		public IEnumerable<SysTranslationTag> SysTranslationTagCollectionByType {
+			get;
+			set;
+		}
+
+		public IEnumerable<UsrdderTag> UsrdderTagCollectionByType {
 			get;
 			set;
 		}

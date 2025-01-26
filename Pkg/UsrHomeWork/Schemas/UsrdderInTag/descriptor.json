@@ -1,0 +1,13 @@
+﻿{
+  "Descriptor": {
+    "UId": "ff651b82-babe-4034-bfeb-0e9b309fd23f",
+    "Name": "UsrdderInTag",
+    "ModifiedOnUtc": "\/Date(1732195068000)\/",
+    "Parent": {
+      "UId": "5894a2b0-51d5-419a-82bb-238674634270",
+      "Name": "BaseEntityInTag"
+    },
+    "ManagerName": "EntitySchemaManager",
+    "Caption": "Тег в записи раздела dder"
+  }
+}

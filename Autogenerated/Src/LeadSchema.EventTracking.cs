@@ -31,7 +31,7 @@
 	#region Class: Lead_EventTracking_BPMSoftSchema
 
 	/// <exclude/>
-	public class Lead_EventTracking_BPMSoftSchema : BPMSoft.Configuration.Lead_OpportunityManagement_BPMSoftSchema
+	public class Lead_EventTracking_BPMSoftSchema : BPMSoft.Configuration.Lead_PRMPortal_BPMSoftSchema
 	{
 
 		#region Constructors: Public
@@ -156,7 +156,7 @@
 	/// <summary>
 	/// Лид.
 	/// </summary>
-	public class Lead_EventTracking_BPMSoft : BPMSoft.Configuration.Lead_OpportunityManagement_BPMSoft
+	public class Lead_EventTracking_BPMSoft : BPMSoft.Configuration.Lead_PRMPortal_BPMSoft
 	{
 
 		#region Constructors: Public
@@ -244,7 +244,7 @@
 	#region Class: Lead_EventTrackingEventsProcess
 
 	/// <exclude/>
-	public partial class Lead_EventTrackingEventsProcess<TEntity> : BPMSoft.Configuration.Lead_OpportunityManagementEventsProcess<TEntity> where TEntity : Lead_EventTracking_BPMSoft
+	public partial class Lead_EventTrackingEventsProcess<TEntity> : BPMSoft.Configuration.Lead_PRMPortalEventsProcess<TEntity> where TEntity : Lead_EventTracking_BPMSoft
 	{
 
 		public Lead_EventTrackingEventsProcess(UserConnection userConnection)

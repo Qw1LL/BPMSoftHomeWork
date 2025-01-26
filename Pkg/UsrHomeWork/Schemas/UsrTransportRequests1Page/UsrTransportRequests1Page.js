@@ -1,7 +1,21 @@
 define("UsrTransportRequests1Page", [], function() {
 	return {
 		entitySchemaName: "UsrTransportRequests",
-		attributes: {},
+		attributes: {
+			"UsrDriver": {
+				dataValueType: this.BPMSoft.DataValueType.LOOKUP,
+				dependencies: [
+					{
+						columns: ["UsrDriver"],
+						methodName: "onDriverChanged"
+					},
+					{
+						columns: ["UsrStatus"],
+						methodName: "onStatusChanged"
+					},
+				]
+			},
+		},
 		modules: /**SCHEMA_MODULES*/{}/**SCHEMA_MODULES*/,
 		details: /**SCHEMA_DETAILS*/{
 			"Files": {
@@ -31,7 +45,94 @@ define("UsrTransportRequests1Page", [], function() {
 				return {
 					invalidMessage: ""
 				};
-			}
+			},
+
+			onDriverChanged: async function() {
+				const driverId = this.get("UsrDriver").value;
+				await this.getActivityCount(driverId).
+				then(this.onActivityFinded.bind(this)).
+				catch(this.onActivityError.bind(this));
+			},
+
+			onStatusChanged: async function() {
+				 const insert = this.getAddActivityInsertQuery();
+				 insert.execute();
+			},
+
+			getFindActivityEsq: function(driverId) {
+				if (!driverId) {
+					return;
+				}
+				const esq = Ext.create("BPMSoft.EntitySchemaQuery", {
+					rootSchemaName: "Activity"
+				});
+				esq.addAggregationSchemaColumn("Id", this.BPMSoft.AggregationType.COUNT, "Count");
+				esq.filters.addItem(BPMSoft.createColumnFilterWithParameter(
+					BPMSoft.ComparisonType.EQUAL, "Contact", driverId)
+				);
+				const filter = BPMSoft.createColumnInFilterWithParameters("Status", ["201cfba8-58e6-df11-971b-001d60e938c6", "4bdbb88f-58e6-df11-971b-001d60e938c6"]);
+				filter.comparisonType = BPMSoft.ComparisonType.NOT_EQUAL;
+				esq.filters.addItem(filter);
+				
+				return esq;
+			},
+
+			getActivityCount: function(driverId) {
+				return new Promise((resolve, reject) => {
+					const esq = this.getFindActivityEsq(driverId);
+					esq.getEntityCollection(function (result) {
+						if (!result.success) {
+							reject(result);
+							return;
+						}
+						const activityCount = result.collection.first().get("Count")
+						resolve(activityCount);
+					}, this);
+				});
+			},
+
+			onActivityFinded: function(activityCount) {
+				if (activityCount > 3) {
+					this.showInformationDialog("На данного водителя назначено более 3х задач");
+				}
+				const update = this.getUpdateActivityESQ();
+				update.execute();
+			},
+			onActivityError: function(result) {
+				this.showInformationDialog(result?.errorInfo?.message ?? "Ошибка");
+			},
+
+			getAddActivityInsertQuery: function() {
+				const insert = Ext.create("BPMSoft.InsertQuery", {
+					rootSchemaName: "Activity"
+				});
+
+				insert.setParameterValue("Owner", this.get("UsrOwner"), this.BPMSoft.DataValueType.GUID);
+				insert.setParameterValue("Contact", this.get("UsrDriver"), this.BPMSoft.DataValueType.GUID);
+				insert.setParameterValue("Account", this.get("UsrCompany"), this.BPMSoft.DataValueType.GUID);
+				insert.setParameterValue("Title", this.get("UsrName"), this.BPMSoft.DataValueType.TEXT);
+				insert.setParameterValue("StartDate", new Date(), this.BPMSoft.DataValueType.DATE_TIME);
+				insert.setParameterValue("DueDate", new Date(), this.BPMSoft.DataValueType.DATE_TIME);
+				insert.setParameterValue("UsrTransportRequest", this.get("Id"), this.BPMSoft.DataValueType.GUID);
+				insert.setParameterValue("Status", "e7174c11-03be-47d9-bb59-6c55838523f7", this.BPMSoft.DataValueType.GUID);
+
+				return insert;
+			},
+
+			getUpdateActivityESQ: function() {
+				const id = this.get("Id");
+				const driver = this.get("UsrDriver").value;
+				const update = Ext.create("BPMSoft.UpdateQuery", {
+					rootSchemaName: "Activity"
+				});
+				update.filters.add("byId", update.createColumnFilterWithParameter(
+					BPMSoft.ComparisonType.EQUAL, "UsrTransportRequest", id));
+
+				update.setParameterValue("Contact", driver, BPMSoft.DataValueType.GUID);
+
+				return update;
+			},
+			
 		},
 		dataModels: /**SCHEMA_DATA_MODELS*/{}/**SCHEMA_DATA_MODELS*/,
 		diff: /**SCHEMA_DIFF*/[

@@ -43,7 +43,7 @@
 		}
 
 		/// <summary>
-		/// Created on.
+		/// Дата создания.
 		/// </summary>
 		public DateTime CreatedOn {
 			get {
@@ -80,7 +80,7 @@
 
 		private Contact _createdBy;
 		/// <summary>
-		/// Created by.
+		/// Создал.
 		/// </summary>
 		public Contact CreatedBy {
 			get {
@@ -90,7 +90,7 @@
 		}
 
 		/// <summary>
-		/// Modified on.
+		/// Дата изменения.
 		/// </summary>
 		public DateTime ModifiedOn {
 			get {
@@ -127,7 +127,7 @@
 
 		private Contact _modifiedBy;
 		/// <summary>
-		/// Modified by.
+		/// Изменил.
 		/// </summary>
 		public Contact ModifiedBy {
 			get {
@@ -162,7 +162,7 @@
 
 		private AddressType _addressType;
 		/// <summary>
-		/// Address type.
+		/// Тип адреса.
 		/// </summary>
 		public AddressType AddressType {
 			get {
@@ -197,7 +197,7 @@
 
 		private Country _country;
 		/// <summary>
-		/// Country.
+		/// Страна.
 		/// </summary>
 		public Country Country {
 			get {
@@ -232,7 +232,7 @@
 
 		private Region _region;
 		/// <summary>
-		/// State/province.
+		/// Область.
 		/// </summary>
 		public Region Region {
 			get {
@@ -267,7 +267,7 @@
 
 		private City _city;
 		/// <summary>
-		/// City.
+		/// Город.
 		/// </summary>
 		public City City {
 			get {
@@ -277,7 +277,7 @@
 		}
 
 		/// <summary>
-		/// Address.
+		/// Адрес.
 		/// </summary>
 		public string Address {
 			get {
@@ -289,7 +289,7 @@
 		}
 
 		/// <summary>
-		/// ZIP/postal code.
+		/// Индекс.
 		/// </summary>
 		public string Zip {
 			get {
@@ -301,7 +301,7 @@
 		}
 
 		/// <summary>
-		/// Primary.
+		/// Основной.
 		/// </summary>
 		public bool Primary {
 			get {
@@ -338,7 +338,7 @@
 
 		private Contact _contact;
 		/// <summary>
-		/// Contact.
+		/// Контакт.
 		/// </summary>
 		public Contact Contact {
 			get {
@@ -348,7 +348,7 @@
 		}
 
 		/// <summary>
-		/// Active processes.
+		/// Активные процессы.
 		/// </summary>
 		public int ProcessListeners {
 			get {
@@ -356,6 +356,41 @@
 			}
 			set {
 				SetColumnValue("ProcessListeners", value);
+			}
+		}
+
+		/// <exclude/>
+		public Guid RtxOwnerId {
+			get {
+				return GetTypedColumnValue<Guid>("RtxOwnerId");
+			}
+			set {
+				SetColumnValue("RtxOwnerId", value);
+				_rtxOwner = null;
+			}
+		}
+
+		/// <exclude/>
+		public string RtxOwnerName {
+			get {
+				return GetTypedColumnValue<string>("RtxOwnerName");
+			}
+			set {
+				SetColumnValue("RtxOwnerName", value);
+				if (_rtxOwner != null) {
+					_rtxOwner.Name = value;
+				}
+			}
+		}
+
+		private Contact _rtxOwner;
+		/// <summary>
+		/// Ответственный.
+		/// </summary>
+		public Contact RtxOwner {
+			get {
+				return _rtxOwner ??
+					(_rtxOwner = new Contact(LookupColumnEntities.GetEntity("RtxOwner")));
 			}
 		}
 

@@ -1,0 +1,14 @@
+﻿{
+  "Descriptor": {
+    "UId": "32dc6005-2a02-405b-bad3-1facda824a47",
+    "Name": "ActivitySectionV2",
+    "ModifiedOnUtc": "\/Date(1733067496000)\/",
+    "Parent": {
+      "UId": "569aaf1a-5943-4f87-ab47-948d941e4920",
+      "Name": "ActivitySectionV2"
+    },
+    "ExtendParent": true,
+    "ManagerName": "ClientUnitSchemaManager",
+    "Caption": "Схема раздела: \"Активности\""
+  }
+}

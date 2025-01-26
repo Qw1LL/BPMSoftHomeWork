@@ -29,7 +29,7 @@
 	#region Class: Lead_OpportunityManagement_BPMSoftSchema
 
 	/// <exclude/>
-	public class Lead_OpportunityManagement_BPMSoftSchema : BPMSoft.Configuration.Lead_SocialLeadGen_BPMSoftSchema
+	public class Lead_OpportunityManagement_BPMSoftSchema : BPMSoft.Configuration.Lead_EventTracking_BPMSoftSchema
 	{
 
 		#region Constructors: Public
@@ -149,7 +149,7 @@
 	/// <summary>
 	/// Лид.
 	/// </summary>
-	public class Lead_OpportunityManagement_BPMSoft : BPMSoft.Configuration.Lead_SocialLeadGen_BPMSoft
+	public class Lead_OpportunityManagement_BPMSoft : BPMSoft.Configuration.Lead_EventTracking_BPMSoft
 	{
 
 		#region Constructors: Public
@@ -199,7 +199,7 @@
 	#region Class: Lead_OpportunityManagementEventsProcess
 
 	/// <exclude/>
-	public partial class Lead_OpportunityManagementEventsProcess<TEntity> : BPMSoft.Configuration.Lead_SocialLeadGenEventsProcess<TEntity> where TEntity : Lead_OpportunityManagement_BPMSoft
+	public partial class Lead_OpportunityManagementEventsProcess<TEntity> : BPMSoft.Configuration.Lead_EventTrackingEventsProcess<TEntity> where TEntity : Lead_OpportunityManagement_BPMSoft
 	{
 
 		public Lead_OpportunityManagementEventsProcess(UserConnection userConnection)

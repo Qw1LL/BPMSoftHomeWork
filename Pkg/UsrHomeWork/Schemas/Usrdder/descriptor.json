@@ -1,0 +1,13 @@
+﻿{
+  "Descriptor": {
+    "UId": "6e90eef0-c2cd-4686-a5d8-6c857a2168ef",
+    "Name": "Usrdder",
+    "ModifiedOnUtc": "\/Date(1732195027000)\/",
+    "Parent": {
+      "UId": "1bab9dcf-17d5-49f8-9536-8e0064f1dce0",
+      "Name": "BaseEntity"
+    },
+    "ManagerName": "EntitySchemaManager",
+    "Caption": "dder"
+  }
+}

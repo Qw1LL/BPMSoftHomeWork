@@ -33,7 +33,7 @@
 	#region Class: Activity_MarketingCampaign_BPMSoftSchema
 
 	/// <exclude/>
-	public class Activity_MarketingCampaign_BPMSoftSchema : BPMSoft.Configuration.Activity_Change_BPMSoftSchema
+	public class Activity_MarketingCampaign_BPMSoftSchema : BPMSoft.Configuration.Activity_Release_BPMSoftSchema
 	{
 
 		#region Constructors: Public
@@ -158,7 +158,7 @@
 	/// <summary>
 	/// Активность.
 	/// </summary>
-	public class Activity_MarketingCampaign_BPMSoft : BPMSoft.Configuration.Activity_Change_BPMSoft
+	public class Activity_MarketingCampaign_BPMSoft : BPMSoft.Configuration.Activity_Release_BPMSoft
 	{
 
 		#region Constructors: Public
@@ -246,7 +246,7 @@
 	#region Class: Activity_MarketingCampaignEventsProcess
 
 	/// <exclude/>
-	public partial class Activity_MarketingCampaignEventsProcess<TEntity> : BPMSoft.Configuration.Activity_ChangeEventsProcess<TEntity> where TEntity : Activity_MarketingCampaign_BPMSoft
+	public partial class Activity_MarketingCampaignEventsProcess<TEntity> : BPMSoft.Configuration.Activity_ReleaseEventsProcess<TEntity> where TEntity : Activity_MarketingCampaign_BPMSoft
 	{
 
 		public Activity_MarketingCampaignEventsProcess(UserConnection userConnection)

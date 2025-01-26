@@ -29,7 +29,7 @@
 	#region Class: Document_DocumentInOpportunity_BPMSoftSchema
 
 	/// <exclude/>
-	public class Document_DocumentInOpportunity_BPMSoftSchema : BPMSoft.Configuration.Document_DocumentInProject_BPMSoftSchema
+	public class Document_DocumentInOpportunity_BPMSoftSchema : BPMSoft.Configuration.Document_DocumentInContract_BPMSoftSchema
 	{
 
 		#region Constructors: Public
@@ -122,7 +122,7 @@
 	/// <summary>
 	/// Документ.
 	/// </summary>
-	public class Document_DocumentInOpportunity_BPMSoft : BPMSoft.Configuration.Document_DocumentInProject_BPMSoft
+	public class Document_DocumentInOpportunity_BPMSoft : BPMSoft.Configuration.Document_DocumentInContract_BPMSoft
 	{
 
 		#region Constructors: Public
@@ -213,7 +213,7 @@
 	#region Class: Document_DocumentInOpportunityEventsProcess
 
 	/// <exclude/>
-	public partial class Document_DocumentInOpportunityEventsProcess<TEntity> : BPMSoft.Configuration.Document_DocumentInProjectEventsProcess<TEntity> where TEntity : Document_DocumentInOpportunity_BPMSoft
+	public partial class Document_DocumentInOpportunityEventsProcess<TEntity> : BPMSoft.Configuration.Document_DocumentInContractEventsProcess<TEntity> where TEntity : Document_DocumentInOpportunity_BPMSoft
 	{
 
 		public Document_DocumentInOpportunityEventsProcess(UserConnection userConnection)

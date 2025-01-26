@@ -26,23 +26,23 @@
 	using System.IO;
 	using System.Linq;
 
-	#region Class: Document_DocumentInProject_BPMSoftSchema
+	#region Class: DocumentSchema
 
 	/// <exclude/>
-	public class Document_DocumentInProject_BPMSoftSchema : BPMSoft.Configuration.Document_DocumentInOrder_BPMSoftSchema
+	public class DocumentSchema : BPMSoft.Configuration.Document_DocumentInOrder_BPMSoftSchema
 	{
 
 		#region Constructors: Public
 
-		public Document_DocumentInProject_BPMSoftSchema(EntitySchemaManager entitySchemaManager)
+		public DocumentSchema(EntitySchemaManager entitySchemaManager)
 			: base(entitySchemaManager) {
 		}
 
-		public Document_DocumentInProject_BPMSoftSchema(Document_DocumentInProject_BPMSoftSchema source, bool isShallowClone)
+		public DocumentSchema(DocumentSchema source, bool isShallowClone)
 			: base(source, isShallowClone) {
 		}
 
-		public Document_DocumentInProject_BPMSoftSchema(Document_DocumentInProject_BPMSoftSchema source)
+		public DocumentSchema(DocumentSchema source)
 			: base(source) {
 		}
 
@@ -53,7 +53,7 @@
 		protected override void InitializeProperties() {
 			base.InitializeProperties();
 			RealUId = new Guid("42a66bd2-2130-44b9-8bc9-07fd4ee03ae0");
-			Name = "Document_DocumentInProject_BPMSoft";
+			Name = "Document";
 			ParentSchemaUId = new Guid("8b33b6b2-19f7-4222-9161-b4054b3fbb09");
 			ExtendParent = true;
 			CreatedInPackageId = new Guid("fe2bb0e4-061e-41b1-be85-5078c802043f");
@@ -91,7 +91,7 @@
 		#region Methods: Public
 
 		public override Entity CreateEntity(UserConnection userConnection) {
-			return new Document_DocumentInProject_BPMSoft(userConnection) {Schema = this};
+			return new Document(userConnection) {Schema = this};
 		}
 
 		public override EmbeddedProcess CreateEventsProcess(UserConnection userConnection) {
@@ -99,11 +99,11 @@
 		}
 
 		public override object Clone() {
-			return new Document_DocumentInProject_BPMSoftSchema(this);
+			return new DocumentSchema(this);
 		}
 
 		public override EntitySchema CloneShallow() {
-			return new Document_DocumentInProject_BPMSoftSchema(this, true);
+			return new DocumentSchema(this, true);
 		}
 
 		public override void GetParentRealUIds(Collection<Guid> realUIds) {
@@ -117,22 +117,22 @@
 
 	#endregion
 
-	#region Class: Document_DocumentInProject_BPMSoft
+	#region Class: Document
 
 	/// <summary>
 	/// Документ.
 	/// </summary>
-	public class Document_DocumentInProject_BPMSoft : BPMSoft.Configuration.Document_DocumentInOrder_BPMSoft
+	public class Document : BPMSoft.Configuration.Document_DocumentInOrder_BPMSoft
 	{
 
 		#region Constructors: Public
 
-		public Document_DocumentInProject_BPMSoft(UserConnection userConnection)
+		public Document(UserConnection userConnection)
 			: base(userConnection) {
-			SchemaName = "Document_DocumentInProject_BPMSoft";
+			SchemaName = "Document";
 		}
 
-		public Document_DocumentInProject_BPMSoft(Document_DocumentInProject_BPMSoft source)
+		public Document(Document source)
 			: base(source) {
 		}
 
@@ -190,13 +190,13 @@
 		#region Methods: Protected
 
 		protected override void InitializeThrowEvents() {
-			Deleted += (s, e) => ThrowEvent("Document_DocumentInProject_BPMSoftDeleted", e);
-			Deleting += (s, e) => ThrowEvent("Document_DocumentInProject_BPMSoftDeleting", e);
-			Inserted += (s, e) => ThrowEvent("Document_DocumentInProject_BPMSoftInserted", e);
-			Inserting += (s, e) => ThrowEvent("Document_DocumentInProject_BPMSoftInserting", e);
-			Saved += (s, e) => ThrowEvent("Document_DocumentInProject_BPMSoftSaved", e);
-			Saving += (s, e) => ThrowEvent("Document_DocumentInProject_BPMSoftSaving", e);
-			Validating += (s, e) => ThrowEvent("Document_DocumentInProject_BPMSoftValidating", e);
+			Deleted += (s, e) => ThrowEvent("DocumentDeleted", e);
+			Deleting += (s, e) => ThrowEvent("DocumentDeleting", e);
+			Inserted += (s, e) => ThrowEvent("DocumentInserted", e);
+			Inserting += (s, e) => ThrowEvent("DocumentInserting", e);
+			Saved += (s, e) => ThrowEvent("DocumentSaved", e);
+			Saving += (s, e) => ThrowEvent("DocumentSaving", e);
+			Validating += (s, e) => ThrowEvent("DocumentValidating", e);
 			base.InitializeThrowEvents();
 		}
 
@@ -205,7 +205,7 @@
 		#region Methods: Public
 
 		public override object Clone() {
-			return new Document_DocumentInProject_BPMSoft(this);
+			return new Document(this);
 		}
 
 		#endregion
@@ -217,7 +217,7 @@
 	#region Class: Document_DocumentInProjectEventsProcess
 
 	/// <exclude/>
-	public partial class Document_DocumentInProjectEventsProcess<TEntity> : BPMSoft.Configuration.Document_DocumentInOrderEventsProcess<TEntity> where TEntity : Document_DocumentInProject_BPMSoft
+	public partial class Document_DocumentInProjectEventsProcess<TEntity> : BPMSoft.Configuration.Document_DocumentInOrderEventsProcess<TEntity> where TEntity : Document
 	{
 
 		public Document_DocumentInProjectEventsProcess(UserConnection userConnection)
@@ -298,7 +298,7 @@
 	#region Class: Document_DocumentInProjectEventsProcess
 
 	/// <exclude/>
-	public class Document_DocumentInProjectEventsProcess : Document_DocumentInProjectEventsProcess<Document_DocumentInProject_BPMSoft>
+	public class Document_DocumentInProjectEventsProcess : Document_DocumentInProjectEventsProcess<Document>
 	{
 
 		public Document_DocumentInProjectEventsProcess(UserConnection userConnection)
@@ -317,6 +317,21 @@
 		#region Methods: Public
 
 		#endregion
+
+	}
+
+	#endregion
+
+
+	#region Class: DocumentEventsProcess
+
+	/// <exclude/>
+	public class DocumentEventsProcess : Document_DocumentInProjectEventsProcess
+	{
+
+		public DocumentEventsProcess(UserConnection userConnection)
+			: base(userConnection) {
+		}
 
 	}
 

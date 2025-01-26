@@ -3,7 +3,7 @@
     "UId": "a00051f4-cde3-4f3f-b08e-c5ad1a5c735a",
     "Name": "Custom",
     "BPMSoftVersion": "1.4.0",
-    "ModifiedOnUtc": "\/Date(1731506457000)\/",
+    "ModifiedOnUtc": "\/Date(1733067902000)\/",
     "Maintainer": "Customer",
     "Description": "Custom Package",
     "DependsOn": [
@@ -214,6 +214,10 @@
         "UId": "4204dd64-db74-42cc-896b-6f690204c4e6",
         "PackageVersion": "1.0.0",
         "Name": "ProductSpecification"
+      },
+      {
+        "UId": "44804298-89f4-6cb8-7709-cf6423bbb494",
+        "Name": "RtxLearning"
       },
       {
         "UId": "468413c6-da9a-4bae-a3e9-31456fea166d",

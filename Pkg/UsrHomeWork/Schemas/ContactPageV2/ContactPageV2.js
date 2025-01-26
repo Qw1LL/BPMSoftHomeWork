@@ -7,22 +7,68 @@ define("ContactPageV2", [], function() {
 			"UsrSchema40a6a56fDetail5e03d458": {
 				"schemaName": "UsrSchema40a6a56fDetail",
 				"entitySchemaName": "UsrTransportRequests",
-				"filter": {
-					"detailColumn": "UsrDriver",
-					"masterColumn": "Id"
-				}
+				"filterMethod": "getCancelRequestDetailFilter"
 			},
 			"UsrSchemaec554c99Detailc66446b5": {
 				"schemaName": "UsrSchemaec554c99Detail",
 				"entitySchemaName": "UsrTransportRequests",
-				"filter": {
-					"detailColumn": "UsrOwner",
-					"masterColumn": "Owner"
-				}
+				"filterMethod": "getRequestDetailFilter"
 			}
 		}/**SCHEMA_DETAILS*/,
 		businessRules: /**SCHEMA_BUSINESS_RULES*/{}/**SCHEMA_BUSINESS_RULES*/,
-		methods: {},
+		methods: {
+			
+			getCancelRequestDetailFilter: function () {
+				const currentContacttId = this.get("Id");
+				const canceledStatusId = "79fb9282-9544-4983-a7b6-c032f8aa4b8f";
+				const filterGroup = new this.BPMSoft.createFilterGroup();
+				const currentContactFilter = this.BPMSoft.createColumnFilterWithParameter(
+					BPMSoft.ComparisonType.EQUAL,
+					"UsrDriver",
+					currentContacttId
+				);
+				const statusFilter = this.BPMSoft.createColumnFilterWithParameter(
+					BPMSoft.ComparisonType.EQUAL,
+					"UsrStatus",
+					canceledStatusId
+				);
+				
+				filterGroup.add("byContactId", currentContactFilter);
+				filterGroup.add("byStatus", statusFilter);
+				
+				return filterGroup;
+			},
+
+			getRequestDetailFilter: function () {
+				const currentContacttId = this.get("Id");
+				const proseccStatusId = "e7174c11-03be-47d9-bb59-6c55838523f7";
+				const toDoStatusId = "e5b533bb-6a16-4c10-bba8-95aeadab257b";
+				const filterGroup = new this.BPMSoft.createFilterGroup();
+				const currentContactFilter = this.BPMSoft.createColumnFilterWithParameter(
+					BPMSoft.ComparisonType.EQUAL,
+					"UsrOwner",
+					currentContacttId
+				);
+
+				// filterGroup.logicalOperation = BPMSoft.LogicalOperatorType.OR;
+				const processStatusFilter = this.BPMSoft.createColumnFilterWithParameter(
+					BPMSoft.ComparisonType.EQUAL,
+					"UsrStatus",
+					proseccStatusId
+				);
+				const toDoStatusFilter = this.BPMSoft.createColumnFilterWithParameter(
+					BPMSoft.ComparisonType.EQUAL,
+					"UsrStatus",
+					toDoStatusId
+				);
+
+				filterGroup.add("byContactId", currentContactFilter);
+				filterGroup.add("byPorcessStatus", processStatusFilter);
+				filterGroup.add("byToDoStatus", toDoStatusFilter);
+
+				return filterGroup;
+			}
+		},
 		dataModels: /**SCHEMA_DATA_MODELS*/{}/**SCHEMA_DATA_MODELS*/,
 		diff: /**SCHEMA_DIFF*/[
 			{

@@ -90,6 +90,9 @@
 			if (Columns.FindByUId(new Guid("2f0759aa-ec2a-d6a6-1a77-e3624fac513e")) == null) {
 				Columns.Add(CreateUsrStatusColumn());
 			}
+			if (Columns.FindByUId(new Guid("df3b2271-8e2a-2c4a-b0c7-2c1ee04abd00")) == null) {
+				Columns.Add(CreateUsrTripDateColumn());
+			}
 		}
 
 		protected virtual EntitySchemaColumn CreateUsrNameColumn() {
@@ -201,6 +204,16 @@
 				Name = @"UsrStatus",
 				ReferenceSchemaUId = new Guid("5f85028b-5bd2-4b3a-95d5-1fdee3742944"),
 				IsIndexed = true,
+				CreatedInSchemaUId = new Guid("ce3557cf-4e38-45eb-aa71-502879d15cd5"),
+				ModifiedInSchemaUId = new Guid("ce3557cf-4e38-45eb-aa71-502879d15cd5"),
+				CreatedInPackageId = new Guid("3c4d067d-156b-4f1a-95fd-baa9da73b631")
+			};
+		}
+
+		protected virtual EntitySchemaColumn CreateUsrTripDateColumn() {
+			return new EntitySchemaColumn(this, DataValueTypeManager.GetInstanceByName("DateTime")) {
+				UId = new Guid("df3b2271-8e2a-2c4a-b0c7-2c1ee04abd00"),
+				Name = @"UsrTripDate",
 				CreatedInSchemaUId = new Guid("ce3557cf-4e38-45eb-aa71-502879d15cd5"),
 				ModifiedInSchemaUId = new Guid("ce3557cf-4e38-45eb-aa71-502879d15cd5"),
 				CreatedInPackageId = new Guid("3c4d067d-156b-4f1a-95fd-baa9da73b631")
@@ -442,6 +455,19 @@
 			}
 		}
 
+		/// <exclude/>
+		public string UsrCarUsrCarBrand {
+			get {
+				return GetTypedColumnValue<string>("UsrCarUsrCarBrand");
+			}
+			set {
+				SetColumnValue("UsrCarUsrCarBrand", value);
+				if (_usrCar != null) {
+					_usrCar.UsrCarBrand = value;
+				}
+			}
+		}
+
 		private UsrCarPark _usrCar;
 		/// <summary>
 		/// Автомобиль.
@@ -464,6 +490,19 @@
 			}
 		}
 
+		/// <exclude/>
+		public string UsrStatusUsrName {
+			get {
+				return GetTypedColumnValue<string>("UsrStatusUsrName");
+			}
+			set {
+				SetColumnValue("UsrStatusUsrName", value);
+				if (_usrStatus != null) {
+					_usrStatus.UsrName = value;
+				}
+			}
+		}
+
 		private UsrTransportRequestsStatus _usrStatus;
 		/// <summary>
 		/// Статус.
@@ -472,6 +511,18 @@
 			get {
 				return _usrStatus ??
 					(_usrStatus = LookupColumnEntities.GetEntity("UsrStatus") as UsrTransportRequestsStatus);
+			}
+		}
+
+		/// <summary>
+		/// Дата поездки.
+		/// </summary>
+		public DateTime UsrTripDate {
+			get {
+				return GetTypedColumnValue<DateTime>("UsrTripDate");
+			}
+			set {
+				SetColumnValue("UsrTripDate", value);
 			}
 		}
 

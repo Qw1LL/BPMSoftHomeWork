@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BPMSoft.Configuration")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("0.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("0.0.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("0.0.0.0+ef27098f329d3b2dce5449c02f94d346f1f94f83")]
 [assembly: System.Reflection.AssemblyProductAttribute("BPMSoft.Configuration")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BPMSoft.Configuration")]
 [assembly: System.Reflection.AssemblyVersionAttribute("0.0.0.0")]

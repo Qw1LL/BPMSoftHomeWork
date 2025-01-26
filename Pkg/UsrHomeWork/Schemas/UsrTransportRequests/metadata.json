@@ -125,9 +125,18 @@
   "S2": "b295071f-7ea9-4e62-8d1a-919bf3732ff2",
   "S4": "5f85028b-5bd2-4b3a-95d5-1fdee3742944",
   "E6": true,
-  "E17": "UsrStatusId"
+  "E17": "UsrStatusId",
+  "E18": "UsrStatusUsrName"
 }
-~ MetaData.Schema.D2 ["ae0e45ca-c495-4fe7-a39d-3ab7278e1617","e80190a5-03b2-4095-90f7-a193a960adee","ebf6bb93-8aa6-4a01-900d-c6ea67affe21","9928edec-4272-425a-93bb-48743fee4b04","3015559e-cbc6-406a-88af-07f7930be832","3fabd836-6a53-4d8d-9069-6df88d9dae1e","28c9528a-5207-47c9-8546-6e1503fcb076","1934cb81-fcf4-4601-a8aa-ddb0041e3a8e","cfb58900-6201-811d-85a1-4e91fc7620ca","5b2acd06-7ed4-0247-a511-47e8542a2fec","f1ddd3fd-cd65-4941-f0ff-a20d3550ef93","05e3f5d7-a7cd-f876-3159-ae33f6263658","bffc7d81-f639-8b53-6445-82b6e54d7630","dfe4e7f2-a673-164a-1526-a20903b32133","bf80b7ca-758e-88c9-6d16-35af4e1063cb","2f0759aa-ec2a-d6a6-1a77-e3624fac513e"]
++ MetaData.Schema.D2 {
+  "UId": "df3b2271-8e2a-2c4a-b0c7-2c1ee04abd00",
+  "A2": "UsrTripDate",
+  "A3": "ce3557cf-4e38-45eb-aa71-502879d15cd5",
+  "A4": "ce3557cf-4e38-45eb-aa71-502879d15cd5",
+  "A5": "3c4d067d-156b-4f1a-95fd-baa9da73b631",
+  "S2": "d21e9ef4-c064-4012-b286-fa1a8171da44"
+}
+~ MetaData.Schema.D2 ["ae0e45ca-c495-4fe7-a39d-3ab7278e1617","e80190a5-03b2-4095-90f7-a193a960adee","ebf6bb93-8aa6-4a01-900d-c6ea67affe21","9928edec-4272-425a-93bb-48743fee4b04","3015559e-cbc6-406a-88af-07f7930be832","3fabd836-6a53-4d8d-9069-6df88d9dae1e","28c9528a-5207-47c9-8546-6e1503fcb076","1934cb81-fcf4-4601-a8aa-ddb0041e3a8e","cfb58900-6201-811d-85a1-4e91fc7620ca","5b2acd06-7ed4-0247-a511-47e8542a2fec","f1ddd3fd-cd65-4941-f0ff-a20d3550ef93","05e3f5d7-a7cd-f876-3159-ae33f6263658","bffc7d81-f639-8b53-6445-82b6e54d7630","dfe4e7f2-a673-164a-1526-a20903b32133","bf80b7ca-758e-88c9-6d16-35af4e1063cb","2f0759aa-ec2a-d6a6-1a77-e3624fac513e","df3b2271-8e2a-2c4a-b0c7-2c1ee04abd00"]
 = MetaData.Schema.D20.A2 "UsrTransportRequestsEvents"
 - MetaData.Schema.EG1.BK29
 - MetaData.Schema.EG1.BK30

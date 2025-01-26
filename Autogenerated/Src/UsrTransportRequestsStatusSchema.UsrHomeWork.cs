@@ -63,8 +63,26 @@
 			UseRecordDeactivation = false;
 		}
 
+		protected override void InitializePrimaryDisplayColumn() {
+			base.InitializePrimaryDisplayColumn();
+			PrimaryDisplayColumn = CreateUsrNameColumn();
+			if (Columns.FindByUId(PrimaryDisplayColumn.UId) == null) {
+				Columns.Add(PrimaryDisplayColumn);
+			}
+		}
+
 		protected override void InitializeColumns() {
 			base.InitializeColumns();
+		}
+
+		protected virtual EntitySchemaColumn CreateUsrNameColumn() {
+			return new EntitySchemaColumn(this, DataValueTypeManager.GetInstanceByName("ShortText")) {
+				UId = new Guid("511901d8-d9f4-30ab-049b-03e77ef5b106"),
+				Name = @"UsrName",
+				CreatedInSchemaUId = new Guid("5f85028b-5bd2-4b3a-95d5-1fdee3742944"),
+				ModifiedInSchemaUId = new Guid("5f85028b-5bd2-4b3a-95d5-1fdee3742944"),
+				CreatedInPackageId = new Guid("3c4d067d-156b-4f1a-95fd-baa9da73b631")
+			};
 		}
 
 		protected override void InitializeMethods() {
@@ -120,6 +138,22 @@
 
 		public UsrTransportRequestsStatus(UsrTransportRequestsStatus source)
 			: base(source) {
+		}
+
+		#endregion
+
+		#region Properties: Public
+
+		/// <summary>
+		/// Название.
+		/// </summary>
+		public string UsrName {
+			get {
+				return GetTypedColumnValue<string>("UsrName");
+			}
+			set {
+				SetColumnValue("UsrName", value);
+			}
 		}
 
 		#endregion

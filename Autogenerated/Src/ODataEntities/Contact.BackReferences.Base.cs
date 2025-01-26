@@ -30,6 +30,11 @@
 
 		#region Properties: Public
 
+		public IEnumerable<UsrdderFile> UsrdderFileCollectionByLockedBy {
+			get;
+			set;
+		}
+
 		public IEnumerable<SysPrcElHistoryLog> SysPrcElHistoryLogCollectionByOwner {
 			get;
 			set;
@@ -166,6 +171,11 @@
 		}
 
 		public IEnumerable<Opportunity> OpportunityCollectionByOwner {
+			get;
+			set;
+		}
+
+		public IEnumerable<ContactAddress> ContactAddressCollectionByRtxOwner {
 			get;
 			set;
 		}
@@ -721,6 +731,11 @@
 		}
 
 		public IEnumerable<Activity> ActivityCollectionByAuthor {
+			get;
+			set;
+		}
+
+		public IEnumerable<RtxBankFile> RtxBankFileCollectionByLockedBy {
 			get;
 			set;
 		}
@@ -2102,6 +2117,41 @@
 			}
 			set {
 				SetColumnValue("IsEmailConfirmed", value);
+			}
+		}
+
+		/// <exclude/>
+		public Guid RtxClientCategoryId {
+			get {
+				return GetTypedColumnValue<Guid>("RtxClientCategoryId");
+			}
+			set {
+				SetColumnValue("RtxClientCategoryId", value);
+				_rtxClientCategory = null;
+			}
+		}
+
+		/// <exclude/>
+		public string RtxClientCategoryName {
+			get {
+				return GetTypedColumnValue<string>("RtxClientCategoryName");
+			}
+			set {
+				SetColumnValue("RtxClientCategoryName", value);
+				if (_rtxClientCategory != null) {
+					_rtxClientCategory.Name = value;
+				}
+			}
+		}
+
+		private RtxClientCategory _rtxClientCategory;
+		/// <summary>
+		/// Категория клиента.
+		/// </summary>
+		public RtxClientCategory RtxClientCategory {
+			get {
+				return _rtxClientCategory ??
+					(_rtxClientCategory = new RtxClientCategory(LookupColumnEntities.GetEntity("RtxClientCategory")));
 			}
 		}
 

@@ -978,19 +978,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Windows\\TEMP\\1\\IIS APPPOOL_BB55\\Default\\dotnet\\.nuget\\packages\\": {}
+    "C:\\Users\\Adm-A.Gaakh\\.nuget\\packages\\": {}
   },
   "project": {
-    "version": "1.4.0.3084",
+    "version": "0.0.0",
     "restore": {
-      "projectUniqueName": "C:\\inetpub\\wwwroot\\BPMSoft\\Demo\\BPMRights\\SalesFullCycle_Marketing_ServiceFull_1_4_0_3084_Net_PostgreSQL\\BPMSoft.WebApp\\BPMSoft.Configuration\\BPMSoft.Configuration.ODataEntities.csproj",
-      "projectName": "BPMSoft.Configuration.ODataEntities",
-      "projectPath": "C:\\inetpub\\wwwroot\\BPMSoft\\Demo\\BPMRights\\SalesFullCycle_Marketing_ServiceFull_1_4_0_3084_Net_PostgreSQL\\BPMSoft.WebApp\\BPMSoft.Configuration\\BPMSoft.Configuration.ODataEntities.csproj",
-      "packagesPath": "C:\\Windows\\TEMP\\1\\IIS APPPOOL_BB55\\Default\\dotnet\\.nuget\\packages\\",
+      "projectUniqueName": "C:\\inetpub\\wwwroot\\BPMSoft\\Demo\\BPMRights\\SalesFullCycle_Marketing_ServiceFull_1_4_0_3084_Net_PostgreSQL\\BPMSoft.WebApp\\BPMSoft.Configuration\\BPMSoft.Configuration.Dev.csproj",
+      "projectName": "BPMSoft.Configuration",
+      "projectPath": "C:\\inetpub\\wwwroot\\BPMSoft\\Demo\\BPMRights\\SalesFullCycle_Marketing_ServiceFull_1_4_0_3084_Net_PostgreSQL\\BPMSoft.WebApp\\BPMSoft.Configuration\\BPMSoft.Configuration.Dev.csproj",
+      "packagesPath": "C:\\Users\\Adm-A.Gaakh\\.nuget\\packages\\",
       "outputPath": "C:\\inetpub\\wwwroot\\BPMSoft\\Demo\\BPMRights\\SalesFullCycle_Marketing_ServiceFull_1_4_0_3084_Net_PostgreSQL\\BPMSoft.WebApp\\BPMSoft.Configuration\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Windows\\TEMP\\1\\IIS APPPOOL_BB55\\Default\\dotnet\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Adm-A.Gaakh\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1010,11 +1010,6 @@
         "warnAsError": [
           "NU1701"
         ]
-      },
-      "restoreAuditProperties": {
-        "enableAudit": "true",
-        "auditLevel": "low",
-        "auditMode": "direct"
       }
     },
     "frameworks": {

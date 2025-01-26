@@ -1,21 +1,21 @@
 {
   "version": 2,
-  "dgSpecHash": "ube3fheHRuVdwuC7KDohFR69jcLtt4NaOY40ZsqRjpsiV/xwA5mRUdCKiXjSS8hnV+ElE2yRQig0PhOCok0vMQ==",
+  "dgSpecHash": "lxZApoJj7ZqXbFWiUWHeKqegAJxH2PwaXcn1CAp7Y26M6sJoUl1aY7vM8pDNOIgSQMZJ0Q4MgZH+ovGyJKSUgg==",
   "success": true,
-  "projectFilePath": "C:\\inetpub\\wwwroot\\BPMSoft\\Demo\\BPMRights\\SalesFullCycle_Marketing_ServiceFull_1_4_0_3084_Net_PostgreSQL\\BPMSoft.WebApp\\BPMSoft.Configuration\\BPMSoft.Configuration.ODataEntities.csproj",
+  "projectFilePath": "C:\\inetpub\\wwwroot\\BPMSoft\\Demo\\BPMRights\\SalesFullCycle_Marketing_ServiceFull_1_4_0_3084_Net_PostgreSQL\\BPMSoft.WebApp\\BPMSoft.Configuration\\BPMSoft.Configuration.Dev.csproj",
   "expectedPackageFiles": [
-    "C:\\Windows\\TEMP\\1\\IIS APPPOOL_BB55\\Default\\dotnet\\.nuget\\packages\\microsoft.servicefabric\\9.0.1028\\microsoft.servicefabric.9.0.1028.nupkg.sha512",
-    "C:\\Windows\\TEMP\\1\\IIS APPPOOL_BB55\\Default\\dotnet\\.nuget\\packages\\microsoft.servicefabric.data\\6.0.1028\\microsoft.servicefabric.data.6.0.1028.nupkg.sha512",
-    "C:\\Windows\\TEMP\\1\\IIS APPPOOL_BB55\\Default\\dotnet\\.nuget\\packages\\microsoft.servicefabric.data.extensions\\6.0.1028\\microsoft.servicefabric.data.extensions.6.0.1028.nupkg.sha512",
-    "C:\\Windows\\TEMP\\1\\IIS APPPOOL_BB55\\Default\\dotnet\\.nuget\\packages\\microsoft.servicefabric.data.interfaces\\6.0.1028\\microsoft.servicefabric.data.interfaces.6.0.1028.nupkg.sha512",
-    "C:\\Windows\\TEMP\\1\\IIS APPPOOL_BB55\\Default\\dotnet\\.nuget\\packages\\microsoft.servicefabric.diagnostics.internal\\6.0.1028\\microsoft.servicefabric.diagnostics.internal.6.0.1028.nupkg.sha512",
-    "C:\\Windows\\TEMP\\1\\IIS APPPOOL_BB55\\Default\\dotnet\\.nuget\\packages\\microsoft.servicefabric.fabrictransport.internal\\6.0.1028\\microsoft.servicefabric.fabrictransport.internal.6.0.1028.nupkg.sha512",
-    "C:\\Windows\\TEMP\\1\\IIS APPPOOL_BB55\\Default\\dotnet\\.nuget\\packages\\microsoft.servicefabric.services\\6.0.1028\\microsoft.servicefabric.services.6.0.1028.nupkg.sha512",
-    "C:\\Windows\\TEMP\\1\\IIS APPPOOL_BB55\\Default\\dotnet\\.nuget\\packages\\microsoft.servicefabric.services.remoting\\6.0.1028\\microsoft.servicefabric.services.remoting.6.0.1028.nupkg.sha512",
-    "C:\\Windows\\TEMP\\1\\IIS APPPOOL_BB55\\Default\\dotnet\\.nuget\\packages\\system.buffers\\4.4.0\\system.buffers.4.4.0.nupkg.sha512",
-    "C:\\Windows\\TEMP\\1\\IIS APPPOOL_BB55\\Default\\dotnet\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512",
-    "C:\\Windows\\TEMP\\1\\IIS APPPOOL_BB55\\Default\\dotnet\\.nuget\\packages\\system.numerics.vectors\\4.4.0\\system.numerics.vectors.4.4.0.nupkg.sha512",
-    "C:\\Windows\\TEMP\\1\\IIS APPPOOL_BB55\\Default\\dotnet\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.5.2\\system.runtime.compilerservices.unsafe.4.5.2.nupkg.sha512"
+    "C:\\Users\\Adm-A.Gaakh\\.nuget\\packages\\microsoft.servicefabric\\9.0.1028\\microsoft.servicefabric.9.0.1028.nupkg.sha512",
+    "C:\\Users\\Adm-A.Gaakh\\.nuget\\packages\\microsoft.servicefabric.data\\6.0.1028\\microsoft.servicefabric.data.6.0.1028.nupkg.sha512",
+    "C:\\Users\\Adm-A.Gaakh\\.nuget\\packages\\microsoft.servicefabric.data.extensions\\6.0.1028\\microsoft.servicefabric.data.extensions.6.0.1028.nupkg.sha512",
+    "C:\\Users\\Adm-A.Gaakh\\.nuget\\packages\\microsoft.servicefabric.data.interfaces\\6.0.1028\\microsoft.servicefabric.data.interfaces.6.0.1028.nupkg.sha512",
+    "C:\\Users\\Adm-A.Gaakh\\.nuget\\packages\\microsoft.servicefabric.diagnostics.internal\\6.0.1028\\microsoft.servicefabric.diagnostics.internal.6.0.1028.nupkg.sha512",
+    "C:\\Users\\Adm-A.Gaakh\\.nuget\\packages\\microsoft.servicefabric.fabrictransport.internal\\6.0.1028\\microsoft.servicefabric.fabrictransport.internal.6.0.1028.nupkg.sha512",
+    "C:\\Users\\Adm-A.Gaakh\\.nuget\\packages\\microsoft.servicefabric.services\\6.0.1028\\microsoft.servicefabric.services.6.0.1028.nupkg.sha512",
+    "C:\\Users\\Adm-A.Gaakh\\.nuget\\packages\\microsoft.servicefabric.services.remoting\\6.0.1028\\microsoft.servicefabric.services.remoting.6.0.1028.nupkg.sha512",
+    "C:\\Users\\Adm-A.Gaakh\\.nuget\\packages\\system.buffers\\4.4.0\\system.buffers.4.4.0.nupkg.sha512",
+    "C:\\Users\\Adm-A.Gaakh\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512",
+    "C:\\Users\\Adm-A.Gaakh\\.nuget\\packages\\system.numerics.vectors\\4.4.0\\system.numerics.vectors.4.4.0.nupkg.sha512",
+    "C:\\Users\\Adm-A.Gaakh\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.5.2\\system.runtime.compilerservices.unsafe.4.5.2.nupkg.sha512"
   ],
   "logs": []
 }

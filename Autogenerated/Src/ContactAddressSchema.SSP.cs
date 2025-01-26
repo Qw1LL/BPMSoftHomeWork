@@ -26,23 +26,23 @@
 	using System.IO;
 	using System.Linq;
 
-	#region Class: ContactAddressSchema
+	#region Class: ContactAddress_SSP_BPMSoftSchema
 
 	/// <exclude/>
-	public class ContactAddressSchema : BPMSoft.Configuration.ContactAddress_Base_BPMSoftSchema
+	public class ContactAddress_SSP_BPMSoftSchema : BPMSoft.Configuration.ContactAddress_Base_BPMSoftSchema
 	{
 
 		#region Constructors: Public
 
-		public ContactAddressSchema(EntitySchemaManager entitySchemaManager)
+		public ContactAddress_SSP_BPMSoftSchema(EntitySchemaManager entitySchemaManager)
 			: base(entitySchemaManager) {
 		}
 
-		public ContactAddressSchema(ContactAddressSchema source, bool isShallowClone)
+		public ContactAddress_SSP_BPMSoftSchema(ContactAddress_SSP_BPMSoftSchema source, bool isShallowClone)
 			: base(source, isShallowClone) {
 		}
 
-		public ContactAddressSchema(ContactAddressSchema source)
+		public ContactAddress_SSP_BPMSoftSchema(ContactAddress_SSP_BPMSoftSchema source)
 			: base(source) {
 		}
 
@@ -53,7 +53,7 @@
 		protected override void InitializeProperties() {
 			base.InitializeProperties();
 			RealUId = new Guid("0839a4b5-5677-40b2-a950-f0d55e2ce68b");
-			Name = "ContactAddress";
+			Name = "ContactAddress_SSP_BPMSoft";
 			ParentSchemaUId = new Guid("d54d2218-61c8-413a-a1b7-5748c7e25f56");
 			ExtendParent = true;
 			CreatedInPackageId = new Guid("d7352345-17a4-46e8-b32e-306ac0453d7a");
@@ -76,7 +76,7 @@
 		#region Methods: Public
 
 		public override Entity CreateEntity(UserConnection userConnection) {
-			return new ContactAddress(userConnection) {Schema = this};
+			return new ContactAddress_SSP_BPMSoft(userConnection) {Schema = this};
 		}
 
 		public override EmbeddedProcess CreateEventsProcess(UserConnection userConnection) {
@@ -84,11 +84,11 @@
 		}
 
 		public override object Clone() {
-			return new ContactAddressSchema(this);
+			return new ContactAddress_SSP_BPMSoftSchema(this);
 		}
 
 		public override EntitySchema CloneShallow() {
-			return new ContactAddressSchema(this, true);
+			return new ContactAddress_SSP_BPMSoftSchema(this, true);
 		}
 
 		public override void GetParentRealUIds(Collection<Guid> realUIds) {
@@ -102,22 +102,22 @@
 
 	#endregion
 
-	#region Class: ContactAddress
+	#region Class: ContactAddress_SSP_BPMSoft
 
 	/// <summary>
 	/// Contact address.
 	/// </summary>
-	public class ContactAddress : BPMSoft.Configuration.ContactAddress_Base_BPMSoft
+	public class ContactAddress_SSP_BPMSoft : BPMSoft.Configuration.ContactAddress_Base_BPMSoft
 	{
 
 		#region Constructors: Public
 
-		public ContactAddress(UserConnection userConnection)
+		public ContactAddress_SSP_BPMSoft(UserConnection userConnection)
 			: base(userConnection) {
-			SchemaName = "ContactAddress";
+			SchemaName = "ContactAddress_SSP_BPMSoft";
 		}
 
-		public ContactAddress(ContactAddress source)
+		public ContactAddress_SSP_BPMSoft(ContactAddress_SSP_BPMSoft source)
 			: base(source) {
 		}
 
@@ -144,7 +144,7 @@
 		#region Methods: Public
 
 		public override object Clone() {
-			return new ContactAddress(this);
+			return new ContactAddress_SSP_BPMSoft(this);
 		}
 
 		#endregion
@@ -156,7 +156,7 @@
 	#region Class: ContactAddress_SSPEventsProcess
 
 	/// <exclude/>
-	public partial class ContactAddress_SSPEventsProcess<TEntity> : BPMSoft.Configuration.ContactAddress_BaseEventsProcess<TEntity> where TEntity : ContactAddress
+	public partial class ContactAddress_SSPEventsProcess<TEntity> : BPMSoft.Configuration.ContactAddress_BaseEventsProcess<TEntity> where TEntity : ContactAddress_SSP_BPMSoft
 	{
 
 		public ContactAddress_SSPEventsProcess(UserConnection userConnection)
@@ -237,7 +237,7 @@
 	#region Class: ContactAddress_SSPEventsProcess
 
 	/// <exclude/>
-	public class ContactAddress_SSPEventsProcess : ContactAddress_SSPEventsProcess<ContactAddress>
+	public class ContactAddress_SSPEventsProcess : ContactAddress_SSPEventsProcess<ContactAddress_SSP_BPMSoft>
 	{
 
 		public ContactAddress_SSPEventsProcess(UserConnection userConnection)
@@ -256,21 +256,6 @@
 		#region Methods: Public
 
 		#endregion
-
-	}
-
-	#endregion
-
-
-	#region Class: ContactAddressEventsProcess
-
-	/// <exclude/>
-	public class ContactAddressEventsProcess : ContactAddress_SSPEventsProcess
-	{
-
-		public ContactAddressEventsProcess(UserConnection userConnection)
-			: base(userConnection) {
-		}
 
 	}
 

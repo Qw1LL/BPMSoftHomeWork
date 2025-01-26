@@ -30,6 +30,11 @@
 
 		#region Properties: Public
 
+		public IEnumerable<Activity> ActivityCollectionByUsrTransportRequest {
+			get;
+			set;
+		}
+
 		public IEnumerable<UsrTransportRequestsFile> UsrTransportRequestsFileCollectionByUsrTransportRequests {
 			get;
 			set;
@@ -374,6 +379,19 @@
 			}
 		}
 
+		/// <exclude/>
+		public string UsrStatusUsrName {
+			get {
+				return GetTypedColumnValue<string>("UsrStatusUsrName");
+			}
+			set {
+				SetColumnValue("UsrStatusUsrName", value);
+				if (_usrStatus != null) {
+					_usrStatus.UsrName = value;
+				}
+			}
+		}
+
 		private UsrTransportRequestsStatus _usrStatus;
 		/// <summary>
 		/// Статус.
@@ -382,6 +400,18 @@
 			get {
 				return _usrStatus ??
 					(_usrStatus = new UsrTransportRequestsStatus(LookupColumnEntities.GetEntity("UsrStatus")));
+			}
+		}
+
+		/// <summary>
+		/// Дата поездки.
+		/// </summary>
+		public DateTime UsrTripDate {
+			get {
+				return GetTypedColumnValue<DateTime>("UsrTripDate");
+			}
+			set {
+				SetColumnValue("UsrTripDate", value);
 			}
 		}
 

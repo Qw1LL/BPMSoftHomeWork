@@ -90,6 +90,9 @@
 			set;
 		}
 
+		/// <summary>
+		/// Id.
+		/// </summary>
 		public Guid Id {
 			get {
 				return GetTypedColumnValue<Guid>("Id");
@@ -99,6 +102,9 @@
 			}
 		}
 
+		/// <summary>
+		/// Дата создания.
+		/// </summary>
 		public DateTime CreatedOn {
 			get {
 				return GetTypedColumnValue<DateTime>("CreatedOn");
@@ -133,6 +139,9 @@
 		}
 
 		private Contact _createdBy;
+		/// <summary>
+		/// Создал.
+		/// </summary>
 		public Contact CreatedBy {
 			get {
 				return _createdBy ??
@@ -140,6 +149,9 @@
 			}
 		}
 
+		/// <summary>
+		/// Дата изменения.
+		/// </summary>
 		public DateTime ModifiedOn {
 			get {
 				return GetTypedColumnValue<DateTime>("ModifiedOn");
@@ -174,6 +186,9 @@
 		}
 
 		private Contact _modifiedBy;
+		/// <summary>
+		/// Изменил.
+		/// </summary>
 		public Contact ModifiedBy {
 			get {
 				return _modifiedBy ??
@@ -181,6 +196,9 @@
 			}
 		}
 
+		/// <summary>
+		/// Заметки.
+		/// </summary>
 		public string Notes {
 			get {
 				return GetTypedColumnValue<string>("Notes");
@@ -190,6 +208,9 @@
 			}
 		}
 
+		/// <summary>
+		/// Название контрагента.
+		/// </summary>
 		public string Account {
 			get {
 				return GetTypedColumnValue<string>("Account");
@@ -199,6 +220,9 @@
 			}
 		}
 
+		/// <summary>
+		/// ФИО контакта.
+		/// </summary>
 		public string Contact {
 			get {
 				return GetTypedColumnValue<string>("Contact");
@@ -233,6 +257,9 @@
 		}
 
 		private ContactSalutationType _title;
+		/// <summary>
+		/// Обращение.
+		/// </summary>
 		public ContactSalutationType Title {
 			get {
 				return _title ??
@@ -240,6 +267,9 @@
 			}
 		}
 
+		/// <summary>
+		/// Полное название должности.
+		/// </summary>
 		public string FullJobTitle {
 			get {
 				return GetTypedColumnValue<string>("FullJobTitle");
@@ -274,6 +304,9 @@
 		}
 
 		private LeadStatus _status;
+		/// <summary>
+		/// Состояние.
+		/// </summary>
 		public LeadStatus Status {
 			get {
 				return _status ??
@@ -306,6 +339,9 @@
 		}
 
 		private InformationSource _informationSource;
+		/// <summary>
+		/// Источник информации.
+		/// </summary>
 		public InformationSource InformationSource {
 			get {
 				return _informationSource ??
@@ -338,6 +374,9 @@
 		}
 
 		private AccountIndustry _industry;
+		/// <summary>
+		/// Отрасль.
+		/// </summary>
 		public AccountIndustry Industry {
 			get {
 				return _industry ??
@@ -370,6 +409,9 @@
 		}
 
 		private AccountAnnualRevenue _annualRevenue;
+		/// <summary>
+		/// Годовой оборот.
+		/// </summary>
 		public AccountAnnualRevenue AnnualRevenue {
 			get {
 				return _annualRevenue ??
@@ -402,6 +444,9 @@
 		}
 
 		private AccountEmployeesNumber _employeesNumber;
+		/// <summary>
+		/// Количество сотрудников.
+		/// </summary>
 		public AccountEmployeesNumber EmployeesNumber {
 			get {
 				return _employeesNumber ??
@@ -409,6 +454,9 @@
 			}
 		}
 
+		/// <summary>
+		/// Рабочий телефон.
+		/// </summary>
 		public string BusinesPhone {
 			get {
 				return GetTypedColumnValue<string>("BusinesPhone");
@@ -418,6 +466,9 @@
 			}
 		}
 
+		/// <summary>
+		/// Мобильный телефон.
+		/// </summary>
 		public string MobilePhone {
 			get {
 				return GetTypedColumnValue<string>("MobilePhone");
@@ -427,6 +478,9 @@
 			}
 		}
 
+		/// <summary>
+		/// Email.
+		/// </summary>
 		public string Email {
 			get {
 				return GetTypedColumnValue<string>("Email");
@@ -436,6 +490,9 @@
 			}
 		}
 
+		/// <summary>
+		/// Факс.
+		/// </summary>
 		public string Fax {
 			get {
 				return GetTypedColumnValue<string>("Fax");
@@ -445,6 +502,9 @@
 			}
 		}
 
+		/// <summary>
+		/// Web.
+		/// </summary>
 		public string Website {
 			get {
 				return GetTypedColumnValue<string>("Website");
@@ -479,6 +539,9 @@
 		}
 
 		private AddressType _addressType;
+		/// <summary>
+		/// Тип адреса.
+		/// </summary>
 		public AddressType AddressType {
 			get {
 				return _addressType ??
@@ -511,6 +574,9 @@
 		}
 
 		private Country _country;
+		/// <summary>
+		/// Страна.
+		/// </summary>
 		public Country Country {
 			get {
 				return _country ??
@@ -543,6 +609,9 @@
 		}
 
 		private Region _region;
+		/// <summary>
+		/// Область/штат.
+		/// </summary>
 		public Region Region {
 			get {
 				return _region ??
@@ -575,6 +644,9 @@
 		}
 
 		private City _city;
+		/// <summary>
+		/// Город.
+		/// </summary>
 		public City City {
 			get {
 				return _city ??
@@ -582,6 +654,9 @@
 			}
 		}
 
+		/// <summary>
+		/// Индекс.
+		/// </summary>
 		public string Zip {
 			get {
 				return GetTypedColumnValue<string>("Zip");
@@ -591,6 +666,9 @@
 			}
 		}
 
+		/// <summary>
+		/// Адрес.
+		/// </summary>
 		public string Address {
 			get {
 				return GetTypedColumnValue<string>("Address");
@@ -600,6 +678,9 @@
 			}
 		}
 
+		/// <summary>
+		/// Не использовать email.
+		/// </summary>
 		public bool DoNotUseEmail {
 			get {
 				return GetTypedColumnValue<bool>("DoNotUseEmail");
@@ -609,6 +690,9 @@
 			}
 		}
 
+		/// <summary>
+		/// Не использовать телефон.
+		/// </summary>
 		public bool DoNotUsePhone {
 			get {
 				return GetTypedColumnValue<bool>("DoNotUsePhone");
@@ -618,6 +702,9 @@
 			}
 		}
 
+		/// <summary>
+		/// Не использовать факс.
+		/// </summary>
 		public bool DoNotUseFax {
 			get {
 				return GetTypedColumnValue<bool>("DoNotUseFax");
@@ -627,6 +714,9 @@
 			}
 		}
 
+		/// <summary>
+		/// Не использовать SMS.
+		/// </summary>
 		public bool DoNotUseSMS {
 			get {
 				return GetTypedColumnValue<bool>("DoNotUseSMS");
@@ -636,6 +726,9 @@
 			}
 		}
 
+		/// <summary>
+		/// Не использовать почту.
+		/// </summary>
 		public bool DoNotUseMail {
 			get {
 				return GetTypedColumnValue<bool>("DoNotUseMail");
@@ -645,6 +738,9 @@
 			}
 		}
 
+		/// <summary>
+		/// Комментарий.
+		/// </summary>
 		public string Commentary {
 			get {
 				return GetTypedColumnValue<string>("Commentary");
@@ -679,6 +775,9 @@
 		}
 
 		private Contact _qualifiedContact;
+		/// <summary>
+		/// Контакт.
+		/// </summary>
 		public Contact QualifiedContact {
 			get {
 				return _qualifiedContact ??
@@ -711,6 +810,9 @@
 		}
 
 		private Account _qualifiedAccount;
+		/// <summary>
+		/// Контрагент.
+		/// </summary>
 		public Account QualifiedAccount {
 			get {
 				return _qualifiedAccount ??
@@ -718,6 +820,9 @@
 			}
 		}
 
+		/// <summary>
+		/// Лид.
+		/// </summary>
 		public string LeadName {
 			get {
 				return GetTypedColumnValue<string>("LeadName");
@@ -727,6 +832,9 @@
 			}
 		}
 
+		/// <summary>
+		/// Активные процессы.
+		/// </summary>
 		public int ProcessListeners {
 			get {
 				return GetTypedColumnValue<int>("ProcessListeners");
@@ -736,6 +844,9 @@
 			}
 		}
 
+		/// <summary>
+		/// Страна (строка).
+		/// </summary>
 		public string CountryStr {
 			get {
 				return GetTypedColumnValue<string>("CountryStr");
@@ -745,6 +856,9 @@
 			}
 		}
 
+		/// <summary>
+		/// Область/штат (строка).
+		/// </summary>
 		public string RegionStr {
 			get {
 				return GetTypedColumnValue<string>("RegionStr");
@@ -754,6 +868,9 @@
 			}
 		}
 
+		/// <summary>
+		/// Город (строка).
+		/// </summary>
 		public string CityStr {
 			get {
 				return GetTypedColumnValue<string>("CityStr");
@@ -788,6 +905,9 @@
 		}
 
 		private GeneratedWebForm _webForm;
+		/// <summary>
+		/// Лендинг.
+		/// </summary>
 		public GeneratedWebForm WebForm {
 			get {
 				return _webForm ??
@@ -820,6 +940,9 @@
 		}
 
 		private LeadType _leadType;
+		/// <summary>
+		/// Тип потребности.
+		/// </summary>
 		public LeadType LeadType {
 			get {
 				return _leadType ??
@@ -852,6 +975,9 @@
 		}
 
 		private LeadTypeStatus _leadTypeStatus;
+		/// <summary>
+		/// Зрелость потребности.
+		/// </summary>
 		public LeadTypeStatus LeadTypeStatus {
 			get {
 				return _leadTypeStatus ??
@@ -884,6 +1010,9 @@
 		}
 
 		private LeadDisqualifyReason _leadDisqualifyReason;
+		/// <summary>
+		/// Причина дисквалификации.
+		/// </summary>
 		public LeadDisqualifyReason LeadDisqualifyReason {
 			get {
 				return _leadDisqualifyReason ??
@@ -916,6 +1045,9 @@
 		}
 
 		private AccountCategory _accountCategory;
+		/// <summary>
+		/// Категория.
+		/// </summary>
 		public AccountCategory AccountCategory {
 			get {
 				return _accountCategory ??
@@ -948,6 +1080,9 @@
 		}
 
 		private AccountOwnership _accountOwnership;
+		/// <summary>
+		/// Форма собственности.
+		/// </summary>
 		public AccountOwnership AccountOwnership {
 			get {
 				return _accountOwnership ??
@@ -980,6 +1115,9 @@
 		}
 
 		private Department _department;
+		/// <summary>
+		/// Департамент.
+		/// </summary>
 		public Department Department {
 			get {
 				return _department ??
@@ -1012,6 +1150,9 @@
 		}
 
 		private Gender _gender;
+		/// <summary>
+		/// Пол.
+		/// </summary>
 		public Gender Gender {
 			get {
 				return _gender ??
@@ -1044,6 +1185,9 @@
 		}
 
 		private Job _job;
+		/// <summary>
+		/// Должность.
+		/// </summary>
 		public Job Job {
 			get {
 				return _job ??
@@ -1076,6 +1220,9 @@
 		}
 
 		private ContactDecisionRole _decisionRole;
+		/// <summary>
+		/// Роль.
+		/// </summary>
 		public ContactDecisionRole DecisionRole {
 			get {
 				return _decisionRole ??
@@ -1108,6 +1255,9 @@
 		}
 
 		private QualifyStatus _qualifyStatus;
+		/// <summary>
+		/// Стадия лида.
+		/// </summary>
 		public QualifyStatus QualifyStatus {
 			get {
 				return _qualifyStatus ??
@@ -1115,6 +1265,9 @@
 			}
 		}
 
+		/// <summary>
+		/// Приветствие.
+		/// </summary>
 		public string Dear {
 			get {
 				return GetTypedColumnValue<string>("Dear");
@@ -1124,6 +1277,12 @@
 			}
 		}
 
+		/// <summary>
+		/// QualificationProcessId.
+		/// </summary>
+		/// <remarks>
+		/// Идентификатор в таблице SysProcessData.
+		/// </remarks>
 		public Guid QualificationProcessId {
 			get {
 				return GetTypedColumnValue<Guid>("QualificationProcessId");
@@ -1158,6 +1317,9 @@
 		}
 
 		private Contact _owner;
+		/// <summary>
+		/// Ответственный.
+		/// </summary>
 		public Contact Owner {
 			get {
 				return _owner ??
@@ -1165,6 +1327,9 @@
 			}
 		}
 
+		/// <summary>
+		/// Напоминание ответственному.
+		/// </summary>
 		public bool RemindToOwner {
 			get {
 				return GetTypedColumnValue<bool>("RemindToOwner");
@@ -1199,6 +1364,9 @@
 		}
 
 		private Contact _salesOwner;
+		/// <summary>
+		/// Ответственный за продажу.
+		/// </summary>
 		public Contact SalesOwner {
 			get {
 				return _salesOwner ??
@@ -1206,6 +1374,9 @@
 			}
 		}
 
+		/// <summary>
+		/// Бюджет.
+		/// </summary>
 		public Decimal Budget {
 			get {
 				return GetTypedColumnValue<Decimal>("Budget");
@@ -1215,6 +1386,9 @@
 			}
 		}
 
+		/// <summary>
+		/// Дата и время встречи.
+		/// </summary>
 		public DateTime MeetingDate {
 			get {
 				return GetTypedColumnValue<DateTime>("MeetingDate");
@@ -1224,6 +1398,9 @@
 			}
 		}
 
+		/// <summary>
+		/// Дата принятия решения.
+		/// </summary>
 		public DateTime DecisionDate {
 			get {
 				return GetTypedColumnValue<DateTime>("DecisionDate");
@@ -1233,6 +1410,9 @@
 			}
 		}
 
+		/// <summary>
+		/// Отображать страницу распределения.
+		/// </summary>
 		public bool ShowDistributionPage {
 			get {
 				return GetTypedColumnValue<bool>("ShowDistributionPage");
@@ -1242,6 +1422,9 @@
 			}
 		}
 
+		/// <summary>
+		/// BpmHref.
+		/// </summary>
 		public string BpmHref {
 			get {
 				return GetTypedColumnValue<string>("BpmHref");
@@ -1251,6 +1434,9 @@
 			}
 		}
 
+		/// <summary>
+		/// Сайт перехода.
+		/// </summary>
 		public string BpmRef {
 			get {
 				return GetTypedColumnValue<string>("BpmRef");
@@ -1285,6 +1471,9 @@
 		}
 
 		private LeadRegisterMethod _registerMethod;
+		/// <summary>
+		/// Как зарегистрирован.
+		/// </summary>
 		public LeadRegisterMethod RegisterMethod {
 			get {
 				return _registerMethod ??
@@ -1317,6 +1506,9 @@
 		}
 
 		private LeadSource _leadSource;
+		/// <summary>
+		/// Источник.
+		/// </summary>
 		public LeadSource LeadSource {
 			get {
 				return _leadSource ??
@@ -1349,6 +1541,9 @@
 		}
 
 		private LeadMedium _leadMedium;
+		/// <summary>
+		/// Канал.
+		/// </summary>
 		public LeadMedium LeadMedium {
 			get {
 				return _leadMedium ??
@@ -1381,6 +1576,9 @@
 		}
 
 		private OpportunityDepartment _opportunityDepartment;
+		/// <summary>
+		/// Направление продажи.
+		/// </summary>
 		public OpportunityDepartment OpportunityDepartment {
 			get {
 				return _opportunityDepartment ??
@@ -1388,6 +1586,9 @@
 			}
 		}
 
+		/// <summary>
+		/// Идентификация пройдена.
+		/// </summary>
 		public bool IdentificationPassed {
 			get {
 				return GetTypedColumnValue<bool>("IdentificationPassed");
@@ -1422,6 +1623,9 @@
 		}
 
 		private Campaign _campaign;
+		/// <summary>
+		/// Кампания.
+		/// </summary>
 		public Campaign Campaign {
 			get {
 				return _campaign ??
@@ -1454,6 +1658,9 @@
 		}
 
 		private BulkEmail _bulkEmail;
+		/// <summary>
+		/// Рассылка.
+		/// </summary>
 		public BulkEmail BulkEmail {
 			get {
 				return _bulkEmail ??
@@ -1461,6 +1668,9 @@
 			}
 		}
 
+		/// <summary>
+		/// Квалифицирован.
+		/// </summary>
 		public int Qualified {
 			get {
 				return GetTypedColumnValue<int>("Qualified");
@@ -1470,6 +1680,9 @@
 			}
 		}
 
+		/// <summary>
+		/// Участник продаж.
+		/// </summary>
 		public int SaleParticipant {
 			get {
 				return GetTypedColumnValue<int>("SaleParticipant");
@@ -1479,6 +1692,9 @@
 			}
 		}
 
+		/// <summary>
+		/// % квалифицированных.
+		/// </summary>
 		public Decimal QualifiedPercent {
 			get {
 				return GetTypedColumnValue<Decimal>("QualifiedPercent");
@@ -1488,6 +1704,9 @@
 			}
 		}
 
+		/// <summary>
+		/// % продаж.
+		/// </summary>
 		public Decimal SalePercent {
 			get {
 				return GetTypedColumnValue<Decimal>("SalePercent");
@@ -1497,6 +1716,9 @@
 			}
 		}
 
+		/// <summary>
+		/// Запускать процесс при создании лида.
+		/// </summary>
 		public bool StartLeadManagementProcess {
 			get {
 				return GetTypedColumnValue<bool>("StartLeadManagementProcess");
@@ -1506,6 +1728,9 @@
 			}
 		}
 
+		/// <summary>
+		/// Тип продажи.
+		/// </summary>
 		public string SaleType {
 			get {
 				return GetTypedColumnValue<string>("SaleType");
@@ -1515,6 +1740,9 @@
 			}
 		}
 
+		/// <summary>
+		/// Рейтинг.
+		/// </summary>
 		public Decimal Score {
 			get {
 				return GetTypedColumnValue<Decimal>("Score");
@@ -1524,6 +1752,9 @@
 			}
 		}
 
+		/// <summary>
+		/// Квалификация пройдена.
+		/// </summary>
 		public bool QualificationPassed {
 			get {
 				return GetTypedColumnValue<bool>("QualificationPassed");
@@ -1558,6 +1789,9 @@
 		}
 
 		private Event _event;
+		/// <summary>
+		/// Мероприятие.
+		/// </summary>
 		public Event Event {
 			get {
 				return _event ??
@@ -1565,6 +1799,9 @@
 			}
 		}
 
+		/// <summary>
+		/// Дата следующей актуализации.
+		/// </summary>
 		public DateTime NextActualizationDate {
 			get {
 				return GetTypedColumnValue<DateTime>("NextActualizationDate");
@@ -1574,6 +1811,9 @@
 			}
 		}
 
+		/// <summary>
+		/// BpmSessionId.
+		/// </summary>
 		public Guid BpmSessionId {
 			get {
 				return GetTypedColumnValue<Guid>("BpmSessionId");
@@ -1583,6 +1823,9 @@
 			}
 		}
 
+		/// <summary>
+		/// Предиктивный рейтинг.
+		/// </summary>
 		public int PredictiveScore {
 			get {
 				return GetTypedColumnValue<int>("PredictiveScore");
@@ -1592,6 +1835,9 @@
 			}
 		}
 
+		/// <summary>
+		/// Дата перевода в конечную стадию .
+		/// </summary>
 		public DateTime MovedToFinalStateOn {
 			get {
 				return GetTypedColumnValue<DateTime>("MovedToFinalStateOn");
@@ -1626,6 +1872,9 @@
 		}
 
 		private Opportunity _opportunity;
+		/// <summary>
+		/// Продажа.
+		/// </summary>
 		public Opportunity Opportunity {
 			get {
 				return _opportunity ??
@@ -1658,6 +1907,9 @@
 		}
 
 		private Account _partner;
+		/// <summary>
+		/// Партнер.
+		/// </summary>
 		public Account Partner {
 			get {
 				return _partner ??
@@ -1690,6 +1942,9 @@
 		}
 
 		private Contact _partnerOwner;
+		/// <summary>
+		/// Ответственный партнера за сделку.
+		/// </summary>
 		public Contact PartnerOwner {
 			get {
 				return _partnerOwner ??
@@ -1722,6 +1977,9 @@
 		}
 
 		private PartnerType _partnerType;
+		/// <summary>
+		/// Тип партнера.
+		/// </summary>
 		public PartnerType PartnerType {
 			get {
 				return _partnerType ??
@@ -1754,6 +2012,9 @@
 		}
 
 		private OpportunityType _salesChannel;
+		/// <summary>
+		/// Канал продажи.
+		/// </summary>
 		public OpportunityType SalesChannel {
 			get {
 				return _salesChannel ??
@@ -1786,6 +2047,9 @@
 		}
 
 		private Order _order;
+		/// <summary>
+		/// Заказ.
+		/// </summary>
 		public Order Order {
 			get {
 				return _order ??
@@ -1818,6 +2082,9 @@
 		}
 
 		private LeadGenExtendedLeadInformation _leadGenExtendedLeadInfo;
+		/// <summary>
+		/// Расширенная информация о лиде.
+		/// </summary>
 		public LeadGenExtendedLeadInformation LeadGenExtendedLeadInfo {
 			get {
 				return _leadGenExtendedLeadInfo ??
@@ -1825,6 +2092,9 @@
 			}
 		}
 
+		/// <summary>
+		/// Социальные метаданные.
+		/// </summary>
 		public string SocialMetadata {
 			get {
 				return GetTypedColumnValue<string>("SocialMetadata");

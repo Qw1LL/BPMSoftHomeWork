@@ -33,7 +33,7 @@
 	#region Class: ContactSchema
 
 	/// <exclude/>
-	public class ContactSchema : BPMSoft.Configuration.Contact_SalesEnterprise_BPMSoftSchema
+	public class ContactSchema : BPMSoft.Configuration.Contact_RtxLearning_RtxSchema
 	{
 
 		#region Constructors: Public
@@ -111,7 +111,7 @@
 	/// <summary>
 	/// Контакт.
 	/// </summary>
-	public class Contact : BPMSoft.Configuration.Contact_SalesEnterprise_BPMSoft
+	public class Contact : BPMSoft.Configuration.Contact_RtxLearning_Rtx
 	{
 
 		#region Constructors: Public
@@ -160,7 +160,7 @@
 	#region Class: Contact_CustomEventsProcess
 
 	/// <exclude/>
-	public partial class Contact_CustomEventsProcess<TEntity> : BPMSoft.Configuration.Contact_SalesEnterpriseEventsProcess<TEntity> where TEntity : Contact
+	public partial class Contact_CustomEventsProcess<TEntity> : BPMSoft.Configuration.Contact_RtxLearningEventsProcess<TEntity> where TEntity : Contact
 	{
 
 		public Contact_CustomEventsProcess(UserConnection userConnection)

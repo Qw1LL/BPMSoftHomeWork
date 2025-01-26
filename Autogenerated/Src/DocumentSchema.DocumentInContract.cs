@@ -26,23 +26,23 @@
 	using System.IO;
 	using System.Linq;
 
-	#region Class: DocumentSchema
+	#region Class: Document_DocumentInContract_BPMSoftSchema
 
 	/// <exclude/>
-	public class DocumentSchema : BPMSoft.Configuration.Document_DocumentInOpportunity_BPMSoftSchema
+	public class Document_DocumentInContract_BPMSoftSchema : BPMSoft.Configuration.Document_Document_BPMSoftSchema
 	{
 
 		#region Constructors: Public
 
-		public DocumentSchema(EntitySchemaManager entitySchemaManager)
+		public Document_DocumentInContract_BPMSoftSchema(EntitySchemaManager entitySchemaManager)
 			: base(entitySchemaManager) {
 		}
 
-		public DocumentSchema(DocumentSchema source, bool isShallowClone)
+		public Document_DocumentInContract_BPMSoftSchema(Document_DocumentInContract_BPMSoftSchema source, bool isShallowClone)
 			: base(source, isShallowClone) {
 		}
 
-		public DocumentSchema(DocumentSchema source)
+		public Document_DocumentInContract_BPMSoftSchema(Document_DocumentInContract_BPMSoftSchema source)
 			: base(source) {
 		}
 
@@ -53,7 +53,7 @@
 		protected override void InitializeProperties() {
 			base.InitializeProperties();
 			RealUId = new Guid("05ec5c8c-fd85-418e-8d4a-95cd4f8b1f77");
-			Name = "Document";
+			Name = "Document_DocumentInContract_BPMSoft";
 			ParentSchemaUId = new Guid("8b33b6b2-19f7-4222-9161-b4054b3fbb09");
 			ExtendParent = true;
 			CreatedInPackageId = new Guid("7f2d0fd0-8147-4292-af7e-8927e24f9683");
@@ -91,7 +91,7 @@
 		#region Methods: Public
 
 		public override Entity CreateEntity(UserConnection userConnection) {
-			return new Document(userConnection) {Schema = this};
+			return new Document_DocumentInContract_BPMSoft(userConnection) {Schema = this};
 		}
 
 		public override EmbeddedProcess CreateEventsProcess(UserConnection userConnection) {
@@ -99,11 +99,11 @@
 		}
 
 		public override object Clone() {
-			return new DocumentSchema(this);
+			return new Document_DocumentInContract_BPMSoftSchema(this);
 		}
 
 		public override EntitySchema CloneShallow() {
-			return new DocumentSchema(this, true);
+			return new Document_DocumentInContract_BPMSoftSchema(this, true);
 		}
 
 		public override void GetParentRealUIds(Collection<Guid> realUIds) {
@@ -117,22 +117,22 @@
 
 	#endregion
 
-	#region Class: Document
+	#region Class: Document_DocumentInContract_BPMSoft
 
 	/// <summary>
 	/// Документ.
 	/// </summary>
-	public class Document : BPMSoft.Configuration.Document_DocumentInOpportunity_BPMSoft
+	public class Document_DocumentInContract_BPMSoft : BPMSoft.Configuration.Document_Document_BPMSoft
 	{
 
 		#region Constructors: Public
 
-		public Document(UserConnection userConnection)
+		public Document_DocumentInContract_BPMSoft(UserConnection userConnection)
 			: base(userConnection) {
-			SchemaName = "Document";
+			SchemaName = "Document_DocumentInContract_BPMSoft";
 		}
 
-		public Document(Document source)
+		public Document_DocumentInContract_BPMSoft(Document_DocumentInContract_BPMSoft source)
 			: base(source) {
 		}
 
@@ -190,8 +190,8 @@
 		#region Methods: Protected
 
 		protected override void InitializeThrowEvents() {
-			Deleted += (s, e) => ThrowEvent("DocumentDeleted", e);
-			Validating += (s, e) => ThrowEvent("DocumentValidating", e);
+			Deleted += (s, e) => ThrowEvent("Document_DocumentInContract_BPMSoftDeleted", e);
+			Validating += (s, e) => ThrowEvent("Document_DocumentInContract_BPMSoftValidating", e);
 			base.InitializeThrowEvents();
 		}
 
@@ -200,7 +200,7 @@
 		#region Methods: Public
 
 		public override object Clone() {
-			return new Document(this);
+			return new Document_DocumentInContract_BPMSoft(this);
 		}
 
 		#endregion
@@ -212,7 +212,7 @@
 	#region Class: Document_DocumentInContractEventsProcess
 
 	/// <exclude/>
-	public partial class Document_DocumentInContractEventsProcess<TEntity> : BPMSoft.Configuration.Document_DocumentInOpportunityEventsProcess<TEntity> where TEntity : Document
+	public partial class Document_DocumentInContractEventsProcess<TEntity> : BPMSoft.Configuration.Document_DocumentEventsProcess<TEntity> where TEntity : Document_DocumentInContract_BPMSoft
 	{
 
 		public Document_DocumentInContractEventsProcess(UserConnection userConnection)
@@ -293,7 +293,7 @@
 	#region Class: Document_DocumentInContractEventsProcess
 
 	/// <exclude/>
-	public class Document_DocumentInContractEventsProcess : Document_DocumentInContractEventsProcess<Document>
+	public class Document_DocumentInContractEventsProcess : Document_DocumentInContractEventsProcess<Document_DocumentInContract_BPMSoft>
 	{
 
 		public Document_DocumentInContractEventsProcess(UserConnection userConnection)
@@ -312,21 +312,6 @@
 		#region Methods: Public
 
 		#endregion
-
-	}
-
-	#endregion
-
-
-	#region Class: DocumentEventsProcess
-
-	/// <exclude/>
-	public class DocumentEventsProcess : Document_DocumentInContractEventsProcess
-	{
-
-		public DocumentEventsProcess(UserConnection userConnection)
-			: base(userConnection) {
-		}
 
 	}
 

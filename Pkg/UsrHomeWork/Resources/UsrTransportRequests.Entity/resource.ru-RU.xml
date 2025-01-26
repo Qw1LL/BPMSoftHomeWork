@@ -13,6 +13,7 @@
 			<Item Name="Columns.UsrOwner.Caption" Value="Ответственный" />
 			<Item Name="Columns.UsrRequestNumber.Caption" Value="Номер заявки" />
 			<Item Name="Columns.UsrStatus.Caption" Value="Статус" />
+			<Item Name="Columns.UsrTripDate.Caption" Value="Дата поездки" />
 			<Item Name="EventsProcessSchema.Caption" Value="Бизнес-процесс" />
 		</Items>
 	</Group>
