@@ -5,16 +5,16 @@
   },
   "projects": {
     "C:\\inetpub\\wwwroot\\BPMSoft\\Demo\\BPMRights\\SalesFullCycle_Marketing_ServiceFull_1_4_0_3084_Net_PostgreSQL\\BPMSoft.WebApp\\BPMSoft.Configuration\\BPMSoft.Configuration.Dev.csproj": {
-      "version": "0.0.0",
+      "version": "1.4.0.3084",
       "restore": {
         "projectUniqueName": "C:\\inetpub\\wwwroot\\BPMSoft\\Demo\\BPMRights\\SalesFullCycle_Marketing_ServiceFull_1_4_0_3084_Net_PostgreSQL\\BPMSoft.WebApp\\BPMSoft.Configuration\\BPMSoft.Configuration.Dev.csproj",
         "projectName": "BPMSoft.Configuration",
         "projectPath": "C:\\inetpub\\wwwroot\\BPMSoft\\Demo\\BPMRights\\SalesFullCycle_Marketing_ServiceFull_1_4_0_3084_Net_PostgreSQL\\BPMSoft.WebApp\\BPMSoft.Configuration\\BPMSoft.Configuration.Dev.csproj",
-        "packagesPath": "C:\\Users\\Adm-A.Gaakh\\.nuget\\packages\\",
+        "packagesPath": "C:\\Windows\\TEMP\\1\\IIS APPPOOL_BB55\\Default\\dotnet\\.nuget\\packages\\",
         "outputPath": "C:\\inetpub\\wwwroot\\BPMSoft\\Demo\\BPMRights\\SalesFullCycle_Marketing_ServiceFull_1_4_0_3084_Net_PostgreSQL\\BPMSoft.WebApp\\BPMSoft.Configuration\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Adm-A.Gaakh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Windows\\TEMP\\1\\IIS APPPOOL_BB55\\Default\\dotnet\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -34,6 +34,11 @@
           "warnAsError": [
             "NU1701"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {

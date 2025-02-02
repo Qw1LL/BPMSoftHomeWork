@@ -1,0 +1,13 @@
+﻿{
+  "Descriptor": {
+    "UId": "4fd1640b-c527-4a37-97ee-d4409e062f26",
+    "Name": "UsrSchema0170b3d9Detail",
+    "ModifiedOnUtc": "\/Date(1738089157000)\/",
+    "Parent": {
+      "UId": "01eb38ee-668a-42f0-999d-c2534f979089",
+      "Name": "BaseGridDetailV2"
+    },
+    "ManagerName": "ClientUnitSchemaManager",
+    "Caption": "Схема детали: \"Команда в заявке на транспорт\""
+  }
+}

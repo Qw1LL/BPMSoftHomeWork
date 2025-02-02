@@ -1,8 +1,11 @@
-define("UsrTransportRequests1Page", [], function() {
+define("UsrTransportRequests1Page", ["UsrRequestNumberEditControl"], function() {
 	return {
 		entitySchemaName: "UsrTransportRequests",
 		attributes: {
 			"UsrDriver": {
+				lookupListConfig: {
+					columns: ["Account", "Phone", "MobilePhone",  "Email", "Name"]
+				},
 				dataValueType: this.BPMSoft.DataValueType.LOOKUP,
 				dependencies: [
 					{
@@ -15,8 +18,38 @@ define("UsrTransportRequests1Page", [], function() {
 					},
 				]
 			},
+			"AddTeamButtonVisible": {
+				"type": BPMSoft.ViewModelColumnType.VIRTUAL_COLUMN,
+				"dataValueType": BPMSoft.DataValueType.BOOLEAN,
+				"caption": "AddTeamButtonVisible",
+				"dependencies": [
+					{
+						"columns": ["UsrStatus", "UsrCompany"],
+						"methodName": "setAddTeamButtonVisibleAttribute"
+					}
+				]
+			}
 		},
-		modules: /**SCHEMA_MODULES*/{}/**SCHEMA_MODULES*/,
+		modules: /**SCHEMA_MODULES*/{
+			"DriverInformation": {
+				"config": {
+					"schemaName": "UsrDriverInformation",
+					"isSchemaConfigInitialized": true,
+					"useHistoryState": false,
+					"parameters": {
+						"viewModelConfig": {
+							MasterColumnName: "UsrDriver"
+						}
+					}
+				}
+			}
+		}/**SCHEMA_MODULES*/,
+		messages: {
+			"UsrDiriverChangedMessage": {
+				mode: BPMSoft.MessageMode.PTP,
+				direction: BPMSoft.MessageDirectionType.PUBLISH
+			},
+		},
 		details: /**SCHEMA_DETAILS*/{
 			"Files": {
 				"schemaName": "FileDetailV2",
@@ -24,6 +57,14 @@ define("UsrTransportRequests1Page", [], function() {
 				"filter": {
 					"masterColumn": "Id",
 					"detailColumn": "UsrTransportRequests"
+				}
+			},
+			"UsrSchema0170b3d9Detail1e778d9e": {
+				"schemaName": "UsrSchema0170b3d9Detail",
+				"entitySchemaName": "UsrTransportRequestTeam",
+				"filter": {
+					"detailColumn": "UsrTransportRequests",
+					"masterColumn": "Id"
 				}
 			}
 		}/**SCHEMA_DETAILS*/,
@@ -33,6 +74,24 @@ define("UsrTransportRequests1Page", [], function() {
 				this.callParent(arguments);
 				this.addColumnValidator("UsrRequestNumber", this.requestNumberColumnValidator);
 		},
+
+			onEntityInitialized: function () {
+				this.callParent(arguments);
+				this.setAddTeamButtonVisibleAttribute();
+			},
+
+			setAddTeamButtonVisibleAttribute: function() {
+					let status = this.get("UsrStatus")?.displayValue;
+					let company = this.get("UsrCompany")?.displayValue;
+					
+					if (status == "В планах" && company) {
+						this.set("AddTeamButtonVisible", true);
+						this.publishPropertyValueToSection("AddTeamButtonVisible", true);
+						return;
+				}
+					this.set("AddTeamButtonVisible", false);
+					this.publishPropertyValueToSection("AddTeamButtonVisible", false);
+			},
 			
 			requestNumberColumnValidator: function(value) {
 				console.log(value);
@@ -48,7 +107,7 @@ define("UsrTransportRequests1Page", [], function() {
 			},
 
 			onDriverChanged: async function() {
-				const driverId = this.get("UsrDriver").value;
+				const driverId = this.get("UsrDriver")?.value;
 				await this.getActivityCount(driverId).
 				then(this.onActivityFinded.bind(this)).
 				catch(this.onActivityError.bind(this));
@@ -78,25 +137,31 @@ define("UsrTransportRequests1Page", [], function() {
 			},
 
 			getActivityCount: function(driverId) {
-				return new Promise((resolve, reject) => {
-					const esq = this.getFindActivityEsq(driverId);
-					esq.getEntityCollection(function (result) {
-						if (!result.success) {
-							reject(result);
-							return;
-						}
-						const activityCount = result.collection.first().get("Count")
-						resolve(activityCount);
-					}, this);
-				});
+				if (driverId) {
+					return new Promise((resolve, reject) => {
+						const esq = this.getFindActivityEsq(driverId);
+						esq.getEntityCollection(function (result) {
+							if (!result.success) {
+								reject(result);
+								return;
+							}
+							const activityCount = result.collection.first().get("Count")
+							resolve(activityCount);
+						}, this);
+					});
+				}
 			},
 
 			onActivityFinded: function(activityCount) {
 				if (activityCount > 3) {
 					this.showInformationDialog("На данного водителя назначено более 3х задач");
+				} else {
+					const tag = this.getDriverInformationModuleSandboxId();
+					const arg = {};
+					this.sandbox.publish("UsrDiriverChangedMessage", arg, [tag]);
+					const update = this.getUpdateActivityESQ();
+					update.execute();
 				}
-				const update = this.getUpdateActivityESQ();
-				update.execute();
 			},
 			onActivityError: function(result) {
 				this.showInformationDialog(result?.errorInfo?.message ?? "Ошибка");
@@ -114,7 +179,7 @@ define("UsrTransportRequests1Page", [], function() {
 				insert.setParameterValue("StartDate", new Date(), this.BPMSoft.DataValueType.DATE_TIME);
 				insert.setParameterValue("DueDate", new Date(), this.BPMSoft.DataValueType.DATE_TIME);
 				insert.setParameterValue("UsrTransportRequest", this.get("Id"), this.BPMSoft.DataValueType.GUID);
-				insert.setParameterValue("Status", "e7174c11-03be-47d9-bb59-6c55838523f7", this.BPMSoft.DataValueType.GUID);
+				insert.setParameterValue("Status", "394d4b84-58e6-df11-971b-001d60e938c6", this.BPMSoft.DataValueType.GUID);
 
 				return insert;
 			},
@@ -132,10 +197,41 @@ define("UsrTransportRequests1Page", [], function() {
 
 				return update;
 			},
+
+			getDriverInformationModuleSandboxId: function () {
+				return this.sandbox.id + "_module_DriverInformation";
+			},
+
+			onAddTeam: function() {
+					window.alert("blabla");
+			},
 			
 		},
 		dataModels: /**SCHEMA_DATA_MODELS*/{}/**SCHEMA_DATA_MODELS*/,
 		diff: /**SCHEMA_DIFF*/[
+			{
+				"operation": "insert",
+				"name": "AddTeam",
+				"parentName": "LeftContainer",
+				"propertyName": "items",
+				"values": {
+					"itemType": BPMSoft.ViewItemType.BUTTON,
+					"style": BPMSoft.controls.ButtonEnums.style.ORANGE,
+					"caption": "Добавить команду", // знаю, что есть ресурсы, не добавлял для ускорения выполненя задачи "bindTo": "Resources.Strings.blabla
+					"click": { "bindTo": "onAddTeam" }, 
+					"visible": { "bindTo": "AddTeamButtonVisible" },
+					"classes": { "textClass": ["actions-button-margin-right"] }
+				}
+			},
+			{
+				"operation": "insert",
+				"parentName": "LeftModulesContainer",
+				"propertyName": "items",
+				"name": "DriverInformation",
+				"values": {
+					"itemType": BPMSoft.ViewItemType.MODULE
+				}
+			},
 			{
 				"operation": "insert",
 				"name": "UsrNamee24b5889-4392-43d6-92c6-4da4eb14b0fb",
@@ -157,6 +253,7 @@ define("UsrTransportRequests1Page", [], function() {
 				"operation": "insert",
 				"name": "UsrRequestNumber16f962cf-fc60-4a10-bc02-b5c8c4ceea93",
 				"values": {
+					"className": "BPMSoft.UsrRequestNumberEditControl",
 					"layout": {
 						"colSpan": 24,
 						"rowSpan": 1,
@@ -297,6 +394,28 @@ define("UsrTransportRequests1Page", [], function() {
 				"values": {
 					"order": 0
 				}
+			},
+			{
+				"operation": "insert",
+				"name": "UsrSchema12567df0Detail28fda340",
+				"values": {
+					"itemType": 2,
+					"markerValue": "added-detail"
+				},
+				"parentName": "ESNTab",
+				"propertyName": "items",
+				"index": 1
+			},
+			{
+				"operation": "insert",
+				"name": "UsrSchema0170b3d9Detail1e778d9e",
+				"values": {
+					"itemType": 2,
+					"markerValue": "added-detail"
+				},
+				"parentName": "ESNTab",
+				"propertyName": "items",
+				"index": 2
 			}
 		]/**SCHEMA_DIFF*/
 	};

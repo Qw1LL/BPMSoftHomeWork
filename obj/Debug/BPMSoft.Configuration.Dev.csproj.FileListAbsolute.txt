@@ -58,3 +58,4 @@ C:\inetpub\wwwroot\BPMSoft\Demo\BPMRights\SalesFullCycle_Marketing_ServiceFull_1
 C:\inetpub\wwwroot\BPMSoft\Demo\BPMRights\SalesFullCycle_Marketing_ServiceFull_1_4_0_3084_Net_PostgreSQL\BPMSoft.WebApp\BPMSoft.Configuration\obj\Debug\BPMSoft..889AD494.Up2Date
 C:\inetpub\wwwroot\BPMSoft\Demo\BPMRights\SalesFullCycle_Marketing_ServiceFull_1_4_0_3084_Net_PostgreSQL\BPMSoft.WebApp\BPMSoft.Configuration\obj\Debug\BPMSoft.Configuration.dll
 C:\inetpub\wwwroot\BPMSoft\Demo\BPMRights\SalesFullCycle_Marketing_ServiceFull_1_4_0_3084_Net_PostgreSQL\BPMSoft.WebApp\BPMSoft.Configuration\obj\Debug\BPMSoft.Configuration.pdb
+C:\inetpub\wwwroot\BPMSoft\Demo\BPMRights\SalesFullCycle_Marketing_ServiceFull_1_4_0_3084_Net_PostgreSQL\BPMSoft.WebApp\BPMSoft.Configuration\obj\Debug\BPMSoft.Configuration.Dev.sourcelink.json

@@ -330,6 +330,11 @@
 			set;
 		}
 
+		public IEnumerable<UsrTransportRequestTeam> UsrTransportRequestTeamCollectionByUsrContact {
+			get;
+			set;
+		}
+
 		public IEnumerable<LocationHistory> LocationHistoryCollectionByContact {
 			get;
 			set;

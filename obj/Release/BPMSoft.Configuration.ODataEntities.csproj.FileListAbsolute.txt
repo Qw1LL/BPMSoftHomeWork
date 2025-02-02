@@ -28,3 +28,4 @@ C:\inetpub\wwwroot\BPMSoft\Demo\BPMRights\SalesFullCycle_Marketing_ServiceFull_1
 C:\inetpub\wwwroot\BPMSoft\Demo\BPMRights\SalesFullCycle_Marketing_ServiceFull_1_4_0_3084_Net_PostgreSQL\BPMSoft.WebApp\BPMSoft.Configuration\obj\Release\BPMSoft..C9A78343.Up2Date
 C:\inetpub\wwwroot\BPMSoft\Demo\BPMRights\SalesFullCycle_Marketing_ServiceFull_1_4_0_3084_Net_PostgreSQL\BPMSoft.WebApp\BPMSoft.Configuration\obj\Release\BPMSoft.Configuration.ODataEntities.dll
 C:\inetpub\wwwroot\BPMSoft\Demo\BPMRights\SalesFullCycle_Marketing_ServiceFull_1_4_0_3084_Net_PostgreSQL\BPMSoft.WebApp\BPMSoft.Configuration\obj\Release\BPMSoft.Configuration.ODataEntities.pdb
+C:\inetpub\wwwroot\BPMSoft\Demo\BPMRights\SalesFullCycle_Marketing_ServiceFull_1_4_0_3084_Net_PostgreSQL\BPMSoft.WebApp\BPMSoft.Configuration\obj\Release\BPMSoft.Configuration.ODataEntities.sourcelink.json

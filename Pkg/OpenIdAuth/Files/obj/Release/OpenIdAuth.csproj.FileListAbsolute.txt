@@ -7,3 +7,4 @@ C:\inetpub\wwwroot\BPMSoft\Demo\BPMRights\SalesFullCycle_Marketing_ServiceFull_1
 C:\inetpub\wwwroot\BPMSoft\Demo\BPMRights\SalesFullCycle_Marketing_ServiceFull_1_4_0_3084_Net_PostgreSQL\BPMSoft.WebApp\BPMSoft.Configuration\Pkg\OpenIdAuth\Files\obj\Release\OpenIdAuth.csproj.CoreCompileInputs.cache
 C:\inetpub\wwwroot\BPMSoft\Demo\BPMRights\SalesFullCycle_Marketing_ServiceFull_1_4_0_3084_Net_PostgreSQL\BPMSoft.WebApp\BPMSoft.Configuration\Pkg\OpenIdAuth\Files\obj\Release\OpenIdAuth.dll
 C:\inetpub\wwwroot\BPMSoft\Demo\BPMRights\SalesFullCycle_Marketing_ServiceFull_1_4_0_3084_Net_PostgreSQL\BPMSoft.WebApp\BPMSoft.Configuration\Pkg\OpenIdAuth\Files\obj\Release\OpenIdAuth.pdb
+C:\inetpub\wwwroot\BPMSoft\Demo\BPMRights\SalesFullCycle_Marketing_ServiceFull_1_4_0_3084_Net_PostgreSQL\BPMSoft.WebApp\BPMSoft.Configuration\Pkg\OpenIdAuth\Files\obj\Release\OpenIdAuth.sourcelink.json

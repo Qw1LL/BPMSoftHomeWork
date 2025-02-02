@@ -2,7 +2,30 @@ define("UsrTransportRequestsbf551ba7Section", [], function() {
 	return {
 		entitySchemaName: "UsrTransportRequests",
 		details: /**SCHEMA_DETAILS*/{}/**SCHEMA_DETAILS*/,
-		diff: /**SCHEMA_DIFF*/[]/**SCHEMA_DIFF*/,
+		attributes: {
+			"AddTeamButtonVisible": {
+				"type": BPMSoft.ViewModelColumnType.VIRTUAL_COLUMN,
+				"dataValueType": BPMSoft.DataValueType.BOOLEAN,
+				"caption": "AddTeamButtonVisible",
+			}
+		},
+		diff: /**SCHEMA_DIFF*/[
+			{
+				"operation": "insert",
+				"name": "AddTeam",
+				"parentName": "CombinedModeActionButtonsCardLeftContainer",
+				"propertyName": "items",
+				"values": {
+					"itemType": BPMSoft.ViewItemType.BUTTON,
+					"style": BPMSoft.controls.ButtonEnums.style.ORANGE,
+					"caption": "Добавить команду", // знаю, что есть ресурсы, не добавлял для ускорения выполненя задачи "bindTo": "Resources.Strings.blabla
+					"click": { "bindTo": "onCardAction" },
+					"visible": { "bindTo": "AddTeamButtonVisible" },
+					"enabled": true,
+					"tag": "onAddTeam"
+				}
+			},
+		]/**SCHEMA_DIFF*/,
 		methods: {
 
 			initFixedFiltersConfig: function() {

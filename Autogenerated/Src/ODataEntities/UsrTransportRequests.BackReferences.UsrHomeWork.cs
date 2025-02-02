@@ -50,6 +50,11 @@
 			set;
 		}
 
+		public IEnumerable<UsrTransportRequestTeam> UsrTransportRequestTeamCollectionByUsrTransportRequests {
+			get;
+			set;
+		}
+
 		/// <summary>
 		/// Id.
 		/// </summary>

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("OpenIdAuth")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.4.0.3084")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.4.0.3084+ef27098f329d3b2dce5449c02f94d346f1f94f83")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.4.0.3084+78d15b293c10e4e7779f5feadffd6ebeda61353f")]
 [assembly: System.Reflection.AssemblyProductAttribute("OpenIdAuth")]
 [assembly: System.Reflection.AssemblyTitleAttribute("OpenIdAuth")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.4.0.3084")]
