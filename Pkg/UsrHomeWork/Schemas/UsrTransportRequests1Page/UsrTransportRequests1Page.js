@@ -1,4 +1,4 @@
-define("UsrTransportRequests1Page", ["UsrRequestNumberEditControl"], function() {
+define("UsrTransportRequests1Page", ["BPMSoft", "ServiceHelper", "UsrRequestNumberEditControl"], function(BPMSoft, ServiceHelper) {
 	return {
 		entitySchemaName: "UsrTransportRequests",
 		attributes: {
@@ -80,6 +80,24 @@ define("UsrTransportRequests1Page", ["UsrRequestNumberEditControl"], function() 
 				this.setAddTeamButtonVisibleAttribute();
 			},
 
+			onDelete: function() { // Сервис работает, записи удаляются, но в этот медот не заходит(( 
+				const data = {
+					usrReqId: this.get("Id"),
+				};
+				ServiceHelper.callService(
+					"UsrTransortRequestsService",
+					"DeleteActivities",
+					response => {
+						if (response) {
+							var result = response;
+							console.log(result.data)
+							return;
+						}
+					},
+					data
+				);
+			},
+
 			setAddTeamButtonVisibleAttribute: function() {
 					let status = this.get("UsrStatus")?.displayValue;
 					let company = this.get("UsrCompany")?.displayValue;
@@ -108,9 +126,26 @@ define("UsrTransportRequests1Page", ["UsrRequestNumberEditControl"], function() 
 
 			onDriverChanged: async function() {
 				const driverId = this.get("UsrDriver")?.value;
-				await this.getActivityCount(driverId).
-				then(this.onActivityFinded.bind(this)).
-				catch(this.onActivityError.bind(this));
+				const data = {
+					driverId: driverId,
+				};
+				ServiceHelper.callService(
+					"UsrTransortRequestsService",
+					"GetActivityCount",
+					response => {
+						if (response) {
+							this.onActivityFinded(response.GetActivityCountResult);
+							return;
+						}
+						this.onActivityError("Ошибка x2");
+						return;
+					},
+					data
+				);
+				
+				// await this.getActivityCount(driverId).
+				// then(this.onActivityFinded.bind(this)).
+				// catch(this.onActivityError.bind(this));
 			},
 
 			onStatusChanged: async function() {
