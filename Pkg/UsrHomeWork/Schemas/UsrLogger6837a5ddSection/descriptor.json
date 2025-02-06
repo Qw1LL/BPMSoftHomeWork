@@ -1,0 +1,13 @@
+﻿{
+  "Descriptor": {
+    "UId": "a9f68301-6d14-440d-9c0c-4ceb65a3ce83",
+    "Name": "UsrLogger6837a5ddSection",
+    "ModifiedOnUtc": "\/Date(1738847477000)\/",
+    "Parent": {
+      "UId": "7912fb69-4fee-429f-8b23-93943c35d66d",
+      "Name": "BaseSectionV2"
+    },
+    "ManagerName": "ClientUnitSchemaManager",
+    "Caption": "Схема раздела: \"UsrLogger\""
+  }
+}

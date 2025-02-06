@@ -245,6 +245,11 @@
 			set;
 		}
 
+		public IEnumerable<UsrLoggerTag> UsrLoggerTagCollectionByType {
+			get;
+			set;
+		}
+
 		public IEnumerable<UsrTransportRequestsTag> UsrTransportRequestsTagCollectionByType {
 			get;
 			set;

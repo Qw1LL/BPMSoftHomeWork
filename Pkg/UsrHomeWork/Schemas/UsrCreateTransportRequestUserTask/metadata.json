@@ -1,0 +1,72 @@
+﻿{
+  "MetaData": {
+    "Schema": {
+      "ManagerName": "ProcessUserTaskSchemaManager",
+      "UId": "f2da968b-8745-444d-bb69-0565cb0af361",
+      "A2": "UsrCreateTransportRequestUserTask",
+      "A5": "3c4d067d-156b-4f1a-95fd-baa9da73b631",
+      "B1": [],
+      "B2": [],
+      "B3": [],
+      "B6": "3e8f3d73-697b-b436-b96c-028b15bf93cc",
+      "B8": "1.4.0.3084",
+      "FJ1": [
+        {
+          "BL1": "BPMSoft.Core.Process.ProcessSchemaParameter",
+          "UId": "ff9b3698-e251-199a-d430-ceec4d448e5f",
+          "A2": "UsrName",
+          "A3": "f2da968b-8745-444d-bb69-0565cb0af361",
+          "A4": "f2da968b-8745-444d-bb69-0565cb0af361",
+          "L1": "8b3f29bb-ea14-4ce5-a5c5-293a929b6ba2",
+          "L8": {},
+          "L6": true,
+          "L11": false
+        },
+        {
+          "BL1": "BPMSoft.Core.Process.ProcessSchemaParameter",
+          "UId": "5ac6a178-1a93-c670-b415-3385de0d888a",
+          "A2": "UsrRequestNumber",
+          "A3": "f2da968b-8745-444d-bb69-0565cb0af361",
+          "A4": "f2da968b-8745-444d-bb69-0565cb0af361",
+          "L1": "8b3f29bb-ea14-4ce5-a5c5-293a929b6ba2",
+          "L8": {},
+          "L6": true,
+          "L11": false
+        },
+        {
+          "BL1": "BPMSoft.Core.Process.ProcessSchemaParameter",
+          "UId": "691458b6-66c9-2b85-29f8-baff4e56fcd2",
+          "A2": "UsrDeliveryAddress",
+          "A3": "f2da968b-8745-444d-bb69-0565cb0af361",
+          "A4": "f2da968b-8745-444d-bb69-0565cb0af361",
+          "L1": "8b3f29bb-ea14-4ce5-a5c5-293a929b6ba2",
+          "L8": {},
+          "L6": true,
+          "L11": false
+        },
+        {
+          "BL1": "BPMSoft.Core.Process.ProcessSchemaParameter",
+          "UId": "0f898df9-0363-3b3d-a112-6199a4cef4f1",
+          "A2": "UsrDescription",
+          "A3": "f2da968b-8745-444d-bb69-0565cb0af361",
+          "A4": "f2da968b-8745-444d-bb69-0565cb0af361",
+          "L1": "8b3f29bb-ea14-4ce5-a5c5-293a929b6ba2",
+          "L8": {},
+          "L11": false
+        },
+        {
+          "BL1": "BPMSoft.Core.Process.ProcessSchemaParameter",
+          "UId": "ba1c0a7d-7bc5-dcc0-5b90-3ad2626b2ee6",
+          "A2": "Result",
+          "A3": "f2da968b-8745-444d-bb69-0565cb0af361",
+          "A4": "f2da968b-8745-444d-bb69-0565cb0af361",
+          "L1": "8b3f29bb-ea14-4ce5-a5c5-293a929b6ba2",
+          "L8": {},
+          "L11": false
+        }
+      ],
+      "FK12": "#839DC3",
+      "FK16": true
+    }
+  }
+}

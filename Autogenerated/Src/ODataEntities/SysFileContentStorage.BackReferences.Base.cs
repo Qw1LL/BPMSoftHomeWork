@@ -250,6 +250,11 @@
 			set;
 		}
 
+		public IEnumerable<UsrLoggerFile> UsrLoggerFileCollectionBySysFileStorage {
+			get;
+			set;
+		}
+
 		public IEnumerable<UsrTransportRequestsFile> UsrTransportRequestsFileCollectionBySysFileStorage {
 			get;
 			set;

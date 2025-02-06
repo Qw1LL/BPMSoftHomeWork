@@ -715,6 +715,11 @@
 			set;
 		}
 
+		public IEnumerable<UsrLoggerFile> UsrLoggerFileCollectionByLockedBy {
+			get;
+			set;
+		}
+
 		public IEnumerable<ExternalAccessFile> ExternalAccessFileCollectionByLockedBy {
 			get;
 			set;

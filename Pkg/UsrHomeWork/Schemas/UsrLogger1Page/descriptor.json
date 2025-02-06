@@ -1,0 +1,13 @@
+﻿{
+  "Descriptor": {
+    "UId": "d58286cc-5e10-4cef-a08f-98a22b235fcc",
+    "Name": "UsrLogger1Page",
+    "ModifiedOnUtc": "\/Date(1738847600000)\/",
+    "Parent": {
+      "UId": "d62293c0-7f14-44b1-b547-735fb40499cd",
+      "Name": "BaseModulePageV2"
+    },
+    "ManagerName": "ClientUnitSchemaManager",
+    "Caption": "Страница редактирования: \"UsrLogger\""
+  }
+}

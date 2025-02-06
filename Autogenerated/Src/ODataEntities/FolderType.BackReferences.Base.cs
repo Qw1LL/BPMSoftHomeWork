@@ -290,6 +290,11 @@
 			set;
 		}
 
+		public IEnumerable<UsrLoggerFolder> UsrLoggerFolderCollectionByFolderType {
+			get;
+			set;
+		}
+
 		public IEnumerable<UsrTransportRequestsFolder> UsrTransportRequestsFolderCollectionByFolderType {
 			get;
 			set;

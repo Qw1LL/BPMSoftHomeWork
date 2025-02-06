@@ -1,0 +1,9 @@
+﻿{
+  "Descriptor": {
+    "UId": "f2da968b-8745-444d-bb69-0565cb0af361",
+    "Name": "UsrCreateTransportRequestUserTask",
+    "ModifiedOnUtc": "\/Date(1738837843000)\/",
+    "ManagerName": "ProcessUserTaskSchemaManager",
+    "Caption": "UsrCreateTransportRequestUserTask"
+  }
+}

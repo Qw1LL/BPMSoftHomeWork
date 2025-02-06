@@ -1,0 +1,13 @@
+﻿{
+  "Descriptor": {
+    "UId": "165f302e-fd58-4680-9863-ba1bbb2a2a46",
+    "Name": "UsrLoggerInTag",
+    "ModifiedOnUtc": "\/Date(1738847510000)\/",
+    "Parent": {
+      "UId": "5894a2b0-51d5-419a-82bb-238674634270",
+      "Name": "BaseEntityInTag"
+    },
+    "ManagerName": "EntitySchemaManager",
+    "Caption": "Тег в записи раздела UsrLogger"
+  }
+}
